@@ -1,0 +1,106 @@
+/* ::-webkit-scrollbar {width: 8px;height:6px;margin-right: 6px;position: absolute;}
+::-webkit-scrollbar-track-piece{background-color: #eee;margin: -2px;}
+::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;} */
+/* vr游戏左侧的游戏栏 */
+body{overflow-x:hidden;}
+body.bac_transparent{background: rgba(0,0,0,0) !important;}
+.vr_container{width: 100%;min-height: auto;margin: 0;}
+.vr_container .left_con{width:240px;}
+.vr_container .left_con h3{display: none;}
+.vr_container .left_con .in_list_con{display: none;}
+.vr_container.webpageGame .left_con .in_list_con{display: block;background: rgba(0,0,0,0);}
+.vr_container.webpageGame .left_con h3{display: block;background: rgba(0,0,0,0);border-color: #293141;}
+.vr_container.webpageGame .left_con,.vr_container.multimedia_left_con .left_con{background:rgba(32, 39, 49, 0.5); border-right:1px solid #293141; position: fixed;height: 100%;}
+.vr_container .right_con{
+	float: none;
+	margin-left: 260px;
+	display: block;
+	width: auto;
+}
+
+.right_con ul.un_sel{margin: 0;}
+
+.pageGame_item .title{margin-left: 0;}
+.banner{padding-top: 20px;}
+.vr_container  .multimedia_right_con {
+	float: none;
+    margin:0 0 0 260px;
+    display: block;
+    width: auto;}
+.vr_container  .left_contain{padding-left: 0;}
+.vr_container  .detail_container{padding-top: 10px;min-width: 990px;}
+.right_con .gameCon li.show-vrgame-detail{margin: 20px 20px  0 0px;}
+/* 隐藏下载客户端按钮 */
+.download_plateform{display: none;}
+#startGame{display: none;}
+/* .vr_container .detail_container .get_gift{display: none;} */
+/* 视频hover */
+/* 显示历史记录 */.multimedia_left_con .left_con .history_record .local_players{display: block;text-indent: 14px;float: right;}
+.multimedia_left_con .left_con .history_record a.clearfix .history_icon_left{margin: 9px;}
+.multimedia_left_con .left_con .history_record .local_players .local_players_icon{left: -4px;}
+.multimedia_left_con .left_con .history_record a .history_icon_right{margin: 10px 8px 0 0;display: none;}    
+.vr_container .multimedia_right_con .multimediaCon{margin-bottom: 0;}
+.vr_container .multimedia_right_con .multimediaCon .min{width: auto;}
+.multimedia_right_con ul li .videoTitle{margin: 0 0 10px 0; padding-top: 10px;}
+.vr_container .right_contain .right_con{margin: 0;}
+.multimedia_left_con .left_con .history_record{position: absolute;bottom: 6px;width: 100%;height: 30px;line-height: 30px;background: rgba(0,0,0,0);}
+.multimedia_left_con .left_con .history_record:hover{background: rgba(0,0,0,0);}
+.multimedia_left_con .left_con .history_record a{width: 49.4%;background:rgb(45,54,69);}
+.multimedia_left_con .left_con .history_record a .history_icon_left{margin: 8px 8px 0 22px;}
+/* 网页游戏的 */
+.webpageGame .left_con .tab .tab_title span{width: 112px;white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;}
+.webpageGame .left_con .tab .tab_con div span{width: 33.3%;white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;}
+.webpageGame .left_con .tab .tab_con ul li span{width: 33.3%;white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden; }
+.webpageGame .left_con .tab .tab_con ul li{width: 100%;}
+/* 视频左侧的 */
+.multimedia_left_con .left_con li,.webpageGame li.startGame{width: 224px;height: 100px;padding:10px 0 0 0;margin-left: 6px;}
+.multimedia_left_con .left_con li .title{margin: 2px 0 0 10px;}
+.multimedia_left_con .left_con li.cur,.webpageGame li.startGame.cur{
+	background: url("../images/hover.png") no-repeat  center;
+}
+.multimedia_left_con .left_con li:hover,.webpageGame li.startGame:hover{
+	background: url("../images/hover.png") no-repeat center;
+}
+.multimedia_left_con .left_con li:active ,.webpageGame li.startGame:active {
+	background: url("../images/active.png") no-repeat center;
+}
+/* 视频 */
+.video_play_container .vr_btn{display: block;}
+.VRgame_home  .left_con {display: none;}
+.VRgame_home div.detail_container{margin-right: 20px;}
+.webgame_con .video_con,.VRgame_home .video_con,.left_per{position: fixed !important;left: 0 !important;top: 0 !important;height: 100%;}
+.charge_title{position: fixed; left: 0; top:0; height: 100%;width: 200px; background: rgba(32,39,49,.5); border-right: 1px solid #2d3747;}
+.charge_title li{width: 200px;}
+/* .video_con .history_record{position: absolute;bottom: 0;background: rgba(0,0,0,0);}
+.video_con .history_record a{width: 49.4%;background:rgba(45,54,69,.5);}
+.video_con .history_record a .history_icon_right{display: none;}
+.video_con .history_record .local_players{text-indent: 24px;}
+.video_con .history_record .local_players{display: block;} */
+/* 新版本的 */
+.VRgame_home_left{display: none;}
+.VRgame_home_right{padding-top: 14px;}
+.VRgame_home .VRgame_home_right{margin-right: 20px;}
+.webgame_left_con {position: fixed !important; top:0 !important;left: 0;}
+.webgame_recent_con .thumb{right: 8px;width: 8px;}
+.video_con{border-top: 0;}
+.webgame_con  .webgame_right_con{padding-top: 14px;}
+.home_page.home_banner{margin-top: 14px;}
+/* vr游戏列表 */
+.all-fixed{
+	top: 13px !important;
+}
+.VRgame_home  .detail_container .right_contain {margin-top: 24px;}
+.personal_center div.right_per .in_right_per{margin-right: 10px !important;}
+.webgame_con  .webgame_right_con{margin-right: 6px;}
+.pageGame_list_item{margin-left: 0;}
+.bind_error, .modify_error, .right_con .receive_gift{padding-left: 0;}
+.multimedia_right_con{margin-right: 10px;}

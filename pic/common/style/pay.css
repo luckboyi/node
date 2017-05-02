@@ -1,0 +1,149 @@
+#choice-bank .choice-bank-list{
+    display: block;
+    margin: 0 5px 20px 0px;
+    float: left;
+}
+
+.sel_pay #choice-bank .choice-bank-list{
+    display: block;
+    margin: 0 25px 20px 0px;
+    float: left;
+}
+
+#choice-bank span:hover .bank-icon{
+    border-color: #2dddf5;
+}
+
+#choice-bank span.cur .bank-icon{
+    border-color: #2dddf5;
+}
+
+#choice-bank{
+    margin:25px 0 5px 0;
+    width: 600px;
+}
+
+#choice-bank.minipay{
+    margin:10px 0 5px 0;
+    width: auto;
+}
+
+#choice-bank span .bank-icon{
+    width: 144px;
+    height: 36px;
+    border: 1px solid #536174;
+    display: block;
+    float: left;
+    margin-left:5px;
+    background:url('//pic.vronline.com/website/min/images/banks.jpg') no-repeat;
+}
+
+#choice-bank span i{
+    width:14px;
+    height:14px;
+    margin-top:11px;
+    background:url('//pic.vronline.com/website/min/images/register.png') no-repeat -202px 0;
+    float: left;
+}
+
+#choice-bank span:hover i{
+    background-position: -202px -14px;
+}
+
+#choice-bank span.cur i{
+    background-position: -202px -14px;
+}
+
+#choice-bank span .bank-icon.bank-icon-ccb{
+    background-position: 0 0;
+}
+#choice-bank span .bank-icon.bank-icon-icbc{
+    background-position: -144px 0px;
+}
+#choice-bank span .bank-icon.bank-icon-abc{
+    background-position: -144px -36px;
+}
+#choice-bank span .bank-icon.bank-icon-cmb{
+    background-position: 0 -36px;
+}
+#choice-bank span .bank-icon.bank-icon-boc{
+    background-position: 0px -72px;
+}
+#choice-bank span .bank-icon.bank-icon-bcom{
+    background-position: -144px -72px;
+}
+#choice-bank span .bank-icon.bank-icon-ceb{
+    background-position: 0px -108px;
+}
+#choice-bank span .bank-icon.bank-icon-post{
+    background-position: -144px -108px;
+}
+#choice-bank span .bank-icon.bank-icon-spdb{
+    background-position: 0px -144px;
+}
+#choice-bank span .bank-icon.bank-icon-cmbc{
+    background-position: -144px -144px;
+}
+#choice-bank span .bank-icon.bank-icon-citic{
+    background-position: 0px -180px;
+}
+#choice-bank span .bank-icon.bank-icon-pab{
+    background-position: -144px -180px;
+}
+#choice-bank span .bank-icon.bank-icon-bos{
+    background-position: 0px -216px;
+}
+#choice-bank span .bank-icon.bank-icon-cgb{
+    background-position: -144px -216px;
+}
+#choice-bank span .bank-icon.bank-icon-bjrcb{
+    background-position: 0px -252px;
+}
+#choice-bank span .bank-icon.bank-icon-nbcb{
+    background-position: -144px -252px;
+}
+#choice-bank span .bank-icon.bank-icon-boh{
+    background-position: 0px -288px;
+}
+#choice-bank span .bank-icon.bank-icon-cib{
+    background-position: -144px -288px;
+}
+#choice-bank span .bank-icon.bank-icon-hxb{
+    background-position: 0px -324px;
+}
+#choice-bank span .bank-icon.bank-icon-njb{
+    background-position: -144px -324px;
+}
+#choice-bank span .bank-icon.bank-icon-bjb{
+    background-position: 0px -360px;
+}
+#choice-bank span .bank-icon.bank-icon-snsb{
+    background-position: -144px -360px;
+}
+#choice-bank span .bank-icon.bank-icon-cdb{
+    background-position: 0px -396px;
+}
+.pay_hide_bar{
+    background:url('//pic.vronline.com/website/min/images/pay_hide_bar.png') no-repeat;
+    width: 554px;
+    height: 23px;
+    cursor: pointer;
+    background-position:center 7px;
+    margin-bottom: 10px;
+}
+.pay_hide_bar i{
+    background:url('//pic.vronline.com/website/min/images/pay_hide_icon.png') no-repeat;
+    background-position: 0 -4px;
+    height: 4px;
+    width: 8px;
+    position: relative;
+    left: 50%;
+    margin-left: -2px;
+    top: -8px;
+}
+.pay_hide_bar.cur i{
+    background-position: 0 0px;
+}
+.pay_hide_bar.minipay{
+    width: 100%;
+}

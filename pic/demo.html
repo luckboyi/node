@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_sd0teljmsyr885mi.css">
+    <script src="//unpkg.com/fastclick@1.0.6/lib/fastclick.js"></script>
+    <title>VRONLINE</title>
+  </head>
+  <body>
+    <input id="vi" type="text" value="" style="width:500px;height:30px"> <span onclick="send()">send</span>
+    <iframe src="http://vue.vronline.com:8080/" style="width:100%;height:800px" frameborder="0"></iframe>
+    <script type="text/javascript">
+    function send() {
+      var v = document.getElementById('vi').value;
+      console.log("send "+v);
+      window.frames[0].postMessage(v,'*');
+    }
+    </script>
+  </body>
+</html>

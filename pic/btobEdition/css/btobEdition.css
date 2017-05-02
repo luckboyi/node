@@ -1,0 +1,426 @@
+@charset "UTF-8";
+i {
+  display: block;
+  background: url(../images/icon.png) no-repeat; }
+
+body {
+  margin: 0; }
+
+/* 默认滚动条的样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  margin-right: 6px;
+  position: absolute; }
+
+::-webkit-scrollbar-track-piece {
+  background-color: #191f2d;
+  margin: -2px; }
+
+::-webkit-scrollbar-thumb {
+  background: #2d3744;
+  min-height: 150px;
+  min-width: 150px;
+  border-radius: 10px; }
+
+.home {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  background: #191f2d; }
+
+.all {
+  position: relative;
+  background: url(../images/bg.png) no-repeat top right; }
+  .all .head {
+    height: 50px;
+    line-height: 50px;
+    background: rgba(41, 51, 64, 0.5);
+    border-bottom: 1px solid #282f3c; }
+    .all .head .left a.return {
+      width: 36px;
+      height: 36px;
+      margin-top: 7px; }
+      .all .head .left a.return i {
+        width: 12px;
+        height: 12px;
+        margin: 12px;
+        background-position: -169px 0; }
+    .all .head .left a.return:hover i {
+      background-position-y: -12px; }
+    .all .head .left p {
+      color: #7b7d80; }
+      .all .head .left p i {
+        width: 15px;
+        height: 14px;
+        margin: 18px 6px 0 32px;
+        background-position: -93px 0; }
+    .all .head .logo {
+      display: inline-block;
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      margin-left: -39px;
+      width: 77px;
+      height: 40px;
+      background: url(../images/icon.png) no-repeat 0 0; }
+    .all .head .right {
+      color: #8196b0; }
+      .all .head .right .time i {
+        width: 14px;
+        height: 14px;
+        margin: 18px 4px 0 0;
+        background-position: -182px 0; }
+      .all .head .right div.more {
+        height: 40px; }
+        .all .head .right div.more i {
+          width: 9px;
+          height: 7px;
+          margin: 23px 20px 0 32px;
+          cursor: pointer;
+          background-position: -197px 0; }
+      .all .head .right div.more:hover > i {
+        background-position-y: -7px; }
+      .all .head .right div.more:hover .install {
+        display: block; }
+      .all .head .right span.narrow {
+        height: 10px;
+        margin-top: 24px;
+        cursor: pointer; }
+        .all .head .right span.narrow i {
+          width: 11px;
+          height: 2px;
+          background: #72767b; }
+      .all .head .right span.narrow:hover i {
+        background: #ffffff; }
+      .all .head .right i.enlarge {
+        width: 22px;
+        height: 22px;
+        margin: 16px 15px 0 13px;
+        cursor: pointer;
+        background-position: -283px 0; }
+      .all .head .right i:hover {
+        background-position-x: -216px; }
+      .all .head .right i.close {
+        width: 9px;
+        height: 9px;
+        margin: 21px 12px 0 0;
+        cursor: pointer;
+        background-position: -207px 0; }
+      .all .head .right i.close:hover {
+        background-position-y: -9px; }
+      .all .head .right .install {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: 16px;
+        width: 98px;
+        height: 90px;
+        border: 1px solid #000;
+        background: #1c202a;
+        z-index: 3; }
+        .all .head .right .install ul li {
+          height: 30px; }
+          .all .head .right .install ul li a {
+            width: 100%;
+            height: 24px;
+            margin-bottom: 3px;
+            line-height: 24px;
+            color: #a9bad0; }
+            .all .head .right .install ul li a i {
+              width: 14px;
+              height: 14px;
+              margin: 6px 8px 0;
+              background-position: -254px 0; }
+        .all .head .right .install ul li:hover i {
+          background-position-y: -14px; }
+        .all .head .right .install ul li.manager {
+          height: 28px;
+          border-top: 1px solid #303846;
+          border-bottom: 1px solid #303846; }
+          .all .head .right .install ul li.manager a {
+            margin-bottom: 4px; }
+          .all .head .right .install ul li.manager i {
+            width: 15px;
+            height: 15px;
+            background-position: -154px 0; }
+        .all .head .right .install ul li.manager:hover i {
+          background-position-y: -15px; }
+        .all .head .right .install ul li:hover a {
+          background: #384355; }
+        .all .head .right .install ul li.quit i {
+          width: 14px;
+          height: 13px;
+          background-position: -268px 0; }
+        .all .head .right .install ul li.quit:hover i {
+          background-position-y: -13px; }
+  .all .number {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    background: #2d3645;
+    text-align: center;
+    z-index: 99; }
+    .all .number > div {
+      display: inline-block; }
+    .all .number i {
+      width: 13px;
+      height: 13px;
+      margin: 9px 8px 0 0;
+      background-position: -141px 0; }
+
+.VRcon {
+  height: 924px;
+  overflow: hidden; }
+
+.container {
+  color: #8196b0; }
+  .container .leftCon {
+    width: 228px;
+    height: 100%;
+    position: fixed;
+    padding: 0 4px 0 8px;
+    border-right: 1px solid #282f3c; }
+    .container .leftCon .screen {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #282f3c; }
+      .container .leftCon .screen i {
+        width: 16px;
+        height: 16px;
+        margin: 12px 8px 0;
+        background-position: -77px 0; }
+    .container .leftCon .type_selection {
+      width: 210px;
+      margin: 0 auto;
+      border-bottom: 1px solid #262c3a; }
+      .container .leftCon .type_selection span {
+        height: 52px;
+        line-height: 52px;
+        color: #22a1be; }
+      .container .leftCon .type_selection ul li {
+        margin: 0 18px 18px 0; }
+        .container .leftCon .type_selection ul li a {
+          padding: 4px; }
+      .container .leftCon .type_selection ul li:hover, .container .leftCon .type_selection ul li.cur {
+        background: #23a0bf; }
+      .container .leftCon .type_selection ul li:hover a, .container .leftCon .type_selection ul li.cur a {
+        color: #fff; }
+    .container .leftCon .number {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 240px;
+      height: 30px;
+      line-height: 30px;
+      background: #2d3645;
+      text-align: center;
+      z-index: 99; }
+      .container .leftCon .number > div {
+        display: inline-block; }
+      .container .leftCon .number i {
+        width: 13px;
+        height: 13px;
+        margin: 9px 8px 0 0;
+        background-position: -141px 0; }
+  .container .rightCon {
+    margin-left: 251px;
+    width: 1018px; }
+    .container .rightCon #scrollbar1 {
+      width: 100%;
+      margin: 6px 0; }
+      .container .rightCon #scrollbar1 .viewport {
+        width: 100%;
+        height: 920px;
+        overflow: hidden;
+        position: relative; }
+      .container .rightCon #scrollbar1 .overview {
+        list-style: none;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        .container .rightCon #scrollbar1 .overview p.title {
+          width: 986px;
+          margin: 16px 0 0 8px;
+          border-bottom: 1px solid #333e50; }
+          .container .rightCon #scrollbar1 .overview p.title span {
+            position: relative;
+            bottom: -1px;
+            display: inline-block;
+            height: 24px;
+            color: #23a0bf;
+            line-height: 24px;
+            border-bottom: 2px solid #23a0bf; }
+        .container .rightCon #scrollbar1 .overview ul {
+          width: 1002px;
+          padding-top: 8px; }
+          .container .rightCon #scrollbar1 .overview ul li {
+            width: 316px;
+            height: 180px;
+            padding: 8px; }
+            .container .rightCon #scrollbar1 .overview ul li a {
+              position: relative;
+              width: 316px;
+              height: 178px;
+              border: 1px solid #000;
+              color: #828f9e; }
+              .container .rightCon #scrollbar1 .overview ul li a img {
+                width: 100%;
+                height: 100%; }
+              .container .rightCon #scrollbar1 .overview ul li a p.describe {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                background: rgba(20, 24, 30, 0.8); }
+                .container .rightCon #scrollbar1 .overview ul li a p.describe span.fl {
+                  margin-left: 12px; }
+                .container .rightCon #scrollbar1 .overview ul li a p.describe span.fr {
+                  width: 16px;
+                  height: 16px;
+                  margin: 8px 12px 0 0;
+                  background: url(../images/icon.png) no-repeat -238px 0; }
+              .container .rightCon #scrollbar1 .overview ul li a div.details {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0 10px;
+                background: rgba(20, 24, 30, 0.8); }
+                .container .rightCon #scrollbar1 .overview ul li a div.details .frequency {
+                  width: 294px;
+                  height: 36px;
+                  line-height: 36px;
+                  border-bottom: 1px solid #434950; }
+                  .container .rightCon #scrollbar1 .overview ul li a div.details .frequency span.f16 {
+                    color: #f29f11; }
+                .container .rightCon #scrollbar1 .overview ul li a div.details p.text {
+                  width: 100%;
+                  height: 50px;
+                  padding: 6px 0;
+                  margin-bottom: 2px;
+                  line-height: 18px;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 3;
+                  overflow: hidden; }
+                .container .rightCon #scrollbar1 .overview ul li a div.details div.use {
+                  text-align: center; }
+                  .container .rightCon #scrollbar1 .overview ul li a div.details div.use > div {
+                    display: inline-block; }
+                  .container .rightCon #scrollbar1 .overview ul li a div.details div.use div.code {
+                    width: 70px;
+                    height: 70px;
+                    border: 1px solid #838589;
+                    margin-right: 12px; }
+                  .container .rightCon #scrollbar1 .overview ul li a div.details div.use p {
+                    line-height: 22px; }
+                  .container .rightCon #scrollbar1 .overview ul li a div.details div.use p.price {
+                    color: #94afd0; }
+          .container .rightCon #scrollbar1 .overview ul li:hover {
+            background: url(../images/border.png) no-repeat; }
+          .container .rightCon #scrollbar1 .overview ul li:hover a {
+            border: 1px solid #23a0bf; }
+          .container .rightCon #scrollbar1 .overview ul li:hover .describe {
+            display: none; }
+          .container .rightCon #scrollbar1 .overview ul li:hover .details {
+            display: block; }
+      .container .rightCon #scrollbar1 .thumb .end, .container .rightCon #scrollbar1 .thumb {
+        background-color: #2d3744; }
+      .container .rightCon #scrollbar1 .scrollbar {
+        position: fixed;
+        right: 4px;
+        width: 8px; }
+      .container .rightCon #scrollbar1 .track {
+        height: 100%;
+        width: 8px;
+        position: relative; }
+      .container .rightCon #scrollbar1 .thumb {
+        height: 20px;
+        width: 8px;
+        cursor: pointer;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        border-radius: 6px; }
+      .container .rightCon #scrollbar1 .thumb .end {
+        overflow: hidden;
+        height: 30px;
+        width: 8px; }
+      .container .rightCon #scrollbar1 .disable {
+        display: none; }
+      .container .rightCon #scrollbar1 .noSelect {
+        user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none; }
+  .container .box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999; }
+    .container .box .prompt {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 480px;
+      padding: 12px;
+      min-height: 300px;
+      border: 1px solid #000;
+      background: #1c202a;
+      color: #828f9e; }
+      .container .box .prompt .promptCon {
+        width: 100%;
+        min-height: 270px;
+        background: #151920; }
+        .container .box .prompt .promptCon p.mode {
+          text-align: right;
+          height: 40px;
+          line-height: 40px;
+          margin-right: 16px; }
+          .container .box .prompt .promptCon p.mode span {
+            padding-left: 6px;
+            margin-left: 2px;
+            cursor: pointer;
+            border-left: 1px solid #3a3e43; }
+          .container .box .prompt .promptCon p.mode span:first-child {
+            border: none; }
+          .container .box .prompt .promptCon p.mode span.cur {
+            color: #23a0bf; }
+        .container .box .prompt .promptCon div.qrcode {
+          width: 150px;
+          height: 150px;
+          margin: 0 auto;
+          border: 1px solid #838589; }
+        .container .box .prompt .promptCon .price {
+          width: 230px;
+          margin: 0 auto;
+          margin-top: 20px; }
+          .container .box .prompt .promptCon .price ul {
+            width: 170px; }
+            .container .box .prompt .promptCon .price ul li {
+              margin: 0 6px;
+              line-height: 20px; }
+      .container .box .prompt > p {
+        margin-bottom: 12px; }
+        .container .box .prompt > p span.fr {
+          width: 9px;
+          height: 9px;
+          margin-top: 6px;
+          cursor: pointer;
+          background: url(../images/icon.png) no-repeat -207px 0; }
+
+/*# sourceMappingURL=btobEdition.css.map */

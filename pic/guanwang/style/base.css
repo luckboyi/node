@@ -1,0 +1,46 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,img,hr{margin:0;padding:0;vertical-align:baseline;font-weight: normal;}
+html,body{background:#191f2d;font-family:'微软雅黑';color:#fff; -webkit-text-size-adjust:none;-webkit-font-smoothing: antialiased;}
+ol,ul,li{list-style:none;}
+.clearfix{*zoom:1;}
+.clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+input::-webkit-input-placeholder{color: #5a697d;}
+input{outline: none;}
+a{text-decoration: none;}
+i{font-style: normal;}
+.pr{  position: relative !important;}
+.pa{  position: absolute !important;}
+.fl{ float: left !important;}
+.fr{ float: right !important;}
+.tac{text-align: center !important;}
+.tal{text-align: left !important;}
+.f14{  font-size: 14px !important;  }
+.f12{font-size: 12px !important;}
+.f16{font-size: 16px !important;}
+.f18{font-size: 18px !important;}
+.f20{font-size: 20px !important;}
+.f22{font-size: 22px !important;}
+.f24{font-size: 24px !important;}
+.f26{font-size: 26px !important;}
+.fw{font-weight: 600 !important;}
+.hide{display: none !important;}
+.show{display: block !important;}
+b{font-weight: normal!important;}
+.blueColor{color: #03a9f4;}
+.errorColor{color: #b82b2b  !important;}
+.mar0{margin-left: 0 !important;}
+.curp{
+    cursor: pointer !important;}
+.blueColor2{color: #23a0bf;}
+input::-webkit-input-placeholder,input::-moz-placeholder{color: #afb1b4}
+.wdHoverColor{color:  #828f9e;}
+/*---------------------base----------------------*/
+.whiteColor{color: #fff;}
+.sel{
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 0;
+    margin:-8px 0 0 0;
+    background: url("../images/register.png") no-repeat 0 0;
+}
+.sel.selected{background-position: 0 -16px;}

@@ -1,0 +1,39 @@
+header .top{
+	width:1220px!important;
+}
+.sec_nav{
+	width:1220px;
+}
+.sec .home_banner{
+	width:1220px;
+}
+.sec .homeCon{
+	padding:0 20px 0 10px;
+}
+.sec .login_container{
+	width:1220px;
+}
+.sec .login_container .login_con{
+	width:900px;
+}
+.sec .login_container .download_vr{
+	width:310px;
+}
+.sec .VRgame_home,.sec .webgame_con{
+	width:1220px;
+}
+.sec .VRgame_home .VRgame_home_right .home_banner,.sec .webgame_con .webgame_right_con .home_banner{
+	width:968px;
+}
+.sec .VRgame_home .VRgame_home_right,.sec .webgame_con .webgame_right_con,.sec .webgame_con .VRgame_home_right{
+	margin-right:0;
+}
+.sec div.official_personal_center{
+	width:1220px;
+}
+.in_video_information .video_content_head{
+	width:970px;
+}
+.in_video_information .video_intro{
+	width:950px;
+}

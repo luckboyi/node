@@ -1,0 +1,157 @@
+.web_login{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-308px;
+	margin-top:-208px;
+	width:595px;
+	height:458px;
+	padding:0 10px;
+	background:url(../images/web_login_bg.png) no-repeat;
+	border:1px solid #000;
+}
+.web_login .login_title{
+	width:100%;
+	height:54px;
+	line-height:54px;
+	text-align: center;
+	border-bottom:1px solid #4b4c4a;
+}
+.web_login .login_title span{
+	display:inline-block;
+	font-size:20px;
+	color:#6b6d70;
+	margin:0 22px;
+	font-weight:bold;
+}
+.web_login .login_title span.up{
+	color:#FFFFFF;
+	background:url(../images/login_icon.png) no-repeat 44px 48px;
+}
+.web_login .login_con{
+	padding:0 60px;
+}
+.web_login .login_con img{
+	display:block;
+	margin:14px auto;
+}
+.web_login .login_con ul li .errorMsg{
+	width:100%;
+	height:20px;
+}
+.web_login .login_con ul li .errorMsg p{
+	line-height:20px;
+	margin-left:80px;
+	color:#d92236!important;
+	display:none;
+}
+.web_login .login_con ul li .errorMsg p.erro_msg_show{
+	display:block;
+}
+.web_login .login_con ul li p i{
+	position:relative;
+	top:2px;
+	width:13px;
+	height:13px;
+	margin:0 4px;
+	background:url(../images/login_icon.png) no-repeat 0 -39px;
+}
+.web_login .login_con ul li span{
+	display:inline-block;
+	width:60px;
+	font-size:14px;
+	color:#6a7883;
+	text-align:right;
+	margin-right:18px;
+}
+.web_login .login_con ul li img{
+	position:absolute;
+	right:-1px;
+	top:-25px;
+	width:84px;
+	height:36px;
+}
+.web_login .login_con ul li input{
+	width:292px;
+	height:36px;
+	line-height:36px;
+	background:url(../images/login_icon.png) no-repeat -76px -14px;
+	border:1px solid #354454;
+	padding-left:36px;
+	font-size:14px;
+	color:#afb1b4;
+}
+.web_login .login_con ul li label input{
+	background:url(../images/login_icon.png) no-repeat -76px -40px;
+}
+.web_login .login_con ul li:first-child input{
+	background:url(../images/login_icon.png) no-repeat -76px 12px;
+}
+.web_login .login_play_games p{
+	width:328px;
+	margin-left:142px;
+	height:38px;
+	line-height:38px;
+	text-align: center;
+	color:#fff;
+	border:1px solid #000;
+	font-size:18px;
+	background:#22a1bf;
+	border-radius:4px;
+	margin-bottom:6px;
+}
+.web_login .login_play_games p:hover{
+	background:#2cdef5;
+}
+.web_login .login_play_games p:active{
+	background:#22a1bf;
+}
+.web_login .login_play_games .agreement{
+	text-align: center;
+	color:#697782;
+}
+.web_login .login_play_games .agreement a{
+	color:#506272;
+}
+.web_login .login_play_games .agreement .sel{
+	position: relative;
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/login_icon.png) no-repeat 0 -96px;
+}
+.sel.selected {
+	background-position: 0 -112px !important;
+}
+.web_login .login_play_games .agreement .sel:hover{
+	background-position: 0 -128px;
+}
+.web_login .login_play_games .third_login{
+	text-align: center;
+	margin-top:6px;
+}
+.web_login .login_play_games .third_login a{
+	margin:0 4px;
+	height:14px;
+	line-height:14px;
+}
+.web_login .login_play_games .third_login a i{
+	position:relative;
+	top:2px;
+	width:12px;
+	height:14px;
+	margin-right:2px;
+	background:url(../images/login_icon.png) no-repeat 0 -55px;
+}
+.web_login .login_play_games .third_login a i.wx{
+	width:16px;
+	background:url(../images/login_icon.png) no-repeat 0 -68px;
+}
+.web_login .login_play_games .third_login a i.wb{
+	top:3px;
+	width:16px;
+	background:url(../images/login_icon.png) no-repeat 0 -82px;
+}
+.web_login .login_con .register_con{
+	margin-top:60px;
+}

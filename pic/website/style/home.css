@@ -1,0 +1,943 @@
+﻿/*VR官网首页*/
+.home_banner{
+	width:1240px;
+	height:294px;
+	margin:0 auto;
+	overflow:hidden;
+	
+}
+.home_banner ul{
+	position:relative;
+	/*left:50%;
+	margin-left:-960px;
+	width:1920px;*/
+	height:294px;
+}
+/*banaer轮播透明度变化*/
+@keyframes move /* Firefox */
+{
+from {opacity:0.3; filter:alpha(opacity=30)}
+to {opacity:1;filter:alpha(opacity=100)}
+}
+
+@-moz-keyframes move /* Firefox */
+{
+from {opacity:0.3; filter:alpha(opacity=30)}
+to {opacity:1;filter:alpha(opacity=100)}
+}
+
+@-webkit-keyframes move /* Safari 和 Chrome */
+{
+from {opacity:0.3; filter:alpha(opacity=30)}
+to {opacity:1;filter:alpha(opacity=100)}
+}
+
+@-o-keyframes move /* Opera */
+{
+from {opacity:0.3; filter:alpha(opacity=30)}
+to {opacity:1;filter:alpha(opacity=100)}
+}
+.home_banner ul li{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	opacity: 0;
+	z-index: 1;
+}
+.home_banner ul li.cur{opacity: 1;z-index: 9;}
+/* .home_banner ul li.cur{
+	display:block;
+	animation:move 0.2s ease-out;
+	-webkit-animation:move 0.2s ease-out;
+	-moz-animation:move 0.2s ease-out;
+	-ms-animation:move 0.2s ease-out;
+	-o-animation:move 0.2s ease-out;
+} */
+.home_banner ul li a{
+	display:block;
+	height:294px;
+	cursor:pointer;
+}
+.home_banner ul li a img{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+.thumbnail{
+	position:relative;
+	width:1240px;
+	height:0;
+	top:-294px;
+	margin:0 auto;
+	z-index:9;
+}
+.thumbnail ol{
+	position:absolute;
+	right:30px;
+	top:0;
+	width:228px;
+	height:264px;
+	padding:10px 0 20px 0;
+}
+.thumbnail ol li{
+	width:218px;
+	height:54px;
+	padding:5px;
+	margin-bottom:1px;
+	background:rgba(0,0,0,.6);
+	cursor:pointer;
+}
+.thumbnail ol li.active{background: rgba(0,0,0,.5) !important;}
+.thumbnail ol li a{
+	display:block;
+}
+.thumbnail ol li a span{
+	width:54px;
+	height:54px;
+}
+.thumbnail ol li a span img{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+.thumbnail ol li.active span{
+	width:50px;
+	height:50px;
+	border:2px solid #23a0bf;
+}
+.thumbnail ol li.active h3{color: #23a0bf;}
+.thumbnail ol li.cur span img{
+	width:100%;
+	height:100%;
+}
+.thumbnail ol li a div{
+	width:154px;
+}
+.thumbnail ol li a div h3{
+	font-size:14px;
+	line-height:24px;
+	cursor:pointer;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+	cursor:pointer;
+}
+.thumbnail ol li a div p{
+	color:#828f9e;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+	cursor:pointer;
+}
+/*精彩推荐*/
+.homeCon .VRgames,.homeCon .webgames,.homeCon .videos{
+	width: 948px;
+	margin-top:10px;
+}
+.homeCon{
+	width:1190px;
+	padding:0 30px 0 20px;
+	margin:10px auto;
+	color:#828f9e;
+	margin-bottom:20px;
+}
+.homeCon .recommendCon {width: 948px;}
+.recommend a,.VRgames a,.webgames a,.videos a{
+	display:block;
+}
+.home_title{
+	width:948px;
+	margin-bottom:10px;	
+	border-bottom:1px solid #313a4a;
+}
+.webgames .home_title,.videos .home_title{
+	margin-bottom:2px;
+}
+.home_title a{
+	height:26px;
+	line-height:26px;
+	font-size:14px;
+	color:#66778d;
+}
+.home_title a:hover{
+	color: #94afd0;
+}
+.recommend h3,.VRgames h3,.webgames h3,.videos h3{
+	position:relative;
+	top:1px;
+	height:26px;
+	line-height:26px;
+	padding-right:10px;
+	font-size:14px;
+	color:#23a0bf;
+	text-align: right;
+	border-bottom:2px solid #23a0bf;
+}
+.recommend h3 i,.VRgames h3 i,.webgames h3 i,.videos h3 i{
+	width:34px;
+	height:26px;
+	line-height:26px;
+	background:url(../images/newVRhome.png) no-repeat 0 2px;
+}
+.VRgames h3 i{
+	background:url(../images/newVRhome.png) no-repeat 0 -26px;
+}
+.webgames h3 i{
+	background:url(../images/newVRhome.png) no-repeat 0 -56px;
+}
+.videos h3 i{
+	background:url(../images/newVRhome.png) no-repeat 0 -88px;
+	width: 30px;
+}
+.recommend h3 span,.VRgames h3 span,.webgames h3 span,.videos h3 span{
+	width:56px;
+	height:26px;
+	line-height:26px;
+}
+.recommend .recommendCon .best{
+	width:466px;
+	height:258px;
+	color: #6e7784;
+	border:1px solid #000;
+}
+.recommend .recommendCon .best:hover{
+	border:1px solid #23a0bf;
+}
+.recommend .recommendCon .best a{
+	width:100%;
+	height:100%;
+	display:block;
+	border: inset 1px;
+	border-color: rgba(0,0,0,0.1); 
+	box-sizing: border-box;  
+	-webkit-box-sizing: border-box;  
+	-moz-box-sizing: border-box;
+	overflow:hidden;
+}
+.recommend .recommendCon .best a div img{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+} 
+.recommend .recommendCon .best>p{
+	position:relative;
+	top:-30px;
+	height:30px;
+	line-height:30px;
+	padding:0 8px;
+	cursor:pointer;
+	background:rgba(20,24,30,.8);
+}
+.recommend .recommendCon .best>p span{color: #6e7784;}
+.recommend .recommendCon .best>p span:first-child{
+	width:70%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+.recommend .recommendCon ul{
+	width:480px;
+	margin-top:-4px;
+}
+.recommend .recommendCon ul li{
+	width:226px;
+	height:126px;
+	border:1px solid #000;
+	overflow:hidden;
+	margin: 4px 0 0 12px;
+}
+.recommend .recommendCon ul li:hover{
+	border:1px solid #23a0bf;
+}
+.recommend .recommendCon ul li a{
+	width:100%;
+	height:100%;
+	display:block;
+	border: inset 1px;
+	border-color: rgba(0,0,0,0.1); 
+	box-sizing: border-box;  
+	-webkit-box-sizing: border-box;  
+	-moz-box-sizing: border-box;
+	overflow:hidden;
+}
+.recommend .recommendCon ul li a div img{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+} 
+.recommend .recommendCon ul li>p{
+	position:relative;
+	top:-29px;
+	height:30px;
+	line-height:30px;
+	padding:0 8px;
+	cursor:pointer;
+	background:rgba(20,24,30,.8);
+	color: #6e7784;
+}
+.recommend .recommendCon ul li>p span{
+	font-size:12px;
+}
+.recommend .recommendCon ul li>p span:first-child{
+	width:70%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+/*热门榜单*/
+.hotList{
+	width:228px;
+}
+.hotList .hotList_title{
+	height:28px;
+	line-height:28px;
+	border-bottom:1px solid #313a4a;
+}
+.hotList .hotList_title span{
+	position:relative;
+	top:-1px;
+	width:33.3%;
+	text-align:center;
+	color:#8196b0;
+	font-size:14px;
+	cursor:pointer;
+}
+.hotList .hotList_title span.cur{
+	color:#23a0bf;
+	border-bottom:2px solid #23a0bf;
+}
+.webgame_con .hotList .hotList_title span{
+	color:#23a0bf;
+	border-bottom:2px solid #23a0bf;
+}
+.hotList .hotList_con{
+	background:#1f2631;
+	display: none;
+}
+.hotList .hotList_con.cur{display: block;}
+.hotList .hotList_con ul{
+	height:262px;
+	width: 228px;
+	overflow: hidden;
+}
+.homeCon .hotList .hotList_con ul{
+	height:263px;
+	padding-top:6px;
+	width: 228px;
+}
+.webgame_con .hotList .hotList_con ul{
+	padding-top:8px;
+	height:276px;
+}
+.webgame_con .right_list_con .tab .tab_con{height: 270px;}
+.hotList .hotList_con ul li{
+	width:100%;
+}
+.hotList .hotList_con ul li:hover div{ display: block;position: relative;}
+.hotList .hotList_con ul li.cur div{display: block;}
+.hotList .hotList_con ul li a span{
+	color:#8196b0;
+	margin-bottom:4px;
+	cursor:pointer;
+}
+.ranking{
+	position:relative;
+	top:2px;
+	width:12px;
+	height:14px;
+	line-height:12px;
+	margin:0 6px;
+	text-align: center;
+	background:url(../images/newVRhome.png) no-repeat -42px 0;
+}
+.ranking2{
+	background-position: -54px 0;
+}
+.ranking3{
+	background-position: -66px 0;
+}
+.ranking4{
+	background-position: -78px 1px;
+}
+.ranking5{
+	background-position: -91px 1px;
+}
+.ranking6{
+	background-position: -104px 1px;
+}
+.ranking7{
+	background-position: -104px -13px;
+}
+.ranking8{
+	background-position: -91px -12px;
+}
+.ranking9{
+	background-position: -78px -12px;
+}
+.ranking10{
+	background-position: -78px -26px;
+}
+.ranking11{
+	background-position: -288px -30px;
+}
+.ranking12{
+	background-position: -288px -43px;
+}
+.hotList .hotList_con ul li a>span:nth-child(2){
+	width:60%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+.hotList .hotList_con ul li a span.downNum{
+	color:#505e70;
+	margin-right:6px;
+}
+.hotList .hotList_con ul li a div{
+	top: 6px;
+	left: 0;
+	width:228px;
+	height:60px;
+	display: none;
+	z-index: 9;
+	overflow:hidden;
+	position: relative;
+	margin-bottom:8px;
+}
+.hotList .hotList_con ul li a{
+	display: inline-block;
+	width: 228px;
+	height: 30px;
+}
+.hotList .hotList_con ul li a div img{
+	width:100%;
+	height:60px;
+} 
+.hotList .hotList_con ul li a div p{
+	position:absolute;
+	right:0;
+	top:0;
+	width:58px;
+	height:60px;
+	z-index:9;
+	background:rgba(35,160,191,.5);
+}
+.hotList .hotList_con ul li a div p span{
+	display:block;
+	line-height:16px;
+	text-align: center;
+	color:#fff;
+}
+.hotList .hotList_con ul li a div p span em{
+	font-size:20px;
+	padding-top:12px;
+}
+/*VR游戏*/
+.homeCon .VRgames .home_title{
+	margin-bottom:0;
+}
+.VRgames_con{
+	width:948px;
+}
+.VRgames_con ul{
+	margin-left:-1px;
+	height:266px;	
+}
+.VRgames_con ul li{
+	position:relative;
+	width:467px;
+	height:120px;
+	margin-bottom:14px;
+	cursor:pointer;
+}	
+.VRgames .VRgames_con ul li a p{
+	position:relative;
+	top:-30px;
+	height:30px;
+	line-height:30px;
+	padding:0 8px;
+	background:rgba(0,0,0,.8);
+	z-index:9;
+	color:#6e7784;
+	cursor:pointer;
+}
+.VRhotGames_con .freeGmae {margin-top: 0;}
+.freeGmae{background: #49b21a;line-height: 34px;margin-top: -8px;}
+.screen{
+	width:228px;
+	margin-top:10px;
+}
+.screen .screen_title{
+	height:28px;
+	line-height:28px;
+	border-bottom:1px solid #313a4a;
+}
+.screen .screen_title h3{
+	position:relative;
+	top:-1px;
+	width:90px;
+	height:28px;
+	line-height:28px;
+	color:#23a0bf;
+	font-size:14px;
+	text-align: center;
+	border-bottom:2px solid #23a0bf;
+}
+.screen .screen_title h3 i{
+	position: relative;
+	left: -6px;
+	top: 3px;
+	width:18px;
+	height:16px;
+	background:url(../images/newVRhome.png) no-repeat -235px 0;
+}
+.screen .screen_con{
+	position:relative;
+	background:#1f2631;
+}
+.screen .screen_con .search{
+	padding:6px;
+}
+.screen .screen_con .search input{
+	width:100%;
+	height:28px;
+	line-height:28px;
+	background:#131a25;
+	text-indent: 10px;
+	color:#8196b0;
+}
+.screen .screen_con .search i{
+	position:absolute;
+	right:16px;
+	top:10px;
+	display:block;
+	width:18px;
+	height:18px;
+	background:url(../images/newVRhome.png) no-repeat -255px 0;
+	cursor:pointer;
+}
+.screen ul{
+	height:266px;
+	padding:0 6px;
+	background: #1f2631;
+}
+.homeCon .screen ul{height: 260px;}
+.screen ul li{
+	margin:5px 7px;
+	padding:0 5px;
+	text-align: center;
+	border-radius:2px;
+	cursor:pointer;
+	max-width:70px;
+	height:24px;
+	line-height:24px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+.screen ul li a{
+	display:block;
+	color:#8196b0;
+}
+.screen ul li.cur{
+	color:#fff;
+	background:#23a0bf;
+}
+.screen ul li.cur a{
+	color:#fff;
+}
+.screen ul li:hover{
+	background:#384355;
+}
+.screen ul li:hover a{
+	color:#fff;
+}
+.screen ul li:active{
+	background:#2093af;
+}
+.homeCon .videos_screen{
+	margin-top:14px;
+}
+.homeCon .videos_screen ul{
+	height:264px;
+}
+/*网页游戏*/
+.games_list .webgames_con ul{
+	width:960px;
+	height:284px;
+	margin-left: -12px;
+}
+.games_list .webgames_con ul li{
+	width: 226px;
+	height: 126px;
+	margin: 12px 0 0 12px; 
+	border: 1px solid #000;
+	overflow: hidden;
+}
+/*.games_list .webgames_con ul li:hover a{
+	background:url(../images/newborder.png) no-repeat;
+}*/
+.games_list .webgames_con ul li:hover {
+	border:1px solid #23a0bf;
+}
+.games_list .webgames_con ul li a{
+	display:block;
+	width:100%;
+	height:100%;
+	border: inset 1px;
+	border-color: rgba(0,0,0,0.1); 
+	box-sizing: border-box;  
+	-webkit-box-sizing: border-box;  
+	-moz-box-sizing: border-box;
+}
+.games_list .webgames_con ul li a div{
+	position:relative;
+	width: 100%;
+	height: 100%;
+}
+.games_list .webgames_con ul li a div img{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+.games_list .webgames_con ul li>p{
+	position:relative;
+	top:-30px;
+	height:30px;
+	line-height:30px;
+	padding:0 8px;
+	background:rgba(0,0,0,.8);
+	z-index:9;
+	color:#6e7784;
+	cursor:pointer;
+}
+.games_list .webgames_con ul li>p span:first-child{
+	width:66%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+.webgames .webgames_con ul li>p.enter{
+	display:none;
+	padding:0;
+	text-align: center;
+	color:#fff;
+}
+.webgames .webgames_con ul li>p.enter span{
+	width:50%;
+	height:100%;
+}
+.webgames .webgames_con ul li>p.enter span:hover{
+	background:#26aed0;
+}
+.webgames .webgames_con ul li>p.enter span:active{
+	background:#2093af;
+}
+.webgames .webgames_con ul li>p.enter span.cur{
+	background:#23a0bf;
+}
+.webgames .webgames_con ul li>p.enter span:last-child:hover{
+	background:#26aed0;
+}
+.webgames .webgames_con ul li>p.enter span:last-child:active{
+	background:#2093af;
+}
+.webgames .webgames_con ul li:hover p{
+	display:none;
+}
+.webgames .webgames_con ul li:hover .enter{
+	display:block;
+}
+.videos ul li a div{
+	position:relative;
+}
+.videos .webgames_con ul li:hover p{
+	display:none;
+}
+.videos .webgames_con ul li a div .mask{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	padding:0;
+	background:rgba(0,0,0,.5);
+	z-index:10;
+}
+.videos.games_list{margin-top: 10px;}
+.videos .webgames_con ul li:hover .mask{
+	display:block;
+}
+i.play{
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left: -25px;
+	margin-top: 20px;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 99;
+	filter:alpha(opacity=0);
+	cursor:pointer;
+}
+.videos .webgames_con ul li:hover .play,.in_video_list_con ul li:hover .play,.new_webgame_con li:hover .play,.video_con .webgame_recent_con li:hover .play{
+	background: url(../images/play_video.png) no-repeat;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	margin-top: -25px;
+	opacity:1;
+    filter:alpha(opacity=100);
+}
+.tab {
+	width:228px;
+	margin-top:13px;
+}
+.tab .tab_title{
+	height: 28px;
+	line-height: 28px;
+	border-bottom:1px solid #262e3b;
+}
+.tab .tab_title span {
+	position:relative;
+	top:-1px;
+	width: 68px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-size: 14px;
+	margin-right: 8px;
+	cursor: pointer;
+}
+.tab_titleBg{
+	border-bottom:2px solid #23a0bf;
+	color:#23a0bf;	
+}
+.tab .tab_con {
+	border-top:1px solid #1f2631;
+	height:277px;
+	background: #1f2631;
+}
+.homeCon .tab .tab_con{height:280px; }
+.tab .tab_con>div{
+	border-bottom:1px solid #262e3b;
+}
+.tab .tab_con div span {
+	width:33.3%;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+}
+.tab .tab_con ul {
+	padding: 0;
+}
+.tab_hide {
+	display: none;
+}
+.tab .tab_con ul li {
+	width:100%;
+	height: 36px;
+	padding: 0;
+	margin: 0;
+}
+.tab .tab_con ul li:nth-child(2n-1) {
+	background:#1d232f;
+}
+.tab .tab_con ul li:hover,.webpageGame .left_con .tab .tab_con ul li:active{
+	background: #2d3747;
+}
+.tab .tab_con ul li.cur{
+	background: #2d3747;
+}
+.tab .tab_con ul li span {
+	width:33.3%;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+	margin:0;
+	cursor:pointer;
+}
+.tab .tab_con ul li .tab_conTime {
+	white-space: nowrap;
+	letter-spacing: -1px;
+	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	-0-transform: scale(0.9);
+}
+.tab .tab_con ul li .gameEnter {
+	display:none;
+	width: 28.3%;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	margin: 7px 5px 0;
+	background: #23a0bf;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.tab .tab_con ul li .gameEnter:hover{
+	background: #26aed0;
+}
+.tab .tab_con ul li .gameEnter:active{
+	background: #2093af;
+}
+.tab .tab_con ul li.cur .gameEnter{
+	display:block;
+}
+.tab .tab_con ul li.cur .tab_conTime{
+	display:none;
+}
+.tab .tab_con ul li:hover .gameEnter{
+	display:block;
+}
+.tab .tab_con ul li:hover .tab_conTime{
+	display:none;
+}
+.recommend{margin-bottom: 10px;}
+.null{
+	display:block;
+}
+.icon-device{
+    width: 30px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-device-deepoon{
+    background-image: url(../images/icon-device/deepoon.png);
+}
+.icon-device-oculus{
+    background-image: url(../images/icon-device/oculus.png);
+}
+.icon-device-htc{
+    background-image: url(../images/icon-device/htc.png);
+}
+.icon-device-osvr{
+    background-image: url(../images/icon-device/osvr.png);
+}
+.device_con{width:96px;height: 32px;overflow: hidden; }
+
+/* 提示 */
+.triangle{
+	height:0;
+    width:0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-color:transparent #c5cace transparent transparent;
+    border-style:solid;
+    border-width:6px;
+    left: -11px;
+    top: 26px;
+	position: absolute;
+}
+.game_tips_con{
+	width: 280px;
+	padding: 20px 10px;
+	background: #c5cace;
+	box-shadow: 0 0 20px #000;
+	left: 228px;
+	cursor: default;
+	top: 0px;
+	min-height: 180px;
+	border: 1px solid #3e424a;
+	z-index: 99;
+	color: #000;
+	display:none;
+}
+.game_tips_con p{color: #000 !important;}
+.game_tips_con .triangle{display: block;}
+.game_tips_head{border-bottom: 1px solid #d2d6db;}
+.game_tips_head h4{font-size: 18px !important;}
+.game_tips_con .game_tips_head p{padding: 5px ;border-bottom: 1px solid #b8bcc0;}
+.game_tips_body{line-height: 16px;}
+.game_tips_body ul{margin: 14px 0 10px 0;height: auto;}
+.game_tips_body ul li{
+	width: 49% !important;
+	height: 56px!important;
+	cursor: default;
+	background: rgba(0,0,0,0) !important;
+	border: none !important;
+}
+.game_tips_body ul li.fr{width: 39% !important;}
+.game_tips_body ul li p.device{background: #9399a5;border-radius: 2px;height: 36px;margin-top: 6px;padding: 0 5px;display: inline-block; width: auto;overflow: hidden;}
+.game_tips_body ul li p.price {margin-top: 6px;}
+.game_tips_body ul li p.price span.money{padding:0 4px; height: 36px; line-height: 36px;min-width: 60px; background: #f29f11;color: #fff;}
+.game_tips_body ul li p.price span.original{text-decoration: line-through; color: #94afd0;margin: 20px 0 0 10px;}
+.game_tips_body  .tag span{padding: 0 6px; line-height: 18px; background: #969ca8;color: #fff;display: inline-block;margin: 6px 6px 10px 0;}
+.game_tips_con .game_tips_body p.img_con img{width: 30px;height: 30px; float: left;display: inline-block;margin: 6px 6px 0 0;}
+.VRhome_pic .game_tips_con{left: 340px;}
+.VRgames_con .vr_pic .game_tips_con{left: 178px;}
+.homeCon .vr_pic .game_tips_con{left:214px;}
+.game_tips_con .freeGmae{height: 36px;line-height: 36px; padding: 0;width: 80px;margin-top: 6px; text-align:center; color:#fff;}
+.VRhotGames .VRhotGames_con ul li:hover .game_tips_con{
+	display:block;
+}
+.VRhotGames .VRgames_con ul li:hover .game_tips_con{
+	display:block;
+}
+.VRhotGames .VRhotGames_con ul li .game_tips_con ul{
+	width:100%;
+}
+.VRhotGames .VRhotGames_con ul li .game_tips_con{
+	left:358px;
+}
+.VRhotGames .VRgames_con ul li .game_tips_con{
+	left:241px;
+}
+.VRhotGames .videosCon ul li:nth-child(2n) .game_tips_con{
+	left:-304px;
+}
+.VRhotGames .VRgames_con ul li:nth-child(3n) .game_tips_con{
+	left:-304px;
+}
+.VRhotGames .videosCon ul li:nth-child(2n) .triangle,.VRhotGames .VRgames_con ul li:nth-child(3n) .triangle{
+	left:300px;
+	border-color:transparent transparent transparent #c5cace;
+}
+/*comesoon 样式*/
+.coming{
+	width: 1270px;
+	height: 420px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: -635px;
+	margin-top: -210px;
+}
+.coming img{
+	display: block;
+}
+.coming p{
+	color: #23a0bf;
+	font-size: 16px;
+	text-align: center;
+	margin-top: -54px;
+}
+.filter-con .screen_con ul{
+	padding-top:10px;
+}

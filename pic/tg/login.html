@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>注册登录</title>
+	<link rel="stylesheet" href="../common/style/base.css">
+	<link rel="stylesheet" href="style/weblogin.css">
+	<script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+	<div class="web_login">
+		<div class="login_title">
+			<span class="up">新用户注册</span>
+			<span>老用户登录</span>
+		</div>
+		<div class="login_con">
+			<img src="images/new.png" />
+			<ul>
+				<li>
+					<span>账户名</span>
+					<input type="text" name="" />
+					<div class="errorMsg">
+						<p class="erro_msg_show"><i></i>该号码已经被注册</p>
+					</div>
+				</li>
+				<li>
+					<span>登录密码</span>
+					<input type="password" name="" />
+					<div class="errorMsg">
+						<p><i></i>该号码已经被注册</p>
+					</div>
+				</li>
+				<li>
+					<span>确认密码</span>
+					<input type="password" name="" />
+					<div class="errorMsg">
+						<p><i></i>该号码已经被注册</p>
+					</div>
+				</li>
+				<li>
+		            <label class="pr">
+		                <span>验证码</span>
+		                <input type="text" placeholder="输入验证码">
+		                <img src="../../../pic/website/images/" class="pa">
+		                <div class="errorMsg">
+							<p><i></i>该号码已经被注册</p>
+						</div>
+		            </label>
+				</li>
+            </ul>
+		</div>
+		<div class="login_con hide">
+			<ul class="register_con">
+				<li>
+					<span>账户名</span>
+					<input type="text" name="" />
+					<div class="errorMsg">
+						<p><i></i>该号码已经被注册</p>
+					</div>
+				</li>
+				<li>
+					<span>登录密码</span>
+					<input type="password" name="" />
+					<div class="errorMsg">
+						<p><i></i>该号码已经被注册</p>
+					</div>
+				</li>
+				<li>
+		            <label class="pr">
+		                <span>验证码</span>
+		                <input type="text" placeholder="输入验证码">
+		                <img src="../../../pic/website/images/" class="pa">
+		                <div class="errorMsg">
+							<p><i></i>该号码已经被注册</p>
+						</div>
+		            </label>
+				</li>
+            </ul>
+		</div>
+		<div class="login_play_games">
+			<p>开始游戏</p>
+			<div class="agreement">
+				<i class="sel"></i>
+				<span>我已阅读并同意<a href="javascirpt:;">《VRonline用户注册协议》</a></span>
+			</div>
+			<div class="third_login">
+				<a href="javascript:;"><i></i>QQ登录</a>
+				<a href="javascript:;"><i class="wx"></i>微信登录</a>
+				<a href="javascript:;"><i class="wb"></i>微博登录</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	$(function(){
+		//注册和登录切换
+		var aSpan=$(".login_title span");
+		var aCon=$(".login_con");
+		var now=0;
+		aSpan.click(function(){
+			now=$(this).index();
+			tab();
+		});
+		function tab(){ 
+			aSpan.removeClass('up');
+			aCon.addClass('hide');
+			aSpan.eq(now).addClass('up');
+			aCon.eq(now).removeClass('hide');
+		};
+	})
+</script>

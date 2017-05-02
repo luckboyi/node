@@ -1,0 +1,43 @@
+.suc_bounced_con{
+    border: 1px solid #000;
+    background: #1c202a;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 0 10px 20px 10px;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    z-index: 99999;
+    box-shadow: 0px 0px 8px #000;
+    color: #828f9e;
+}
+.bounced_head{width: 100%;height: 46px;}
+.bounced_head h3{
+    line-height: 46px;
+    font-size: 18px;
+}
+.bounced_head .close_btn{right: 0;}
+.bounced_body{
+    min-width: 400px;
+    padding: 10px 0;
+    text-align: center;
+    background: #151920;
+}
+.bounced_body p{
+    display: inline-block;
+    line-height: 42px;
+    width: 100%;
+}
+.bounced_foot{height: 30px; margin:10px 0 0px 0;}
+.bounced_foot ul{display: inline-block;height: 30px;}
+.bounced_foot ul li,.about_vr .bounced_foot p{
+    line-height: 30px;
+    width: 90px;
+    background: #384455;
+    cursor: pointer;
+    margin: 0 4px;
+    color: #a9bad0;
+    border: 1px solid #000;
+}
+.bounced_foot ul li:hover,.about_vr .bounced_foot p:hover{background: #48576f;}
+.bounced_foot ul li:active,.about_vr .bounced_foot p:active{background: #384355;}

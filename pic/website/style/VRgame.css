@@ -1,0 +1,257 @@
+.VRgame_home{
+	width:1240px;
+	margin:0 auto;
+	color:#8196b0 ;
+}
+.VRgame_home div.local_games,.VRgame_home div.VR_games{
+	line-height:17px;
+	padding:10px 0;
+	border-bottom:1px solid #252d3b;
+	cursor:pointer;
+}
+.VRgame_home_left{
+	border-right:1px solid #293141;
+}
+.VRgame_home_left .VR_game_icon{
+	width:16px;
+	height:16px;
+	margin-right:12px;
+	background:url(../images/newVRhome.png) no-repeat -68px -140px;
+}
+.VRgame_home_left .VR_games_right{
+	width:10px;
+	height:10px;
+	margin-top:6px;
+	background-position:-51px -281px;
+}
+.VRgame_home_left .VR_games i.active{
+	background:url(../images/newVRhome.png) -51px -291px no-repeat!important;
+}
+.VRgame_home_left .VR_games_left{
+	margin-left:32px;
+}
+.VRgame_home_left .VR_games:hover{
+	color:#b1d0f7;
+}
+.VRgame_home_left .VR_games:hover .VR_games_left{
+	background-position:-88px -140px;
+}
+.VRgame_home_left h3.f14{
+	margin-top:10px;
+	padding:0 10px;
+	line-height:24px;
+	border-bottom:1px solid #1f2635;
+}
+.VRgame_home_left .VR_games_con ul{
+	border-top:1px solid #1f2635;
+	padding-top:10px;
+	width:100%;
+	overflow: hidden;
+}
+.VRgame_home_left .hot_game .VR_games_con ul{
+	border:none;
+	padding-top:0;
+}
+.VRgame_home .VRgame_home_left .VR_games_con ul li{
+	padding:8;
+	margin:0;
+}
+.VRgame_home_left .VR_games_con ul li{
+	width:208px;
+	height:117px;
+	padding:8px;
+}
+.VRgame_home_left .VR_games_con ul li:hover{
+	background:url(../images/games_border.png) no-repeat;	
+}
+.VRgame_home_left .VR_games_con ul li:hover a{
+	border:1px solid #23a0bf;	
+}
+.VRgame_home_left .VR_games_con ul li a{
+	position:relative;
+	display:block;
+	width:206px;
+	height:115px;
+	border:1px solid #000;
+}
+.VRgame_home_left .VR_games_con ul li a>p{
+	position:absolute;
+	bottom:0;
+	height:30px;
+	width:100%;
+	line-height:30px;
+	z-index:99;
+	background: rgba(0,0,0,.5);
+}
+.VRgame_home_left .VR_games_con ul li a>p span{
+	display:block;
+	width:38%;
+	text-indent:18px;
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	-o-text-overflow:ellipsis; 
+	overflow:hidden;
+	color:#94afd0;
+}
+.VRgame_home_left .VR_games_con ul li a>p span:first-child{
+	text-indent:6px;
+	width:62%;
+	color: #828f9e;
+}
+.VRgame_home_left .VR_games_con ul li a img{
+	width:100%;
+	height:100%;
+}
+.VRgame_home_right{
+	width:970px;
+}
+.VRgame_home_con{
+	margin-top:12px;
+}
+.VRhotGames{
+	width:730px;
+}
+.VRhotGames_title{
+	height:28px;
+	line-height:28px;
+	border-bottom:1px solid #313a4a;
+	margin-bottom:8px;
+}
+.VRhotGames_title h3{
+	position:relative;
+	top:-2px;
+	font-size:14px;
+	padding-right:10px;
+	color:#23a0bf;
+	border-bottom:2px solid #23a0bf;
+}
+.VRhotGames_title h3 i{
+	position:relative;
+	top:4px;
+	width:30px;
+	height:20px;
+	background:url(../images/newVRhome.png) no-repeat 0 0;
+}
+.VRhotGames_title .game_library i{
+	background:url(../images/newVRhome.png) no-repeat -42px -41px;
+}
+.VRhotGames_title span{
+	padding-left:14px;
+	color:#627288;
+	height:14px;
+	line-height:14px;
+	margin-top:8px;
+	background:url(../images/newVRhome.png) no-repeat -290px 3px;
+	cursor:pointer;
+}
+.VRhotGames_title span:hover{
+	color:#94afd0;
+	background:url(../images/newVRhome.png) no-repeat -290px -10px;
+}
+.VRhotGames .VRhotGames_con ul{
+	width:750px;
+}
+.VRhotGames .VRhotGames_con ul li{
+	width:357px;
+	height:200px;
+	margin:0 16px 16px 0;
+}
+.VRhotGames .VRhotGames_con ul li a{
+	display:block;
+	width:355px;
+	height:198px;
+	border:1px solid #000;
+}
+.VRhotGames .VRhotGames_con ul li a img{
+	width:100%;
+	height:100%;
+}
+.VRhotGames .VRhotGames_con ul li a>p{
+	position:relative;
+	bottom:33px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	background:rgba(0,0,0,.8);
+	z-index:9;
+	color:#6e7784;
+	cursor:pointer;
+	text-indent:8px;
+}
+.VRhotGames .VRhotGames_con ul li a>p span{
+	width:20%;
+}
+.VRhotGames .VRhotGames_con ul li a>p span:first-child{
+	width:80%;
+}
+.VRhotGames .VRhotGames_con ul li:hover a{
+	border:1px solid #23a0bf;
+}
+.VRgame_home_right .hotList .hotList_title span{
+	position:relative;
+	top:-1px;
+	width:80px;
+	padding-right:10px;
+	display:inline-block;
+	text-align:right;
+	color:#23a0bf;
+	border-bottom:2px solid #23a0bf;
+	font-size:14px;
+	cursor:pointer;
+}
+/*游戏库*/
+.VRgame_home_con .VRhotGames .VRgames_con ul li{
+	width:240px;
+	height:135px;
+	margin:0 6px 6px 0;
+}
+.VRgame_home_con .VRhotGames .VRgames_con ul li a{
+	width:238px;
+	height:133px;
+}
+.VRgame_home_con .VRhotGames .VRgames_con ul li a>p span{
+	width:30%;
+}
+.VRgame_home_con .VRhotGames .VRgames_con ul li a>p span:first-child{
+	width:70%;
+}
+.VRgame_home_right .hotList .hotList_title span i{
+	position:absolute;
+	left:0;
+	top:6px;
+	width:18px;
+	height:16px;
+	background:url(../images/newVRhome.png) no-repeat -216px 0;
+}
+.VRgame_home_right .hotList .hotList_con ul{
+	height:423px;
+}
+.VRgame_home_right .hotList .hotList_con ul li:first-child{
+	padding-top:6px;
+}
+.VRgame_home_right .hotList .hotList_con ul li a span{
+	margin-bottom:0;
+}
+.VRgame_home_right .screen .screen_title h3{
+	width:120px;
+}
+.hotList .hotList_con.video_hot  ul li,.webgame_con  .hotList .hotList_con.webgame_hot ul li{margin-top: 2px;}
+.homeCon .hotList .hotList_con.video_hot  ul li{margin-top: 0;}
+.VRhotGames .VRgames_con ul li{
+	width:359px;
+	height:99px;
+	margin:0 15px 10px 0;
+}
+.VRhotGames .VRgames_con ul li a{
+	display: block;
+}
+.VRgame_home_con .screen {
+	margin-top:17px;
+}
+.VRgame_home_con .screen ul{
+	height:212px;
+}
+.VRgame_home  .new_webgame{margin-top: 0;}
+.VRgame_home_con .vrgame_hot ul li{
+	margin:6px 0;
+}
