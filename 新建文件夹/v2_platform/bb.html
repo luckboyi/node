@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/va-style.css">
+    <script src="js/plug/jquery-1.11.3.min.js"></script>
+    <script src="startGame/js/Interface.js"></script>
+
+</head>
+<body>
+<!--头部结构S-->
+<div class="header pr clearfix pageGame_window" style="-webkit-app-region: drag;">
+    <div class="manager fr clearfix pr"   style="-webkit-app-region: no-drag;">
+        <div class="window  mini fl" title="最小化" style="-webkit-app-region: no-drag;"></div>
+        <div class="window  max fl" title="最大化" style="-webkit-app-region: no-drag;"></div>
+        <div class="window  closeplate fl" title="关闭" style="-webkit-app-region: no-drag;"></div>
+    </div>
+</div>
+<!--头部结构E-->
+<iframe src="http://passport.vronline.com/auth/3Dbobo?url=vr_windows" frameborder="0" width="100%" height="100%" style="background: #fff;"></iframe>
+</body>
+</html>
+<script>
+    $(function(){
+        windowFn();
+    })
+</script>

@@ -1,0 +1,22 @@
+<div class="drive clearfix " >
+    <div class="act_con fl">
+        <h3 class="act_title" ng-bind="driveMs.title" data-name=""></h3>
+        <p class="act_text" ng-bind="driveMs.explain"></p>
+        <div >
+            <div class="install_btn language " data-name="install" ng-show="driveBtn" ng-click="driveBtn()">安装</div>
+            <div class="drive_schedule pr" ng-show="drivePro">
+                <div class="in_sch pr" >
+                    <p class="do_in_sch pr "  style="width:{{driveDow.percent*3.88}}px">
+                        <p class="pa" style="left:5px; top:0;" ng-bind="driveDow.text"></p>
+                        <i class="do_btn" ></i>
+                    </p>
+                </div>
+                <span class="pa" ng-class="{pause:pause}" ng-click="stopBtn()"></span>
+            </div>
+        </div>
+    </div>
+    <div class="act_img fr">
+        <img ng-src="{{driveMs.imgSrc}}"/>
+    </div>
+</div>
+

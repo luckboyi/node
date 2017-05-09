@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值中心</title>
+    <link rel="stylesheet" href="../online/pageGame/style/base.css">
+    <link rel="stylesheet" href="style/charge.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="charge_container clearfix">
+        <div class="fl charge_title">
+            <ul>
+                <li class="cur pr"><i></i>支付宝</li>
+                <li class="pr"><i class="wx"></i>微&nbsp&nbsp&nbsp&nbsp信</li>
+                <li class="pr"><i class="bank"></i>银行卡</li>
+            </ul>
+        </div>
+        <div class="fl in_charge_container">
+            <div class="in_charge_con">
+                <h4 class="wdHoverColor">充值账号</h4>
+                <p class="con">
+                    <span>平台账号：</span>
+                    <span class="name"></span>
+                    <span class="blueColor2 platform_balance">G点余额：</span>
+                    <span class="blueColor2 has_v_num">80</span>
+                </p>
+                <p class="con charge_sel">
+                    <span class="cur">充值V点</span>
+                    <span>网页游戏</span>
+                </p>
+            </div>
+            <ul class="charge_sel_con">
+                <li class="platform_charge cur">
+                    <div class="in_charge_con">
+                        <h4 class="wdHoverColor">选择充值金额</h4>
+                        <p class="con charge_num">
+                            <span class="cur">100</span>
+                            <span>500</span>
+                            <span>1000</span>
+                            <span>2000</span>
+                            <span>5000</span>
+                        </p>
+                        <p class="con other_num clearfix pr">
+                            <span class="other_title fl">其他金额：</span>
+                            <span class="other_input fl pr">
+                                <input type="text" placeholder="填写1~500000之间的整数">
+                                <i class="pa"><span class="errorColor pa " >金额填写1~50000之间的整数，不含小数点</span></i>
+                            </span>
+                            <span class="errorColor pa errorMsg">金额填写1~50000之间的整数，不含小数点</span>
+                        </p>
+                        <p class="con sel_pay">
+                            <span class="charge_btn aliPay cur">
+                                <i class="cur">支付宝手机扫码</i>
+                                <i>登录支付宝账号</i>
+                            </span>
+                            <span class="charge_btn wxPay">
+                                <i class="cur">微信手机支付</i>
+                            </span>
+                            <span class="charge_btn bankPay">
+                                <i class="cur">网银支付</i>
+                                <i>信用卡支付</i>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+                <li class="pageGame_charge ">
+                    <div class="in_charge_con">
+                        <h4 class="wdHoverColor">选择充值金额</h4>
+                        <p class="con">
+                            <span>游戏名称：</span>
+                            <select name="" id="Gamename">
+                                <option value="1">蜀山传奇</option>
+                                <option value="2">选择服务器2</option>
+                                <option value="3">选择服务器3</option>
+                                <option value="4">选择服务器4</option>
+                            </select>
+                            <span class="sel_server">选择服务器：</span>
+                            <select name="" id="server">
+                                <option value="1">选择服务器1</option>
+                                <option value="2">选择服务器2</option>
+                                <option value="3">选择服务器3</option>
+                                <option value="4">选择服务器4</option>
+                            </select>
+                            <span class="mal30">总付比例：</span>
+                            <span>￥</span>
+                            <span>1:100 元宝</span>
+                        </p>
+                        <p class="con charge_num">
+                            <span class="cur">100</span>
+                            <span>500</span>
+                            <span>1000</span>
+                            <span>2000</span>
+                            <span>5000</span>
+                        </p>
+                        <p class="con other_num clearfix pr">
+                            <span class="other_title fl">其他金额：</span>
+                            <span class="other_input fl pr">
+                                <input type="text" placeholder="填写1~500000之间的整数">
+                                <i class="pa"><span class="errorColor pa " >金额填写1~50000之间的整数，不含小数点</span></i>
+                            </span>
+                            <span class="errorColor pa errorMsg">金额填写1~50000之间的整数，不含小数点</span>
+                            <span class="mal30">获得游戏币：</span>
+                            <span class="blueColor">38900元宝</span>
+                        </p>
+                        <div class="con pay_v">
+                            <p>
+                                <span>V点余额：</span>
+                                <span class="blueColor">100</span>
+                                <span class="blueColor">点</span>
+                                <span class="pr mal30"><i class="sel pa"></i>使用V点支付本次交易</span>
+                            </p>
+                            <p class="use_v">
+                                <span>支付总额：</span>
+                                <span class="whiteColor">￥</span>
+                                <span class="whiteColor total_num">500</span>
+                                <span>/</span>
+                                <span class="blueColor use_v_num">100</span>
+                                <span class="blueColor">点被使用</span>
+                            </p>
+                            <p>
+                                <span>你需支付：</span>
+                                <span>￥400</span>
+                            </p>
+                        </div>
+                        <p class="con sel_pay">
+                            <span class="charge_btn aliPay cur">
+                                <i class="cur">支付宝手机扫码</i>
+                                <i>登录支付宝账号</i>
+                            </span>
+                            <span class="charge_btn wxPay">
+                                <i class="cur">微信手机支付</i>
+                            </span>
+                            <span class="charge_btn bankPay">
+                                <i class="cur">网银支付</i>
+                                <i>信用卡支付</i>
+                            </span>
+                        </p>
+                        <div class="con clearfix pay_tips">
+                            <span class="fl"></span>
+                            <div class="fl">
+                                <p>您的V点数余额不足，无法支付。您可以通过以下方法进行充值：</p>
+                                <p>方法1：对平台账号充值VR点数。<a href="javascript:;" class="blueColor">如何获得V点数>></a></p>
+                                <p>方法2：使用支付宝进行支付。</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="in_charge_con">
+                <h4  class="wdHoverColor">温馨提示<span class="fr"><a href="javascript:;" class="blueColor f12  pr"><i class="pa"></i>联系客服</a></span></h4>
+                <div class="tips_con">
+                    <p>1、您充入的V点不可返还，并且无法提现，某些游戏和（或）服务可能会收费额外费用。</p>
+                    <p>2、支付宝账户额支付：只要您的支付宝账户中存有余额，就可以为游戏进行充值。</p>
+                    <p>3、使用支付宝支付，对消费者来说，目前不需要任何的手续费。</p>
+                    <p>想要了解更多信息，请阅读 <a href="javascript:;" class="wdHoverColor">《VRonline使用条款》</a>和 <a href="javascript:;" class="wdHoverColor">《销售条款》</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<script>
+    $(function(){
+        $('.other_input input').focus();
+        //点击左侧支付方式
+        $('.charge_title li').on('click',function(){
+            var n = $(this).index();
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.charge_sel_con li.cur').find('.sel_pay span').eq(n).show().siblings().hide();
+        });
+        //选择充值类型
+        $('.charge_sel span').on('click',function(){
+            var n = $(this).index();
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.charge_sel_con li').eq(n).addClass('cur').siblings().removeClass('cur');
+            //判断是何种支付方式
+            var n =$('.charge_title li.cur').index();
+            $('.charge_sel_con li.cur').find('.sel_pay span').eq(n).show().siblings().hide();
+        });
+
+        //是否使用v点支付
+        $('.pay_v .sel').on('click',function(){
+            //alert($('.pageGame_charge .other_input input').val())
+            if($('.pageGame_charge .other_input input').val() !=''){
+                $(this).toggleClass('selected');
+                $(this).hasClass('selected') ? $('.use_v').show():$('.use_v').hide();
+                //使用v点
+                $('.use_v_num').text($('.has_v_num').text());
+                //$('.other_input').val();
+                $('.use_v .total_num').text($('.pageGame_charge .other_input input').val())
+            }else{
+
+                $('.pageGame_charge .errorMsg').text('充值金额不能为空').show();
+            }
+        });
+        //选择充值金额
+        $('.charge_num span').on('click',function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            var num = $(this).text();
+            $('.other_input input').val(num);
+            $('.use_v .total_num').text(num);
+            $(this).parents('li').find('.errorMsg').text('').hide();
+        });
+        //判断充值
+        /*当失去焦点的时候*/
+        $('.other_input input').blur(function(){
+            var val = $(this).val();
+            //$('.pageGame_charge .errorMsg').text('充值金额不能为空').show();
+            var msg = chargeNumCheck($(this));
+            if(msg != ''){
+                $(this).parents('li').find('.errorMsg').text(msg).show();
+            }else{
+                $(this).parents('li').find('.errorMsg').hide();
+            }
+        });
+
+    });
+    function chargeNumCheck(obj){
+        var val = $.trim(obj.val());
+        var msg = '';
+        var re = /^(\+|-)?\d+$/;
+        if(val == ''){
+            msg = '充值金额不能为空';
+        }else if(!re.test(val) || val < 0 || val.length >5 ||isNaN(val)){
+            msg= '金额填写1~50000之间的整数，不含小数点'
+        }else{
+            msg = '';
+        }
+        return msg;
+    }
+</script>

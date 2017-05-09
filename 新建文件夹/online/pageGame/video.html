@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频页</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="video_css/valiant360.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/jquery.valiant360.js"></script>
+</head>
+<body>
+<div class="video_play_container">
+    <div class="valiantPhoto" data-video-src="demo.mp4" style="width: 960px; height: 540px;background: #000"></div>
+</div>
+</body>
+</html>
+<script>
+    $(function(){
+        //vr视频播放
+        $('.valiantPhoto').Valiant360({
+            clickAndDrag:true,
+            muted:false,
+            loop:false
+        });
+        //点击喜欢或者不喜欢是
+       /* $('.video_content_head').on('click','.comment',function(){
+            if(!$('body').find('.comment').hasClass('cur')){
+               var num = parseInt($(this).find('b').html());
+                num = num+1;
+                $(this).addClass('cur').find('b').text(num);
+            }
+        })*/
+    })
+</script>

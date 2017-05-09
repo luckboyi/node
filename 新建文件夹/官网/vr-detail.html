@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VR游戏详情页</title>
+    <link rel="stylesheet" href="../../../pic/common/style/base.css">
+	<link rel="stylesheet" href="../../../pic/website/style/headeFooter.css"/>
+	<link rel="stylesheet" href="../../../pic/website/style/VRhome.css" />
+	<!--new 2016-10-23 qb-->
+	<script src="js/html5shiv.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="../../../pic/website/js/detail_video.js"></script>
+</head>
+<body class="gamesBg">
+<header>
+	<div class='top clearfloat'>
+		<div class='fl left'>
+			<img src='../../../pic/website/images/logo.png' />
+			<a class='sy' href="javascript:;">首页</a>
+			<a href="javascript:;">充值</a>
+			<a href="javascript:;">关于VRonline</a>
+		</div>
+		<div class='fr right clearfix'>
+			<a class='fl blue' href='javascript:;'>安装VR客户端</a>
+			<a class='login' href="javascript:;">登录</a>
+			<!--new 2016-10-14-->
+			<!--new 2016-10-19 qb 语言暂时先不要-->
+			<a class='language clearfix hide' href="javascript:;">
+				<span>语言</span>
+				<div class="change_language">
+					<p class="chinese">中文</p>
+					<p>英文</p>
+				</div>
+			</a>
+			<!--new 2016-10-14--以下注释的代码登录之后的样式-->
+			<div class='fr login_user hide'>
+				<div class="clearfix">
+					<span class="user_pic fl">
+						<img src='' />
+					</span>
+					<div class="fl user_detail clearfix">
+						<!--new 2016-10-19 qb-->
+						<h3>DaveheDavehe<span></span></h3>
+						<div class="grade clearfix">
+							<span class="fl level2"></span>
+							<span class="fl level_num">2345</span>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<!--new 2016-10-19 qb-->
+					<li class="geren"><a href="javascript:;"><span></span>个人中心</a></li>
+					<!--<li class="change"><a href="javascript:;"><span></span>更改语言</a></li>-->
+					<li class="switch"><a href="javascript:;"><span></span>切换账户</a></li>
+					<li class="quit"><a href="javascript:;"><span></span>退出</a></li>
+				</ul>
+			</div>
+			<!--new 2016-10-14-->
+		</div>
+	</div>
+</header>
+<div class="sec_nav">
+	<div class="nav clearfloat">
+		<ul class='fl clearfloat'>
+			<li class="fl">
+				<!--new 2016-10-14 span外面包个a-->
+				<a href="javascript:;"><span>VR游戏</span></a>
+				<div class='con block'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+			<li class="fl">
+				<!--new 2016-10-14 span外面包个a-->
+				<a href="javascript:;"><span>多媒体</span></a>
+				<div class='con'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+			<li class="fl">
+				<!--new 2016-10-14 span外面包个a-->
+				<a href="javascript:;"><span>网页游戏</span></a>
+				<div class='con'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+			<li class="fl">
+				<!--new 2016-10-14 span外面包个a-->
+				<a href="javascript:;"><span>设备支持</span></a>
+				<div class='con'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+		</ul>
+		<!--<div class='search fr'>
+			<input class='txt' type='text' placeholder="请输入游戏名称" />
+			<input type='submit' value='' class='sub' />
+		</div>-->
+	</div>
+</div>
+<div class="vr_container clearfix">
+    <div class="left_con fl">
+        <h3>最近游戏</h3>
+        <!--new 2016-10-13-->
+        <div class="in_list_con">
+        	<!--new2016-10-23 qb-->
+	        <ul class="ul_bg">
+	            <li class="cur">
+	                <a href="javascript:;">
+	                    <span class="fl">
+	                        <img src="../../../pic/website/images/3.jpg">
+	                    </span>
+	                    <div class="title fl">
+	                        <p class="name">盛世王朝</p>
+	                        <p class="service">青山云3服</p>
+	                    </div>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="javascript:;">
+	                    <span class="fl">
+	                        <img src="../../../pic/website/images/3.jpg">
+	                    </span>
+	                    <div class="title fl">
+	                        <p class="name">盛世王朝</p>
+	                        <p class="service">青山云3服</p>
+	                    </div>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="javascript:;">
+	                    <span class="fl">
+	                        <img src="../../../pic/website/images/3.jpg">
+	                    </span>
+	                    <div class="title fl">
+	                        <p class="name">盛世王朝</p>
+	                        <p class="service">青山云3服</p>
+	                    </div>
+	                </a>
+	            </li>
+	        </ul>
+        </div>
+        <div class="noGame_history hide">
+            <span></span>
+        </div>
+        <!--new 2016-10-20 qb finish-->
+        <div class="noLoginGame">
+        	<span></span>
+        </div>
+        <!--new 2016-10-13-->
+        <div class="ad">
+        	<!--new 2016-10-28 qb-->
+            <a href="card_package.html" target="_blank">
+                <img src="../../../pic/website/images/package.jpg">
+            </a>
+        </div>
+        <div class="ad">
+            <a href="javascript:;">
+                <img src="../../../pic/website/images/3.jpg">
+            </a>
+        </div>
+    </div>
+    <div class="right_con fr detail_container">
+        <div class="detail clearfix">
+            <div class="left_contain fl">
+                <h3>Tom Clancy’s The Division™</h3>
+                <div class="lanrenzhijia">
+                    <div id="picBox" class="picBox">
+                        <ul class="cf">
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                            <li><a href="javascript:;"><img src="image/vedio-bg.jpg" /><i class="btn-link-i"></i></a></li>
+                        </ul>
+                    </div>
+                    <div id="listBox" class="listBox">
+                        <ul class="cf">
+                            <li class="on"><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+
+                        </ul>
+                    </div>
+                    <div class="detail_btn">
+                        <span id="prev" class="btn prev"></span>
+                        <span id="next" class="btn next"></span>
+                        <span class="btn_center" id="center"><em></em></span>
+                    </div>
+                </div>
+                <div class="detail_comment">
+                    <div class="comment ">
+                    	<div class="comment_foot">
+                            <p class="have_comment clearfix">
+                            	<i class="fl language" data-name="has">已经有</i>
+                            	<b class="fl"></b>
+                            	<i class="fl language" data-name="evaluating"></i>
+                            	<span>条测评</span>
+                            </p>
+                            <div class="comment_login " style="display: block; position: static;">
+								<div class="in_com_login clearfix">
+									<p class="un_login fl language" data-name="un_login">未登录，请</p>
+									<p class="fl login_in_text language login-link" data-name="login_enter">登录</p>
+									<p class="fl language" data-name="or">或</p>
+									<p class="fl login_text language login-link" data-name="register">注册</p>
+								</div>
+							</div>
+							<div class="add_comment pr no-comment hide">
+								<textarea  cols="30" rows="10" id="content"></textarea>
+							</div>
+							<div class="in_comment_foot clearfix no-comment hide">
+								<div class="fl comment_grade pr" id="gradeCon">
+									<ul class="un_sel fl">
+										<li></li>
+									</ul>
+									<span class="grade_mouse pa grade"></span>
+									<span class="game_score clearfix score"><b class="fl" ></b><em class="fl language" data-name="score">分</em></span>
+								</div>
+								<div class="fr clearfix comment_btn ">
+									<p class="fl language" data-name="like_game"></p>
+									<span class="fl" style='line-height:34px;'>你喜欢这款游戏么？</span>
+									<ul class="fl clearfix">
+										<li class="fl cur language isGood" is-good="1">喜欢</li>
+										<li  class="fl language isGood" is-good="0">不喜欢</li>
+									</ul>
+									<p class="fl send language" data-name="send" id="sendComment">发送</p>
+								</div>
+							</div>
+							<div class="has-comment hide">您已经评论过了</div>
+                        </div>
+                        <ul class="comment_head clearfix">
+                        	<!--new 2016-10-20 qb-->
+                            <li class="fl splendid cur language" data-name="splendid">精彩评论<span>(123)</span></li>
+                            <li class="fl newComment language" data-name="newComment">最新评论<span>(123)</span></li>
+                            <li class="fl newComment language" data-name="newComment">好评<span>(123)</span></li>
+                            <li class="fl newComment language" data-name="newComment">差评<span>(123)</span></li>
+                            <li class="fr badComment clearfix hide"><i class="fl language" data-name="badComment"></i><b class="fl"></b></li>
+                            <li class="fr goodComment clearfix hide"><i class="fl language" data-name="goodComment"></i><b class="fl"></b></li>
+                            <li class="fl myComment language" data-name="myComment">我的评论</li>
+                        </ul>
+                        <div class="comment_body">
+                            <ol class="in_comment_body" id="comment_con">
+                                <li class="comment_list" u-id="100050">
+                                    <div class="comment_body_con clearfix">
+                                        <div class="fl com_portrait">
+                                            <img src="http://api.vronline.com/Public/../../../pic/website/images/defaultpic/girl2.jpg">
+                                        </div>
+                                        <div class="fl right_com pr">
+                                            <div class="right_com_title clearfix ">
+                                                <h3 class="fl">WB21T：</h3>
+                                                <span class="fl">非常棒，强烈推荐</span>
+                                            </div>
+                                            <div class="right_com_con clearfix">
+                                                <p class="fl">2016-07-27 13:33:14</p>
+                                                <p class="fl playGame_time clearfix">
+                                                    <i class="language fl" data-name="game_play_time">进行游戏时间：</i>
+                                                    <b class="fl">1.6</b>
+                                                    <em class="fl language" data-name="play_hour">个小时</em>
+                                                </p>
+                                              	<div class="fr clearfix comment_comment">
+                                                    <div class="fl comment_delete language" data-name="report">删除</div>
+                                                    <i class="fl">|</i>
+                                                    <!--new 2016-10-13-->
+                                                    <div class="fl pr like cur">(<b>46</b>)</div>
+                                                    <i class="fl">|</i>
+                                                    <div class="fl pr unlike cur">(<b>1</b>)
+                                                    <!--new 2016-10-13-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="comment_list" u-id="100050">
+                                    <div class="comment_body_con clearfix">
+                                        <div class="fl com_portrait">
+                                            <img src="http://api.vronline.com/Public/../../../pic/website/images/defaultpic/girl2.jpg">
+                                        </div>
+                                        <div class="fl right_com pr">
+                                            <div class="right_com_title clearfix ">
+                                                <h3 class="fl">WB21TW1T：</h3>
+                                                <span class="fl">非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐非常棒，强烈推荐</span>
+                                            </div>
+                                            <div class="right_com_con clearfix">
+                                                <p class="fl">2016-07-27 13:33:14</p>
+                                                <p class="fl playGame_time clearfix">
+                                                    <i class="language fl" data-name="game_play_time">进行游戏时间：</i>
+                                                    <b class="fl">1.6</b>
+                                                    <em class="fl language" data-name="play_hour">个小时</em>
+                                                </p>
+                                              	<div class="fr clearfix comment_comment">
+                                                    <div class="fl comment_delete language" data-name="report">举报</div>
+                                                    <i class="fl">|</i>
+                                                    <div class="fl pr like">(<b>46</b>)</div>
+                                                    <i class="fl">|</i>
+                                                    <div class="fl pr unlike">(<b>1</b>)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="page_number clearfix">
+                            	<span class="fl">上一页</span>
+                            	<ul class="fl clearfix">
+                            		<li class="fl li_bg">1</li>
+                            		<li class="fl">2</li>
+                            		<li class="fl">...</li>
+                            		<li class="fl">9</li>
+                            		<li class="fl">10</li>
+                            		<li class="fl">11</li>
+                            	</ul>
+                            	<span class="fl">下一页</span>
+                            </div>
+                            <!--<div class="comment_page" id="comment_page"></div>-->
+                        </div>
+                        <div class="unComment language" data-name="unComment">暂无评论</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_contain fl">
+                <div class="get_gift">
+                	<input class="btn" type="button" value="开始游戏" />
+                	<!--<div class="clearfix">
+                        <a class="fl" href="javascript:;">账号充值</a>
+                        <a class="fr" href="javascript:;">进入论坛</a>
+                    </div>-->
+                    <!--new 2016-10-20 qb-->
+                    <!--<p class="pr">
+                    	<span>
+                    		<input type="button" value="领取礼包" />
+                    	</span>
+                    </p>-->
+                </div>
+                <div class="content0">
+                  <div class="right_con">
+                      <h3>游戏价格</h3>
+                  </div>
+                  <div class="game_price clearfix tac ">
+                      <div class="game_discount_con hide ">
+                        <div class="game_discount fl f18 " style="width:60px;line-height:36px;background:#49b21a;">-50%</div>
+                        <div class="game_price fl " style="width:60px; height:36px;background:rgba(2, 2, 10, 0.4);">
+                           <p style="text-decoration:line-through; color:#d6e0ea;">192</p>
+                           <p class="f14" style="color:#2cdef5;">80<i style="height:15px;margin-left:4px;">V</i></p>
+                        </div>
+                      </div>
+                      <div class="fl game_price f22  hide" >
+                          199<i style="height:26px;margin-left:4px;">V</i>
+                      </div>
+                      <div class="fl gane_free f20" style="line-height:36PX; padding:0 20px;background:rgba(2, 2, 10, 0.4); color:#2cdef5;">
+                        免费
+                      </div>
+                  </div>
+                </div>
+                <div class="content1">
+                    <div class="right_con">
+                        <h3>游戏评分</h3>
+                    </div>
+                    <div class="score clearfix">
+                        <span class="fl"   style="color:#fff;">7.5</span><i class="fl"   style="color:#fff;">分</i><p class="fl">（已有</p><b class="fl">2012</b><p class="fl">人评分）</p>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="right_con clearfix">
+                        <h3 class="fl" style="margin-right: 28px">支持设备</h3>
+                    </div>
+                    <ul class="con_list clearfix">
+                    	<!--new 2016-10-19-->
+                        <li title="HTC"><a href="javascript:;">HTC</a></li>
+                        <li title="HTC"><a href="javascript:;">HTC</a></li>
+                        <li title="HTC"><a href="javascript:;">HTC</a></li>
+                        <li title="HTC"><a href="javascript:;">HTC</a></li>
+                    </ul>
+                </div>
+                <div class="content1">
+                    <div class="right_con">
+                        <h3>游戏简介</h3>
+                    </div>
+                    <p class="summary">我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。在黑色星期五——一种毁坏性的流行病席卷了整个纽约，基础设施接二连三地慢慢瘫痪。在短短几天内，失去生活必需品的整个社会陷入了混乱。</p>
+                </div>
+                <div class="content1">
+                    <div class="right_con">
+                        <h3>系统需求</h3>
+                    </div>
+	            	<div class="configure">
+	            		<div class="clearfix configure_title">
+		            		<span class="fl clearbg">推荐配置</span>
+		            		<span class="fl">最低配置</span>
+	            		</div>
+            			<div class="configure_con configure_show">
+            				<p><span>操作系统:</span><span class="Configure_details">Windows 7</span><i class="lack"></i></p>
+            				<p><span>处理器:</span><span class="Configure_details">1.8 GHz Pentium 4</span><i></i></p>
+            				<p><span>内存:</span><span class="Configure_details">1GB RAM Direc</span><i></i></p>
+            				<p><span>DirectX 版本:</span><span class="Configure_details">9.0c</span><i></i></p>
+            				<p><span>存储空间:</span><span class="Configure_details">需要 1 GB 可用空间</span><i></i></p>
+            			</div>
+            			<div class="configure_con">
+            				<p><span>操作系统:</span><span class="Configure_details">Windows 7</span><i class="lack"></i></p>
+            				<p><span>处理器:</span><span class="Configure_details">1.8 GHz P</span><i></i></p>
+            				<p><span>内存:</span><span class="Configure_details">1GB RAM </span><i></i></p>
+            				<p><span>DirectX 版本:</span><span class="Configure_details">9.0c</span><i></i></p>
+            				<p><span>存储空间:</span><span class="Configure_details">需要 1 GB 可用空间</span><i></i></p>
+            			</div>
+	            	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="side">
+	<div class="sideCon">
+		<p>联系我们</p>
+		<ul>
+			<!--new 2016-10-11-->
+			<!--new 2016-10-18-->
+			<li>
+				<a href="javascript:;"><span class="service">QQ交流群</span></a>
+				<div class="follow">
+					<p>扫码加群(群号:324688287)</p>
+					<img src="../../../pic/website/images/qqCode.png" />
+				</div>
+			</li>
+			<!--new 2016-10-18-->
+			<li><a href="javascript:;"><span class="sina">新浪微博</span></a></li>
+			<li>
+				<a href="javascript:;"><span class="code"></span></a>
+				<div class="follow">
+					<p>扫码关注微信公众号</p>
+					<img src="../../../pic/website/images/code.png" />
+				</div>
+			</li>
+			<li><a href='#'><span class="up">返回顶部</span></a></li>
+			<!--new 2016-10-11-->
+		</ul>
+	</div>
+</div>
+<footer>
+	<div class='foot'>
+		<img src="../../../pic/website/images/logo.png" />
+		<div class="aboutUS">
+			<a href="javascript:;">关于VRonline</a>
+			<a href="javascript:;">关于恺英</a>
+			<a href="javascript:;">联系我们</a>
+			<a href="javascript:;">商务合作</a>
+			<a class='none' href="javascript:;">我是开发者</a>
+		</div>
+		<!--new2016-10-14-->
+		<div class="hide">
+			<span>友情链接：</span>
+			<a href="javascript:;">OculusRift贴吧</a>
+			<a href="javascript:;">妖界VRVR</a>
+			<a href="javascript:;">345导航</a>
+			<a href="javascript:;">VR科技网</a>
+			<a href="javascript:;">一起爱VR</a>
+			<a href="javascript:;">VR玩家</a>
+			<a href="javascript:;">智壹VR网</a>
+			<a href="javascript:;">07073VR</a>
+			<a href="javascript:;">VR眼镜vr论坛</a>
+			<a href="javascript:;">vv麦逗VR</a>
+			<a href="javascript:;">VR专业导航网站</a>
+			<a class='none' href="javascript:;">高手VR</a>
+		</div>
+		<!--new2016-10-14-->
+		<div style="width:300px;margin:0 auto; " >
+ 			<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202001649" style="border:0;display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../../pic/website/images/pl.png" style="float:left;"/><p  class=""  style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; ">沪公网安备 31011202001649号</p></a>
+ 		</div>
+		<p>
+			<span>沪网文[2013]0667-082</span>
+			<span>沪ICP备16034129号-1</span>
+			<span>文化部网络游戏举报和联系电子邮箱:</span>
+			<a href="Mailto:wlyxjb@gmail.com" style="border: none;">wlyxjb@gmail.com</a>
+		</p>
+		<!--new-2016-10-11-->
+		<p>
+			<span>Copyright&copy;2008-2015 vronline.com All Rights Reserved</span>
+			<span>上海恺英网络科技有限公司 版权所有</span>
+		</p>
+		<!--new2016-10-14-->
+	</div>
+</footer>
+</body>
+</html>
+<script>
+    $(function(){
+        banner();
+
+        $(".comment_body_con .right_com span").each(function(){
+        	var nameWidth=$(this).prev().width()+"px";
+        	$(this).css("text-indent",nameWidth);
+        });
+        //导航条
+		$('.nav ul li').each(function(){
+			$(this).mouseover(function(){
+				$(this).children('.con').show();
+			});
+			$(this).mouseout(function(){
+				$(this).children('.con').hide();
+			})
+		});
+
+
+		// new 2016-10-20
+        //Tab  配置轮播图
+		var aSpan=$(".configure_title span");
+		var aCon=$(".configure_con");
+		var now=0;
+		aSpan.click(function(){
+			now=$(this).index();
+			tab();
+		});
+		function tab(){
+			aSpan.removeClass('clearbg');
+			aCon.removeClass('configure_show');
+			aSpan.eq(now).addClass('clearbg');
+			aCon.eq(now).addClass('configure_show');
+		};
+	});
+</script>

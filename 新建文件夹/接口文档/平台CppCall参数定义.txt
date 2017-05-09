@@ -1,0 +1,157 @@
+window.CppCall('frametype', 'action', 'json');
+
+
+frametype:	'common'
+		action			描述		json
+---------------------------------------------------------------------
+action:    	'close' 		关闭		null
+		'max'			最大化		null
+		'min'			最小化		null
+		'openurl'		打开外链	{'url':'http:///'}
+		'payres'		支付返回	{'code':0成功 其他错误码}
+		'fullscreen'
+		'openvr'		打开客户端
+
+1.主面板、登陆面板
+frametype: 	'loginframe'
+
+		action			描述		json
+---------------------------------------------------------------------
+action:    	'register' 		注册		{"account":"测试账号01","pwd":"123456"}
+		'login'			登录		{"account":"测试账号01","pwd":"123456","keeploginstate":"1：保持登录状态，0：不保持"}
+		'req_smscode'		获取验证码	
+		'verify_res'		验证
+		'prelogin'		点击登陆
+		'select_item'		选择某个用户
+		'delete_item'		删除账号
+		'checkaccount'		判断用户是否可以注册	{"account":"测试账号01"}
+
+		'trdloginres'		第三方登录返回	‘和普通登录返回一样的json’
+		'showlogin'		显示登陆框
+		'logout'		登出
+		'wxlogin'		微信登录	url
+		'qqlogin'		QQ登录
+		'wblogin'		微博登录
+		'bblogin'		3D播播登录
+		'updateuserinfo'	更新用户信息	{"nick":"小猫小狗","img":"http://.."}
+		'offlineloginconfirm'	离线登录确定 
+		'checkimgcode'		检查验证码	{'imgcode':'1234'}
+
+
+frametype: 	'mainframe'
+
+		action			描述		json
+---------------------------------------------------------------------
+action:    	'close' 		关闭		null
+		'max'			最大化		null
+		'min'			最小化		null
+		'menu'			菜单		(菜单项json）
+		'menu_itemclicked'	菜单点击	(item json）
+		'addlocalgame'		增加本地游戏	null
+		'set_restore'
+		'set_confirm'
+		'set_open'
+		'set_modify'
+		'main_tab_changed'	点击tab切换（游戏，视频） 
+		'showhidetool'
+		'closebtnclicked'	关闭按钮点击	{"state": 0，"remstate": 0 }	// 【state 0 最小化 1 关闭】  【remstate bool true 记住 false 不记住】
+		'vrcloseconfirm'	
+		'publickBunced'				{'funid':1111}
+
+		'savecommonkeyset'		按键设置(wModifers|wValue)	{ {'openset': [00,10], 'closerview0x1157,'lenspull':0x1153}, 								                                                                                       }
+
+		'savegamekeyset'	'gamewarworld': {'A': 0x41,'B',0x42, 'X':0x43, 'Y':0x44, 'LB': 0x45, 'RB':46, 'LT':0x47,'RT':0x48}
+
+		'resetkeyset'		恢复默认设置   
+		'requestversion'	请求版本号
+
+2.游戏列表
+
+frametype:	'gamelistframe'
+		
+		action			描述		json
+----------------------------------------------------------------------
+action:		
+		'item_clicked'		项点击		(数据id)
+		'menu_startgame'	开始游戏	(游戏id)
+		'menu_deletegame'	删除游戏	(游戏id)
+		'add_localgame'		添加本地列表	（index）
+		'addgame_confirm'
+		'addgame_browser'
+
+
+3.游戏面板：	
+		
+frametype:	'gameframe'
+
+		action			描述		json
+------------------------------------------------------------------------
+		'item_clicked'		点击游戏	(gameid)
+		'startinstall'		开始安装	(gameid)
+		'pauseinstall'		暂停安装	(gameid）
+		'resumeinstall'		继续安装	(gameid)
+		'startgame'		开始游戏	{'game_id':100,'gamename':wet,'openvrmode':1}
+		'gamefuncclicked'	功能按钮点击	{'game_id':, 100m, 'openvrmode':1}
+
+
+4.驱动面板
+
+frametype:	'driverframe'
+
+		action			描述		json
+-------------------------------------------------------------------------
+		'startinstall'		开始安装	(drivertype)
+		'pauseresumeinstall'	暂停继续安装	(drivertype)
+
+5.视频面板
+
+frametype:	'videoframe'
+
+
+		action			描述		json
+-------------------------------------------------------------------------
+		'videotypeclicked'	点击左侧列表	(vtid)
+		'videoclicked'		点击视频	(vid)
+		'videorated'		视频点赞、踩 	1:赞 0：踩
+		'videoopendir'		打开目录
+		'videoshowhistory'	显示历史
+		'videoplay'		继续播放	（videoid）
+		'videopause'		暂停播放 	（videoid）
+		'videostop'		停止播放	（videoid）
+		'video_vr_open'		视频在vr中打开	url
+		'video_open_local'	本地播放
+
+6.页游
+frametype:	'webpagegamehallframe'
+
+
+		action			描述		json
+-------------------------------------------------------------------------
+		'openarea'		打开选服	{'gamename': '游戏名', 'url':'http://'}
+		'startgame'		开始游戏	{'gamename': '游戏名' ，'areaname':'专区名'，'gameSrc':'http://'}
+		'opendetail'		打开详情页
+
+		
+7.im
+frametype:	'immainframe'
+
+		action			描述		json
+-------------------------------------------------------------------------
+		'addfriend'		增加好友	{'userid' : }
+		'delfriend'		删除好友	{'userid': 100000,'bothdel': true}
+		'searchfriend'		查找用户	{'username':'测试1'}
+		'openchat'		打开聊天框	{'userid':100000}
+		'openaddfriend'		打开增加好友框
+
+frametype:	'imchatframe'
+
+		action			描述		json
+-------------------------------------------------------------------------
+		'sendmsg'		发送消息	{'userid' : 100000,'msg':'json'}
+
+frametype: 	'imaddfriendframe'
+
+		action			描述		json
+-------------------------------------------------------------------------
+		'searchuser'		搜索用户	{'txt': '用户名、id等'}
+

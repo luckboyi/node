@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../style/va-style.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/laypage.js"></script>
+    <script src="../js/base.js"></script>
+</head>
+<body>
+    <!--账号注册s-->
+    <div class="login show">
+        <div class="login_head clearfix">
+            <h3 class="fl">账号注册</h3>
+            <p class="login_close fr"></p>
+        </div>
+        <div class="login_body">
+            <form id="registerForm">
+                <p class="pr">
+                    <i ></i>
+                    <input type="text" placeholder="11位手机号/邮箱" name="phoneNumber">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+                <p class="pr">
+                    <i></i>
+                    <input type="text" placeholder="输入昵称" name="nickName">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+                <p class="pr">
+                    <i></i>
+                    <input type="password" placeholder="输入密码" name="loginPassword" class="loginPassword">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+                <p class="pr">
+                    <i></i>
+                    <input type="password" placeholder="确认密码" name="checkLoginPassword">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+                <p class="pr" id="verify_drag">
+                    <!--<span class="drag_verification">
+                        <b></b>
+                        拖动滑块验证
+                    </span>-->
+                </p>
+                <p class="clearfix pr message_code">
+                    <i></i>
+                    <input type="text" placeholder="输入验证码" class="verification fl" name="verifyCode">
+                    <input class="send_btn fr" type="button" value="发送验证码" id="send_btn">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+            </form>
+            <div class="clearfix login_agreement">
+                <i class="login_sel selected fl"></i>
+                <span class="fl agreement">我已阅读并同意<a href="javascript:;">《维奥相关用户协议》</a></span>
+            </div>
+            <div class="register">注册</div>
+            <div class="hasAccount">已有账号？<a href="javascript:;">《马上登录》</a></div>
+        </div>
+    </div>
+    <!--账号注册e-->
+    <!--注册完成S-->
+    <div class="verification_con  success_register ">
+        <div class="verification_head clearfix" >
+            <h3 class="fl">注册完成</h3>
+            <i class="verification_close fr"></i>
+        </div>
+        <div class="verification_body" style="">
+            <p>您的账号注册成功！请妥善保管好账号密码，确保账号安全</p>
+        </div>
+        <div class="success_register_btn">完成并登录</div>
+    </div>
+    <!--注册完成E-->
+    <!--注册失败S-->
+    <div class="verification_con  success_register ">
+        <div class="verification_head clearfix" >
+            <h3 class="fl">注册失败</h3>
+            <i class="verification_close fr"></i>
+        </div>
+        <div class="verification_body" style="">
+            <p>您的账号注册失败！请重新注册！</p>
+        </div>
+        <div class="success_register_btn">重新注册</div>
+    </div>
+    <!--注册失败E-->
+    <!--帐号登陆S-->
+    <div class="login_enter ">
+        <i class="login__enter_close"></i>
+        <h3></h3>
+        <div class="login_enter_con">
+            <div class="login_img fl">
+                <img src="../image/touxiang.jpg">
+            </div>
+            <div class="fl login_enter_input">
+                <div class="in_login_enter_input">
+                    <div class="pr in_login_input pr">
+                        <input class="fl" type="text" placeholder="手机/邮箱"  name="login_in_phoneNum">
+                        <a class="fl" href="javascript:;">注册账号</a>
+                        <i class="pull-down"></i>
+                        <ul class="pa">
+                            <li><b>55555555</b><i class="input_close"></i></li>
+                            <li><b>666666</b><i class="input_close"></i></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <input class="fl" type="password" placeholder="请输入密码" name="login_in_password">
+                        <a class="fl" href="javascript:;">找回密码</a>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="login_enter_sel clearfix">
+                    <div class="fl password">
+                        <i class="selected"></i>
+                        记住密码
+                    </div>
+                    <div class="fl automatic">
+                        <i></i>
+                        自动登录
+                    </div>
+                </div>
+                <div class="login_enter_btn">登录</div>
+                <p class="login_enter_erro pa"></p>
+            </div>
+
+        </div>
+
+    </div>
+    <!--帐号登陆E-->
+    <!--验证码s-->
+    <div class="verification_con " id="dragVer">
+        <div class="verification_head clearfix" >
+            <h3 class="fl">请输入验证码</h3>
+            <i class="verification_close fr"></i>
+        </div>
+        <div class="verification_body" style="">
+            <p>您的操作出现异常，请输入验证码</p>
+            <input type="text" placeholder="请输入验证码">
+            <div class="verification_img">
+                <img src="../image/touxiang.jpg">
+                <a href="javascript:;">看不清换一张</a>
+            </div>
+        </div>
+        <div class="verification_foot">
+            <div class="verification_cancel fr">取消</div>
+            <div class="verification_sure fr">确定</div>
+        </div>
+    </div>
+    <!--验证码E-->
+</body>
+</html>
+
+
+<script>
+
+    /*function loginFn(){
+
+    };*/
+    /*var countdown=60;
+    function settime(val) {
+
+        if (countdown == 0) {
+            //val.removeAttribute("disabled");
+            val.value="免费获取验证码";
+            countdown = 60;
+        } else {
+            //val.setAttribute("disabled", true);
+            val.value="重新发送(" + countdown + ")";
+            countdown--;
+        }
+        setTimeout(function() {
+            settime(val)
+        },1000)
+    }
+    $('#send_btn').click(function(){
+        settime($(this))
+        //$(this).value="免费获取验证码";
+    });*/
+
+    //默认获取焦点
+    $(document).ready(function(){
+        $("input[name='phoneNumber']").focus();
+        $("input[name='login_in_phoneNum']").focus();
+    });
+
+    /*账号登录*/
+    function loginInFn(){
+        //注册失去焦点
+        $('#registerForm input').each(function(){
+            $(this).blur(function () {
+                var errmsg = register_check(this);
+                var valid = $(this).siblings(".Validform_checktip");
+                if(errmsg !== ''){
+                    valid.addClass('error_msg').html(errmsg);
+                }else{
+                    valid.removeClass('error_msg').html('');
+                }
+            });
+
+        });
+        //注册检测
+        function register_check(e){
+            var o =$(e);
+            var value = $.trim(o.val());
+            var errmsg = '';
+            var name = o.attr('name');
+            switch (name){
+                case 'phoneNumber':
+                        if(value == ''){
+                            errmsg ='手机号/邮箱不能为空';
+                            break;
+                        }
+                        var rs = /^(13|14|15|17|18)[0-9]{9}$/;
+                        var reg = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+                        if(!rs.test(value) && !reg.test(value)){
+                            errmsg = '请填写正确的手机号/请填写正确的邮箱地址';
+                            break;
+                        }
+                    break;
+                case 'nickName':
+                        if (value == "") {
+                            errmsg = "昵称不能为空";
+                            break;
+                        }
+                        var rs=/^[a-zA-Z\u4E00-\u9FA50-9][a-zA-Z\u4E00-\u9FA50-9_]*$/;
+                        if (!rs.test(value)) {
+                            errmsg="只允许中英文、数字、下划线，且不能以下划线开头"
+                            break;
+                        }
+                        var a =value.length;
+                        if (value.match(/[^\x00-\xff]/ig) != null) {
+                            var b = value.match(/[^\x00-\xff]/ig).length;
+                            a = a + b * 2
+                        }
+                        if (a < 6 || a > 24) {
+                            errmsg = "昵称长度只能6~24个字符";
+                            break;
+                        }
+                    break;
+                case 'loginPassword':
+                        if (value == "") {
+                            errmsg = "密码不能为空";
+                            break;
+                        }
+                        if (value.length<6 || value.length>16) {
+                            errmsg ="输入6-16位密码";
+                            break;
+                        }
+                    break;
+                case 'checkLoginPassword':
+                        if(value == ''){
+                            errmsg = '密码不能为空';
+                            break;
+                        }
+                        if(value != $('.loginPassword').val()){
+                            errmsg = '两次密码不同';
+                            break;
+                        }
+                    break;
+                case 'verifyCode':
+                        if (value == "") {
+                            errmsg = "验证码不能为空" ;
+                            break;
+                        }
+                        var rs = /^[0-9]{6}$/;
+                        if (!rs.test(value)) {
+                            errmsg = "验证码填写有误";
+                            break;
+                        }
+                    break;
+            }
+            return errmsg;
+        };
+        //登录失去焦点
+        $('.in_login_enter_input input').each(function(){
+           $(this).blur(function(){
+              login_check($(this));
+           });
+        });
+        //登录检测
+        function login_check(obj){
+            var name = obj.attr('name');
+            var value = obj.val();
+            if(name == 'login_in_phoneNum'){
+                if (typeof (value) == 'undefined' || value == "") {
+                    $('.login_enter_erro').html('账号不能为空');
+                    return '账号不能为空';
+                }
+            };
+            if(name == 'login_in_password'){
+                if (typeof (value) == 'undefined' || value == "") {
+                    obj.addClass('bdcol-red');
+                    $('.login_enter_erro').html('密码不能为空');
+                    return '密码不能为空';
+                }
+            };
+        }
+        /*账号注册*/
+        /*账号注册*/
+        //点击关闭
+        $('.login_close ').on('click',function(){
+            $('.login ').hide();
+        });
+        //点击登录关闭
+        $('.login__enter_close').on('click',function(){
+            $('.login_enter').hide();
+        });
+        //点击发送验证码
+        //倒计时
+        var countdown = 60 ;
+        function setTime(obj){
+
+            //alert(1)
+            if(countdown == 0){
+                //val.removeAttr('disabled');
+                obj.val('发送验证码');
+                countdown = 60;
+            }else{
+                //val.attr('disabled',true);
+
+                obj.val("重新发送("+countdown+")");
+                countdown--;
+            }
+            setTimeout(function(){
+                setTime(obj)
+            },1000)
+        }
+
+        $('#send_btn').click(function(){
+            setTime($(this));
+        });
+
+        /*验证码*/
+        //点击关闭
+        $('.verification_close ').on('click',function(){
+            $('.verification_con').hide();
+        })
+        //点击取消
+        $('.verification_cancel').on('click',function(){
+            $('.verification_con').hide();
+        })
+        //点击确定
+        $('.verification_sure ').on('click',function(){
+            $('.verification_con').hide();
+        });
+        //点击手机下拉
+        //点击手机下拉
+        $('.pull-down').on('click',function(){
+            $('.in_login_input ul').toggle();
+
+        });
+        $('.in_login_input').hover(function(){
+
+        },function(){
+            $('.in_login_input ul').hide();
+        });
+        //获取下来菜单的账号信息
+        $('.in_login_input').on('click','li',function(){
+            $('.in_login_input input').val($(this).find('b').text())
+        });
+        //点击关闭提示
+        $('.input_close').on('click',function(){
+            $(this).parent('li').detach();
+        });
+        //点击登录
+        $('.login_enter_btn').on('click',function(){
+            $('.login_enter').hide();
+            //获取电话号码
+            console.dir($('.in_login_input input').val());
+            //动态添加提示
+            html = '<li><b></b><i class="input_close"></i></li>';
+            $('.in_login_input ul').append(html);
+            $('.in_login_input ul li:last-child').find('b').text($('.in_login_input input').val());
+            setTimeout(function(){
+
+            },1)
+        });
+        //点击记住密码
+        $('.password').on('click',function(){
+            $(this).find('i').toggleClass('selected');
+        });
+        //点击自动登录
+        $('.automatic').on('click',function(){
+            $(this).find('i').toggleClass('selected');
+        });
+        //点击勾选协议
+        $('.login_sel ').on('click',function(){
+            $(this).toggleClass('selected');
+        });
+
+
+        //新加的事件
+        //点击注册 弹出注册完成
+        $('.login .register').on('click',function(){
+           $('.success_register').show();
+            $('.login').hide();
+        });
+        //点击注册完成隐藏弹框
+        $('.success_register_btn').on('click',function(){
+            $('.success_register').hide();
+        });
+        //点击滑动
+        $('.drag_verification b').mousemove(function(e){
+            var x = e.clientX - $(this).offset().left;
+            $(this).css('left',x);
+        })
+    }
+    loginInFn();
+
+
+</script>
+
+
+<script>
+    function drag(obj,moveObj){
+        var left, top, $this;
+        $(document).delegate(moveObj, 'mousedown', function (e) {
+            left = e.clientX, top = e.clientY, $this = $(this).css('cursor', 'move');
+            this.setCapture ? (this.setCapture(), this.onmousemove = function(ev) {
+                mouseMove(ev);
+            }, this.onmouseup = mouseUp(ev)) : $(document).bind("mousemove", mouseMove).bind("mouseup", mouseUp);
+        });
+        function mouseMove(e) {
+            var target = obj;
+            var l = Math.max((e.clientX - left + Number(target.css('margin-left').replace(/px$/, ''))  ), -target.position().left);
+            var t = Math.max((e.clientY - top + Number(target.css('margin-top').replace(/px$/, '')) ), -target.position().top);
+            l = Math.min(l, $(window).width() - target.width() - target.position().left);
+            t = Math.min(t, $(window).height() - target.height() - target.position().top);
+            left = e.clientX;
+            top = e.clientY;
+            target.css({ 'margin-left': l, 'margin-top': t });
+        }
+        function mouseUp(e) {
+            var el = $this.css('cursor', 'default').get(0);
+            el.releaseCapture ? (el.releaseCapture(), el.onmousemove = el.onmouseup = null) : $(document).unbind("mousemove", mouseMove).unbind("mouseup", mouseUp);
+        }
+    }
+    drag($('#dragVer'),'.verification_head');
+
+
+    //滑动验证插件
+    (function($){
+        $.fn.drag = function(options){
+            var x, drag = this, isMove = false, defaults = {
+            };
+            var options = $.extend(defaults, options);
+            //添加背景，文字，滑块
+            var html = '<div class="drag_bg"></div>'+
+                    '<div class="drag_text" onselectstart="return false;" unselectable="on">拖动滑块验证</div>'+
+                    '<div class="handler handler_bg"></div>';
+            this.append(html);
+
+            var handler = drag.find('.handler');
+            var drag_bg = drag.find('.drag_bg');
+            var text = drag.find('.drag_text');
+            var maxWidth = drag.width() - handler.width();  //能滑动的最大间距
+
+            //鼠标按下时候的x轴的位置
+            handler.mousedown(function(e){
+                isMove = true;
+                x = e.pageX - parseInt(handler.css('left'), 10);
+            });
+
+            //鼠标指针在上下文移动时，移动距离大于0小于最大间距，滑块x轴位置等于鼠标移动距离
+            $(document).mousemove(function(e){
+                var _x = e.pageX - x;
+                if(isMove){
+                    if(_x > 0 && _x <= maxWidth){
+                        handler.css({'left': _x});
+                        drag_bg.css({'width': _x});
+                    }else if(_x > maxWidth){  //鼠标指针移动距离达到最大时清空事件
+                        dragOk();
+                    }
+                }
+            }).mouseup(function(e){
+                isMove = false;
+                var _x = e.pageX - x;
+                if(_x < maxWidth){ //鼠标松开时，如果没有达到最大距离位置，滑块就返回初始位置
+                    handler.css({'left': 0});
+                    drag_bg.css({'width': 0});
+                }
+            });
+
+            //清空事件
+            function dragOk(){
+                handler.removeClass('handler_bg').addClass('handler_ok_bg');
+                text.text('验证通过');
+                drag.css({'color': '#fff'});
+                handler.unbind('mousedown');
+                $(document).unbind('mousemove');
+                $(document).unbind('mouseup');
+                setTimeout(function(){
+                    $('#verify_drag').hide();
+                    $('.message_code').show();
+                },300)
+
+            }
+        };
+    })(jQuery);
+    $('#verify_drag').drag();
+
+</script>
+

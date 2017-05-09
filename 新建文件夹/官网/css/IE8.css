@@ -1,0 +1,58 @@
+@media \0screen {
+	header{
+		background:#0b0f14;
+		opacity:0.9;
+		filter:alpha(opacity=90);
+	}
+	.triangle{
+		opacity:0.6;
+		filter:alpha(opacity=60);
+	}
+	.time{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+	}
+	.rm_mask{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+	}
+	.sec .games .txt{
+		filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	}
+	.news_mask,.pageGame_list_item .hot_list ul li a .title{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E53b4759,endColorstr=#E53b4759);
+	}
+	.multimedia_right_con ul li .minPic .min_video_news,.multimedia_right_con ul li .bigPic .video_news,.receive_gift .gift_con .in_gift_con{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9902020a,endColorstr=#9902020a);
+	}
+	.multimedia_right_con ul li .big:hover .bigPic_mask,.multimedia_right_con ul li .min li:hover .minPic_mask{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9902020a,endColorstr=#9902020a);
+	}
+	.receive_gift .my_gift_list tr td.key i{
+		height:14px;
+		line-height:14px;
+	}
+	.personal_center .right_per .in_right_per,.vr_container .left_con .ul_bg,.multimedia_left_con .ul_bg{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#6602020a,endColorstr=#6602020a);
+	}
+	.personal_center .right_per .user_msg .user_header{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33384355,endColorstr=#33384355);
+	}
+	.personal_center .right_per .user_msg .user_header .submit_msg i{
+		left:-20px;
+		top:2px;
+	}
+	.vr_container .left_con ul{
+		width:196px;
+	}
+	.login_con,.download_vr{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);
+	}
+	.right_contain .get_gift,.content1 .score,.content2 .con_list li,.content1 p,.comment_foot,.comment_body,.comment_head li.cur,.webpageGame .content2 .right_con div p{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#6602020a,endColorstr=#6602020a);
+	}
+	.content1 .configure div p,.clearbg{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#9902020a,endColorstr=#9902020a);
+	}
+	.right_con ul li p{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C83b4759,endColorstr=#C83b4759);
+	}
+}

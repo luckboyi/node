@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/personal_center.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+    <div class="bind_container tac " >
+        <div class="in_bind_container">
+            <div class="close_btn"></div>
+            <div class="in_con_text">
+                <p class="bind_phone_num pr">
+                    <span >绑定手机号：</span>
+                    <input type="text" name="phoneNun">
+                    <span class="errorColor pa">xxxx</span>
+                </p>
+                <p class="send_code pr">
+                    <span>输入验证码：</span>
+                    <input type="text" name="codeNum">
+                    <span class="unbind_send_mes"  style="" id="send_code">发送验证码</span>
+                    <span class="errorColor pa">xxxx</span>
+                </p>
+            </div>
+            <ul class="unbind_btn tac clearfix" >
+                <li class="fl sure">确定</li>
+                <li class="fl cancel" >取消</li>
+            </ul>
+        </div>
+    </div>
+    <div class="bind_container tac" >
+        <div class="in_bind_container">
+            <div class="close_btn"></div>
+            <div class="in_con_text">
+                <p class="unbind_tipsCon">xxxxx</p>
+            </div>
+            <ul class="unbind_btn tac clearfix" >
+                <li class="fl sure">确定</li>
+                <li class="fl cancel" >取消</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $(function(){
+        $('.bind_container').find('input[name="phoneNun"]').focus();
+        //点击确定
+        $('.sure').on('click',function(){
+          $(this).parents('.bind_container').hide();
+        });
+        //点击取消
+        $('.cancel').on('click',function(){
+            $(this).parents('.bind_container').hide();
+        });
+        //点击关闭
+        $('.close_btn').on('click',function(){
+            $(this).parents('.bind_container').hide();
+        });
+
+
+        //点击倒计时
+        $('#send_code').on('click',function(){
+            setTime($(this))
+        });
+
+        //检测
+        $('.bind_container input').each(function(){
+            $(this).blur(function(){
+                check_bind_num($(this));
+            });
+        });
+        function check_bind_num(obj){
+            var name = obj.attr('name');
+            var value = obj.val();
+            var rs = /^(13|14|15|17|18)[0-9]{9}$/;
+            if(name == 'phoneNun'){
+                if (typeof (value) == 'undefined' || value == "") {
+                    obj.next('.errorColor').show().html('不能为空');
+                }else if(!rs.test(value)){
+                    obj.next('.errorColor').show().html('请输入正确的手机号！');
+                }else{
+                    obj.next('.errorColor').hide().html('');
+                }
+            };
+        }
+
+        var countdown = 60;
+        function setTime(obj){
+            //alert(1)
+            if(countdown == 0){
+                obj.text("重新发送");
+                obj.css({'pointer-events':'auto','background':'#22a1bf','border-color':'#22a1bf'});
+                countdown = 60;
+                //clearTimeout(timer)
+            }else{
+                //val.attr('disabled',true);
+                obj.css({'pointer-events':'none','background':'#384455','border-color':'#384455'});
+                obj.text("已发送("+countdown+")");
+                countdown--;
+                console.dir(countdown);
+                setTimeout(function(){
+                    setTime(obj)
+                },1000);
+            };
+        };
+
+
+    })
+</script>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第三方后台</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/register.css">
+</head>
+<body class="personal">
+    <header>
+    	<div>
+    		<img src="images/logo.png" />
+    	</div>
+    </header>
+    <section class='sec'>
+    	<div class="state clearfix">
+    		<span class='fl step cur'><span class='icon'></span>1 填写资料</span>
+    		<span class='fl line'>-----------------------------------</span>
+    		<span class='fl step'><span class='icon'></span>2 验证邮箱</span>
+    		<span class='fl line'>-----------------------------------</span>
+    		<span class='fl step'><span class='icon'></span>3 完成注册</span>
+    	</div>
+        <form action=''>
+        	<div class='account'>
+        		<p class='f18 title'>平台账号</p>
+        		<div> 
+        			<span class='dt'>平台账号：</span>
+        			<span>brucelee123</span>
+        			<input class='btn' type='button' name='button' value="切换账号" />
+        		</div>
+        		<div>
+        			<span class='dt'>绑定手机：</span>
+        			<a href="javascript:;">绑定手机</a>
+        			<span class='prompt'>必须绑定手机的账号才能注册成为开发者</span>
+        		</div>
+        	</div>
+        	<div class='message'>
+        		<p class='f18 title'>个人信息</p>
+                <table>
+                    <tr>
+                        <td>
+                            <span class='td_name'>姓名：</span>
+                        </td>
+                        <td>
+                            <input type="text" name="text" placeholder='与身份证上姓名保持一致' />
+                            <span class='prompt'>必须绑定手机的账号才能注册成为开发者</span>
+                            <p class='error'>*开发者名称不符合规范</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class='td_name'>身份证：</span>
+                        </td>
+                        <td>
+                            <input type="text" name="text" placeholder='请填写个人身份证' />
+                            <p class='error'>*身份证号码不符合规范</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class='td_name'>电子邮箱：</span>
+                        </td>
+                        <td>
+                            <input type="text" name="text" placeholder='请填写有效邮箱，用于接收平台审核通知等重要信息' />
+                            <p class='error'>*请填写有效的电子邮箱</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class='td_name'>联系地址：</span>
+                        </td>
+                        <td>
+                            <select class="sel1">
+                                <option>请选择省/直辖市</option>
+                                <option>北京市</option>
+                                <option>上海市</option>
+                                <option>广东省</option>
+                                <option>江苏省</option>
+                                <option>浙江省</option>
+                            </select>
+                            <select class="sel2">
+                                <option>请选择市区/地区</option>
+                                <option>aaa</option>
+                                <option>bbb</option>
+                                <option>ccc</option>
+                                <option>ddd</option>
+                            </select>
+                            <p class='ads error'>*请选择联系地址</p>
+                            <textarea placeholder='请填写有效地址，该地址作为联系您和回寄纸质协议等使用'></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class='td_name'>手持身份证照片：</span>
+                        </td>
+                        <td>
+                            <div class='pic'>
+                            	<span></span>
+                            	<p>上传图片</p>
+                            </div>
+                            <p class='pic_error error'>*请上传有效的图片</p>
+                            <div class='mind'>
+                                <a href='javascript:;'>上传图片实例></a>
+                                <p>1: 2M以内，JPG/PNG格式的图片</p>
+                                <p>2: 开发者手持身份证/护照正面进行拍照，要求五官可见，证件信息清晰无遮挡</p>
+                                <p>3: 目前我们只针对境外开发者开放使用本人出镜手持护照截图，如您属于中国大陆国籍
+                    的必须使用有效期内的本人出镜手持身份证截图</p>
+                                <p>4: 我司资质验证系统已与工商部门联网，请勿提供虚假证件</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+        	</div>
+        	<div class='sub'>
+                <div class='accept'>
+                    <input type="checkbox" id='checkbox' />
+                    <span class='checked' id='checkboxSure'></span>
+                    <span>同意接受<a href="javascript:;">XXXXXXXX开发者协议</a></span>
+                </div>
+                <div class='sub_btn'>
+                    <input type="submit" name='' value="上一步"/>
+                    <input type="submit" name='' value="下一步"/>      
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer>
+    	<div class='cooperate'>
+    		<a href="javascript:;">合作伙伴</a>
+    		<a href="javascript:;">合作伙伴</a>
+    	</div>
+    	<div>
+    		<span> &copy;2010-2015 xxxx.com 版权所有 
+    		 	<a href="javascript:;">著作权与商标声明 |</a>
+    		 	<a href="javascript:;">法律声明 |</a>
+    		 	<a href="javascript:;">隐私声明 |</a>
+    		 	<a href="javascript:;">关于恺英网</a>
+    		</span>
+    	</div>
+    </footer>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

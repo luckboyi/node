@@ -1,0 +1,472 @@
+.container .topImg {
+  position: relative;
+  left: 50%;
+  margin-left: -960px; }
+.container .vrhome {
+  width: 1200px;
+  margin: 40px auto; }
+  .container .vrhome a.more i {
+    margin: 4px 0 0 4px;
+    width: 20px;
+    height: 16px;
+    background-position: 0 -27px; }
+  .container .vrhome a.more:hover i {
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    background-position-x: -20px; }
+  .container .vrhome .mask {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); }
+  .container .vrhome .recommend {
+    margin-bottom: 30px; }
+    .container .vrhome .recommend .name {
+      border-bottom: 1px solid #e5e5e5; }
+      .container .vrhome .recommend .name span {
+        color: #1e1e1e;
+        padding: 0 10px;
+        height: 32px;
+        line-height: 32px;
+        top: 1px;
+        border: 1px solid transparent;
+        cursor: pointer; }
+      .container .vrhome .recommend .name span:hover, .container .vrhome .recommend .name span.cur {
+        border: 1px solid #e5e5e5;
+        border-top-color: #ffd800;
+        border-bottom-color: #fff; }
+    .container .vrhome .recommend .recommendCon {
+      width: 100%;
+      overflow: hidden; }
+      .container .vrhome .recommend .recommendCon ul {
+        display: none;
+        width: 2000px; }
+        .container .vrhome .recommend .recommendCon ul li {
+          width: 222px;
+          height: 390px;
+          margin-right: 22px; }
+          .container .vrhome .recommend .recommendCon ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center; }
+            .container .vrhome .recommend .recommendCon ul li a img {
+              width: 100%;
+              height: 288px;
+              border: 0;
+              margin-top: 20px; }
+            .container .vrhome .recommend .recommendCon ul li a p {
+              text-align: center;
+              line-height: 40px;
+              color: #5b5b5b; }
+            .container .vrhome .recommend .recommendCon ul li a .type {
+              display: inline-block;
+              padding: 0 10px;
+              height: 26px;
+              line-height: 26px;
+              border-radius: 10px;
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              text-align: center;
+              margin: 0 auto;
+              color: #b1b1b1;
+              border: 1px solid #b1b1b1; }
+            .container .vrhome .recommend .recommendCon ul li a .mask {
+              height: 288px; }
+          .container .vrhome .recommend .recommendCon ul li a:hover .mask {
+            display: block; }
+      .container .vrhome .recommend .recommendCon ul.cur {
+        display: block; }
+  .container .vrhome .vrnews .left {
+    width: 434px; }
+    .container .vrhome .vrnews .left .tab {
+      height: 454px;
+      overflow: hidden; }
+      .container .vrhome .vrnews .left .tab .carousel {
+        height: 454px;
+        overflow: hidden; }
+      .container .vrhome .vrnews .left .tab ul {
+        width: 9999px; }
+        .container .vrhome .vrnews .left .tab ul li {
+          width: 434px;
+          height: 454px; }
+          .container .vrhome .vrnews .left .tab ul li a {
+            width: 100%;
+            height: 100%; }
+          .container .vrhome .vrnews .left .tab ul li img {
+            width: 100%;
+            height: 100%; }
+      .container .vrhome .vrnews .left .tab i {
+        width: 32px;
+        height: 56px;
+        background: url(../images/vrsprite.png) no-repeat;
+        z-index: 9;
+        cursor: pointer; }
+      .container .vrhome .vrnews .left .tab i.prev {
+        left: 0;
+        top: 200px;
+        background-position: -106px 0; }
+      .container .vrhome .vrnews .left .tab i.next {
+        right: 0;
+        top: 200px;
+        background-position: -138px 0; }
+      .container .vrhome .vrnews .left .tab i:hover {
+        background-position-y: -56px; }
+      .container .vrhome .vrnews .left .tab p.num {
+        bottom: 20px;
+        right: 20px; }
+    .container .vrhome .vrnews .left .video {
+      margin-top: 20px; }
+      .container .vrhome .vrnews .left .video .til {
+        margin-bottom: 24px; }
+      .container .vrhome .vrnews .left .video a {
+        display: block;
+        width: 284px;
+        height: 152px; }
+        .container .vrhome .vrnews .left .video a img {
+          width: 100%;
+          height: 100%; }
+      .container .vrhome .vrnews .left .video a:hover .mask {
+        display: block; }
+      .container .vrhome .vrnews .left .video a.logo {
+        width: 140px;
+        margin-right: 10px; }
+        .container .vrhome .vrnews .left .video a.logo img {
+          width: 100%;
+          height: 100%; }
+  .container .vrhome .vrnews .middle {
+    width: 430px;
+    margin: 0 20px; }
+    .container .vrhome .vrnews .middle .type {
+      width: 36px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      background: #e74b48;
+      color: #fff;
+      margin-right: 4px; }
+    .container .vrhome .vrnews .middle .hot {
+      display: block; }
+      .container .vrhome .vrnews .middle .hot p.clearfix span.f16 {
+        width: 390px;
+        height: 16px;
+        line-height: 16px;
+        color: #e74b48; }
+      .container .vrhome .vrnews .middle .hot div.clearfix {
+        margin-top: 13px; }
+        .container .vrhome .vrnews .middle .hot div.clearfix img {
+          width: 118px;
+          height: 72px; }
+        .container .vrhome .vrnews .middle .hot div.clearfix p {
+          width: 300px;
+          height: 72px;
+          line-height: 24px;
+          margin-left: 8px;
+          overflow: hidden;
+          color: #b8b8b8; }
+    .container .vrhome .vrnews .middle .hot:hover p {
+      color: #1792fa; }
+    .container .vrhome .vrnews .middle ul li {
+      width: 430px;
+      height: 36px;
+      line-height: 36px; }
+      .container .vrhome .vrnews .middle ul li a {
+        width: 430px; }
+        .container .vrhome .vrnews .middle ul li a span {
+          width: 36px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          background: #1792fa;
+          color: #fff;
+          margin: 10px 14px 0 0; }
+        .container .vrhome .vrnews .middle ul li a p {
+          width: 380px; }
+    .container .vrhome .vrnews .middle ul li.recom {
+      border-top: 1px solid #d2d2d2;
+      border-bottom: 1px solid #d2d2d2; }
+      .container .vrhome .vrnews .middle ul li.recom span {
+        background: #e74b48; }
+    .container .vrhome .vrnews .middle ul li:hover a {
+      color: #1792fa; }
+    .container .vrhome .vrnews .middle .moreNews {
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border: 1px solid #e74b48;
+      color: #e74b48;
+      cursor: pointer; }
+    .container .vrhome .vrnews .middle .moreNews:hover {
+      color: #1792fa; }
+  .container .vrhome .vrnews .right {
+    width: 288px; }
+    .container .vrhome .vrnews .right .title {
+      margin-bottom: 24px; }
+    .container .vrhome .vrnews .right .special_games a {
+      display: block;
+      width: 100%;
+      height: 166px;
+      margin-bottom: 20px; }
+      .container .vrhome .vrnews .right .special_games a img {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 166px;
+        border: 0; }
+      .container .vrhome .vrnews .right .special_games a i.play {
+        display: none;
+        left: 50%;
+        top: 50%;
+        width: 63px;
+        height: 63px;
+        margin-left: -31px;
+        margin-top: -31px;
+        background-position: -43px 0;
+        z-index: 10; }
+    .container .vrhome .vrnews .right .special_games a:hover .mask {
+      display: block; }
+    .container .vrhome .vrnews .right .special_games a:hover i {
+      display: block; }
+    .container .vrhome .vrnews .right .special_games p {
+      width: 49%;
+      height: 32px;
+      line-height: 32px;
+      margin-bottom: 8px;
+      background: #e2e2e2; }
+    .container .vrhome .vrnews .right .special_games .playNum i {
+      width: 23px;
+      height: 23px;
+      margin: 4px 6px 0 12px;
+      background-position: 0 0; }
+    .container .vrhome .vrnews .right .special_games .goodNum i {
+      width: 21px;
+      height: 21px;
+      margin: 4px 6px 0 12px;
+      background-position: -23px 0; }
+    .container .vrhome .vrnews .right .gamesColumn {
+      display: block;
+      width: 100%;
+      height: 102px;
+      margin-bottom: 20px; }
+      .container .vrhome .vrnews .right .gamesColumn img {
+        width: 100%;
+        height: 102px;
+        border: 0; }
+    .container .vrhome .vrnews .right a.gamesColumn:hover .mask {
+      display: block; }
+  .container .vrhome .hot_evaluating {
+    margin: 72px 0 62px; }
+    .container .vrhome .hot_evaluating .evaluating {
+      width: 100%; }
+      .container .vrhome .hot_evaluating .evaluating .prev {
+        left: -50px;
+        top: 46%;
+        width: 46px;
+        height: 69px;
+        background-position: -42px -100px;
+        cursor: pointer; }
+      .container .vrhome .hot_evaluating .evaluating .next {
+        right: -50px;
+        top: 50%;
+        width: 46px;
+        height: 69px;
+        background-position: -42px -170px;
+        cursor: pointer; }
+      .container .vrhome .hot_evaluating .evaluating .evaluatingCon {
+        width: 100%;
+        height: 344px;
+        padding-top: 24px;
+        overflow: hidden; }
+        .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul {
+          width: 99999px; }
+          .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li {
+            width: 234px;
+            height: 344px;
+            overflow: hidden;
+            margin-right: 8px; }
+            .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a {
+              display: block;
+              width: 100%;
+              height: 100%; }
+              .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a img {
+                width: 100%;
+                height: 298px; }
+              .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a .bg {
+                width: 115px;
+                height: 44px;
+                line-height: 44px;
+                margin-top: -3px;
+                text-align: center;
+                border: 1px solid #696969;
+                color: #fff;
+                background: #000; }
+                .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a .bg p {
+                  display: inline-block; }
+                .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a .bg i.message {
+                  width: 18px;
+                  height: 16px;
+                  margin: 14px 10px 0 0;
+                  background-position: -105px -116px; }
+                .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a .bg i.playNum {
+                  width: 22px;
+                  height: 14px;
+                  margin: 14px 10px 0 0;
+                  background-position: -126px -116px; }
+              .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a .mask {
+                height: 298px; }
+            .container .vrhome .hot_evaluating .evaluating .evaluatingCon ul li a:hover .mask {
+              display: block; }
+  .container .vrhome .manufacturer .til {
+    border: none;
+    padding: 0;
+    margin-bottom: 18px; }
+  .container .vrhome .manufacturer .firm {
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 22px;
+    border-bottom: 2px solid #f4f4f4; }
+    .container .vrhome .manufacturer .firm span {
+      top: 0px;
+      margin-right: 86px;
+      cursor: pointer; }
+    .container .vrhome .manufacturer .firm span:hover, .container .vrhome .manufacturer .firm span.cur {
+      border-bottom: 2px solid #ffd800; }
+  .container .vrhome .manufacturer .firmNews {
+    display: none; }
+  .container .vrhome .manufacturer .cur {
+    display: block; }
+  .container .vrhome .manufacturer .newEvaluating {
+    width: 434px;
+    margin-right: 20px; }
+    .container .vrhome .manufacturer .newEvaluating img {
+      width: 100%;
+      height: 270px;
+      border: 0; }
+    .container .vrhome .manufacturer .newEvaluating a {
+      display: block; }
+      .container .vrhome .manufacturer .newEvaluating a p {
+        bottom: 0;
+        height: 42px;
+        line-height: 42px;
+        width: 414px;
+        padding: 0 10px;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff; }
+      .container .vrhome .manufacturer .newEvaluating a .fraction {
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        text-align: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        color: #000;
+        background: #ffde00; }
+  .container .vrhome .manufacturer .newInformation {
+    width: 446px; }
+    .container .vrhome .manufacturer .newInformation ul li {
+      height: 40px;
+      line-height: 40px; }
+      .container .vrhome .manufacturer .newInformation ul li a span.ells {
+        width: 400px; }
+    .container .vrhome .manufacturer .newInformation ul li:hover a {
+      color: #1792fa; }
+  .container .vrhome .manufacturer .gameshow {
+    margin-top: 24px; }
+    .container .vrhome .manufacturer .gameshow ul li {
+      width: 206px;
+      height: 186px;
+      margin-right: 24px; }
+      .container .vrhome .manufacturer .gameshow ul li a {
+        width: 100%;
+        height: 100%; }
+        .container .vrhome .manufacturer .gameshow ul li a img {
+          width: 100%;
+          height: 128px; }
+        .container .vrhome .manufacturer .gameshow ul li a p {
+          height: 38px;
+          line-height: 16px;
+          margin: 10px 0;
+          overflow: hidden; }
+    .container .vrhome .manufacturer .gameshow ul li:hover a {
+      color: #1792fa; }
+  .container .vrhome .rankingList {
+    width: 280px; }
+    .container .vrhome .rankingList .title {
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5; }
+      .container .vrhome .rankingList .title .ranking {
+        width: 30px;
+        margin-right: 4px; }
+      .container .vrhome .rankingList .title .gameName {
+        width: 160px; }
+      .container .vrhome .rankingList .title .score {
+        width: 40px; }
+    .container .vrhome .rankingList ul li {
+      border-bottom: 1px dashed #e5e5e5; }
+      .container .vrhome .rankingList ul li .title {
+        height: 52px;
+        line-height: 52px;
+        border: none; }
+        .container .vrhome .rankingList ul li .title .ranking {
+          width: 22px;
+          height: 22px;
+          line-height: 24px;
+          margin-top: 14px;
+          border: 1px solid #d9d9d9; }
+        .container .vrhome .rankingList ul li .title .rankingColor {
+          color: #fff;
+          background: #ffcc00;
+          border: 1px solid #ffcc00; }
+        .container .vrhome .rankingList ul li .title .score {
+          color: #ff7e00; }
+        .container .vrhome .rankingList ul li .title .buy {
+          width: 40px;
+          height: 20px;
+          line-height: 20px;
+          background: #ff7e00;
+          color: #fff;
+          margin-top: 16px; }
+      .container .vrhome .rankingList ul li .gameImg {
+        display: none;
+        width: 100%;
+        height: 176px;
+        margin-bottom: 6px; }
+        .container .vrhome .rankingList ul li .gameImg img {
+          width: 100%;
+          height: 100%; }
+    .container .vrhome .rankingList ul li:hover .gameImg, .container .vrhome .rankingList ul li.cur .gameImg {
+      display: block; }
+  .container .vrhome .ranks {
+    width: 100%;
+    margin-top: 52px;
+    overflow: hidden; }
+    .container .vrhome .ranks .til {
+      height: 34px;
+      line-height: 34px;
+      border: none;
+      border-bottom: 3px solid #ffd800;
+      padding: 0;
+      margin-bottom: 18px; }
+    .container .vrhome .ranks > div {
+      width: 9999px; }
+    .container .vrhome .ranks .rankingList {
+      margin-right: 27px; }
+      .container .vrhome .ranks .rankingList span.fr {
+        width: 42px; }
+      .container .vrhome .ranks .rankingList .up {
+        color: #e74b48; }
+      .container .vrhome .ranks .rankingList .down {
+        color: #1792fa; }
+
+/*# sourceMappingURL=vrhome.css.map */

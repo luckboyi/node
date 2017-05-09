@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="http://pic.vronline.com/videoGame/style/base.css">
+		<link rel="stylesheet" href="http://pic.vronline.com/videoGame/style/3dbobo.css">
+    </head>
+    <body>
+	<div class="uploading_con tac submit_con">
+		<div class="in_uploading_con">
+			<div class="uploading_head pr">
+				<h3 class="f20">大赛报名</h3>
+				<a href="JavaScript:;" class="pa">返回首页</a>
+			</div>
+			<div class="uploading_body">
+				<div class="uploading_content company_con   pr">
+					<p><i>※</i>参赛者名称</p>
+					<input type="text" placeholder="公司/工作室/团队/个人作者名称">
+					<p class="pa erroMsg"></p>
+				</div>
+				<div class="uploading_content phone_con  pr">
+					<p><i>※</i>手机号</p>
+					<input type="text" placeholder="请输入你的手机号">
+					<div class="verification clearfix">
+						<input class="fl" type="text" placeholder="请输入验证码" />
+						<p class="fl send">发 送</p>
+					</div>
+					<p class="pa erroMsg"></p>
+				</div>
+				<div class="uploading_content">
+					<p><i>※</i>参与组别</p>
+					<select name="" id="">
+						<option value="">CG制作单元</option>
+					</select>
+					<p class="f12">视频制作中混合以虚拟角色形象、虚拟场景的360°VR全景类视频（包括3D全景视频）；同时包含：实景+虚拟角色、虚拟场景+人物的形式，不限制作软件包括 MAYA 、3Dmax、blender、Softimage、C4D、Unity、MMD等制作软件</p>
+				</div>
+				<div class="uploading_content city_select">
+					<p><i>※</i>国际/城市</p>
+					<div class="clearfix">
+						<select name="" id="" class="fl">
+							<option value="">CG制作单元</option>
+						</select>
+						<select name="" id="" class="fl">
+							<option value="">CG制作单元</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="uploading_content  pr">
+					<p><i>※</i>常用拍摄设备</p>
+					<input type="text" placeholder="请输入你的常用拍摄设备">
+					<p class="pa erroMsg"></p>
+				</div>
+				<div class="uploading_content  pr">
+					<p><i>※</i>常用制作软件</p>
+					<input type="text" placeholder="请输入你的常用制作软件">
+					<p class="pa erroMsg"></p>
+				</div>
+			</div>
+			<div class="uploading_foot">
+				<p class="submit_btn f20">提交</p>
+				
+			</div>
+
+		</div>		
+	</div>
+    </body>
+    <script type="text/javascript" src="https://pic.vronline.com/common/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$('.company_con input').blur(function() {
+    			//alert(1)
+    			var val = $(this).val();
+    			if(val.length == 0){
+    				$(this).nextAll('.erroMsg').text('不能为空').addClass('erroColor')
+    			}
+    		});
+    		$('.phone_con input').blur(function() {
+    			var val = $(this).val();
+    			var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+    			if(val.length == 0){
+    				$(this).nextAll('.erroMsg').text('不能为空').addClass('erroColor')
+    			}
+    			if (!myreg.test(val)){
+    				$(this).nextAll('.erroMsg').text('请输入正确的手机号').addClass('erroColor')
+    			}
+    		});
+    		$('.uploading_content input').focus(function(event) {
+    				$(this).nextAll('.erroMsg').text('').removeClass('erroColor')
+
+    		});
+
+
+
+    		
+    	})
+    </script>
+</html>

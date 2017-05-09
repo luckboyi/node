@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="http://pic.vronline.com/common/style/base.css">
+    <script src="js/tips.js"></script>
+</head>
+<body class="platform">
+    <div class="charge_con pr">
+        <h3>支付</h3>
+        <i class="close_btn"></i>
+        <div class="charge_content">
+            <p class="clearfix charge_game">
+                <span class="fl img_box">
+                    <img src="" width="100%" height="100%">
+                </span>
+                <span class="fl">
+                    <span class="game_num">
+                        <b class="blueColor cud">100元宝</b>
+                        <b class="cud">（游戏币）</b>
+                    </span>
+                    <b>单价：</b>
+                    <b class="blueColor">1元</b>
+                </span>
+                <span class="fr balance">
+                	<span>V币余额：</span><b>300</b><em>V</em>
+                </span>
+            </p>
+            <p class="clearfix charge_num hide">
+                <span class="fl cud title">购买数量：</span>
+                <span class="fl sub cud">-</span>
+                <input type="text" class="fl" value="10">
+                <span class="fl add cud">+</span>
+            </p>
+            <p class="charge_method">
+                <span class="cud title">付款方式：</span>
+                <span name="0" class="cud method_list cur">V点</span>
+                <span name="1" class="cud method_list">支付宝</span>
+                <span name="2" class="cud method_list">微信</span>
+                <span name="3" class="cud method_list">银行卡</span>
+                <select class="cud method_list">
+                    <option name="4" value="">更多</option>
+                    <option name="5" value="">更多</option>
+                    <option name="6" value="">更多</option>
+                </select>
+                <div class="select_border"></div>
+            </p>
+            <div class="method_con clearfix hide">
+            	<p class="fl pr charge_pay">
+	                <span class="cud title">支付V币：</span>
+	                <span class="cud pay_money pr vr_pay cur"><b class="blueColor">10</b><em class="blueColor" style="vertical-align: bottom;padding: 0 2px;">V</em>点</span>
+	                <span class="cud pay_money pr other_pay"><b class="blueColor">10</b><em class="" style="vertical-align: bottom;padding: 0 2px;">元</em></span>
+	            </p>
+	            <p class="fl payment_remind">您可以使用当前的V币余额支付本次交易</p>
+	            <p class="fl payment_remind hide">V币账户余额不足，请先充值或试试其它支付方式。</p>
+            </div>
+            <div class="method_con clearfix">
+            	<p class="fl pr charge_pay">
+	                <span class="cud title">交易金额：</span>
+	                <span class="cud pay_money pr vr_pay cur"><em class="blueColor" style="vertical-align: bottom;padding: 0 2px;">¥</em><b class="blueColor">10</b></span>
+	                <span class="cud pay_money pr other_pay"><b class="blueColor">10</b><em class="" style="vertical-align: bottom;padding: 0 2px;">元</em></span>
+	            </p>
+	            <p class="fl payment_remind">
+	            	<i class="sel pa"></i><span class="cud title">V币余额：</span><b class="blueColor">10</b><em class="blueColor" style="vertical-align: bottom;padding: 0 2px;">V</em>点
+	            </p>
+            </div>
+            <p>
+                <span class="submit_btn cud">立即购买</span>
+                <span class="remind">下订单之前，请您确认订单信息</span>
+            </p>
+        </div>
+        <div class="charge_content buy clearfix hide">
+        	<p>购买成功</p>
+        	<p class="buy_txt">购买商品成功，请至游戏内查看</p>
+        	<div class="fr clearfix">
+        		<span class="fl">确定</span>
+        		<span class="fl">取消</span>
+        	</div>
+        </div>
+        <div class="charge_content buy clearfix hide">
+        	<p>购买失败</p>
+        	<p class="buy_txt">购买商品失败，请重新支付</p>
+        	<div class="fr clearfix">
+        		<span class="fl">确定</span>
+        		<span class="fl">取消</span>
+        	</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    /*$(function(){
+        //点击减
+        $('.charge_con .sub').on('click',function(){
+            //获取当前input值;
+            var num = $('.charge_num').find('input').val();
+            num--;
+            if(num <0){
+                $(this).unbind('click');
+            }else{
+                $('.charge_num').find('input').val(num);
+                if($('.charge_con').find('.method_list ').eq(0).hasClass('cur')){
+                    checkPayMed(0);
+                    $('.charge_pay').find('b').text(num);
+                }else{
+                    checkPayMed(1);
+                    $('.charge_pay').find('b').text(num)
+                }
+            }
+
+        });
+        //点击加
+        $('.charge_con .add').on('click',function(){
+            //获取当前input值;
+            var num = $('.charge_num').find('input').val();
+            num++;
+            $('.charge_num').find('input').val(num);
+            if($('.charge_con').find('.method_list ').eq(0).hasClass('cur')){
+                checkPayMed(0);
+                $('.charge_pay').find('b').text(num);
+            }else{
+                checkPayMed(1);
+                $('.charge_pay').find('b').text(num)
+            }
+
+
+        });
+        //点击支付方式
+        $('.charge_method').find('.method_list').on('click',function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            if($('.charge_con').find('.method_list ').eq(0).hasClass('cur')){
+                checkPayMed(0)
+            }else{
+                checkPayMed(1)
+            }
+        });
+
+        //点击立即购买
+
+    });
+    //判断是v点支付还是其他支付
+
+    (function($){
+        var payFn ={};
+        payFn.config={
+            url:'', //type请求地址
+            ajaxType:'post', //请求方式
+            ajaxData:{},//传参
+            jsonpCall:'',// 指定jsonpcallback函数
+            channels:'',//支付方式
+            gamenum:'',//支付游戏币类型数量
+            unitprice:'',//单价
+            paynum:'',//支付数量
+            paymoney:'',//支付总额
+        }
+        payFn.init =function(config){
+            var _this =this;
+            _this.config = $.extend({},_this.config,config);
+        }
+        payFn.createHtml = function(){
+
+        }
+    })(jQuery)*/
+
+
+    tipsFn.init({
+        model:'tips',
+        headerMsg:'',//头部提示信息
+        msg:'解绑手机后，您将无法再使用139*******23进行找回密码',//提示的html信息
+        msg2:'您的账号可能会面临安全风险',//提示信息2
+        btnState:0,//是否显示取消按钮
+    });
+</script>

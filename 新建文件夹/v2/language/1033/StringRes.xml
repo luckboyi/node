@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item key="game_title" 			value="Game" />
+	<item key="video_title" 		value="Multimedia" />
+	<item key="drive_title" 		value="Driver" />
+	<item key="manage_set"			value="Settings" />
+	<item key="manage_idea"			value="Feedback" />
+	<item key="manage_account"		value="Switch account" />
+	<item key="manage_exit"			value="Quit" />
+	<item key="manage_delete"		value="Delete" />
+	<item key="install"				value="Install" />
+	<item key="pause"				value="Pause" />
+	<item key="started"				value="Start" />
+	<item key="continue"			value="Continue" />
+	<item key="finish"				value="Installation complete." />
+	<item key="game_plain"			value="Game introduction" />
+	<item key="support_equipment"	value="Supported devices" />
+	<item key="system"				value="Hardware requirements:" />
+	<item key="configuration"		value="Recommended hardware:" />
+	<item key="minimum"				value="My computer:" />
+	<item key="os"					value="Operating system" />
+	<item key="processor"			value="CPU" />
+	<item key="storage"				value="Memory" />
+	<item key="versions"			value="DirectX version" />
+	<item key="space"				value="GPU" />
+	<item key="noGame"				value="No local game added." />
+	<item key="addNoGame"			value="Please add games from game library or local game." />
+	<item key="addGame"				value="Add local game" />
+	<item key="manage_language"		value="Language setting"/>
+	<item key="Chinese"				value="Chinese"/>
+	<item key="English"				value="English"/>
+	<item key="deleteSure"			value="Please confirm to delete game from list."/>
+	<item key="deleteLocalName"		value="Remove local files as well."/>
+	<item key="sure"				value="OK"/>
+	<item key="cancel"				value="Cancel"/>
+	<item key="userName"			value="Account name"/>
+	<item key="update"				value="Update" />
+	<item key="in_game"				value="Playing..." />
+	<item key="addGame"				value="Add game" />
+	<item key="selectRoutine"		value="Select an execute file to add to you game library." />
+	<item key="routine"				value="Application" />
+	<item key="area"				value="Area" />
+	<item key="add_select"			value="Add selected application." />
+	<item key="manage_set"			value="Settings" />
+	<item key="integration_set"		value="General" />
+	<item key="set_language"		value="Language setting:" />
+	<item key="set_facility"		value="Start application when new device detected:" />
+	<item key="yes"					value="Yes" />
+	<item key="no"					value="No" />
+	<item key="colse_set"			value="When click close button:" />
+	<item key="min"					value="Minimize" />
+	<item key="close_set"			value="Close application" />
+	<item key="download_path"		value="Default download folder:" />
+	<item key="amend"				value="Browse..." />
+	<item key="open"				value="Open" />
+	<item key="renew"				value="Set to default" />
+	<item key="manage_advice"		value="Feedback" />
+	<item key="your_problem"		value="Your question (required):" />
+	<item key="contact_way"			value="Contact (select one):" />
+	<item key="upload_photo"		value="Upload screenshot" />
+	<item key="registering"			value="Sign up" />
+	<item key="agreed"				value="I agree." />
+	<item key="vo_agreement"		value="《VRonline user agreement》"/>
+	<item key="register"			value="Sign up" />
+	<item key="log_in"				value="Have account already?" />
+	<item key="in_registering"		value="Sign up" />
+	<item key="forgot_password"		value="Forget password?" />
+	<item key="remember_password"	value="Remember password" />
+	<item key="automatic_login"		value="Log in automatically" />
+	<item key="login_enter"			value="Log in" />
+	<item key="verification_code"	value="Please input CAPTCHA." />
+	<item key="abnormal_operation"	value="Unexpected error, please input CAPTCHA." />
+	<item key="invisibility"		value="Refresh" />
+	<item key="registration"		value="Registration complete." />
+	<item key="registration_msg"	value="Your account successfully created. Please keep your password safe." />
+	<item key="success_register"	value="Registration complete, please sign in." />
+	<item key="erro_registration"	value="Registration fail" />
+	<item key="registration_erro_msg"	value="Registration fail, please sign up again." />
+	<item key="re_register"			value="Return and sign up again." />
+	<item key="sent_verfication"	value="Send SMS code" />
+	<item key="video_history"		value="History" />
+	<item key="panoramic_video"		value="Player" />
+	<item key="more"				value="More..." />
+	<item key="open_local"			value="Open" />
+	<item key="splendid"			value="精彩评测" />
+	<item key="newComment"			value="Recent:" />
+	<item key="goodComment"			value="Positive" />
+	<item key="badComment"			value="Negative" />
+	<item key="myComment"			value="My comments" />
+	<item key="haveWatch"			value="Views" />
+	<item key="game_play_time"		value="You've played:" />
+	<item key="play_hour"			value="hour(s)" />
+	<item key="report"				value="Report" />
+	<item key="has_report"			value="Reported" />
+	<item key="suc_report"			value="Report success." />
+	<item key="go_score"			value="You have no comment, time to comment!" />
+	<item key="total"				value="Total" />
+	<item key="video_num"			value="video" />
+	<item key="unlike"				value="Not recommanded" />
+	<item key="like"				value="Recommand" />
+	<item key="send"				value="Send" />
+	<item key="like_game"			value="Do you recommand this game?" />
+	<item key="score"				value="Score" />
+	<item key="un_login"			value="Not logged in, please" />
+	<item key="unComment"			value="No comments" />
+	<item key="has"					value="have" />
+	<item key="evaluating"			value="comments" />
+	<item key="comment_add"			value="Add comment" />
+	<item key="has"					value="has" />
+	<item key="or"					value="or" />
+	<item key="has_people"			value="comments" />
+	<item key="game_score"			value="Player score" />
+	<item key="click_start"			value="Click Start button to start." />
+
+	<item key="pageGame_title"			value="Web Game" />
+
+</config>
+
+	<item key="success_set"	value="Success" />
+	<item key="success_set_msg"	value="Your password has been changed, please keep your account secure." />
+	<item key="success_pas_set"	value="Edit complete." />
+	<item key="password_again"	value="Re-enter password" />
+	<item key="password_back"	value="Recover password" />
+	<item key="next_tip"	value="Next" />
+	<item key="version_checking"		value="Detecting game version..." />
+	<item key="sent_verfication"	value="Send SMS code" />
+	<item key="registration_save"	value="Please keep your password secure." />
+	<item key="your_msg"		value="Your account" />
+	<item key="has_num"			value="Sign In" />
+ 

@@ -1,0 +1,6 @@
+device_id   1 == deepoon E2
+		2 == oculus Dk2
+		3 == oculus rift
+		4 == htc
+		5 == osvr hdek1
+		6 == osvr hdk2

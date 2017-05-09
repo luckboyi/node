@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>意见反馈</title>
+    <link rel="stylesheet" type="text/css" href="../style/va-style.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/laypage.js"></script>
+    <script src="../js/base.js"></script>
+</head>
+<body>
+<div class="bounced show">
+    <div class="advice">
+        <div class="advice_head clearfix">
+            <h3 class="fl appendCon" data-name="manage_advice">意见反馈</h3>
+            <div class="close fr cn"></div>
+        </div>
+        <div class="bounced_con">
+            <div class="addGame-body clearfix">
+                <p>您的问题（必填）</p>
+                <textarea ></textarea>
+                <p>联系方式（必填一项）</p>
+                <div class="clearfix advice_write">
+                    <input class="fl" type="text" placeholder="请输入手机号">
+                    <input class="fl" type="text" placeholder="请输入QQ号">
+                </div>
+                <p>上传照片</p>
+                <div class="advice_img clearfix">
+                    <div class="pr fl">
+                        <p></p>
+                        <input type="file" onchange="previewImage(this)">
+
+                    </div>
+                    <div class="pr fl">
+                        <p></p>
+                        <input type="file">
+                        <img src="">
+                    </div>
+                    <div class="pr fl">
+                        <p></p>
+                        <input type="file">
+                        <img src="">
+                    </div>
+                    <div class="pr fl">
+                        <p></p>
+                        <input type="file">
+                        <img src="">
+                    </div>
+                    <div class="pr fl">
+                        <p></p>
+                        <input type="file">
+                        <img src="">
+                    </div>
+                </div>
+            </div>
+            <div class="in-foot clearfix">
+                <div class="cancel fr cn language" data-name="cancel">取消</div>
+                <div class="browse fr cn language" data-name="sure">确定</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+    //实现本地图片上传
+    function previewImage(file)
+    {
+        var MAXWIDTH  = 260;
+        var MAXHEIGHT = 180;
+        var div = $('.advice_img div')
+        if (file.files && file.files[0])
+        {
+            div.innerHTML ='<img class="showImg">';
+            var img = $('.showImg');
+            img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+                img.style.marginTop = rect.top+'px';
+            }
+            var reader = new FileReader();
+            reader.onload = function(evt){img.src = evt.target.result;}
+            reader.readAsDataURL(file.files[0]);
+        };
+    }
+    function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+        var param = {top:0, left:0, width:width, height:height};
+        if( width>maxWidth || height>maxHeight )
+        {
+            rateWidth = width / maxWidth;
+            rateHeight = height / maxHeight;
+
+            if( rateWidth > rateHeight )
+            {
+                param.width =  maxWidth;
+                param.height = Math.round(height / rateWidth);
+            }else
+            {
+                param.width = Math.round(width / rateHeight);
+                param.height = maxHeight;
+            }
+        }
+
+        param.left = Math.round((maxWidth - param.width) / 2);
+        param.top = Math.round((maxHeight - param.height) / 2);
+        return param;
+    }
+   /* function adviceFn(){
+        $('.advice_img input').on('click',function(){
+            previewImage(file)
+        })
+    }*/
+    adviceFn();
+</script>

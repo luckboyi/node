@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../style/va-style.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/laypage.js"></script>
+    <script src="../js/base.js"></script>
+</head>
+<body style="padding: 8px;">
+    <div class="comment">
+        <ul class="clearfix comment_head">
+            <li class="fl splendid cur">精彩评测</li>
+            <li class="fl newComment">最新评测</li>
+            <li class="fl goodComment">好评<b>(1024)</b></li>
+            <li class="fl badComment">差评<b>(2048)</b></li>
+            <li class="fl myComment">我的评论</li>
+        </ul>
+        <div class="comment_body">
+            <ol class="in_comment_body" id="comment_con">
+            </ol>
+            <div class="comment_page" id="comment_page"></div>
+        </div>
+        <div class="comment_foot">
+            <p class="have_comment">已经有<b>1222</b>条评测</p>
+            <div class="add_comment">
+                <textarea  cols="30" rows="10"  onclick="this.value='';">发表评论</textarea>
+            </div>
+            <div class="in_comment_foot clearfix">
+            <div class="fl comment_grade pr">
+                <ul class="un_sel fl">
+                    <li></li>
+                </ul>
+                <span class="grade_mouse pa"></span>
+                <span class="game_score"><b>0.5</b>分</span>
+            </div>
+            <div class="fr clearfix comment_btn">
+                <p class="fl">你喜欢这款游戏么？</p>
+                <ul class="fl clearfix">
+                    <li class="fl cur">喜欢</li>
+                    <li  class="fl">不喜欢</li>
+                </ul>
+                <p class="fl send">发送</p>
+            </div>
+            </div>
+        </div>
+        <div class="no_score">
+            <h3>提示</h3>
+            <p>你还没有评分哦，快去评分吧！</p>
+            <div>
+                <button class="sure">确定</button>
+                <button class="cancel">取消</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    data=[{
+        'imgSrc':'image/touxiang.jpg',
+        'title':'驰车',
+        'content':'世界上没有rpg解决不了的事情',
+        'time':'2016年4月24日',
+        'gameTime':'0',
+        'like':'100',
+        'unlike':'200'
+    },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'time':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        }
+
+    ]
+
+
+    //获取body高度
+    var height = document.body.clientHeight -70;
+
+
+    function comment(data){
+        var nums = parseInt(height/77); //每页出现的数量
+        var pages = Math.ceil(data.length/nums); //得到总页数
+        var thisDate = function(curr){
+            //此处只是演示，实际场景通常是返回已经当前页已经分组好的数据
+            var str = '', last = curr*nums - 1;
+            last = last >= data.length ? (data.length-1) : last;
+            for(var i = (curr*nums - nums); i <= last; i++){
+                str += '<li class="comment_list">\
+                        <div class="comment_body_con clearfix">\
+                            <div class="fl com_portrait">\
+                                <img src="'+data[i].imgSrc+'">\
+                            </div>\
+                            <div class="fl right_com pr">\
+                                <div class="right_com_title clearfix ">\
+                                    <h3 class="fl">'+data[i].title+'：</h3>\
+                                    <span class="fl">'+data[i].content+'</span>\
+                                </div>\
+                                <div class="right_com_con clearfix">\
+                                    <p class="fl">'+data[i].commentTime+'</p>\
+                                    <p class="fl playGame_time">进行游戏时间：<b>'+data[i].gameTime+'</b>个小时</p>\
+                                    <div class="fr clearfix comment_comment">\
+                                        <div class="fl comment_delete">删除</div>\
+                                        <i class="fl">|</i>\
+                                        <div class="fl pr like">(<b>'+data[i].like+'</b>)</div>\
+                                        <i class="fl">|</i>\
+                                        <div class="fl pr unlike">(<b>'+data[i].unlike+'</b>)</div>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </li>';
+            }
+            return str;
+        };
+
+        //调用分页
+        laypage({
+            cont: 'comment_page',
+            pages: pages,
+            jump: function(obj){
+                document.getElementById('comment_con').innerHTML = thisDate(obj.curr);
+            }
+        })
+    }
+    comment(data);
+
+</script>
+<script>
+        //点赞
+        $('.comment_comment .like').one('click',function(){
+            if(!$(this).parent().find('.unlike').hasClass('cur')){
+                var num =parseInt($(this).find('b').text()) + 1;
+                //console.dir(num+1);
+                $(this).addClass('cur');
+                $(this).find('b').text(num);
+            }
+
+        });
+        //点倒彩
+        $('.comment_comment .unlike').one('click',function(){
+            if(!$(this).parent().find('.like').hasClass('cur')){
+                var num =parseInt($(this).find('b').text()) + 1;
+                //console.dir(num+1);
+                $(this).addClass('cur');
+                $(this).find('b').text(num);
+            }
+
+
+        });
+        //点删除
+        $('.comment_comment .delete').on('click',function(){
+            $(this).parents('.comment_list').detach();
+
+        });
+        //评分
+        $('.grade_mouse').mousemove(function(e){
+            var x = (e.clientX - $(this).offset().left)/15;
+            var num = x.toString();
+            if((num.substring(num.indexOf('.'))+1) <.5){
+                n = 0.5
+            }else{
+                n = 1;
+            }
+            var left = parseInt(x) + n;
+            $('.comment_grade li').css('width',left*16);
+            $('.comment_grade .game_score b').text(left);
+            $(this).click(function(){
+                $('.grade_mouse').unbind('mousemove')
+            });
+        });
+        //点击确定评分；
+        $('.grade_mouse').click(function(){
+            $(this).unbind('mousemove');
+            $(this).addClass('click')
+        });
+        //点击发送
+        $('.comment_btn .send').on('click',function(){
+            if($('.grade_mouse').hasClass('click')){
+                //获取当前内容
+                console.dir($('.add_comment textarea').val())
+                //获取评分
+                console.dir($('.game_score').text());
+                //
+            }else{
+                //现在每评分弹框
+                $('.comment .no_score').show();
+            }
+        })
+        //点击是否喜欢
+        $('.comment_btn ul li').on('click',function(){
+            $(this).addClass('cur').siblings().removeClass('cur')
+        })
+        //点击未评分按钮
+        $('.comment .no_score .cancel').on('click',function(){
+            $('.comment .no_score').hide();
+        })
+        //点击确定
+        $('.comment .no_score .sure').on('click',function(){
+            $('.comment .no_score').hide();
+        })
+</script>

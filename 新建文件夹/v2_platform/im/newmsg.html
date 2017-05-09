@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新消息</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/im.css">
+    <script src="../js/plug/jquery-1.11.3.min.js"></script>
+    <script src="../js/plug/tinyscrollbar.js"></script>
+    <script src="js/tool/vue.js"></script>
+</head>
+<body>
+    <div class="new_msg_con" id="new_msg_tips">
+        <ul>
+            <li class="clearfix pr" v-for="(index,list) in lists" @click="openMsgFn(index)" user-id="{{list.uid}}">
+                <div class="img_container fl">
+                    <img :src="list.url">
+                </div>
+                <div class="fl in_msg_con">
+                    <p class="els name" title="{{list.name}}">{{list.name}}</p>
+                    <p class="els">{{list.msg}}</p>
+                </div>
+                <div class="fr chat_msg_num pa" v-if="list.msgnum !=0 ">{{list.msgnum}}</div>
+            </li>
+        </ul>
+        <div class="new_msg_btn clearfix">
+            <span class="fl" @click="overlookFn">忽略全部</span>
+            <span class="fr" @click="viewAll()">查看全部</span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/component/newmsg.js"></script>
+<script src="js/tool/imInterface.js"></script>
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" type="text/css" href="style/va-style.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/tips.js"></script>
+    <script src="js/drive.js"></script>
+    <script src="js/Interface.js"></script>
+    <style>
+        .iframe_con{
+            width: 100%;
+            height: 100%;
+        }
+        .time_remain{
+            line-height: 48px;
+            height: 48px;
+            color: #969696;
+            margin-right: 6px;
+            position: relative;
+            display: none;
+        }
+        .time_remain:before{
+            content: '';
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 50%;
+            left: -16px;
+            margin-top: -6px;
+            background: url('image/icon.png') no-repeat 0 0;
+        }
+        .time_remain i{
+            margin-right: 20px;;
+        }
+        .title_name{
+            font-size: 16px;
+            margin-right: 20px;
+            color: #969696;
+            cursor: default;
+        }
+        .title_name img{
+            width: 16px;
+            height: 16px;
+            vertical-align: -2px;
+            margin-right: 4px;
+        }
+        .cp_title{
+            cursor: pointer;
+        }
+        .cp_title:hover{
+            color: #fff;
+        }
+        .drive_name{display: none;}
+    </style>
+</head>
+<body>
+<div class="">
+    <div style="width:5px; height:5px; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; right:0;top:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; right:0;bottom:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; left:0;bottom:0; -webkit-app-region: drag; " class="pa"></div>
+    <div style="width:100%;height:1px; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:100%;height:1px; left:0;bottom:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px;height:100%; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px;height:100%; right:0;top:0; -webkit-app-region: drag;" class="pa"></div>
+    <!--头部结构S-->
+    <div class="header pr clearfix pageGame_window" style="-webkit-app-region: drag;">
+        <div class="fl header_tool clearfix pr"  style="-webkit-app-region: no-drag;z-index: 1;" >
+            <p class="fl back hide" title=""></p>
+            <span class="drive_name fl title_name clearfix "><img src=""><b></b></span>
+            <span class=" fl title_name cp_title home">首页</span>
+            <span class="drive fl title_name cp_title drive_name ">驱动</span>
+            <span class="fl hide" id='reload'>刷新</span>
+        </div>
+        <h4 class="logo fl"></h4>
+        <div class="manager fr clearfix pr"   style="-webkit-app-region: no-drag;">
+            <div class="time_remain fl clearfix"><b class="fl">剩余时间：</b><i class="fl">00:19:10</i>|</div>
+            <div class="window mini fl" title="最小化" style="-webkit-app-region: no-drag;"></div>
+            <div class="window max fl" title="最大化" style="-webkit-app-region: no-drag;"></div>
+            <div class="window close fl" title="关闭"  style="-webkit-app-region: no-drag;"></div>
+        </div>
+    </div>
+    <!--头部结构E-->
+</div>
+<div class="iframe_con pr">
+    <div class="loading tac">
+        <p  class="loading_icon">
+            <img src="image/load.gif">
+        </p>
+        <div>
+            <span class="fl">Loading</span>
+            <div class="spinner fl"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+        </div>
+    </div>
+    <iframe id="iframe_con" src="" frameborder="0" width="100%" height="100%"></iframe>
+</div>
+<div class="drive_con clearfix">
+    <div class="drive_download_con ">
+        <div class="clearfix">
+            <div class="act_con fl">
+                <div class="drive_name">
+                </div>
+                <div class="drive_information">
+                </div>
+                <div class="drive_undown">
+                    <div class="install_btn language" data-name="install">安装</div>
+                </div>
+            </div>
+            <div class="act_img fr">
+            </div>
+        </div>
+        <div class="drive_schedule pr  tac">
+            <span class="pa hide"></span>
+            <div class="in_sch pr clearfix">
+                <div class="do_in_sch pa fl"  style="width:50%;">
+                    <i class="do_btn"></i>
+                </div>
+                <div class="pa clearfix fl download_text hide" id="drive_down_pro">
+                    <div class="clearfix text_pro" style="left:5px; top:0;">
+                        <div class="spinner fl hide"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+                    </div>
+                </div>
+            </div>
+            <p class="pr download_pro_text">设备已连接，正在为您安装驱动，请耐心等待<b></b>...</p>
+        </div>
+        <div class="loading_drive tac"><i>正在安装中...</i></div>
+        <p class="friendly_rem">友情提醒：当安装驱动过程中需要您的电脑处于联网状态，如安装进度条长时间停止不动，请您检查当前网络是否正常：）</p>
+    </div>
+    <div class="suc_drive tac">
+        <div class="suc_drive_img">
+            <img src="image/suc_drive.png">
+        </div>
+    </div>
+    <div class="fail_drive tac">
+        <div class="fail_drive_img">
+            <img src="image/fail_drive.png">
+        </div>
+        <div class="fail_install_btn">重新安装</div>
+    </div>
+</div>
+<script>
+    if (window.CppCall == undefined) {
+        window.CppCall = function () {};
+    }
+    $(function(){
+        // $('#reload').on('click',function(){
+        //     $('#iframe_con').attr('src','http://vue.vronline.com:8080/');
+        // })
+        resizeFn();
+        windowFn();
+        $(window).resize(function() {
+            resizeFn();
+        });
+
+        //点击关闭按钮
+        $('.close_btn').on('click',function(){
+            $(this).parent('.charge').hide();
+        });
+        //点击打开文件
+        var data = {
+            src:'demo.mp4'
+        };
+        $('.add_local_btn').on('click',function(){
+            //addLocalUrl(data)
+            window.CppCall('videoframe', 'videoopendir', '');
+        });
+        $('body').on('click','.open_local_file',function(){
+            //alert(1)
+            window.CppCall('videoframe', 'videoopendir', '');
+        });
+        /*点击进入驱动页*/
+        $('body').on('click','.drive',function(){
+            //alert(1)
+            $('.drive_con').show();
+            $('.loading').hide();
+            $('#iframe_con').hide();
+        });
+        //点击进入首页
+        $('body').on('click','.home',function(){
+            //alert(1)
+            $('#iframe_con').show();
+            $('.drive_con').hide();
+            iframeLoad();
+        });
+    });
+
+    function resizeFn(){
+        var winHeight;
+        if (window.innerHeight){
+            winHeight = window.innerHeight;
+        }else if ((document.body) && (document.body.clientHeight))
+        { winHeight = document.body.clientHeight;}
+        //console.log(winHeight);
+        //调用滚动事件
+        $('.pageGameCon').height((winHeight-38)+'px');
+        $('.iframe_con').height(winHeight-48);
+
+        //功能键
+        /*$(document).keydown(function (event) {
+            alert(event.keyCode);
+        });*/
+    };
+
+</script>
+</body>
+</html>
+<script>
+   /* $(function(){
+        $('body').tipsFn({
+            msg:'这是测试'
+        });
+    })*/
+</script>

@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页游戏</title>
+    <link rel="stylesheet" href="http://pic.vronline.com/common/style/base.css">
+    <link rel="stylesheet" href="http://pic.vronline.com/website/style/headeFooter.css"/>
+    <!--<link rel="stylesheet" href="http://pic.vronline.com/website/css/wap.min.css" />-->
+    <link rel="stylesheet" href="../../../../pic/website/style/home.css" />
+    <link rel="stylesheet" href="../../../../pic/website/style/VRgame.css" />
+    <link rel="stylesheet" href="../../../../pic/website/style/webgame.css" />
+</head>
+<body>
+<header>
+    <div class='top clearfloat'>
+        <div class='fl left'>
+            <a class="home_logo" href="http://www.vronline.com/"><img src='http://pic.vronline.com/website/images/logo.png' /></a>
+            <a class='sy' href="javascript:;">首页</a>
+            <a href="javascript:;">充值</a>
+            <a href="javascript:;">关于VRonline</a>
+        </div>
+        <div class='fr right'>
+            <a class='blue' href='javascript:;'>安装VR客户端</a>
+            <!--<a class='login' href="javascript:;">登录</a>
+            <!--new 2016-10-14 finish-->
+            <!--new 2016-10-19 qb 语言暂时先不要 finish-->
+            <!--<a class='language clearfix hide' href="javascript:;">
+                <span>语言</span>
+                <div class="change_language">
+                    <p class="chinese">中文</p>
+                    <p>英文</p>
+                </div>
+            </a>-->
+            <!--new 2016-10-14 以下注释的代码登录之后的样式 finish-->
+            <div class='login_user'>
+                <div class="clearfix">
+							<span class="user_pic fl">
+								<img src='' />
+							</span>
+                    <div class="fl user_detail clearfix">
+                        <h3>DaveheDavehe</h3>
+                        <div class="grade clearfix">
+                            <span class="fl level2"></span>
+                            <span class="fl level_num">2345</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <!--new 2016-10-19 qb finish-->
+                    <li class="geren"><a href="javascript:;"><span></span>个人中心</a></li>
+                    <!--<li class="change"><a href="javascript:;"><span></span>更改语言</a></li>-->
+                    <li class="switch"><a href="javascript:;"><span></span>切换账户</a></li>
+                    <li class="quit"><a href="javascript:;"><span></span>退出</a></li>
+                </ul>
+            </div>
+            <!--new 2016-10-14 finish -->
+        </div>
+    </div>
+</header>
+<div class="sec_nav">
+    <div class="nav clearfloat">
+        <ul class='fl clearfloat'>
+            <li class="fl">
+                <!--new 2016-10-14 span外面包个a finish-->
+                <a href="javascript:;"><span>VR游戏</span></a>
+                <div class='con block'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+            <li class="fl">
+                <!--new 2016-10-14 span外面包个a finish-->
+                <a href="javascript:;"><span>多媒体</span></a>
+                <div class='con'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+            <li class="fl">
+                <!--new 2016-10-14 span外面包个a finish-->
+                <a href="javascript:;"><span>网页游戏</span></a>
+                <div class='con'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+            <li class="fl">
+                <!--new 2016-10-14 span外面包个a finish-->
+                <a href="javascript:;"><span>设备支持</span></a>
+                <div class='con'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+        </ul>
+        <!--<div class='search fr'>
+            <input class='txt' type='text' placeholder="请输入游戏名称" />
+            <input type='submit' value='' class='sub' />
+        </div>-->
+    </div>
+</div>
+<div class="webgame_con pr clearfix">
+    <div class="webgame_left_con fl" id="webgame_left_con">
+        <div class="webgame_login">
+            <!--未登录的状态-->
+            <div class="unlogin_con ">
+                <div class="webgame_login_con">
+                    <h3 class="f14">登录</h3>
+                    <div class="webgame_login">
+                        <p class="pr">
+                            <input type="text" placeholder="手机/VRonline账号">
+                            <span class="erro_msg erroColor pa"><i class="erro_icon"></i><b>错误信息</b></span>
+                        </p>
+                        <p class="pr">
+                            <input type="text" placeholder="请输入密码">
+                            <span class="erro_msg erroColor pa"><i class="erro_icon"></i><b>错误信息</b></span>
+
+                        </p>
+                        <p class="clearfix set_login_state">
+                            <span class="fl web_auto_login pr f12"><i class="pa cur"></i>自动登录</span>
+                            <span class="fr forget_psw blueColor f12">忘记密码</span>
+                        </p>
+                        <p class="clearfix login_btn tac">
+                            <span class="fl"><a href="javascript:;">登录</a></span>
+                            <span class="fr"><a href="javasccript:;">注册</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="quick_login">
+                    <h3 class="f14">第三方登录</h3>
+                    <ul class="clearfix">
+                        <li class="fl qq"><a href="http://passport.vronline.com/auth/qq"></a></li>
+                        <li class="fl wx"><a href="http://passport.vronline.com/auth/wx"></a></li>
+                        <li class="fl weibo"><a href="http://passport.vronline.com/auth/weibo"></a></li>
+                    </ul>
+                </div>
+                <div class="webgame_recent">
+                    <h3>热门游戏</h3>
+                    <div class="in_webgame_recent webgame_list_hei" id="hot_recent">
+                        <div class="webgame_recent_con pr hot_game_hei">
+                            <div class="scrollbar pa fr"><div class="track"><div class="thumb pa"><div class="end"></div></div></div></div>
+                            <div class="viewport hot_game_hei">
+                                <ul class="overview">
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                            <p class="pa game_title clearfix">
+	                                            <span class="fl">星战前夜</span>
+	                                            <span class="fr">网通一区</span>
+	                                        </p>
+	                                        <div class="go_btn pa clearfix">
+	                                            <p class="go_detail show-webgame-detail" appid="1000011">进入专区</p>
+	                                            <p class="start_game start-web-game-server cur" game-id="1000011" game-name="像素骑士团">开始游戏</p>
+	                                        </div>
+                                        </a>
+                                    </li>
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                            <p class="pa game_title">
+	                                            <span class="fl">星战前夜</span>
+	                                            <span class="fr">网通一区</span>
+	                                        </p>
+	                                        <div class="go_btn pa">
+	                                            <p class="go_detail show-webgame-detail" appid="1000011">进入专区</p>
+	                                            <p class="start_game start-web-game-server cur" game-id="1000011" game-name="像素骑士团">开始游戏</p>
+	                                        </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--未登录的状态-->
+            <!--登录成功的状态-->
+            <div class="suc_login hide">
+                <div class="user_msg">
+                    <h3>登录</h3>
+                    <p class="clearfix in_user_msg_con">
+                        <span class="fl">我叫ddd</span>
+                        <span class="fr blueColor f12">退出</span>
+                    </p>
+                    <p class="clearfix login_btn tac">
+                        <span class="fl"><a href="javascript:;">个人中心</a></span>
+                        <span class="fr"><a href="javasccript:;">充值</a></span>
+                    </p>
+                </div>
+                <div class="webgame_recent">
+                    <h3>最近游戏</h3>
+                    <div class="in_webgame_recent webgame_list_hei" id="webgame_recent">
+                        <div class="webgame_recent_con pr webgame_list_hei">
+                            <div class="scrollbar pa fr"><div class="track"><div class="thumb pa"><div class="end"></div></div></div></div>
+                            <div class="viewport webgame_list_hei">
+                                <ul class="overview">
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                        </a>
+                                        <p class="pa game_title">
+                                            <span class="fl">星战前夜</span>
+                                            <span class="fr">网通一区</span>
+                                        </p>
+                                    </li>
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                        </a>
+                                        <p class="pa game_title">
+                                            <span class="fl">星战前夜</span>
+                                            <span class="fr">网通一区</span>
+                                        </p>
+                                    </li>
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                        </a>
+                                        <p class="pa game_title">
+                                            <span class="fl">星战前夜</span>
+                                            <span class="fr">网通一区</span>
+                                        </p>
+                                    </li>
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                        </a>
+                                        <p class="pa game_title">
+                                            <span class="fl">星战前夜</span>
+                                            <span class="fr">网通一区</span>
+                                        </p>
+                                    </li>
+                                    <li class="pr">
+                                        <a href="javascript:;">
+                                            <img src="../images/3.jpg" >
+                                        </a>
+                                        <p class="pa game_title">
+                                            <span class="fl">星战前夜</span>
+                                            <span class="fr">网通一区</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--登录成功的状态-->
+        </div>
+    </div>
+    <div class="webgame_right_con fr">
+        <div class="home_banner webgame_banner">
+            <ul class="clearfix">
+                <li class="fl cur"><a href="javascript:;"><img src="http://pic.vronline.com/website/images/Carouselfigure1.jpg" ></a></li>
+                <li class="fl"><a href="javascript:;"><img src="http://pic.vronline.com/website/images/Carouselfigure2.jpg" ></a></li>
+                <li class="fl"><a href="javascript:;"><img src="http://pic.vronline.com/website/images/multimedia_bigPic.png" ></a></li>
+                <li class="fl"><a href="javascript:;"><img src="http://pic.vronline.com/website/images/VRquanjing_03.png" ></a></li>
+            </ul>
+            <div class="thumbnail">
+                <ol>
+                    <li class="active">
+                        <a class="clearfix" href="javascript:;">
+                            <span class="fl"><img src="http://pic.vronline.com/website//images/newhome.jpg" ></span>
+                            <div class="fr">
+                                <h3>阴阳师</h3>
+                                <p title="《阴阳师》首部资料片">《阴阳师》首部资料片</p>
+                                <p title="“魑魅之卷”资料片今日上线">“魑魅之卷”资料片今日上线</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="clearfix" href="javascript:;">
+                            <span class="fl"><img src="http://pic.vronline.com/website//images/newhome.jpg" ></span>
+                            <div class="fr">
+                                <h3>阴阳师</h3>
+                                <p title="《阴阳师》首部资料片">《阴阳师》首部资料片</p>
+                                <p title="“魑魅之卷”资料片今日上线">“魑魅之卷”资料片今日上线</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="clearfix" href="javascript:;">
+                            <span class="fl"><img src="http://pic.vronline.com/website//images/newhome.jpg" ></span>
+                            <div class="fr">
+                                <h3>阴阳师</h3>
+                                <p title="《阴阳师》首部资料片">《阴阳师》首部资料片</p>
+                                <p title="“魑魅之卷”资料片今日上线">“魑魅之卷”资料片今日上线</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="clearfix" href="javascript:;">
+                            <span class="fl"><img src="http://pic.vronline.com/website//images/newhome.jpg" ></span>
+                            <div class="fr">
+                                <h3>阴阳师</h3>
+                                <p title="《阴阳师》首部资料片">《阴阳师》首部资料片</p>
+                                <p title="“魑魅之卷”资料片今日上线">“魑魅之卷”资料片今日上线</p>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="in_webgame_right_con clearfix">
+            <div class="fl in_webgame_left_con">
+                <!--猜你喜欢-->
+                <div class="love_webgame">
+                    <div class="webgame_con_head">
+                        <h3 class="blueColor pr">
+                            <i class="pa"></i>
+                            <span>猜你喜欢</span>
+                        </h3>
+                    </div>
+                    <div class="love_webgame_con">
+                        <ul class="clearfix">
+                            <!--new 2016-11-19-->
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--猜你喜欢-->
+                <!--最新推荐-->
+                <div class="new_webgame">
+                    <div class="webgame_con_head">
+                        <h3 class="blueColor pr">
+                            <i class="pa"></i>
+                            <span>最新推荐</span>
+                        </h3>
+                    </div>
+                    <div class="new_webgame_con">
+                        <ul class="clearfix ">
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="play_num fr ells" title="1222人玩过">1222人玩过</span>
+                                </p>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="go_detail">进入专区</p>
+                                    <p class="start_game cur">开始游戏</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </li>
+							<li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="play_num fr ells" title="1222人玩过">1222人玩过</span>
+                                </p>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="go_detail">进入专区</p>
+                                    <p class="start_game cur">开始游戏</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="play_num fr ells" title="1222人玩过">1222人玩过</span>
+                                </p>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="go_detail">进入专区</p>
+                                    <p class="start_game cur">开始游戏</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="play_num fr ells" title="1222人玩过">1222人玩过</span>
+                                </p>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="go_detail">进入专区</p>
+                                    <p class="start_game cur">开始游戏</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="play_num fr ells" title="1222人玩过">1222人玩过</span>
+                                </p>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="go_detail">进入专区</p>
+                                    <p class="start_game cur">开始游戏</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="play_num fr ells" title="1222人玩过">1222人玩过</span>
+                                </p>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="go_detail">进入专区</p>
+                                    <p class="start_game cur">开始游戏</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--最新推荐-->
+                <!-- 活动专区-->
+                <div class="active_webgame">
+                    <div class="webgame_con_head">
+                        <h3 class="blueColor pr">
+                            <i class="pa"></i>
+                            <span>活动专区</span>
+                        </h3>
+                        <a class="fr blueColor f12" href="javascript:;">换一批</a>
+                    </div>
+                    <div class="love_webgame_con">
+                        <ul class="clearfix">
+                            <!--new 2016-11-19-->
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;" class="pr clearfix">
+                                    <div class="fl img_con">
+                                        <img src="../images/3.jpg" >
+                                    </div>
+                                    <div class="fl text_con">
+                                        <p class="title f14">梦幻西游</p>
+                                        <p class="play_num">2800人在玩</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                    <div class="go_btn pa">
+                                        <p class="start_game">开始游戏</p>
+                                        <p class="go_detail">进入专区</p>
+                                    </div>
+                                    <!--new 2016-11-19-->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 活动专区-->
+                <!-- 游戏列表-->
+                <div class="webgame_list">
+                    <div class="webgame_con_head">
+                        <h3 class="blueColor pr">
+                            <i class="pa"></i>
+                            <span>游戏列表</span>
+                        </h3>
+                    </div>
+                    <div class="webgame_list_con">
+                        <ul class="clearfix">
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="title tac ells">游戏名</p>
+                                <div class="go_btn pa">
+                                <p class="start_game">开始游戏</p>
+                                <p class="go_detail">进入专区</p>
+                            </div>
+                            </li>
+                            <!--new 2016-11-19-->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 游戏列表-->
+            </div>
+            <div class="fr right_list_con">
+                <!--礼包专区-->
+                <div class="gift_con">
+                    <div class="gift_title">
+                        <span class="f14">礼包专区</span>
+                        <a href="javascript:;" class="blueColor f12 fr">换一批</a>
+                    </div>
+                    <div class="in_gift_con">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="clearfix">
+                                    <div class="img_con fl">
+                                        <img src="../images/3.jpg">
+                                    </div>
+                                    <div class="gift_text fl">
+                                        <p class="name">烈火屠龙</p>
+                                        <p class="residue_gift">
+                                            <span>仅剩</span>
+                                            <span class="yellow_color">2134</span>
+                                            <span>个礼包</span>
+                                        </p>
+                                    </div>
+                                    <div class="get_gift_btn tac fr">
+                                        领取
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="clearfix">
+                                    <div class="img_con fl">
+                                        <img src="../images/3.jpg">
+                                    </div>
+                                    <div class="gift_text fl">
+                                        <p class="name">烈火屠龙</p>
+                                        <p class="residue_gift">
+                                            <span>仅剩</span>
+                                            <span class="yellow_color">2134</span>
+                                            <span>个礼包</span>
+                                        </p>
+                                    </div>
+                                    <div class="get_gift_btn tac fr">
+                                        领取
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="clearfix">
+                                    <div class="img_con fl">
+                                        <img src="../images/3.jpg">
+                                    </div>
+                                    <div class="gift_text fl">
+                                        <p class="name">烈火屠龙</p>
+                                        <p class="residue_gift">
+                                            <span>仅剩</span>
+                                            <span class="yellow_color">2134</span>
+                                            <span>个礼包</span>
+                                        </p>
+                                    </div>
+                                    <div class="get_gift_btn tac fr">
+                                        领取
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--礼包专区-->
+                <!--热门榜单-->
+                <div class="hotList">
+                    <div class="hotList_title clearfix">
+                        <span class="fl cur">热门榜单</span>
+                        <span class="fl">新游首发</span>
+                    </div>
+                    <div class="hotList_con vrgame_hot cur">
+                        <ul>
+                            <li class="first cur">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="second">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking2"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="third">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking3"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fourth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking4"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fifth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking5"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="sixth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking6"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hotList_con webgame_hot">
+                        <ul>
+                            <li class="first cur">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking"></span>
+                                    <span class="fl">网页游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="second">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking2"></span>
+                                    <span class="fl">网页游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="third">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking3"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fourth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking4"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fifth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking5"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="sixth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking6"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hotList_con video_hot">
+                        <ul>
+                            <li class="first cur">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking"></span>
+                                    <span class="fl">视频名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="second">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking2"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="third">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking3"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fourth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking4"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="fifth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking5"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="sixth">
+                                <a class="clearfix" href="javascript:;">
+                                    <span class="fl ranking ranking6"></span>
+                                    <span class="fl">VR游戏名称</span>
+                                    <span class="fr downNum">1111次</span>
+                                    <div>
+                                        <img src="http://pic.vronline.com/website/images/newhome.jpg" >
+                                        <p>
+                                            <span><em>9.6</em>分</span>
+                                            <span>免费</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--开服-->
+                <div class="tab">
+                    <div class="tab_title clearfix">
+                        <span class="fl tab_titleBg">新服公告</span>
+                        <span class="fl">已开新服</span>
+                    </div>
+                    <div class="tab_con">
+                        <div class="clearfix">
+                            <span class="fl">游戏名称</span>
+                            <span class="fl">服务器</span>
+                            <span class="fl">时间</span>
+                        </div>
+                        <ul>
+                            <li class="clearfix cur">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟69区</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟69区</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟69区</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟69区</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                            </li>
+                        </ul>
+                        <ul class='tab_hide'>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟70区</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟70区</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟70区</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="fl">唐门六道</span>
+                                <span class="fl">联盟70区</span>
+                                <span class="fl tab_conTime">09-10 14:30</span>
+                                <span class="fl gameEnter">进入游戏</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--搜索-->
+                <div class="screen">
+                    <div class="screen_title">
+                        <h3><i></i>按类型筛选</h3>
+                    </div>
+                    <div class="screen_con">
+                        <div class="search">
+                            <input type="text" placeholder="请输入游戏名称" />
+                            <i></i>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">类型：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">免费</a></li>
+                                <li class="fl"><a href="javascript:;">休闲</a></li>
+                                <li class="fl"><a href="javascript:;">体育</a></li>
+                                <li class="fl"><a href="javascript:;">独立</a></li>
+                                <li class="fl"><a href="javascript:;">MMORPG</a></li>
+                                <li class="fl"><a href="javascript:;">FPC</a></li>
+                                <li class="fl"><a href="javascript:;">TPS</a></li>
+                                <li class="fl"><a href="javascript:;">MOBA</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">设备：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">全部</a></li>
+                                <li class="fl"><a href="javascript:;">大朋</a></li>
+                                <li class="fl"><a href="javascript:;">HTC</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">特征：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">全部</a></li>
+                                <li class="fl"><a href="javascript:;">动作</a></li>
+                                <li class="fl"><a href="javascript:;">策略</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">字母：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">abc</a></li>
+                                <li class="fl"><a href="javascript:;">edr</a></li>
+                                <li class="fl"><a href="javascript:;">fff</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="http://pic.vronline.com/common/js/jquery-1.12.3.min.js"></script>
+<script src="http://pic.vronline.com/website/js/tinyscrollbar.js"></script>
+<script src="http://pic.vronline.com/website/js/base.js"></script>
+<script src="http://pic.vronline.com/website/js/banner.js"></script>
+
+<script>
+    $(function(){
+            //轮播
+        $('.home_banner').bannerVideo();
+        /*
+         //游戏列表滚动条
+         $('#webgame_recent').tinyscrollbar();
+         $('#hot_recent').tinyscrollbar();*/
+        //左侧游戏列表
+        webgame_list_scroll();
+        $(window).resize(function(event) {
+            webgame_list_scroll();
+        });
+    });
+
+    //左侧的js判断
+    //左侧的函数
+    function webgame_list_scroll(){
+        var winHeight;
+        if (window.innerHeight){
+            winHeight = window.innerHeight;
+        }else if ((document.body) && (document.body.clientHeight)) {
+            winHeight = document.body.clientHeight;
+        };
+        var rightHei = $('.webgame_right_con').height();
+        console.dir(rightHei)
+        //var hei = $('#vrgame_list').offset().top;
+        if($('#vrgame_list').hasClass('isScroll')){
+            $('.vr_list_hei').css({
+                height:winHeight-73
+            });
+            $('.in_vr_list_hei').css({
+                height:winHeight-73-30
+            });
+        }else{
+            $('#vrgame_list').css({
+                'position':'relative',
+                'top':'0'
+            })
+            $('.vr_list_hei').css({
+                height:rightHei
+            });
+            $('.in_vr_list_hei').css({
+                height:rightHei
+            });
+        }
+        //滚动到相应的位置
+        $(window).scroll(function(event) {
+            var sct = $(this).scrollTop();
+
+            //console.log(offsetH);
+            if(sct >= 73){
+                $('#webgame_left_con').css({
+                    'position':'fixed',
+                    'top':'73px'
+                }).addClass('isScroll');
+                $('.vr_list_hei').css({
+                    height:winHeight-362
+                });
+                $('.in_vr_list_hei').css({
+                    height:winHeight-362
+                });
+            
+                $('#vrgame_list_scroll').tinyscrollbar();
+            }else{
+                $('#webgame_left_con').css({
+                    'position':'relative',
+                    'top':'0'
+                }).removeClass('isScroll');
+                $('.vr_list_hei').css({
+                    height:rightHei
+                });
+                $('.in_vr_list_hei').css({
+                    height:rightHei
+                });
+            }
+        });
+    }
+</script>

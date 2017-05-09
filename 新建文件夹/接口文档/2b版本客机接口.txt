@@ -1,0 +1,13 @@
+pc==>html5
+
+mainFn.interface('module','fn','data')
+
+
+action				| 描述			| json
+-----------------------------------------------------------------------------------------------------------------
+
+'setdevice'			设置设备信息		{'devname': 'htc', 'img': 'file:///'}
+
+'seturl'			设置iframeurl		{'url':'http://'}
+
+'updatetime'			更新剩余时间		{'txt':'00:30:00'}

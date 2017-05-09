@@ -1,0 +1,69 @@
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/*视频页*/
+.multimedia_left_con{color:#536174; }
+.thumb{display: none;}
+#video_right_con{margin:0px 20px 0 260px; width: auto;}
+.multimedia_right_con ul li .min{margin: 0;}
+#video_right_con .scrollbar{right: -16px;}
+#video_container ul.ul_bg{width: 240px;}
+#video_container .left_con{width: 240px;}
+.left_con li{width: 234px;height: 100px;padding: 0;margin: 0;}
+.left_con li.cur{background: url("../images/hover.png") no-repeat center ;}
+.left_con li:hover{background: url("../images/hover.png") no-repeat center ;}
+.left_con li:active{background: url("../images/hover.png") no-repeat center ;}
+#video_container .left_con .video_con_hei li span{margin: 22px 0 0 16px;}
+.left_con:hover .thumb,.multimedia_right_con:hover .thumb{display: block;}
+.left_con li .title{margin:20px 0 0 10px }
+.multimedia_left_con .left_con ul li .title p{
+    width: 136px;
+}
+.left_con_btn{bottom: 0; left: 0; height: 30px;line-height: 30px;width: 100%;}
+.left_con_btn a{width: 49.4%;display: inline-block;background: rgba(45,54,69,.5);text-align: center;color: #5a697d;}
+.left_con_btn a:hover{background: #425067;color:  #a9bad0;}
+#video_container .multimedia_right_con .multimediaCon .min li{left: 0;}
+.multimedia_right_con .multimediaCon .big{}
+.multimedia_right_con .multimediaCon .min{width: auto;}
+
+
+/*意见反馈*/
+.mask{ position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,.5); z-index:99999999; display: none;}
+.mask h3{height: 16px;}
+.bounced{
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    z-index: 99999;
+    cursor: default;
+    box-shadow: 0px 0px 8px #000 ;
+}
+.bounced_con{border: 1px solid #000;
+    background: #1c202a;
+    padding: 12px;
+    border-top: 1px solid #1c202a;margin-top: -1px;}
+.advice{color: #828f9e;}
+.advice_head{padding-top: 10px;}
+.advice_head h3{text-indent: 12px; line-height: 30px;}
+.advice_head{border: 1px solid #000; background: #1c202a;}
+.advice .addGame-body{background: #151920; padding: 10px;}
+.advice .addGame-body p{line-height: 24px;}
+.advice .addGame-body textarea{color: #828f9e;width: 655px;height:120px; background: #48576f; border: none; resize: none; padding: 5px; margin: 10px 0;}
+.advice_write input{color: #828f9e; width: 150px; height: 32px;line-height: 32px; background: #48576f; outline: none; border: none; text-indent: 10px;}
+.advice_write input:nth-child(1){margin-right: 10px;}
+.advice_write{margin-bottom: 10px;}
+.advice_img div{width: 128px; height: 80px; margin-right: 5px; background: url("../../common/images/icon.png") no-repeat 0 -1400px;}
+.advice_img input{width: 100%;height: 100%;overflow: hidden; opacity: 0; z-index: 99;position: absolute;top: 0;left: 0;}
+.advice_img p{  position: absolute;right: 2px;top:-8px; z-index: 100; display: none;}
+.advice_img p:hover{ background-position-y: -230px;}
+.advice_img img{width: 100%;height: 100%; position: absolute; left:0; top:0; border: none; display: none;}
+.in-foot div{padding: 6px 30px;margin: 10px 0 0 10px; color: #a9bad0; display: block; border-radius: 2px;}
+.in-foot div.cn{ background:#384455; cursor: default; pointer-events:auto; }
+.in-foot .cn:hover{background: #425067;}
+.in-foot .cn:active{background: #2d3645;}

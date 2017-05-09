@@ -1,0 +1,798 @@
+<html><head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=9">
+		<meta name="keywords" content="VR游戏、VR视频">
+		<meta name="description" content="这是vronline">
+		<meta name="renderer" content="webkit">
+				<!--页面的Title-->
+		<title>网页游戏</title>
+		<!--页面的Title End-->
+		<link href="http://pic.vronline.com/common/style/base.css?20" rel="stylesheet">
+		<link href="http://pic.vronline.com/common/style/login.css?20" rel="stylesheet">
+		<link href="http://pic.vronline.com/website/css/wap.min.css?20" rel="stylesheet">
+		<link href="http://pic.vronline.com/website/style/valiant360.css?20" rel="stylesheet">
+				<script src="http://pic.vronline.com/common/js/jquery-1.12.3.min.js?20"></script>
+		
+		<style>
+.webgame_recent_con{
+    height: auto;
+}
+.overview .webgame_recent_con li {
+    width: 208px;
+    height: 117px;
+}
+.overview .webgame_recent_con li a {
+    width: 206px;
+    height: 115px;
+    border: 1px solid #000;
+}
+</style>
+	</head>
+	<body>
+				<header>
+			<div class="top clearfloat">
+				<div class="fl left">
+					<a class="home_logo" href="http://www.vronline.com/"><img src="http://pic.vronline.com/website/images/logo.png?20"></a>
+					<a class="sy" href="http://www.vronline.com">首页</a><a class="" href="http://www.vronline.com/charge">充值中心</a><a class="" href="http://www.vronline.com/down">下载中心</a><a class="" href="http://www.vronline.com/vronline">关于VRonline</a>
+				</div>
+				<div class="fr right clearfix">
+					<a class="fl blue" href="http://www.vronline.com/">安装VRonline</a>
+										<a class="login" href="http://www.vronline.com/login">登录</a>
+													</div>
+		</div></header>
+				<section class="sec">
+						<div class="sec_nav">
+				<div class="nav clearfloat">
+					<ul class="fl clearfloat">
+						<li class="fl">
+							<a href="http://www.vronline.com/vrgame"><span>VR游戏</span></a>
+						</li>
+						<li class="fl">
+							<a href="http://www.vronline.com/media"><span>多媒体</span></a>
+							<!-- <div class='con'>
+									<a href='http://www.vronline.com/media'>全景VR</a>
+									<a href='http://www.vronline.com/media'>游戏视频</a>
+									<a href='http://www.vronline.com/media'>风景名胜</a>
+							</div> -->
+						</li>
+						<li class="fl">
+							<a href="http://www.vronline.com/webgame"><span>网页游戏</span></a>
+						</li>
+						<li class="fl">
+							<a href="http://www.vronline.com/device"><span>设备支持</span></a>
+						</li>
+					</ul>
+					<!--<div class='search fr'>
+									<input class='txt' type='text' placeholder="请输入游戏名称" />
+									<input type='submit' value='' class='sub' />
+					</div>-->
+				</div>
+			</div>
+						<div class="webgame_con pr clearfix">
+    <div class="webgame_left_con fl left-fix-con need-tiny-scroll has-fixed" id="webgame_left_con" style="position: fixed; top: 74px; left: auto;">
+        <div class="scrollbar pa fr" style="height: 405px;"><div class="track" style="height: 405px;"><div class="thumb pa" style="top: 0px; height: 329.367px;"><div class="end"></div></div></div></div>
+        <div class="webgame_login viewport" style="height: 405px; overflow: hidden; position: relative;">
+            <!--未登录的状态-->
+                                        <div class="unlogin_con overview" style="top: 0px;">
+                                    <div class="webgame_login_con">
+                        <h3 class="f14">登录</h3>
+                        <div class="webgame_login">
+                            <p class="pr">
+                                <input type="text" placeholder="手机/VRonline账号" name="accountnum">
+                                <span class="erro_msg erroColor pa"><i class="erro_icon"></i><b>错误信息</b></span>
+                            </p>
+                            <p class="pr">
+                                <input type="password" placeholder="请输入密码" name="password">
+                                <span class="erro_msg erroColor pa"><i class="erro_icon"></i><b>错误信息</b></span>
+
+                            </p>
+                            <p class="clearfix set_login_state">
+                                <span class="fl web_auto_login pr f12"><i class="pa has_auto"></i>自动登录</span>
+                                <span class="fr forget_psw blueColor f12" onclick="window.location.href='http://www.vronline.com/forgetpwd'">忘记密码</span>
+                            </p>
+                            <p class="clearfix login_btn tac">
+                                <span class="fl" id="loginBtn"><a href="javascript:;">登录</a></span>
+                                <span class="fr"><a href="http://www.vronline.com/register">注册</a></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="quick_login">
+                        <h3 class="f14">第三方登录</h3>
+                        <ul class="clearfix">
+                            <li class="fl qq"><a href="http://passport.vronline.com/auth/qq"></a></li>
+                            <li class="fl wx"><a href="http://passport.vronline.com/auth/wx"></a></li>
+                            <li class="fl weibo"><a href="http://passport.vronline.com/auth/weibo"></a></li>
+                        </ul>
+                    </div>
+                                        <div class="webgame_recent">
+                        <h3>热门游戏</h3>
+                        <div class="in_webgame_recent webgame_list_hei" id="hot_recent">
+                            <div class="webgame_recent_con pr hot_game_hei">
+                                <div class="hot_game_hei">
+                                    <ul>
+                                                                                                                                    <li class="pr show-webgame-detail" appid="1000011">
+                                                    <a href="javascript:;">
+                                                        <img src="http://image.vronline.com/webgameimg/pub/1000011/logo/ty226?7">
+                                                        <p class="pa game_title">
+                                                            <span class="fl">像素骑士团</span>
+                                                            <span class="fr"></span>
+                                                        </p>
+                                                        <div class="go_btn pa">
+                                                            <p class="go_detail show-webgame-detail" appid="1000011">进入专区</p>
+                                                            <p class="start_game cur start-web-game" game-id="1000011" server-id="-1" game-name="像素骑士团">开始游戏</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--未登录的状态-->
+                        </div>
+    </div>
+    <div class="webgame_right_con fr">
+    <div class="home_banner webgame_banner">
+	<ul class="clearfix">
+						<li class="fl cur"><a href="http://webgame.vronline.com/servers/1000011"><img src="http://image.vronline.com/bannerimg/index/o_1b0b02ld91llud6khkp1153i6ig"></a></li>
+				<li class="fl "><a href="http://webgame.vronline.com/servers/1000011"><img src="http://image.vronline.com/bannerimg/index/o_1b0b1lbflq4u1ja3115a646e6cg"></a></li>
+				<li class="fl "><a href="http://webgame.vronline.com/servers/1000011"><img src="http://image.vronline.com/bannerimg/index/o_1b0b1mpio5sg1em6ap7trecedg"></a></li>
+					</ul>
+	<div class="thumbnail">
+		<ol>
+									<li>
+				<a class="clearfix" href="javascript:;">
+					<span class="fl"><img src=""></span>
+					<div class="fr">
+						<h3></h3>
+						<p title=""></p>
+					</div>
+				</a>
+			</li>
+						<li>
+				<a class="clearfix" href="javascript:;">
+					<span class="fl"><img src=""></span>
+					<div class="fr">
+						<h3></h3>
+						<p title=""></p>
+					</div>
+				</a>
+			</li>
+						<li>
+				<a class="clearfix" href="javascript:;">
+					<span class="fl"><img src=""></span>
+					<div class="fr">
+						<h3></h3>
+						<p title=""></p>
+					</div>
+				</a>
+			</li>
+								</ol>
+	</div>
+</div>
+    <div class="in_webgame_right_con clearfix">
+        <div class="fl in_webgame_left_con">
+            <!--猜你喜欢-->
+            <div class="love_webgame">
+                <div class="webgame_con_head">
+                    <h3 class="blueColor pr">
+                    <i class="pa"></i>
+                    <span>猜你喜欢</span>
+                    </h3>
+                </div>
+                <div class="love_webgame_con">
+                    <ul class="clearfix">
+                                                                        <li class="fl">
+                            <a href="javascript:;" class="pr clearfix">
+                                <div class="fl img_con">
+                                    <img src="http://image.vronline.com/webgameimg/pub/1000011/logo/ty226?7">
+                                </div>
+                                <div class="fl text_con">
+                                    <p class="title f14">像素骑士团</p>
+                                    <p class="play_num">5人在玩</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                                <div class="go_btn pa">
+                                    <p class="start_game start-web-game" game-id="1000011" server-id="-1" game-name="像素骑士团">开始游戏</p>
+                                    <p class="go_detail show-webgame-detail cur" appid="1000011">进入专区</p>
+                                </div>
+                                <!--new 2016-11-19-->
+                            </a>
+                        </li>
+                                                                    </ul>
+                </div>
+            </div>
+            <!--猜你喜欢-->
+            <!--最新推荐-->
+            <div class="new_webgame">
+                <div class="webgame_con_head">
+                    <h3 class="blueColor pr">
+                    <i class="pa good_icon"></i>
+                    <span>热门推荐</span>
+                    </h3>
+                </div>
+                <div class="new_webgame_con">
+                    <ul class="clearfix ">
+                                                                        <li class="fl pr">
+                            <a href="javascript:;">
+                                <img src="http://image.vronline.com/webgameimg/pub/1000011/logo/ty226?7">
+                            </a>
+                            <p class="clearfix pa title">
+                                <span class="fl ells" title="像素骑士团">像素骑士团</span>
+                                <span class="play_num fr ells" title="5玩过">5人玩过</span>
+                            </p>
+                            <div class="go_btn pa">
+                                <p class="go_detail show-webgame-detail" appid="1000011">进入专区</p>
+                                <p class="start_game start-web-game cur" game-id="1000011" server-id="-1" game-name="像素骑士团">开始游戏</p>
+                            </div>
+                        </li>
+                                                                    </ul>
+                </div>
+            </div>
+            <!--最新推荐-->
+            <!-- 活动专区-->
+            <div class="active_webgame">
+                <div class="webgame_con_head">
+                    <h3 class="blueColor pr">
+                    <i class="pa"></i>
+                    <span>活动专区</span>
+                    </h3>
+                    <a class="fr blueColor f12 activeArea" href="javascript:;">换一批</a>
+                </div>
+                <div class="love_webgame_con">
+                    <ul class="clearfix" id="activeArea"><li class="fl"><a href="javascript:;" class="pr clearfix"><div class="fl img_con"><img src="http://image.vronline.com/webgameimg/pub/1000011/logo/ty226?7"></div><div class="fl text_con"><p class="title f14">像素骑士团</p><p class="play_num">5人在玩</p><p></p></div><div class="go_btn pa"><p class="start_game cur start-web-game-server" game-id="1000011" game-name="像素骑士团">开始游戏</p><p class="go_detail show-webgame-detail" appid="1000011">进入专区</p></div></a></li></ul>
+                </div>
+            </div>
+            <!-- 活动专区-->
+            <!-- 游戏列表-->
+            <div class="webgame_list">
+                <div class="webgame_con_head">
+                    <h3 class="blueColor pr">
+                    <i class="pa"></i>
+                    <span>游戏列表</span>
+                    </h3>
+                </div>
+                <div class="webgame_list_con">
+                    <ul class="clearfix" id="page-content">
+                                            <li class="fl pr">                            <a href="javascript:;">                                <img src="http://image.vronline.com/webgameimg/pub/1000011/icon?7">                            </a>                            <p class="title tac ells">像素骑士团</p>                            <div class="go_btn pa">                                <p class="start_game cur start-web-game" game-id="1000011" server-id="-1" game-name="像素骑士团">开始游戏</p>                                <p class="go_detail show-webgame-detail" appid="1000011">进入专区</p>                            </div>                        </li><li class="fl pr">                            <a href="javascript:;">                                <img src="http://image.vronline.com/webgameimg/pub/1000012/icon?1">                            </a>                            <p class="title tac ells">testserver</p>                            <div class="go_btn pa">                                <p class="start_game cur start-web-game" game-id="1000012" server-id="-1" game-name="testserver">开始游戏</p>                                <p class="go_detail show-webgame-detail" appid="1000012">进入专区</p>                            </div>                        </li><li class="fl pr">                            <a href="javascript:;">                                <img src="http://image.vronline.com/webgameimg/pub/1000014/icon?0">                            </a>                            <p class="title tac ells">test</p>                            <div class="go_btn pa">                                <p class="start_game cur start-web-game" game-id="1000014" server-id="-1" game-name="test">开始游戏</p>                                <p class="go_detail show-webgame-detail" appid="1000014">进入专区</p>                            </div>                        </li><li class="fl pr">                            <a href="javascript:;">                                <img src="http://image.vronline.com/webgameimg/pub/1000024/icon?5">                            </a>                            <p class="title tac ells">烈火屠龙</p>                            <div class="go_btn pa">                                <p class="start_game cur start-web-game" game-id="1000024" server-id="-1" game-name="烈火屠龙">开始游戏</p>                                <p class="go_detail show-webgame-detail" appid="1000024">进入专区</p>                            </div>                        </li><li class="fl pr">                            <a href="javascript:;">                                <img src="http://image.vronline.com/webgameimg/pub/1000034/icon?1">                            </a>                            <p class="title tac ells">捕鱼大亨</p>                            <div class="go_btn pa">                                <p class="start_game cur start-web-game" game-id="1000034" server-id="-1" game-name="捕鱼大亨">开始游戏</p>                                <p class="go_detail show-webgame-detail" appid="1000034">进入专区</p>                            </div>                        </li><li class="fl pr">                            <a href="javascript:;">                                <img src="http://image.vronline.com/webgameimg/pub/1000035/icon?1">                            </a>                            <p class="title tac ells">攻城掠地</p>                            <div class="go_btn pa">                                <p class="start_game cur start-web-game" game-id="1000035" server-id="-1" game-name="攻城掠地">开始游戏</p>                                <p class="go_detail show-webgame-detail" appid="1000035">进入专区</p>                            </div>                        </li></ul>
+                </div>
+            <div class="pageLoadding" style="width: 100%; text-align: center; clear: both; display: none;"><img src="http://pic.vronline.com/website/images/loading.gif?v=1" style="width:32px;height:32px;"></div><div class="pageEnd" style="width: 100%; border-top: 1px solid rgb(49, 58, 74); text-align: center; clear: both; line-height: 35px; color: rgb(35, 160, 191);">我们是有底线的</div></div>
+            <!-- 游戏列表-->
+        </div>
+        <div class="fr right_list_con">
+            <!--礼包专区-->
+            <div class="gift_con">
+                <div class="gift_title">
+                    <span class="f14">礼包专区</span>
+                    <a href="http://www.vronline.com/giftList" class="blueColor f12 fr giftArea">更多</a>
+                </div>
+                <div class="in_gift_con">
+                    <ul id="giftList"><li><a href="javascript:;" class="clearfix"><div class="img_con fl"><img src="http://image.vronline.com/webgameimg/pub/1000012/logo/ty226?1"></div><div class="gift_text fl"><p class="name">testserver</p><p class="residue_gift"><span>仅剩</span><span class="yellow_color">151</span><span>个礼包</span></p></div><div class="get_gift_btn tac fr" data-appid="1000012" data-gid="1" data-gamename="testserver" data-serverid="0">领取</div></a></li><li><a href="javascript:;" class="clearfix"><div class="img_con fl"><img src="http://image.vronline.com/webgameimg/pub/1000024/logo/ty226?5"></div><div class="gift_text fl"><p class="name">烈火屠龙</p><p class="residue_gift"><span>仅剩</span><span class="yellow_color">40</span><span>个礼包</span></p></div><div class="get_gift_btn tac fr" data-appid="1000024" data-gid="4" data-gamename="烈火屠龙" data-serverid="0">领取</div></a></li><li><a href="javascript:;" class="clearfix"><div class="img_con fl"><img src="http://image.vronline.com/webgameimg/pub/1000035/logo/ty226?1"></div><div class="gift_text fl"><p class="name">攻城掠地</p><p class="residue_gift"><span>仅剩</span><span class="yellow_color">50</span><span>个礼包</span></p></div><div class="get_gift_btn tac fr" data-appid="1000035" data-gid="6" data-gamename="攻城掠地" data-serverid="0">领取</div></a></li><li><a href="javascript:;" class="clearfix"><div class="img_con fl"><img src="http://image.vronline.com/webgameimg/pub/1000011/logo/ty226?7"></div><div class="gift_text fl"><p class="name">像素骑士团</p><p class="residue_gift"><span>仅剩</span><span class="yellow_color">41</span><span>个礼包</span></p></div><div class="get_gift_btn tac fr" data-appid="1000011" data-gid="3" data-gamename="像素骑士团" data-serverid="0">领取</div></a></li></ul>
+                </div>
+            </div>
+            <!--礼包专区-->
+            <!--热门榜单-->
+            <div class="hotList">
+                <div class="hotList_title clearfix">
+                    <!-- <span class="fl cur">VR游戏</span> -->
+                    <span class="fl">热门榜单</span>
+                    <!--   <span class="fl">精彩视频</span> -->
+                </div>
+                <div class="hotList_con webgame_hot " style="display: block;">
+	<ul>
+        				<li class="show-webgame-detail cur" appid="1000011">
+			<a class="clearfix" href="javascript:;">
+				<span class="fl ranking ranking1"></span>
+				<span class="fl" title="网页游戏名称">像素骑士团</span>
+				<span class="fr downNum">5次</span>
+				<div>
+										<img src="http://image.vronline.com/webgameimg/pub/1000011/rank?7">
+														</div>
+			</a>
+		</li>
+				<li class="show-webgame-detail " appid="1000024">
+			<a class="clearfix" href="javascript:;">
+				<span class="fl ranking ranking2"></span>
+				<span class="fl" title="网页游戏名称">烈火屠龙</span>
+				<span class="fr downNum">3次</span>
+				<div>
+										<img src="http://image.vronline.com/webgameimg/pub/1000024/rank?5">
+														</div>
+			</a>
+		</li>
+				<li class="show-webgame-detail " appid="1000034">
+			<a class="clearfix" href="javascript:;">
+				<span class="fl ranking ranking3"></span>
+				<span class="fl" title="网页游戏名称">捕鱼大亨</span>
+				<span class="fr downNum">5次</span>
+				<div>
+										<img src="http://image.vronline.com/webgameimg/pub/1000034/rank?1">
+														</div>
+			</a>
+		</li>
+				<li class="show-webgame-detail " appid="1000035">
+			<a class="clearfix" href="javascript:;">
+				<span class="fl ranking ranking4"></span>
+				<span class="fl" title="网页游戏名称">攻城掠地</span>
+				<span class="fr downNum">0次</span>
+				<div>
+										<img src="http://image.vronline.com/webgameimg/pub/1000035/rank?1">
+														</div>
+			</a>
+		</li>
+		        	</ul>
+</div>
+            </div>
+            <!--开服-->
+            <div class="tab">
+	<div class="tab_title clearfix">
+		<span class="fl tab_titleBg">新服公告</span>
+		<span class="fl">已开新服</span>
+	</div>
+	<div class="tab_con">
+		<div class="clearfix">
+			<span class="fl">游戏名称</span>
+			<span class="fl">服务器</span>
+			<span class="fl">时间</span>
+		</div>
+		<ul>
+						<li class="clearfix">
+				<span class="fl">暂无新服</span>
+				<span class="fl">暂无新服</span>
+				<span class="fl">暂无新服</span>
+			</li>
+					</ul>
+		<ul class="tab_hide">
+									<li class="clearfix start-web-game" game-id="1000024" game-name="烈火屠龙" server-id="123" server-name="aaaa">
+				<span class="fl">
+										烈火屠龙
+									</span>
+				<span class="fl">aaaa</span>
+				<span class="fl tab_conTime">11-14 10:44</span>
+				<span class="fl gameEnter">进入游戏</span>
+			</li>
+						<li class="clearfix start-web-game" game-id="1000034" game-name="捕鱼大亨" server-id="1" server-name="捕鱼大亨">
+				<span class="fl">
+										捕鱼大亨
+									</span>
+				<span class="fl">捕鱼大亨</span>
+				<span class="fl tab_conTime">11-10 14:37</span>
+				<span class="fl gameEnter">进入游戏</span>
+			</li>
+						<li class="clearfix start-web-game" game-id="1000024" game-name="烈火屠龙" server-id="1" server-name="测试区">
+				<span class="fl">
+										烈火屠龙
+									</span>
+				<span class="fl">测试区</span>
+				<span class="fl tab_conTime">11-08 18:00</span>
+				<span class="fl gameEnter">进入游戏</span>
+			</li>
+						<li class="clearfix start-web-game" game-id="1000011" game-name="像素骑士团" server-id="1" server-name="测试1服">
+				<span class="fl">
+										像素骑士团
+									</span>
+				<span class="fl">测试1服</span>
+				<span class="fl tab_conTime">10-12 14:00</span>
+				<span class="fl gameEnter">进入游戏</span>
+			</li>
+						<li class="clearfix start-web-game" game-id="1000012" game-name="testserver" server-id="1" server-name="server1">
+				<span class="fl">
+										testserver
+									</span>
+				<span class="fl">server1</span>
+				<span class="fl tab_conTime">01-01 08:00</span>
+				<span class="fl gameEnter">进入游戏</span>
+			</li>
+								</ul>
+	</div>
+</div>
+            <!--搜索-->
+            <div class="screen ">
+    <div class="screen_title">
+        <h3>按类型筛选</h3>
+    </div>
+    <div class="screen_con">
+        <ul class="clearfix">
+                        <li class="fl get-list" type="webgame" class-id="20100">射击游戏</li>
+                        <li class="fl get-list" type="webgame" class-id="20200">动作游戏</li>
+                        <li class="fl get-list" type="webgame" class-id="20300">棋牌</li>
+                        <li class="fl get-list" type="webgame" class-id="20400">益智</li>
+                    </ul>
+    </div>
+</div>
+        </div>
+
+    </div>
+</div>
+</div>
+						<div class="side">
+				<div class="sideCon">
+					<p>联系我们</p>
+					<ul>
+						<li>
+							<a href="javascript:;"><span class="service">QQ交流群</span></a>
+							<div class="follow qq_follow">
+								<img src="http://pic.vronline.com/website/images/qq.png?20">
+							</div>
+						</li>
+						<li>
+							<a href="http://weibo.com/6041941286/profile?topnav=1&amp;wvr=6" target="_blank"><span class="sina">新浪微博</span></a>
+							<div class="follow sina_follow">
+								<img src="http://pic.vronline.com/website/images/sina.png?20">
+							</div>
+						</li>
+						<li>
+							<a href="javascript:;"><span class="code"></span></a>
+							<div class="follow">
+								<img src="http://pic.vronline.com/website/images/VRonline_platform.jpg?20">
+								<img style="margin-top:8px;" src="http://pic.vronline.com/website/images/VRonline_game.jpg?20">
+							</div>
+						</li>
+						<li><a href="#"><span class="up">返回顶部</span></a></li>
+					</ul>
+				</div>
+			</div>
+					</section>
+				<script src="http://pic.vronline.com/common/js/datacenter_stat.js?20"></script>
+		<script src="http://pic.vronline.com/common/js/ClientConfig.js?20"></script>
+		<script src="http://pic.vronline.com/website/js/bannerVideo.js?20"></script>
+		<script src="http://pic.vronline.com/common/js/platform.js?20"></script>
+        <script src="http://pic.vronline.com/website/js/base.js?20"></script>
+        <script src="http://pic.vronline.com/website/js/tinyscrollbar.js?20"></script>
+		<script type="text/javascript">
+		//导航条
+		$('.nav ul li').each(function(){
+			$(this).mouseover(function(){
+				$(this).children('.con').show();
+			});
+			$(this).mouseout(function(){
+				$(this).children('.con').hide();
+			})
+		});
+
+		$(".website-link").click(function(){
+			var link_to=$(this).attr("link-to");
+			if(!link_to){
+				return false;
+			}
+			window.location.href=link_to;
+		});
+		/**
+		 * VR游戏详情
+		 */
+		$("body").delegate(".show-vrgame-detail", 'click', function(event) {
+			event.stopPropagation();
+			var appid=$(this).attr("appid");
+			var json={
+				game_id:appid
+			};
+			PL.callFun('gamelistframe', 'item_clicked', json);
+			location.href = "/vrgame/" + appid;
+		});
+
+		/**
+		 * 页游详情
+		 */
+		$("body").delegate('.show-webgame-detail', 'click', function(event) {
+			event.stopPropagation();
+	    	var appid=$(this).attr("appid");
+	    	window.location.href="/webgame/"+appid;
+	    });
+
+
+	    /**
+		 * 页游详情
+		 */
+		$("body").delegate('.show-video-detail', 'click', function(event) {
+			event.stopPropagation();
+	    	var appid=$(this).attr("video-id");
+	    	window.location.href="/media/play/"+appid;
+	    });
+
+
+		/**
+		 * 开始页游，进入选服务器
+		 */
+	    $("body").delegate('.start-web-game-server', 'click', function(event) {
+	    	event.stopPropagation();
+	    	var appid=$(this).attr("game-id");
+	    	var appname=$(this).attr("game-name");
+	    	var json={
+	    		gameid:appid,
+	        	gamename:appname,
+	        	gameSrc:ClientConfig.Host + "/servers/" + appid
+	    	};
+	    	PL.startGame(json);
+	    });
+
+	    /**
+	     * 页游进入具体服务器
+	     */
+	    $("body").delegate('.start-web-game', 'click', function(event) {
+	    	event.stopPropagation();
+	    	var gameid=$(this).attr("game-id");
+			if(!gameid){
+				return false;
+			}
+			var json={
+				gameid:gameid,
+				gamename: $(this).attr("game-name"),
+				areaid:$(this).attr("server-id"),
+				areaname:$(this).attr("server-name")
+			};
+			PL.startGame(json);
+	    });
+
+
+		 /**
+		 * VR视频详情
+		 */
+		$("body").delegate(".show-video-class", 'click', function(event) {
+			event.stopPropagation();
+			var class_id = $(this).attr("class-id");
+			window.location.href="/video/list?class_id="+class_id;
+		});
+
+		/**
+		 * VR视频详情
+		 */
+		$("body").delegate(".get-list", 'click', function(event) {
+			event.stopPropagation();
+			$(this).addClass('cur').siblings().removeClass('cur')
+			var class_id = $(this).attr("class-id");
+			var data={};
+			if(class_id){
+				data={class_id:class_id};
+			}
+			window.pagination.reload({
+				ajaxData:data
+			});
+		});
+
+		/**
+		 * VR搜索标签
+		 */
+		$("body").delegate(".to-list", 'click', function(event) {
+			event.stopPropagation();
+			$(this).addClass('cur').siblings().removeClass('cur')
+			var class_id = $(this).attr("class-id");
+			var type = $(this).attr("type");
+			window.location.href="/"+type+"/list?class_id="+class_id;
+		});
+
+				var scrollbar=$('.need-tiny-scroll').tinyscrollbar();
+		scrollbar=scrollbar.tinyscrollbar().data("plugin_tinyscrollbar");
+		window.reserveHeight=162;
+		updateScrollbar();
+
+		/**
+		 * 页面滚动时，左侧栏固定
+		 */
+		$(window).scroll(function(event) {
+	        var sct = $(this).scrollTop();
+	        var scl=$(this).scrollLeft();
+	        var windowWidth=$(this).width();
+	        console.log(windowWidth);
+	        console.log(scl);
+	        if(sct >= 74){
+	            $('.left-fix-con,.fix-con').css({
+	                'position':'fixed',
+	                'top':'74px',
+	            }).addClass('has-fixed');
+
+	            $('.all-fixed').css({
+	                'top':'74px',
+	            }).addClass('has-fixed');
+
+	            $(".list-con-change-for-fix").css({
+	            	"padding-top":"40px"
+	            });
+	            window.reserveHeight=74;
+	        }else{
+	            $('.left-fix-con,.fix-con').css({
+	                'position':'relative',
+	                'top':'0',
+	                'left':'auto'
+	            }).removeClass('has-fixed');
+	            var height=148-sct;
+	            $('.all-fixed').css({
+	                'top':height+'px'
+	            }).addClass('has-fixed');
+	            $(".list-con-change-for-fix").css({
+	            	"padding-top":"10px"
+	            });
+	            window.reserveHeight=162-sct;
+	        }
+
+	        if(windowWidth<1240){
+	        	$('.all-fixed').each(function(i,e){
+	        		var left=$(e).attr("fix-left");
+	            	if(!left){
+	            		left=0;
+	            	}
+	            	$(e).css({
+		                'left':left-scl
+		            });
+	        	});
+	        	if(sct >= 74){
+		        	$('.left-fix-con,.fix-con').each(function(i,e){
+		        		var left=$(e).attr("fix-left");
+		            	if(!left){
+		            		left=0;
+		            	}
+		            	$(e).css({
+			                'left':left-scl
+			            });
+		        	});
+		        }
+        	}else{
+        		$('.all-fixed,.left-fix-con,.fix-con').css({
+        			'left':'auto'
+        		});
+        	}
+
+	        updateScrollbar();
+    	});
+
+		$(window).resize(function(){
+			$('.fix-height').each(function(i,e){
+				$(e).css({
+					height:$(window).height()-$(e).offset().top,
+					overflow:"hidden"
+				});
+			});
+			updateScrollbar();
+		});
+
+		function updateScrollbar(){
+			if(!scrollbar){
+				return false;
+			}
+			var viewHeight=$(window).height()-window.reserveHeight;
+			viewHeight=viewHeight?viewHeight:0;
+			$(".viewport").height(viewHeight);
+			scrollbar.update("relative");
+		}
+				</script>
+		<script src="http://pic.vronline.com/website/js/webgameLogin.js?20"></script>
+<!-- <script src="http://pic.vronline.com/website/js/bannerVideo.js?20"></script> -->
+<script src="http://pic.vronline.com/website/js/banner.js?20"></script>
+<script src="http://pic.vronline.com/common/js/common-my.js?20"></script>
+<script src="http://pic.vronline.com/common/js/pagination.js?20?20"></script>
+<script>
+$(function() {
+    $(".pageGame_item").delegate('.showWebGameDetail', 'click', function(event) {
+        var appid = $(this).attr("appid");
+        window.location.href = "/webgame/" + appid;
+    });
+    $(".pageGame_item").delegate('.in_game', 'click', function(event) {
+        var appid = $(this).attr("game-id");
+        var appname = $(this).attr("game-name");
+        var json = {
+            gameid: appid,
+            gamename: appname,
+            gameSrc: ClientConfig.Host + "/servers/" + appid
+        };
+        PL.callFun('webpagegamehallframe', 'openarea', json);
+    });
+    $('.webgame_hot').show();
+    var giftList = '%5B%7B%22hasNum%22%3A41%2C%22getGiftTm%22%3Atrue%2C%22gid%22%3A3%2C%22appid%22%3A1000011%2C%22name%22%3A%22%5Cu50cf%5Cu7d20%5Cu9a91%5Cu58eb%5Cu56e2%22%2C%22image%22%3A%7B%22logo%22%3A%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Flogo%3F7%22%2C%22rank%22%3A%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Frank%3F7%22%2C%22icon%22%3A%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Ficon%3F7%22%2C%22slider%22%3A%5B%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8oav1vr5nsm1flm1s9b189e18%22%2C%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8lf02kn6qp8ei12251r2816%22%2C%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8ihc1bbj13tp1gom17m6115m14%22%2C%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8grqm721eaonjuc38r2d12%22%5D%7D%7D%2C%7B%22hasNum%22%3A151%2C%22getGiftTm%22%3Atrue%2C%22gid%22%3A1%2C%22appid%22%3A1000012%2C%22name%22%3A%22testserver%22%2C%22image%22%3A%7B%22logo%22%3A%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Flogo%3F1%22%2C%22rank%22%3A%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Frank%3F1%22%2C%22icon%22%3A%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Ficon%3F1%22%2C%22slider%22%3A%5B%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Fo_1b09s5f1uufat3s1s2rrvl18eo1a%22%2C%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Fo_1b09s5d4915areaq1mlu1qqr1rmp18%22%2C%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Fo_1b09s5aq128k7h10j510el1c3h16%22%2C%22webgameimg%5C%2Fpub%5C%2F1000012%5C%2Fo_1b09s589c1vafcl8429u6911ti14%22%5D%7D%7D%2C%7B%22hasNum%22%3A40%2C%22getGiftTm%22%3Atrue%2C%22gid%22%3A4%2C%22appid%22%3A1000024%2C%22name%22%3A%22%5Cu70c8%5Cu706b%5Cu5c60%5Cu9f99%22%2C%22image%22%3A%7B%22logo%22%3A%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Flogo%3F5%22%2C%22rank%22%3A%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Frank%3F5%22%2C%22icon%22%3A%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Ficon%3F5%22%2C%22slider%22%3A%5B%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Fo_1b0hvnas8l741f941su5kj91aqs16%22%2C%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Fo_1b0hvn3skgk687g1dr2dfiigo14%22%2C%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Fo_1b0hvn0pb1ulmvsq4js2oeuus12%22%2C%22webgameimg%5C%2Fpub%5C%2F1000024%5C%2Fo_1b0hvmte170p80f1ek8i73153j10%22%5D%7D%7D%2C%7B%22hasNum%22%3A50%2C%22getGiftTm%22%3Atrue%2C%22gid%22%3A6%2C%22appid%22%3A1000035%2C%22name%22%3A%22%5Cu653b%5Cu57ce%5Cu63a0%5Cu5730%22%2C%22image%22%3A%7B%22logo%22%3A%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Flogo%3F1%22%2C%22rank%22%3A%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Frank%3F1%22%2C%22icon%22%3A%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Ficon%3F1%22%2C%22slider%22%3A%5B%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Fo_1b11hl4vqfb7137gr9g1232jk31e%22%2C%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Fo_1b11hl2da1ps0qab1cbj1rcj19ln1c%22%2C%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Fo_1b11hl01ibaf68fim6jiva1c1a%22%2C%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Fo_1b11hkt1i1p6j1gv4jhp701184418%22%2C%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Fo_1b11hkq0r8gg1cin1dbg17j5174j16%22%2C%22webgameimg%5C%2Fpub%5C%2F1000035%5C%2Fo_1b11hkn5glth1g2s1j8s34815s114%22%5D%7D%7D%5D';
+    var activeList = '%5B%7B%22id%22%3A1000011%2C%22name%22%3A%22%5Cu50cf%5Cu7d20%5Cu9a91%5Cu58eb%5Cu56e2%22%2C%22score%22%3A5%2C%22play%22%3A5%2C%22tp%22%3A%22webgame%22%2C%22image%22%3A%7B%22logo%22%3A%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Flogo%3F7%22%2C%22rank%22%3A%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Frank%3F7%22%2C%22icon%22%3A%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Ficon%3F7%22%2C%22slider%22%3A%5B%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8oav1vr5nsm1flm1s9b189e18%22%2C%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8lf02kn6qp8ei12251r2816%22%2C%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8ihc1bbj13tp1gom17m6115m14%22%2C%22webgameimg%5C%2Fpub%5C%2F1000011%5C%2Fo_1b0ak8grqm721eaonjuc38r2d12%22%5D%7D%2C%22category%22%3A%5B20100%5D%2C%22original_sell%22%3A0%2C%22sell%22%3A0%2C%22desc%22%3A%22%5Cu50cf%5Cu7d20%5Cu9a91%5Cu58eb%5Cu56e2%22%2C%22code%22%3A%22webgame-activity%22%2C%22messageId%22%3A%22webgame-activity-1%22%2C%22_version_%22%3A1552204684357271562%7D%5D';
+
+    var giftInfo = randomArr.getRandom({
+        'arry': eval(decodeURIComponent(giftList)),
+        'range': 4
+    });
+    //console.log(giftInfo);
+    $('#giftList').html(randomArr.areaHtml(giftInfo, 'gift'));
+    var activeInfo = randomArr.getRandom({
+        'arry': eval(decodeURIComponent(activeList)),
+        'range': 12
+    });
+    $('#activeArea').html(randomArr.areaHtml(activeInfo, 'active'));
+    console.log(eval(decodeURIComponent(activeList)));
+    //activeArea
+    $(".activeArea").click(function(event) {
+        /* Act on the event */
+        var info = randomArr.getRandom({
+            'arry': eval(decodeURIComponent(activeList)),
+            'range': 12
+        });
+        $('#activeArea').html(randomArr.areaHtml(info, 'active'));
+        console.log(info);
+    });
+
+    $('.home_banner').bannerVideo();
+    //领取礼包事件
+    $("body").on("click", ".get_gift_btn", function() {
+        var userId = "",
+            gid = $(this).attr("data-gid"),
+            gameName = $(this).attr("data-gameName"),
+            serverId = $(this).attr("data-serverId"),
+            appId = $(this).attr("data-appId");
+        console.log(userId);
+        if ($.trim(userId) == "" || $.trim(userId) == "undefine") {
+            //window.CppCall('loginframe', 'showlogin', '');
+            randomArr.createHtml(0, '领取失败', '请先登录', 'erro'); //失败调用数据
+            return false;
+        }
+        if ($.trim(userId) == "" || $.trim(gid) == "") {
+            //pubApi.showDomError($("#addErrorBox"), "非法参数");
+            alert("非法参数！");
+            return false;
+        }
+
+        var paramObj = {
+            "action": "getCode",
+            "gid": gid,
+            "userid": userId,
+            'appname': gameName,
+            'appid': appId,
+            'serverd': serverId,
+        };
+
+        var ajaxUrl = "http://www.vronline.com/getGiftCode";
+
+        var jumpUrl = '',
+            url = 'website/getMyPackage';
+        if (/^http/i.test(url)) {
+            jumpUrl = url;
+        } else {
+            jumpUrl = 'http://' + window.location.host + '/' + url;
+        }
+        pubApi.ajaxPost(ajaxUrl, paramObj, function(result) {
+            if (result.code == 0) {
+                randomArr.createHtml(1, '领取成功', result.data.vCode, '', jumpUrl); //领取成功
+            }
+        }, function(result) {
+            if (result.code == 2301) { //已经领取过，也提示领取成功页面
+                randomArr.createHtml(1, '领取成功', result.data.vCode, '', jumpUrl); //领取成功
+            } else {
+                randomArr.createHtml(0, '领取失败', result.msg, 'erro'); //失败调用数据
+            }
+
+            pubApi.showError();
+        });
+    });
+
+    /*
+     **关闭弹窗
+     */
+    $("body").on("click", "#sureBtn", function() {
+        $('.gift_get').removeClass('show');
+    });
+
+    /**
+     * 滚动加载内容
+     */
+     pagination.init({
+        type: "scroll", //type=page，普通翻页加载，scroll为滚动加载
+        url: "/webgame/api/list", //ajaxType=ajax时为请求地址
+        ajaxType:"get",
+        ajaxData:{
+            class_id:"0"
+        },
+        contentHtmlTmp:'<li class="fl pr">\
+                            <a href="javascript:;">\
+                                <img src="{icon}">\
+                            </a>\
+                            <p class="title tac ells">{name}</p>\
+                            <div class="go_btn pa">\
+                                <p class="start_game cur start-web-game" game-id="{id}" server-id=-1 game-name="{name}">开始游戏</p>\
+                                <p class="go_detail show-webgame-detail" appid="{id}">进入专区</p>\
+                            </div>\
+                        </li>',
+        //ajaxData: {}, //其他需要专递参数
+        //ifEmptyHtml: "<div style='display:block; clear:both; text-align: center;font-size:18px; width:100%'>没有更多游戏了</div>", //如果数据会空时填入容器的html
+        contentHtmlContainer: "#page-content", //生成html后存放的容器
+        autoCreateHtml: true
+        //getPageDataSuccess: "", //ajax获取数据成功后执行函数,默认执行在contentHtmlContainer替换生成的html
+        //handleData: "", //获取处理数据
+    });
+})
+</script>
+	
+
+</body></html>

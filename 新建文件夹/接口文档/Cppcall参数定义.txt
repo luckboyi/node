@@ -1,0 +1,460 @@
+
+
+html5
+
+mainFn.interface('module','fn','data')
+
+1.主面板
+module: 	'main_panel'
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		'changeLanguage'	多语言		data ={
+								
+							}			
+		'add_game'		添加本地游戏	data0={
+            							'game_id':'0',
+                						'title':'全民奇迹',
+                						'imgSrc':'图片地址',
+                						'tag':['所有标签']
+							}
+
+		'prev'			返回上一步
+		'next'			进入下一步
+		'min'			最小化
+		'max'			最大化		data={'window_state':''0 最大化}
+		'close'			关闭
+		'menu'			设置菜单	data={'languageState':2025,'serviceState':1,'autoState':1,'dir':'D:/','closeplatselected':'0(最小化)','openVronline'}
+		'boundced_hide'		所有菜单隐藏	
+		
+		'lgoin'			登录		data={
+								'userName':'用户账户',
+								'password':'密码'，
+								'password_state':'0（选择）',
+								'login_state':'0(选择)'
+							}
+		
+		'title_state'		隐藏头部标签   data = {
+								'state':'1显示 0 隐藏'
+								'title':'game/video/drive'
+							}
+		'title_table'		切换标签	data={
+								'title':'game/video/drive'
+							}
+		'vrBtn'			vr按钮切换	data = {'state': 0 退出vr；}
+
+		'showCourse'		显示新手教程
+		'aboutVr'		关于vr
+
+		'vrOpen'		开启vr		
+		'vrClose'		关闭vr
+		'correctOpen'		开启次校准
+		'correctClose'		关闭次校准
+		'changeBackground'	src
+		‘system_tips’		系统提示如果32位
+		‘close_platform’	关闭/退出平台提示
+		'close_data'		关闭数据的显示	data={
+								"state": 0，"remstate": 0 
+							}
+		'exit_vr'		退出vr		data={'state'：‘0’}
+		'un_equipment_tips'	没有设备的时候弹框  data={'state':'0'}
+		'chargereload'		刷新
+		'cptest'		测试入口	data={
+								state：1
+							}
+		'public_bounced'	公共弹框	{'funid':1, 'txt':'传的内容'}
+
+		'setgamekey'		设置游戏按键   	{'common'{'openset':'ctrl+w','closerview:'ctrl+v',lenspull':'ctrl+n','oepnhandle':0x1154,'ctrlmouse':0x1155,'ctrlview':0x1156}, 							
+                                                         'gamewarworld': {'A': 0x41,'B',0x42, 'X':0x43, 'Y':0x44, 'LB': 0x45, 'RB':46, 'LT':0x47,'RT':0x48}}
+		exchange_code_result	兑换码		{state:'1成功or 0失败',gamename:'游戏名'}
+		setiframe
+		showVersion		显示版本号	{version:'1.0.1.2'}
+		goGameDetail		跳转到相应的游戏详情页 {id:'100010'}
+		getDrive		驱动的类型	{deviceType:'1'}
+		driveDown		驱动的下载进度	{pro:'1-100'}
+		showPlatformInfor	首进入平台的展示介绍
+		showDownloadTip		首次点击下载显示
+		showInstallTips	首次登陆成功后显示	
+1.游戏列表
+module: 	'list'
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		'left_item'		左侧列表	data={
+								'game_id':'0',
+								'title':'游戏名称',
+								'imgSrc':'图片路径',
+								'tag':['标签']
+								}
+		'store'			商城列表	data={
+								'game_id':''
+								'state':'new 或者空',
+								'imgSrc':'图片路径',
+								'title':'游戏名称',
+								'type':['mac','window'](支持的设备如果为mac就写mac， 如果支持window就写window)
+								}
+		'store_empty'		清空商城			
+		
+		'list_download_pro'	左侧列表下载进度 data={
+								'game_id':''
+								'status':'',0未下载 1正在下载 2下载完成
+								'percent':'下载的速度'（1-100）
+								}
+		'delete_game'		删除游戏	data={data:[{
+								'game_id':'0',
+								'title':'游戏名称'，
+								'delete_localGame':0(0删除本地) 1（不删）
+								}]}
+    		'add_local'		添加桌面列表	data={data:[{
+								'state':'0(不添加到头部)'
+								'game_id':'0',
+								'title':'游戏名称'，
+								'imgSrc':'图标'，
+								'address':'路径'
+								}]
+							}
+		'select_list'		选中游戏        data={data:[{
+								'game_id':'0',
+								'title':'游戏名称'
+								}]}
+
+		'changeGameListImg'	修改游戏列表图片 data={
+								'game_id':'0',
+								'img':''
+								}
+		'changeStoreImg'	修改游戏库图片 	 data={
+								'game_id':'0',
+								'img':''
+								}
+		'gamelist_empty'	清空游戏列表	
+		
+2.游戏详情
+
+module: 	'detail'
+
+		action			描述		               json
+---------------------------------------------------------------------
+fn:    		'detail_click'		点击左侧列表进入详情本地数据	data={data:[{
+										'game_id':'0',
+                								'title':'标题',
+										'score':'',
+										'people_num':''
+										'background':'背景图片地址'，
+                								'bigImg':['上面大图或者视频路径'],
+               									 'miImg':['下面占位图路径'],
+                								'introduction':'游戏简介',
+                								'support':['大鹏','HTC'],
+               									 'message':[
+											{
+											'name':''
+											'conform':'是否符合'
+											}
+											{
+											'name':''
+											'conform':'是否符合'
+											}
+                								'mini_message':[{
+											'name':''
+											}
+											{
+											'name':''
+											}]
+            								]},
+		
+		'detail_online_lick'	点击商城进入详情		data={data:[{
+										'game_id':'0',
+                								'title':'标题',
+										'background':'背景图片地址'
+                								'bigImg':['上面大图或者视频路径'],
+               									 'miImg':['下面占位图路径'],
+                								'introduction':'游戏简介',
+                								'support':['大鹏','HTC'],
+               									 'message':['Windows 7','处理器','内存','v.10','3.2'],（推荐的配置）
+                								'mini_message':['Windows 8','处理器','内存','v.10','3.2']（最低的配置）	
+									]}
+		'datail_add_leftList'   商城信息添加到列表		data={data:[{
+										'game_id':'0'，
+										'title':'游戏名称',
+										'imgSrc':'图片路径',
+										'tag':['标签']
+									}]}
+		'detail_downLoad_pro'	游戏下载状态			data={data:[{
+										'game_id':'0'，
+										
+										'speed':'下载速度',（多少GB）
+										'residue':'剩余量',
+										'percent':'下载的速度',（1-100）
+										'text',''
+									}]}
+		'detail_update_statue'	安装状态			data={
+										data:{
+										'game_id':'0'，
+										'status':'',0安装 1 暂停 2 继续 3 开始游戏 4更新 5检查版本
+										'':''
+										}
+									}
+
+		'start_game'		开始游戏 关闭游戏		data ={data:[{
+										'state':'' 0开始游戏  1关闭游戏							
+									}]
+									}
+		'local_detail'		本地详情数据			data = {
+										'title':'游戏名称'
+										'src':'图片地址'
+										'sup_vr':'0(不支持) 1支持'	
+									}
+
+		'unloginGameState'	未登录状态			data ={
+										'state':'0'
+									}
+
+
+	
+		'config_msg'		配置信息	
+		'downloadBtn'		按钮状态			data = {fun:'enable'}
+									{fun:'disable'}
+									{fun:'settext',text:''}
+									{fun:'gameid','text':'游戏'}
+		'downloadProgress'	下载进度			data = {fun:'setpro’,text:'{percent:'进度',txt:'文本'}'}
+									{fun:'show',}
+									{fun:'hide'}
+									{fun:'unable'}
+									{fun:'disable'}
+		'download_tips_show'	下载提示显示			
+		'download_tips_hide'	下载提示隐藏
+		'download_tips_data'	下载数据			{‘txt’:''}
+		'local_cofig_msg'	本地配置信息			[{
+										'txt':'操作系统'
+										'msg':'win7'
+										'confirm':'是否符合'
+									},
+									{
+										'txt':'处理器'
+										'msg':'win7'
+										'confirm':'是否符合'
+									}]
+		'unClickVr3d'		不可点击
+		'clickVr3d'		可点击
+		'usable'		设备				{state:'0'}
+		'vr_sup_tips'		是否支持魔兽世界的tips		{‘state’:''}
+		'un_service_tips'	是否显示设备tips			{'state':''}
+		show_downBtn		显示按钮			{state:''}
+		buy_game		购买游戏			{paytoken : xxxxxx   
+									appid 	 : 1,//
+									serverid : 1,
+									openid	 : "faqRv_HgeC",   //光民
+									vrkey	 : "xxxxxxxxxxx" ,  //tooken
+									url		 : "http://img3.duitang.com/uploads/item/201411/07/20141107220551_TMMsE.jpeg",
+									item  	 : "游戏名",
+									itemid	 : 1007,//游戏id
+									extra1	 : "uid|game"}
+		
+3.驱动		
+
+module: 	'drive'
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		show_drive_title	显示驱动	{name:'驱动名称'}
+		hide_drive_title	隐藏驱动
+		drive_name		驱动名称	{name:'驱动名称' 下载完成后传入完成安装}
+		drive_information	驱动信息	{txt:'驱动的信息',imgsrc:''}
+		drive_pro		驱动下载	{pro:'下载进度'，txt:'下载文本'}
+		drive_pro_show		进度show
+		drive_pro_hide		进度hide
+		pause_down		暂停下载
+		continue_down           继续下载
+		drive_erro_info		驱动错误的时候	{
+							gpu:'本机显卡'
+							title：'大朋E2设备'
+							msg:'NVIDIA 英伟达1080、1070、1060、1050Ti等10系列的显卡'
+							}
+		showDrive_pro       	显示下载页
+		HideDrive_pro		隐藏下载页		
+		showInstallSuc          显示驱动安装成功 
+		hideInstallSuc          隐藏驱动安装成功 
+		showInstallFail		显示安装失败
+		hideInstallFail		隐藏安装失败
+		showInstallLoading	显示安装loading
+		hideInstallLoading	隐藏安装loading
+
+4.登录注册
+
+module: 	'login'
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		'login_in'	     	账号提示 	data={	
+								'phoneList':'[]'
+							}
+		'select_phoneNum'	账号提示登录	data={
+								'user_name':'',
+								'password':'',
+								'keeploginstate':''
+							}
+		'login_state'		登录是否成功	data={
+								'state':'1成功0',
+								'txt':''，
+								'useName':'用户名'，
+								'useImg':'用户头像',
+								'uId':'用户id'
+							}
+		'show_login'		显示登录框			
+
+		'register'		注册是否成功	data6={	
+                						'state':'0,成功 1.注册失败 100：验证码错误'，
+								'msg': '用户名已经存在'
+								}
+
+		'erroThree'		三次后弹框	data = {'phoneNum':'手机号'}
+		'verification'		验证码验证	data={
+								'state':'0错误1成功'
+								'msg':'错误提示'
+							}
+		'verificationCheck'	输入验证码	data={
+								'code':'验证码'
+							}
+		'checkaccountres'	判断用户是否可以注册返回	data = {
+										'rst':'1:可以注册 0：用户已经被注册了'
+										'msg':'账号已经被注册'
+										}
+		'currency'              平台币余额	data={'num':'';}
+		'user_logout'		账号退出
+		'update_usermsg'	更新账号信息	data={'nike':'','img':''}
+		'offline_login'		离线登录
+		'network_error'		网络错误	
+		'show_code'		显示验证码      data={'state':'0'(不显示)，src:'验证码的地址'}
+
+		'refresh_page'		刷新当前页面
+							
+5视频
+module:		'video'
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		'left_item'	     	左侧视频列表	data={	
+								'vt_id':''
+								'title':'游戏名称',
+								'imgSrc':'图片路径',
+								'tag':['标签']'
+							}
+		'homePage'		首页列表	data={
+								'title':'视频主题',
+								'sum':'共xxx部视频',
+								'vt_id':''
+								'video_id':'',
+								'url':'',
+								'explain':'说明'
+								'recomImg':'推荐位大图',
+								'recomName':'推荐位名称'，
+								'recomVideoTime':'推荐位视频时间',
+								'peopleNum':'观看视频的是人次'
+								'list':[{
+									'video_id':'',
+									'explain':'说明'，
+									'url':''
+									'showImg':'图片地址',
+									'videoName':'视频名称',
+									'videoTime':'视频时长'，
+									'peopleNum':'观看视频的是人次'
+									},{
+									'video_id':'',
+									'explain':'说明'，
+									'url':''
+									'showImg':'图片地址',
+									'videoName':'视频名称',
+									'videoTime':'视频时长'，
+									'peopleNum':'观看视频的是人次'
+									}]
+							}
+		'listBanner'		banner轮播	data=[{
+								'video_id':'',
+								'url':'',
+								'vt_id':'',
+								'title':'视频名称'
+								'explain':'说明'
+								'bannerImg':'广告位图片'
+							},{
+								'video_id':'',
+								'url':'',
+								'vt_id':'',
+								'title':'视频名称'
+								'explain':'说明'
+								'bannerImg':'广告位图片'
+							},{
+								'video_id':'',
+								'url':'',
+								'vt_id':'',
+								'title':'视频名称'
+								'explain':'说明'
+								'bannerImg':'广告位图片'
+							},{
+								'video_id':'',
+								'url':'',
+								'vt_id':'',
+								'title':'视频名称'
+								'explain':'说明'
+								'bannerImg':'广告位图片'
+							}
+							]
+		'right_item_header'	详细列表头部	data={
+								'title':'主题',
+								'sum':'共xxx部视频'
+							}
+		'right_item_con'	详细列表内容	data={
+								'video_id':'',
+								'vt_id':'',
+								'url':''，
+								'explain':'说明'，
+								'imgSrc':'图片地址',
+								'videoTime':'视频时间',
+								'title':'视频名称'，
+								'peopleNum':'观影人数'	
+							}
+	
+		'historyList_header'	浏览历史头部	data={
+								'title':'主题',
+								'sum':'共xxx部视频',
+								'id':'0 今天 1 一周内 2 更早'
+							}
+		'historyList_con'	浏览历史记录	data={
+								'video_id':'',
+								'url':'',
+								'explain':'说明'，
+								'imgSrc':'图片地址',
+								'videoTime':'视频时间',
+								'title':'视频名称'	
+							}
+
+		'videoInformation'	视频描述信息	data={
+								'video_id':'',
+								'unlike':'点差评的数目'，
+								'like':'点赞的人数',
+								'watchTimes':'xx次观看'	
+							}
+		'addLocalVideo'		添加本地视频源	data={
+								'src':'视频源'	
+							}
+		'video_home_empty'	清空视频首页	
+		'video_list_empty'	清空视频列表页
+6 单独模块
+module:		'pageGame' （页游选服模块）
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		'startGame'	     	左侧视频列表	data={	
+								'areaname':'区服名称'
+								'gname':'游戏名称'，
+								'gameSrc':'页游地址',
+
+							}
+module:		'charge' （内购模块）
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		'chargeData'	     	内购页面	data={	
+								'src':'充值的地址'
+							}
+module:		'userframe' （充值模块）
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		'chargereload'	     	充值刷新页面	

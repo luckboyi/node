@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/base.css">
+	    <link rel="stylesheet" href="style/style.css">
+	    <script src="js/plug/jquery-1.11.3.min.js"></script>
+    	<script src="js/plug/jquery.SuperSlide.2.1.1.js"></script>
+    	<script src="js/tool/platform.js"></script>
+	
+    </head>
+    <body>
+    	<div class="slide mask pr show">
+		    <div class="cast fl pr pa center" >
+		    <div style="width:100%; height:100px; left:0;top:0; z-index:9999; -webkit-app-region: drag;" class="pa"></div>
+		      <div class="close pa hide" style="-webkit-app-region: no-drag;" ></div>
+		      <div class="hd pa">
+		          <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+		      </div>
+		      <div class="bd pr">
+		          <ul class="cast-list">
+		          <li><img src="image/1.jpg"></li>
+		          <li><img src="image/2.jpg"></li>
+		          <li><img src="image/3.jpg"></li>
+		          <li class="pr"><img src="image/4.jpg"><a class="into pa" href="#"></a></li>
+		          </ul>
+		          <div class="arrow">
+		              <a class="prev pa" href="javascript:;"></a>
+		              <a class="next pa" href="javascript:;"></a>
+		          </div>
+		      </div>
+		  </div>
+		</div>
+		<script type="text/javascript">
+		    var $cast = $(".cast");
+		    $cast.slide({
+		        mainCell: ".cast-list",
+		        titCell:".hd ul",
+		        effect: "leftLoop",
+		        autoPage:"<li></li>",
+		        autoPlay: false,
+		        pnLoop:false,
+		        interTime:"3000",
+		        prevCell:".arrow .prev",
+		        nextCell:".arrow .next"
+		    });
+		</script>
+    </body>
+</html>
+<script>
+	$(function(){
+		$('body').on('click','.close',function(){
+			//alert(1)
+        	PL.callFun('mainframe', 'close','');	
+		})
+		$('body').on('click','a.into',function(){
+        	PL.callFun('common', 'openvr','');	
+		})
+	})
+</script>

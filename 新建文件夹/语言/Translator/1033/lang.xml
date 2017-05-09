@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language name="ch" guid="{0DAEDE3C-6B94-4a81-9A55-C304FDD69D99}">
+  <context>
+    <!--没有上下文的翻译-->
+	<message>
+      <source>add_game</source>
+      <translation>AddGame</translation>
+    </message>
+	<message>
+      <source>select_game</source>
+      <translation>Select Game Add To Local</translation>
+    </message>
+	<message>
+      <source>set_title</source>
+      <translation>Set</translation>
+    </message>
+	<message>
+      <source>software</source>
+      <translation>|     | SoftWare</translation>
+    </message>
+	<message>
+      <source>area</source>
+      <translation>| Area</translation>
+    </message>
+	<message>
+      <source>cancel</source>
+      <translation>Cancel</translation>
+    </message>
+	<message>
+      <source>add_all</source>
+      <translation>Add Selected</translation>
+    </message>
+	<message>
+      <source>cancel</source>
+      <translation>Cancel</translation>
+    </message>
+	<message>
+      <source>browse</source>
+      <translation>Browse</translation>
+    </message>
+	<message>
+      <source>close</source>
+      <translation>Close</translation>
+    </message>
+	<message>
+      <source>ok</source>
+      <translation>OK</translation>
+    </message>
+	<message>
+      <source>your_question</source>
+      <translation>Your Question（*）</translation>
+    </message>
+	<message>
+      <source>contact_information</source>
+      <translation>Contact Information（*）</translation>
+    </message>
+	<message>
+      <source>phone</source>
+      <translation>Phone</translation>
+    </message>
+	<message>
+      <source>upload_pic</source>
+      <translation>Upload Picture</translation>
+    </message>
+	<message>
+      <source>device_in</source>
+      <translation>Auto Start Soft</translation>
+    </message>
+	<message>
+      <source>close_btn</source>
+      <translation>Close Set Button</translation>
+    </message>
+	<message>
+      <source>default_download_dir</source>
+      <translation>Default Dir</translation>
+    </message>
+	<message>
+      <source>restore_default</source>
+      <translation>Resotre</translation>
+    </message>
+	<message>
+      <source>modify</source>
+      <translation>Modify</translation>
+    </message>
+	<message>
+      <source>open</source>
+      <translation>Open</translation>
+    </message>
+	<message>
+      <source>exit_program</source>
+      <translation>Exit</translation>
+    </message>
+	<message>
+      <source>mini</source>
+      <translation>Mini</translation>
+    </message>
+	<message>
+      <source>yes</source>
+      <translation>Yes</translation>
+    </message>
+	<message>
+      <source>no</source>
+      <translation>No</translation>
+    </message>
+	<message>
+      <source>set_language</source>
+      <translation>Set Language</translation>
+    </message>
+	<message>
+      <source>lang_chs</source>
+      <translation>Chinese</translation>
+    </message>
+	<message>
+      <source>lang_en</source>
+      <translation>English</translation>
+    </message>
+	<message>
+      <source>driver_installing</source>
+      <translation>Install...</translation>
+    </message>
+	<message>
+      <source>driver_installsuccess</source>
+      <translation>Install Sucess!</translation>
+    </message>
+	<message>
+      <source>driver_installfail</source>
+      <translation>Install Fail!</translation>
+    </message>
+	<message>
+      <source>driver_install_sucess_caption</source>
+      <translation>driver has installed, need restar pc, are you restart now?</translation>
+    </message>
+  </context>
+  
+   <context name="messagebox">
+    <message>
+      <source>yse</source>
+      <translation>Yes</translation>
+    </message>
+	<message>
+      <source>no</source>
+      <translation>No</translation>
+    </message>
+	<message>
+      <source>ok</source>
+      <translation>ok</translation>
+    </message>
+    <message>
+      <source>cancel</source>
+      <translation>Cancel</translation>
+    </message>
+    <message>
+      <source>retry</source>
+      <translation>Retry</translation>
+    </message>
+  </context>
+</language>

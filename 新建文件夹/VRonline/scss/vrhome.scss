@@ -1,0 +1,626 @@
+$redColor:#e74b48;//红色字体/评测 推荐背景色
+$blueColor:#1792fa;//绿色字体/字体hover颜色/资讯背景色
+$bottomColor:#ffd800; //标题下划线颜色
+$textColor:#5b5b5b; //文本颜色
+$tabColor:#1e1e1e; //tab切换字体颜色
+$buyColor:#ff7e00; //购买背景颜色
+$rankColor:#ffcc00; //排名背景颜色
+$briefColor:#333333; //简介文本颜色
+.container{
+    .topImg{
+        position:relative;
+        left:50%;
+        margin-left:-960px;
+    }
+    .vrhome{
+        width:1200px;
+        margin:40px auto;
+        a.more{
+            i{
+                margin:4px 0 0 4px;
+                width:20px;
+                height:16px;
+                background-position:0 -27px;
+            }
+        }
+        a.more:hover i{
+            transition: all .2s ease-out;  
+            -webkit-transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+            -ms-transition: all .2s ease-out;
+            -o-transition: all .2s ease-out;
+            background-position-x:-20px;
+        }
+        .mask{
+            display:none;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,.4);
+        }
+        .recommend{
+            margin-bottom:30px;
+            .name{
+                border-bottom: 1px solid #e5e5e5;
+                span{
+                    color:$tabColor;
+                    padding:0 10px;
+                    height:32px;
+                    line-height:32px;
+                    top:1px;
+                    border:1px solid transparent;
+                    cursor:pointer;
+                }
+                span:hover,span.cur{
+                    border:1px solid #e5e5e5;
+                    border-top-color:$bottomColor;
+                    border-bottom-color:#fff;
+                }
+            }
+            .recommendCon{
+                width:100%;
+                overflow:hidden;
+                ul{
+                    display:none;
+                    width:2000px;
+                    li{
+                        width:222px;
+                        height:390px;
+                        margin-right:22px;
+                        a{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                            text-align: center;
+                            img{
+                                width:100%;
+                                height:288px;
+                                border:0;
+                                margin-top:20px;
+                            }
+                            p{
+                                text-align: center;
+                                line-height:40px;
+                                color:$textColor;
+                            }
+                            .type{
+                                display:inline-block;
+                                padding:0 10px;
+                                height:26px;
+                                line-height:26px;
+                                border-radius:10px;
+                                -webkit-border-radius:10px;
+                                -moz-border-radius:10px;
+                                text-align: center;
+                                margin:0 auto;
+                                color:#b1b1b1;
+                                border:1px solid #b1b1b1;
+                            }
+                            .mask{
+                                height:288px;
+                            }
+                        }
+                        a:hover .mask{
+                            display: block;
+                        }
+                    }
+                }
+                ul.cur{
+                    display:block;
+                }
+            }
+        }
+        .vrnews{
+            .left{
+                width:434px;
+                .tab{
+                    height:454px;
+                    overflow:hidden;
+                    .carousel{
+                        height:454px;
+                        overflow:hidden;
+                    }
+                    ul{
+                        width:9999px;
+                        li{
+                            width:434px;
+                            height:454px;
+                            a{
+                                width:100%;
+                                height:100%;
+                            }
+                            img{
+                                width:100%;
+                                height:100%;
+                            }
+                        }
+                    }
+                    i{
+                        width:32px;
+                        height:56px;
+                        background:url(../images/vrsprite.png) no-repeat;
+                        z-index:9;
+                        cursor:pointer;
+                    }
+                    i.prev{
+                        left:0;
+                        top:200px;
+                        background-position:-106px 0;
+                    }
+                    i.next{
+                        right:0;
+                        top:200px;
+                        background-position:-138px 0;
+                    }
+                    i:hover{
+                        background-position-y:-56px;
+                    }
+                    p.num{
+                        bottom:20px;
+                        right:20px;
+                    }
+                }
+                .video{
+                    margin-top:20px;
+                    .til{
+                        margin-bottom:24px;
+                    }
+                    a{
+                        display:block;
+                        width:284px;
+                        height:152px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    a:hover .mask{
+                        display:block;
+                    }
+                    a.logo{
+                        width:140px;
+                        margin-right:10px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+            }
+            .middle{
+                width:430px;
+                margin:0 20px;
+                .type{
+                    width:36px;
+                    height:16px;
+                    line-height:16px;
+                    text-align: center;
+                    background:$redColor;
+                    color:#fff;
+                    margin-right:4px;
+                }
+                .hot{
+                    display:block;
+                    p.clearfix{
+                        span.f16{
+                            width:390px;
+                            height:16px;
+                            line-height:16px;
+                            color:$redColor;
+                        }
+                    }
+                    div.clearfix{
+                        margin-top:13px;
+                        img{
+                            width:118px;
+                            height:72px;
+                        }
+                        p{
+                            width:300px;
+                            height:72px;
+                            line-height:24px;
+                            margin-left:8px;
+                            overflow:hidden;
+                            color:#b8b8b8;
+                        }
+                    }
+                }
+                .hot:hover p{
+                    color:$blueColor;
+                }
+                ul{
+                    li{
+                        width:430px;
+                        height:36px;
+                        line-height:36px;
+                        a{
+                            width:430px;
+                            span{
+                                width:36px;
+                                height:16px;
+                                line-height:16px;
+                                text-align: center;
+                                background:$blueColor;
+                                color:#fff;
+                                margin:10px 14px 0 0;
+                            }
+                            p{
+                                width:380px;
+                            }
+                        }
+                    }
+                    li.recom{
+                        border-top:1px solid #d2d2d2;
+                        border-bottom:1px solid #d2d2d2;
+                        span{
+                            background:$redColor;
+                        }
+                    }
+                    li:hover a{
+                        color:$blueColor;
+                    }
+                }
+                .moreNews{
+                    width:100%;
+                    height:36px;
+                    line-height:36px;
+                    text-align: center;
+                    border:1px solid $redColor;
+                    color:$redColor;
+                    cursor:pointer;
+                }
+                .moreNews:hover{
+                    color:$blueColor;
+                }
+            }
+            .right{
+                width:288px;
+                .title{
+                    margin-bottom:24px;
+                }
+                .special_games{
+                    a{
+                        display:block;
+                        width:100%;
+                        height:166px;
+                        margin-bottom:20px;
+                        img{
+                            left:0;
+                            top:0;
+                            width:100%;
+                            height:166px;
+                            border:0;
+                        }
+                        i.play{
+                            display:none;
+                            left:50%;
+                            top:50%;
+                            width:63px;
+                            height:63px;
+                            margin-left:-31px;
+                            margin-top:-31px;
+                            background-position:-43px 0;
+                            z-index:10;
+                        }
+                    }
+                    a:hover .mask{
+                        display:block;
+                    }
+                    a:hover i{
+                        display:block;
+                    }
+                    p{
+                        width:49%;
+                        height:32px;
+                        line-height:32px;
+                        margin-bottom:8px;
+                        background:#e2e2e2;
+                    }
+                    .playNum i{
+                        width:23px;
+                        height:23px;
+                        margin:4px 6px 0 12px; 
+                        background-position:0 0;
+                    }
+                    .goodNum i{
+                        width:21px;
+                        height:21px;
+                        margin:4px 6px 0 12px; 
+                        background-position:-23px 0;
+                    }
+                }
+                .gamesColumn{
+                    display:block;
+                    width:100%;
+                    height:102px;
+                    margin-bottom:20px;
+                    img{
+                        width:100%;
+                        height:102px;
+                        border:0;
+                    }
+                }
+                a.gamesColumn:hover .mask{
+                    display:block;
+                }
+            }
+        }
+        .hot_evaluating{
+            margin:72px 0 62px;
+            .evaluating{
+                width:100%;
+                .prev{
+                   left:-50px;
+                   top:46%;
+                   width:46px;
+                   height:69px; 
+                   background-position:-42px -100px;
+                   cursor:pointer;
+                }
+                .next{
+                   right:-50px;
+                   top:50%;
+                   width:46px;
+                   height:69px; 
+                   background-position:-42px -170px;
+                   cursor:pointer;
+                }
+                .evaluatingCon{
+                    width:100%;
+                    height:344px;
+                    padding-top:24px;
+                    overflow:hidden;
+                    ul{
+                        width:99999px;
+                        li{
+                            width:234px;
+                            height:344px;
+                            overflow:hidden;
+                            margin-right:8px;
+                            a{
+                                display:block;
+                                width:100%;
+                                height:100%;
+                                img{
+                                    width:100%;
+                                    height:298px;
+                                }
+                                .bg{
+                                    width:115px;
+                                    height:44px;
+                                    line-height:44px;
+                                    margin-top:-3px;
+                                    text-align: center;
+                                    border:1px solid #696969;
+                                    color:#fff;
+                                    background:#000;
+                                    p{
+                                        display: inline-block;
+                                    }
+                                    i.message{
+                                        width:18px;
+                                        height:16px;
+                                        margin:14px 10px 0 0;
+                                        background-position:-105px -116px ; 
+                                    }
+                                    i.playNum{
+                                        width:22px;
+                                        height:14px;
+                                        margin:14px 10px 0 0;
+                                        background-position:-126px -116px ;
+                                    }
+                                }
+                                .mask{
+                                    height:298px;
+                                }
+                            }
+                            a:hover .mask{
+                                display:block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .manufacturer{
+            .til{
+                border:none;
+                padding:0;
+                margin-bottom:18px;
+            }
+            .firm{
+                height:28px;
+                line-height:28px;
+                margin-bottom:22px;
+                border-bottom:2px solid #f4f4f4;
+                span{
+                    top:0px;
+                    margin-right:86px;
+                    cursor:pointer;
+                }
+                span:hover,span.cur{
+                    border-bottom:2px solid $bottomColor;                   
+                }
+                
+            }
+            .firmNews{
+                display:none;
+            }
+            .cur{
+                display:block;
+            }
+            .newEvaluating{
+                width:434px;
+                margin-right:20px;
+                img{
+                    width:100%;
+                    height:270px;
+                    border:0;
+                }
+                a{
+                    display:block;
+                    p{
+                        bottom:0;
+                        height:42px;
+                        line-height:42px;
+                        width:414px;
+                        padding:0 10px;
+                        background:rgba(0,0,0,.4);
+                        color:#fff;
+                    }
+                    .fraction{
+                        bottom:20px;
+                        right:20px;
+                        width:56px;
+                        height:56px;
+                        line-height:56px;
+                        text-align: center;
+                        border-radius:50%;
+                        -webkit-border-radius:50%;
+                        -moz-border-radius:50%;
+                        color:#000;
+                        background:#ffde00;
+                    }
+                }
+            }
+            .newInformation{
+                width:446px;
+                ul{
+                    li{
+                        height:40px;
+                        line-height:40px;
+                        a{
+                            span.ells{
+                                width:400px; 
+                            }
+                        }
+                    }
+                    li:hover a{
+                       color:$blueColor; 
+                    }
+                }
+            }
+            .gameshow{
+                margin-top:24px;
+                ul{
+                    li{
+                        width:206px;
+                        height:186px;
+                        margin-right:24px;
+                        a{
+                            width:100%;
+                            height:100%;
+                            img{
+                                width:100%;
+                                height:128px;
+                            }
+                            p{
+                                height:38px;
+                                line-height:16px;
+                                margin:10px 0;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                    li:hover a{
+                        color:$blueColor;
+                    }
+                }
+            }
+        }
+        .rankingList{
+            width:280px;
+            .title{
+                height:24px;
+                line-height:24px;
+                text-align: center;
+                border-bottom:1px solid #e5e5e5;
+                .ranking{
+                    width:30px;
+                    margin-right:4px;
+                }
+                .gameName{
+                    width:160px;
+                }
+                .score{
+                    width:40px;
+                }
+            }
+            ul{
+                li{
+                    border-bottom:1px dashed #e5e5e5;
+                    .title{
+                        height:52px;
+                        line-height:52px;
+                        border:none;
+                        .ranking{
+                            width:22px;
+                            height:22px;
+                            line-height:24px;
+                            margin-top:14px;
+                            border:1px solid #d9d9d9;
+                        }
+                        .rankingColor{
+                            color:#fff;
+                            background:#ffcc00;
+                            border:1px solid #ffcc00;
+                        }
+                        .score{
+                            color:$buyColor;
+                        }
+                        .buy{
+                            width:40px;
+                            height:20px;
+                            line-height:20px;
+                            background:$buyColor;
+                            color:#fff;
+                            margin-top:16px;
+                        }
+                    }
+                    .gameImg{
+                        display:none;
+                        width:100%;
+                        height:176px;
+                        margin-bottom:6px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                }
+                li:hover .gameImg,li.cur .gameImg{
+                    display:block;
+                }
+            }
+        }
+        .ranks {
+            .til{
+                height:34px;
+                line-height:34px;
+                border:none;
+                border-bottom:3px solid $bottomColor;
+                padding:0;
+                margin-bottom:18px;
+            }
+            width:100%;
+            margin-top:52px;
+            overflow:hidden;
+            >div{
+                width:9999px;
+            }
+            .rankingList{
+                margin-right:27px;
+                span.fr{
+                    width:42px;
+                }
+                .up{
+                    color:$redColor;
+                }
+                .down{
+                    color:$blueColor;
+                }
+            }
+        }
+    }
+}

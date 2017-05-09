@@ -1,0 +1,151 @@
+<!--内容S-->
+<div class="list_con clearfix js_list_hei">
+    <!--左侧列表结构S-->
+    <div  ng-controller="leftListController">
+        <div class="side_list fl js_list_hei">
+            <div id="scrollbar1" class=" js_scr_hei">
+                <div class="scrollbar fr pr">
+                    <div class="track">
+                        <div class="thumb pa"></div>
+                    </div>
+                </div>
+                <div class="in_side_list viewport js_scr_hei" >
+                    <div class="no_game">
+                        <i></i>
+                        <p class="in_no_game language" data-name="noGame"></p>
+                        <p class="add_no_game language" data-name="addNoGame"></p>
+                    </div>
+                    <ul class="overview" >
+                        <li class="in_side_con clearfix" ng-class="{cur:curShow}" ng-repeat="list in gameList"  game-id="{{list.game_id}}" ng-right-click="decrement()" ng-click="listClick($index)">
+                            <a ui-sref="game.detail">
+                                <div class="lise_content clearfix">
+                                    <img ng-src="{{list.imgSrc}}" />
+                                    <div class="fl">
+                                        <p class="title" ng-bind="list.title"></p>
+                                        <span ng-repeat="tag in list.tag track by $index" ng-bind="list.tag[$index]"></span>
+                                    </div>
+                                </div>
+                                <p class="download_progress pr">
+                                    <i class="in_download_pro pa" style="width:{{listDownload.percent*2.12}}px"></i>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="add_game" ng-click="addGame()"><i>+</i><span class="language" data-name="addGame"></span></p>
+            <!--添加本地游戏-->
+            <div class="bounced bounced_drag" ng-show="bounced">
+                <div class="addGame ">
+                    <div class="addGame-header clearfix">
+                        <h3 class="fl">添加游戏</h3>
+                        <div class="close fr cn" ng-click="close()"></div>
+                    </div>
+                    <div class="addGame-body">
+                        <p class="in-body-title">选择一个程序并将其添加至您的游戏库</p>
+                        <div class="in-body-con" >
+                            <ul class="in-con-header" ng-click="selectAll()">
+                                <li class=" in-con-check" ng-class="{selected:select}"></li>
+                                <li class="parting-line first-parting-line clearfix"><i class="fl">|</i><i class="fr">|</i></li>
+                                <li class="parting-line sec-parting-line clearfix">程序<i class="fr">|</i></li>
+                                <li class="in-con-area">区域</li>
+                            </ul>
+                            <div class="in-con-body"  id="scrollbar4">
+                                <div class="scrollbar pr fr">
+                                    <div class="track">
+                                        <div class="thumb pa"><div class="end"></div></div>
+                                    </div>
+                                </div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                        <ul>
+                                            <li ng-repeat="list in addLocalGame" ng-click="localSelect()" class="cn " ng-class="{cur:current}" game-id="list.game_id">
+                                                <span class=" in-con-check"  ng-class="{selected:select}"></span>
+                                                    <span  class="parting-line first-parting-line clearfix">
+                                                        <img src="" ng-src="{{list.imgSrc}}"/>
+                                                    </span>
+                                                <span  class="parting-line sec-parting-line clearfix" ng-bind="list.title"></span>
+                                                <span class="in-con-area" ng-bind="list.address"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="in-foot clearfix">
+                            <div class="cancel fr cn " ng-click="cancel()">取消</div>
+                            <div class="addSelect fr " ng-class="{cn:select}" ng-click="addLeftGameList()">添加所选程序</div>
+                            <div class="browse fr cn" ng-click="browse()">浏览</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--添加本地游戏-->
+            <!--确认框-->
+            <ul class="delete pa ">
+                <li>
+                    <p>x</p>
+                    <span class="in_delete language" data-name="manage_delete" ng-click="manage_delete()">删除</span>
+                </li>
+                <li class="exit">
+                    <p></p><span class="delete language" data-name="manage_exit">退出</span>
+                </li>
+            </ul>
+            <div class="confirmation" id="confirmation_drag" ng-show="rightConfirm">
+                <div class="in_confirmation">
+                    <p class="language" data-name="deleteSure">是否删除本地游戏</p>
+                    <div class="delete_local">
+                        <input type="checkbox" checked="checked">
+                        <span class="language" data-name="deleteLocalName">删除本地</span>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="sure language" data-name="sure" ng-click="confirmation_sure($index)">确定</div>
+                    <div class="cancel language" data-name="cancel" ng-click="confirmation_cancel($index)">取消</div>
+                </div>
+            </div>
+            <!--确认框-->
+        </div>
+        <div ui-view></div>
+    </div>
+
+    <!--左侧列表结构S-->
+    <!--商城S-->
+    <div>
+        <div class="list_container js_list_hei show"  ng-controller="storeListController">
+            <div id="scrollbar2"  class=" js_store_scr_hei">
+                <div class="scrollbar fr pr js_scr_hei">
+                    <div class="track">
+                        <div class="thumb pa"></div>
+                    </div>
+                </div>
+                <div class="viewport js_store_hei" >
+                    <ul class="list_con clearfix overview">
+                        <li ng-repeat="list in storeList" game-id="{{list.game_id}}" ng-click="storeClick()">
+                            <a ui-sref="game.detail">
+                                <div class="list_img">
+                                    <i ng-class="{new:status}"></i>
+                                    <img ng-src="{{list.imgSrc}}"/>
+                                </div>
+                                <div class="list_state clearfix">
+                                    <p class="fl list_name" ng-bind="list.title"></p>
+                                    <p class="fr list_platform"><i ng-class="{window:list.win}"></i><i ng-class="{mac:list.mac}"></i></p>
+                                </div>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ui-view></div>
+    </div>
+    <!--商城E-->
+    <!--右侧详情页S-->
+    <!--右侧详情页E-->
+
+</div>
+<!--内容S-->
+

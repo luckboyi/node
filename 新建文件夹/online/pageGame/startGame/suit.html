@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选服</title>
+    <link rel="stylesheet" href="http://pic.vronline.com/common/style/base.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/tinyscrollbar.js"></script>
+    <style>
+
+    </style>
+</head>
+<body  class="platform">
+
+<div class="pageGame_user_msg">
+    <span class="fr refresh"><i></i>刷新</span>
+    <span class="fr mute"><i></i>静音</span>
+    <span class="fr change"><i></i>换服</span>
+    <span class="fr exit"><i></i>退出</span>
+    <span class="fr userName"><i></i>艾泽拉斯</span>
+</div>
+<!--选择服务器S-->
+<div class="choose_suit">
+        <div class="in_suit pr" id="suit_list" game-id="100001"  user-id="">
+            <div class="scrollbar pr fr">
+                <div class="track">
+                    <div class="thumb pa"></div>
+                </div>
+            </div>
+            <div class="viewport pr">
+                <div class="overview">
+                    <div class="rec_suit">
+                         <div class="title clearfix">
+                             <h3 class="recommend fl">推荐服务器</h3>
+                             <div class="re_content">
+                             <a href="javascript:;">
+                             <div class="fl button">
+                                <p>双线212服</p>
+                                <p>进入游戏</p>
+                             </div></a>
+                             <div class="advise">
+                                 <p><b>我们根据您使用的网络环境为您推荐左侧服务器</b></p>
+                                 <span class="fl"><i class=""></i>畅通</span>
+                                 <span class="fl"><i class="status3 "></i>拥挤</span>
+                                 <span class="fl"><i class="status6"></i>繁忙</span>
+                                 <span class="fl"><i class="status9"></i>维护</span>
+                             </div> 
+                             <div class="clearfix"></div>
+                              <ul class="suit_con clearfix">
+                                <li area-id="10001" game-src=""  title="联盟1区"><i class="crowd"></i><b>联盟1区</b>
+                                     <div class="icon_con">
+                                    <span class="rec_icon">荐</span><span class="new_icon">新</span>
+                                </div>
+                                </li>
+                                <li area-id="10001" game-src=""  title="联盟2区"><i class="maintain"></i><b>联盟2区</b></li>
+                                <li area-id="10001" game-src=""  title="联盟3区"><i class="crowd"></i><b>联盟3区</b></li>
+                                </ul>
+                            </div>
+                         </div> 
+                         <!-- <ul class="suit_con clearfix">
+                                <li area-id="10001" game-src=""><b class="tips"></b><i class="crowd"></i><b>联盟10区</b></li>
+                                <li area-id="10002" game-src=""><b class="tips"></b><i class="busy"></i><b>联盟60区</b></li>
+                                <li area-id="10003" game-src=""><b class="tips"></b><i class="busy"></i><b>联盟880区</b></li>
+                                <li area-id="10004" game-src=""><b class="tips"></b><i class="maintain"></i><b>联盟200区</b></li>
+                               </ul> -->                    
+                    </div>
+                    <div class="recently_suit">
+                        <h3>最近登录服务器</h3>
+                        <ul class="suit_con clearfix">
+                            <li area-id="10001" game-src="" title="联盟1区"><i class="crowd"></i><b>联盟1区</b></li>
+                            <li area-id="10001" game-src="" title="联盟2区"><i class="maintain"></i><b>联盟2区</b></li>
+                            <li area-id="10001" game-src="" title="联盟3区"><i class="crowd"></i><b>联盟3区</b></li>
+                        </ul>
+                    </div>
+                    <div class="all_suit">
+                        <h3>所有服务器</h3>
+                        <ul class="suit_con clearfix">
+                            <li area-id="10001" game-src="http://qqgame.qq.com/frame/WdPageJump.shtml?appid=1101082222&pid=10" title="联盟1区"><i class="crowd"></i><b>联盟1区</b>
+                                <div class="icon_con">
+                                    <span class="rec_icon">荐</span><span class="new_icon">新</span>
+                                </div>
+                            </li>
+                            <li area-id="10001" game-src="http://qqgame.qq.com/frame/WdPageJump.shtml?appid=1101082222&pid=10" title="联盟2区"><i class="crowd"></i><b>联盟2区</b></li>
+                            <li area-id="10001" game-src="http://qqgame.qq.com/frame/WdPageJump.shtml?appid=1101082222&pid=10" title="联盟3区"><i class="crowd"></i><b>联盟3区</b></li>
+                            <li area-id="10001" game-src="http://qqgame.qq.com/frame/WdPageJump.shtml?appid=1101082222&pid=10" title="联盟4区"><i class="crowd"></i><b>联盟4区</b></li>
+                            <li area-id="10001" game-src="http://qqgame.qq.com/frame/WdPageJump.shtml?appid=1101082222&pid=10" title="联盟5区"><i class="crowd"></i><b>联盟5区</b></li>
+                           
+                           </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--选择服务器S-->
+<script>
+    $(function(){
+        if (window.CppCall == undefined) {
+            window.CppCall = function () {};
+        };
+        var url = location.href;
+        $('#suit_list').tinyscrollbar();
+        //点击选服列表修改地址
+        $('.in_suit .suit_con').on('click','li',function(){
+            window.location.href =$(this).attr('game-src');
+        });
+
+        //是否登录
+        $('.pageGame_user_msg').find('span').on('click',function(){
+            if($(this).hasClass('refresh')){
+                window.location.href =location.href;
+            }else if($(this).hasClass('mute')){
+                $(this).toggleClass('offmute')
+            }else if($(this).hasClass('change')){
+                window.location.href =url;
+            }else if($(this).hasClass('exit')){
+                $(this).hide();
+                $(this).next('.userName').hide();
+                window.CppCall('common', 'close','');
+            }
+        })
+    })
+</script>
+</body>
+</html>

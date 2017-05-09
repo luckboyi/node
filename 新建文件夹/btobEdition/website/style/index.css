@@ -1,0 +1,188 @@
+.defBlueCol {
+  color: #39baf3; }
+
+.pa {
+  position: absolute; }
+
+.icon {
+  width: 11px;
+  height: 11px;
+  background: url("../images/tbicon.png") no-repeat 0 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block; }
+
+.download_icon {
+  left: 0; }
+
+body {
+  background: #052254; }
+
+.nav {
+  width: 100%;
+  height: 62px;
+  line-height: 62px;
+  background: rgba(11, 15, 20, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999; }
+
+.in_nav {
+  width: 1190px;
+  margin: 0 auto; }
+
+.logo {
+  height: 32px;
+  padding-top: 12px; }
+  .logo a {
+    width: 49px;
+    height: 32px; }
+    .logo a img {
+      width: 100%;
+      height: 100%; }
+
+.in_nav_con .home {
+  margin-right: 20px; }
+.in_nav_con li.division {
+  line-height: 70px;
+  height: 62px; }
+.in_nav_con li a {
+  display: inline-block;
+  padding: 4px; }
+.in_nav_con li .defBlueCol {
+  padding-left: 10px;
+  margin-left: 20px; }
+
+/*lunbo*/
+.banner_con {
+  width: 100%;
+  height: 800px; }
+
+.in_banner_con {
+  width: 100%;
+  height: 100%; }
+  .in_banner_con li {
+    height: 800px;
+    width: 100%; }
+    .in_banner_con li a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    .in_banner_con li.cur a {
+      opacity: 1;
+      filter: alpha(opacity=100); }
+
+.banner_btn {
+  width: 100%;
+  bottom: 20px; }
+  .banner_btn ol {
+    display: inline-block; }
+  .banner_btn li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background: #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    margin: 0 7px;
+    cursor: pointer; }
+    .banner_btn li.cur {
+      opacity: 1;
+      filter: alpha(opacity=100); }
+
+.content {
+  width: 100%;
+  height: 2800px;
+  background: url("../images/content.png") no-repeat center; }
+
+.shade_div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%; }
+  .shade_div .in_shade_div {
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background: #1c202a;
+    border: 1px solid #000;
+    font-size: 14px; }
+    .shade_div .in_shade_div .header {
+      height: 32px;
+      line-height: 32px; }
+    .shade_div .in_shade_div .body {
+      padding: 20px;
+      background: #151920;
+      min-width: 370px;
+      text-align: center; }
+      .shade_div .in_shade_div .body div {
+        display: inline-block; }
+        .shade_div .in_shade_div .body div p {
+          text-align: left;
+          line-height: 24px; }
+      .shade_div .in_shade_div .body p.tal {
+        text-align: left;
+        color: #828f9e;
+        line-height: 32px;
+        margin-bottom: 20px; }
+      .shade_div .in_shade_div .body p a {
+        color: #39baf3;
+        margin-left: 10px;
+        text-decoration: underline; }
+        .shade_div .in_shade_div .body p a:hover {
+          color: #0096ff; }
+      .shade_div .in_shade_div .body span {
+        display: inline-block;
+        width: 170px;
+        line-height: 36px;
+        height: 36px;
+        background: #2889c8;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 4px;
+        margin: 20px 0; }
+        .shade_div .in_shade_div .body span:hover {
+          background: #0096ff; }
+
+.close_icon {
+  width: 9px;
+  height: 9px;
+  margin-top: 12px;
+  background-position: 0 -11px; }
+  .close_icon:hover {
+    background-position: -9px -11px; }
+
+.foot_con {
+  text-align: center;
+  background: rgba(11, 15, 20, 0.8);
+  padding-bottom: 20px; }
+  .foot_con .logo {
+    padding: 30px 0 12px 0; }
+  .foot_con ul {
+    display: inline-block; }
+    .foot_con ul li {
+      font-size: 16px;
+      margin: 10px 6px;
+      color: #39baf3; }
+      .foot_con ul li a {
+        font-size: 16px;
+        color: #39baf3; }
+  .foot_con .police span {
+    margin-left: 6px; }
+  .foot_con .in_foot_con {
+    margin: 6px 0; }
+
+/*# sourceMappingURL=index.css.map */

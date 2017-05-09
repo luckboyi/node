@@ -1,0 +1,658 @@
+$backCor:#1d232f;
+$wordCor:#828f9e;
+$selCor:#c4d9f3;
+$wordCor2:#536174;
+$scrollCor:#2d3744;
+$selBlueCor:#2cdef5;
+$selBlueCorHover:#22a1bf;
+$backCor2:#1f2631;
+$borCor:#293141;
+$backCorCur:#2d3747;
+$backCorHover:#384355;
+$backActive:#425067;
+$backBlue:#0096ff;
+$erroColor:#b82b2b;
+.textOver{
+  white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;
+}
+.center{
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+span.choice_box{
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url("../images/personal_center.png") no-repeat -135px 0;
+  margin: 4px 0px 0 60px;
+  vertical-align: sub;
+}
+span.choice_box.choiced{background-position: -120px 0 !important;}
+span.user_vr_pay{margin-left: 4px !important;}
+.personal_center{
+  height: 100%;
+  .problem_center{
+    color: $wordCor;
+  }
+  .left_per{
+    width: 246px;
+    height: 100%;
+    border-right: 1px solid $borCor;
+    background: rgba(32, 39, 49, 0.5);
+    li.pr{
+      width: 244px;
+      padding: 1px;
+      text-align: center;
+      line-height: 50px;
+      border-bottom: 1px solid $borCor;
+      ol{
+        li{
+          border: none;
+          padding: 1px;
+          color: $wordCor2;
+          font-size: 14px;
+          cursor: default;
+          text-align: left;
+          text-indent: 94px;
+          line-height: 50px;
+          &:active{
+            background: $backCorHover;
+          }
+          &:hover{
+            background: $backActive;
+          }
+          &.cur{
+            background: $backCorHover;
+            color: $wordCor;
+          }
+        }
+      }
+      &:hover{
+        background: $backActive;
+        &:before{
+          background-position-x: -28px !important;
+        }
+        a{
+          color: $wordCor;
+        }
+      }
+      &.charge:hover{
+        background: rgba(32, 39, 49, 0.5);
+      }
+      &:active{
+        background: $backCorHover;
+      }
+      &.cur{
+        background: $backCorHover;
+        &:before{
+          background-position-x: -28px !important;
+        }
+        a{
+          color: $wordCor;
+        }
+      }
+      &.charge.cur{
+        background: rgba(32, 39, 49, 0.5);
+      }
+      &:before{
+        content: '';
+        width: 28px;
+        height: 28px;
+        background: url("../images/personal_center.png") no-repeat 0 0;
+        position: absolute;
+        left: 64px;
+        top: 12px;
+      }
+
+      &.charge:before{
+        background-position:0 -28px ;
+      }
+      &.charge i{
+        width: 10px;
+        height: 10px;
+        background: url("../images/personal_center.png") no-repeat -90px 0;
+        right: 20px;
+        top: 24px;
+        position: absolute;
+      }
+      &.charge i.cur{
+        background-position-x: -100px !important;
+      }
+      &.problem:before{
+        background-position: 0 -56px;
+      }
+      a{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        color: $wordCor2;
+        display: block;
+      }
+    }
+  }
+  .right_per{
+    margin-left: 270px;
+    padding: 20px 0;
+    .in_right_per{
+      width: 940px;
+      padding: 10px;
+      background: rgba(2,2,10,.4);
+      li.list_con{
+        display: none;
+        &.cur{
+          display: block;
+        }
+        ol{
+          li.pay_method{
+
+          }
+          li.pay_method.cur{
+            display: block;
+          }
+        }
+      }
+
+    }
+    .user_msg{
+      .user_header{
+        height: 194px;
+        background: rgba(56,67,85,.2);
+        text-align: center;
+        p{
+          img{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            margin-top: 15px;
+          }
+          i.edit{
+            width: 24px;
+            height: 24px;
+            background: url("../images/personal_center.png") no-repeat 0 -84px;
+            @extend .center;
+            top: 86%;
+            left: 54%;
+          }
+          &.title{
+            line-height: 40px;
+            color: $selCor;
+            font-size: 18px;
+          }
+        }
+        .submit_msg{
+          display: inline-block;
+          i{
+            width: 14px;
+            height: 18px;
+            background: url("../images/personal_center.png") no-repeat -24px -84px;
+            @extend .center;
+            left: -6%;
+            position: absolute;
+          }
+          p,span{
+            font-size: 14px;
+            color: $wordCor;
+            padding: 0 3px;
+          }
+
+
+        }
+
+      }
+      .user_con{
+        ul{
+          padding: 0 120px;
+          margin-top: 40px;
+          li{
+            width: 324px;
+            &:nth-child(2n){
+              float: right;
+            }
+            color: $wordCor2;
+            h4{
+              font-size: 14px;
+              color: $wordCor;
+              line-height: 18px;
+              text-indent: 8px;
+              cursor: default;
+              border-left: 2px solid $selBlueCor;
+              &.icon  i{
+                content: '';
+                width: 17px;
+                height: 17px;
+                background: url("../images/personal_center.png") no-repeat -40px -84px;
+                position: absolute;
+                @extend .center;
+                left: 88px;
+              }
+              p{
+                left: 98%;
+                top: -62%;
+                height:50px ;
+                width: 340px;
+                line-height: 50px;
+                padding: 0 40px;
+                background: #151920;
+                color:$erroColor;
+                display: none;
+                border: 1px solid #000;
+                @extend .center;
+                &.phone_tips{
+                  width: 560px;
+                  left: 132%;
+                }
+              }
+            }
+            p{
+              margin: 20px 0;
+              text-indent: 10px;
+              span,input{
+                min-width: 78px;
+                line-height: 30px;
+                font-size: 14px;
+              }
+              input{
+                background: $backCor;
+                outline: none;
+                border: none;
+                width: 136px;
+                text-indent: 4px;
+                color: $wordCor;
+              }
+              span.fr,b.unbind i{
+                width: 90px;
+                display: inline-block;
+                text-align: center;
+                text-indent: 0;
+                font-size: 14px;
+                line-height: 30px;
+                background: $backCorHover;
+                border-radius: 2px;
+                color: #fff;
+                cursor: default;
+                &:hover{
+                  background: $backActive;
+                }
+                &:active{
+                  background: $backCor;
+                }
+              }
+              b.unbind i{margin-left: 20px;}
+            }
+          }
+        }
+      }
+    }
+  }
+  /*-------------------new--------------------*/
+  .paymentCenter{
+    color: $wordCor2;
+    padding: 10px;
+    .payment_title{
+      color: $wordCor;
+      text-indent: 5px;
+      line-height: 18px;
+      font-size: 16px; border-left: 3px solid $selBlueCor;
+      .contact{
+        font-size: 13px;
+        position: relative;
+        &:before{
+          content: '';
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          background: url("../images/personal_center.png") no-repeat -85px -84px;
+          left: -30%;
+        }
+        &:hover{
+          color: #169bd6;
+        }
+      }
+    }
+    .payment_con{
+      div{
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        margin: 30px 0;
+        text-align: center;
+        &.vr_pay_con{
+          text-align: left;
+          margin: 0;
+          &.pageGame_choice_mode{
+            background: $backCor;
+            width: 544px;
+            height: auto;
+            padding: 10px;
+            p{
+              line-height: 42px;
+            }
+            .choice_vr_pay{
+              display: none;
+            }
+          }
+        }
+        &.pageGame_pay{
+          height: 100px;
+        }
+        &.pay_sel_btn{
+          line-height: 28px;
+          height: auto;
+          text-align: left;
+          span{
+            text-align: center;
+            line-height: 28px;
+            display:inline-block;
+            cursor: default;
+            border-radius: 2px;
+            margin-right: 10px;
+            width: 84px;
+            background: $backCor;
+            &:hover{
+              background: $backCorHover;
+            }
+            &:active{
+              background: $backCorCur;
+            }
+            &.cur{
+              background: $backCorCur;
+              color: $wordCor;
+            }
+          }
+        }
+        &.zhi_pay_con{
+          display: none;
+          width: 630px;
+          div.fl{
+            padding:20px 130px;
+            margin-top: 12px;
+            border-right: 1px solid $borCor;
+            a{
+              width: 112px;
+              line-height: 32px;
+              color: #fff;
+              text-align: center;
+              display: block;
+              cursor: default;
+              top: 0;
+              left: 653px;
+              background: $selBlueCorHover;
+              border-radius: 2px;
+              &:hover{
+                background: $selBlueCor;
+              }
+              &:active{
+                background: $selBlueCorHover;
+              }
+            }
+          }
+          a{
+            color: #169bd6;
+            text-decoration: underline;
+          }
+
+        }
+        .name{
+          padding: 0 4px;
+        }
+        .balance_title{
+          margin-left: 60px;
+        }
+        .server{
+          margin-left: 40px;
+        }
+        .total_scale{
+          margin-left: 40px;
+        }
+        select{
+          line-height: 30px;
+          height: 30px;
+          background: $backCor;
+          border: none;
+          color: $wordCor2;
+          padding: 0 0px 0 10px;
+          text-align: center;
+        }
+        &.payment_num{
+          span{
+            width: 110px;
+            line-height: 30px;
+            background: $backCor;
+            border: 1px solid $backCor;
+            cursor: default;
+            text-align: center;
+            margin-right: 1px;
+            &:hover{
+              border: 1px solid #7b96c3;
+              background: $backCorHover;
+              color: #fff;
+            }
+            &:active{
+              border: 1px solid #7b96c3;
+              background: $backActive;
+              color: #fff;
+            }
+            &.cur{
+              border: 1px solid #7b96c3;
+              background: $backCorHover;
+              color: #fff;
+            }
+          }
+        }
+        &.other_pay_num{
+          label{
+            span{
+              width: 111px;
+              line-height: 30px;
+              background: $backCor;
+              text-align: center;
+              cursor: default;
+              color: $wordCor;
+              border: 1px solid $backCor;
+              border-right: 1px solid $wordCor2;
+            }
+            input{
+              line-height: 32px;
+              width: 220px;
+              color: $wordCor;
+              text-indent: 10px;
+              background: $backCor;
+              border: none;
+            }
+          }
+          i{
+            width: 17px;
+            height: 17px;
+            background: url("../images/personal_center.png") no-repeat -40px -84px;
+            margin: 8px 16px;
+
+          }
+          p.pay_num_tips{
+            padding: 0 40px;
+            line-height: 50px;
+            border: 1px solid #000;
+            background: #151920;
+            display: none;
+            color: #b82b2b;
+            left: 40%;
+            top: -24%;
+          }
+          p.erro_tips{
+            top: 28px;
+            display: none;
+          }
+        }
+        &.payment_btn{
+          width: 112px;
+          line-height: 32px;
+          color: #fff;
+          cursor: default;
+          background: $selBlueCorHover;
+          border-radius: 2px;
+          &:hover{
+            background: $selBlueCor;
+          }
+          &:active{
+            background: $selBlueCorHover;
+          }
+        }
+        &.payment_select{
+          ul{
+            padding: 0 20px 0 6px;
+            height: 160px;
+            border-right: 1px solid $borCor;
+            li{
+              width: 105px;
+              height: 43px;
+              line-height: 43px;
+              border: 1px solid rgba(0,0,0,0);
+              margin: 10px 0;
+              &:hover{
+                border:1px solid  $borCor;
+                background: $backCorCur;
+              }
+              &:active{
+                border:1px solid  $borCor;
+                background: $backActive;
+              }
+              &.cur{
+                border:1px solid  $borCor;
+                background: $backCor;
+                i{
+                  background-position-x: -72px;
+                }
+              }
+              i{
+                width: 12px;
+                height: 12px;
+                background: url("../images/personal_center.png") no-repeat -60px -84px;
+                position: absolute;
+                @extend .center;
+                left: 18%;
+              }
+              em{
+                width: 73px;
+                height: 30px;
+                background: url("../images/personal_center.png") no-repeat 0 -112px;
+                position: absolute;
+                @extend  .center;
+                left: 60%;
+              }
+              &.zhi_pay{
+                em{
+                  height: 26px;
+                  background-position-y: -142px;
+                }
+              }
+            }
+          }
+          .select_right{
+            text-align: left;
+            margin: 0;
+            height: auto;
+            p{
+              span{
+                font-size: 14px;
+                &.pay_now{
+                  width: 112px;
+                  line-height: 32px;
+                  color: #fff;
+                  text-align: center;
+                  display: block;
+                  cursor: default;
+                  top: 0;
+                  left: 790px;
+                  background: $selBlueCorHover;
+                  border-radius: 2px;
+                  &:hover{
+                    background: $selBlueCor;
+                  }
+                  &:active{
+                    background: $selBlueCorHover;
+                  }
+                }
+                &.balance{
+                  margin-left: 20px;
+                }
+              }
+
+            }
+          }
+        }
+        &.payment_tips{
+          height: 108px;
+          margin:20px 0 ;
+          width:920px;
+          display: none;
+          background: $backCor;
+          i{
+            width: 38px;
+            height: 38px;
+            margin: 20px 30px ;
+            background: url("../images/personal_center.png") no-repeat -60px -33px;
+          }
+          div{
+            margin: 0;
+            text-align: left;
+            padding: 10px;
+          }
+        }
+        &.tips_con{
+          height: 120px;
+          padding: 20px;
+          text-align: left;
+          border: 1px solid $borCor;
+          font-size: 12px;
+          a{
+            padding: 0 5px;
+          }
+          a:hover{
+            font-size: 12px;
+            color: #169bd6;
+          }
+        }
+        &.pay_zhi_btn{
+          text-align: left;
+          span,input{
+            width: 112px;
+            line-height: 32px;
+            color: #169bd6;
+            text-align: center;
+            display: inline-block;
+            cursor: default;
+            background: rgba(0,0,0,0);
+            border: 1px solid $selBlueCorHover;
+            border-radius: 2px;
+            &:hover{
+              background: $selBlueCor;
+              color: #fff;
+            }
+            &:active{
+              background: $selBlueCorHover;
+              color: #fff;
+            }
+            &.cur{
+              background: $selBlueCorHover;
+              color: #fff;
+              &:hover{
+                background: $selBlueCor;
+                color: #fff;
+              }
+              &:active{
+                background: $selBlueCorHover;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pageGame_sel{
+      display: none;
+    }
+  }
+}

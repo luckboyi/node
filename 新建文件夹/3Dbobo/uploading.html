@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="http://pic.vronline.com/videoGame/style/base.css">
+		<link rel="stylesheet" href="http://pic.vronline.com/videoGame/style/3dbobo.css">
+    </head>
+    <body>
+	<div class="uploading_con tac">
+		<div class="in_uploading_con">
+			<div class="uploading_head pr">
+				<h3 class="f20">视频上传</h3>
+				<a href="JavaScript:;" class="pa">返回首页</a>
+			</div>
+			<div class="uploading_body">
+				<div class="uploading_content">
+					<p class="pr"><i>※</i>选择传送方式</p>
+					<select name="" id="">
+						<option value="">测试</option>
+						<option value="">测试</option>
+
+					</select>
+				</div>
+				<div class="uploading_content">
+					<p><i>※</i>添加视频</p>
+					<div class="verification clearfix uploadVideo">
+						<input class="fl" type="text" />
+						<p class="fl send">上传</p>
+						<p class="fl schedule"><span class="num">50%</span></p>
+					</div>
+				</div>
+				<div class="uploading_content uploading_content2 pr">
+					<p><i>※</i>视频名称</p>
+					<input type="text" placeholder="不超过11字">
+					<p class="pa erroMsg"></p>
+				</div>
+				<div class="uploading_content">
+					<p><i>※</i>视频类型</p>
+					<select name="" id="">
+						<option value="">测试</option>
+					</select>
+				</div>
+				<div class="uploading_content uploading_content3 pr">
+					<p><i>※</i>视频简介</p>
+					<textarea name="" id="" cols="30" rows="8" placeholder="不超过200字"></textarea>
+					<p class="pa erroMsg"></p>
+				</div>
+				<div class="uploading_content">
+					<p><i>※</i>横向缩略图(小于100K)</p>
+					<div class="img_con small_img pr">
+						<input type="file" class="pa">
+						<img src="http://pic.vronline.com/videoGame/images/h_image.jpg" height="187" width="355" alt="">
+					</div>
+				</div>
+				<div class="uploading_content ">
+					<p><i>※</i>竖向缩略图(小于100K)</p>
+					<div  class="img_con big_img pr">
+						<input type="file" class="pa">
+						<img src="http://pic.vronline.com/videoGame/images/s_image.jpg" height="331" width="233" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="uploading_foot">
+				<p class="submit_btn f20">同意上传协议并提交</p>
+				<p class="f14">请仔细阅读开发者协议<a href="javascript:;">[上传协议]</a></p>
+				<p  class="f14">如不同意请关闭本页面</p>
+			</div>
+
+		</div>		
+	</div>
+    </body>
+    <script type="text/javascript" src="https://pic.vronline.com/common/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$('.uploading_content2 input').blur(function() {
+    			//alert(1)
+    			var val = $(this).val();
+    			if(val.length == 0){
+    				$(this).nextAll('.erroMsg').text('不能为空').addClass('erroColor')
+    			}
+    			if(val.length >11){
+    				$(this).nextAll('.erroMsg').text('不能超过11字').addClass('erroColor')
+    			}
+    		});
+    		$('.uploading_content3 textarea').blur(function() {
+    			var val = $(this).val();
+    			if(val.length == 0){
+    				$(this).nextAll('.erroMsg').text('不能为空').addClass('erroColor')
+    			}
+    			if(val.length >200){
+    				$(this).nextAll('.erroMsg').text('不能超过200字').addClass('erroColor')
+    			}
+    		});
+    		$('.uploading_content2 textarea').focus(function(event) {
+    				$(this).nextAll('.erroMsg').text('').removeClass('erroColor')
+
+    		});
+
+
+
+    		
+    	})
+    </script>
+</html>

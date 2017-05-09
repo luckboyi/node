@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>自适应的斜角水平菜单</title>
+<style type="text/css">
+.menu {
+font-family:Arial;
+font-size:14px;
+}
+.menu a,.menu a:visited {
+display:block;
+float:left;
+position:relative;
+background-color:#CC0000;
+color:#FFFFFF;
+text-decoration:none;
+padding:6px;
+margin:1px 0 0 1px;
+}
+.menu a .corner {
+position:absolute;
+height:0;
+width:0;
+overflow:hidden;
+border-bottom:solid 6px #CC0000;
+border-left:solid 6px #FFFFFF;
+top:0;
+left:0;
+}
+.menu a:hover {
+background-color:#FF9900;
+color:#333333;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+<a href="#">
+<span class="corner"></span>Home</a>
+<a href="#">
+<span class="corner"></span>Connect</a>
+<a href="#">
+<span class="corner"></span>Web Dev</a>
+<a href="#">
+<span class="corner"></span>Web Design</a>
+<a href="#">
+<span class="corner"></span>Map</a>
+</div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>引导页</title>
+  <link rel="stylesheet" href="./style/base.css">
+  <style>
+    
+    .box{
+      width:200px;height: 10px;
+      background: url('./images/leardbg.png') no-repeat center;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      animation:donghua 0.5s linear forwards;
+      -moz-animation:donghua 1s linear forwards; /* Firefox */
+      -webkit-animation:donghua 0.5s linear forwards; /* Safari and Chrome */
+      -o-animation:donghua 1s ; /* Opera */
+    }
+    @keyframes donghua{
+      10%{width:200px;height:10px;}
+      60%{width:150px;height:525px;}
+
+      100% {width:528px;height: 337px;}
+      }
+      @-moz-keyframes donghua /* Firefox */
+      {
+        10%{width:200px;height:10px;}
+        60%{width:150px;height:525px;}
+
+        100% {width:528px;height: 337px;}
+
+      }
+
+      @-webkit-keyframes donghua /* Safari and Chrome */
+      {
+        10%{width:200px;height:10px;}
+        60%{width:150px;height:525px;}
+
+        /*90%{width:500px;height: 337px;}*/
+        100% {width:528px;height: 337px;}
+      }
+
+
+  </style>
+</head>
+<body style="background-color:#fff;">
+  <div class="homelead_con mask show">
+    <!-- <div class="in_homelead_con pr">
+      <div class="top_con "></div>
+      <div class="corner pa top_left_corner"></div>
+      <div class="corner pa top_right_corner"></div>
+      <div class="corner pa bottom_left_corner"></div>
+      <div class="corner pa bottom_right_corner"></div>
+      <div class="center_con"></div>
+      <div class="bottom_con"></div>
+      <div></div>
+    </div> -->
+    <div class="box pa">
+
+    </div>
+  </div>
+</body>
+</html>

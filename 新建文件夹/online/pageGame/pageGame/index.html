@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页游戏</title>
+    <link rel="stylesheet" type="text/css"  href="../style/base.css">
+    <link rel="stylesheet" type="text/css"  href="style/pageGame.css">
+    <script src="js/tool/jquery-1.11.3.min.js"></script>
+    <script src="../js/tinyscrollbar.js"></script>
+    <script src="js/tool/jquery.gallery.js"></script>
+    <script src="js/pageGame.js"></script>
+</head>
+<body>
+    <div class="pageGame_container">
+        <div class="pageGame_con pr fl pageGame_con_hei" id="pageGame_left_list_scrollbar">
+            <div class="scrollbar fr pa  pageGame_con_hei">
+                <div class="track">
+                    <div class="thumb pa"></div>
+                </div>
+            </div>
+            <div class="viewport pr pageGame_con_hei">
+                <div class="overview">
+                    <h3>最近游戏</h3>
+                    <div id="pageGame_scrollbar" class="list_con pr">
+
+                        <div class="viewport pr">
+                            <div class="overview">
+                                <ul class="">
+                                    <li class=""  game-name="" area-name="" gameSrc="">
+                                        <a href="javascript:;" class="clearfix">
+                                            <img src="images/touxiang.jpg" class="fl">
+                                            <div class="in_list_con fl">
+                                                <p>三国乱世</p>
+                                                <span>联盟10区</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                <!----------------------------------new 增加的--------------------------------------->
+                                <div class="noGame_history">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!----------------------------------new 增加的--------------------------------------->
+                    <div class="tab">
+                        <ul class="clearfix f14" style="height: 30px;">
+                            <li class="fl cur">
+                                <a href="javascript:;">新服公告</a>
+                            </li>
+                            <li class="fl">
+                                <a href="javascript:;">已开新服</a>
+                            </li>
+                        </ul>
+                        <ol style="display: table;">
+                            <li class="cur">
+                                <table>
+                                    <tr>
+                                        <th>游戏名称</th>
+                                        <th>服务器</th>
+                                        <th>时间</th>
+                                    </tr>
+                                    <tr class="cur gameList"  game-name="" area-name="" gameSrc="">
+                                        <td>唐门六道</td>
+                                        <td>联盟69区</td>
+                                        <td class="pr">
+                                            <div class="clearfix">
+                                                <i class="fl">09-10</i><b class="fl">14:30</b>
+                                            </div>
+                                            <div class="pa play_game">进入游戏</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li>
+                                <table>
+                                    <tr>
+                                        <th>游戏名称</th>
+                                        <th>服务器</th>
+                                        <th>时间</th>
+                                    </tr>
+                                    <tr class="cur gameList"  game-name="" area-name="" gameSrc="">
+                                        <td>唐门4道</td>
+                                        <td>联盟69区</td>
+                                        <td class="pr">
+                                            <div class="clearfix">
+                                                <i class="fl">09-10</i><b class="fl">14:30</b>
+                                            </div>
+                                            <div class="pa play_game">进入游戏</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="ad">
+                        <ul>
+                            <li>
+                                <!--new 2016-10-28 qb-->
+					            <a href="../../../官网/card_package.html" target="_blank">
+					                <img src="../../../../../pic/webgame/images/package.jpg">
+					            </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="images/list.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageGame_right_con pr pageGame_con_hei pageGame_index "  id="pageGame_list_scrollbar" >
+            <div class="scrollbar fr pa  pageGame_con_hei">
+                <div class="track">
+                    <div class="thumb pa"></div>
+                </div>
+            </div>
+            <div class="viewport pr pageGame_con_hei">
+                <div class="overview">
+                    <div class="banner">
+                        <ul id="videoBanner">
+                            <li class="poster-item"  game-name="" area-name="" gameSrc="">
+                                <a href="javascript:;">
+                                    <img src="images/banner.jpg" width="100%" height="100%">
+                                </a>
+                            </li>
+                            <li class="poster-item">
+                                <a href="javascript:;">
+                                    <img src="images/banner.jpg" width="100%" height="100%">
+                                </a>
+                            </li>
+                            <li class="poster-item">
+                                <a href="javascript:;">
+                                    <img src="images/banner.jpg" width="100%" height="100%">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pageGame_list_item">
+                        <div class="hot_item">
+                            <div class="item_header">
+                                <h4>热门游戏</h4>
+                            </div>
+                            <div class="hot_list">
+                                <ul class="clearfix" >
+                                    <li class="fl"  game-name="" area-name="" gameSrc="">
+                                        <a href="javascript:;" class="pr">
+                                            <img src="images/list.jpg">
+                                            <i class="new"></i>
+                                            <p class="pa title">炫斗之王</p>
+                                            <div class="btn pa">
+                                                <div class="in_btn">
+                                                    <p class="in_game">进入游戏</p>
+                                                    <p class="go_home">游戏首页</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list_item">
+                            <div class="item_header">
+                                <h4>游戏列表</h4>
+                            </div>
+                            <div class="list_title clearfix">
+                                <span class="fl cur"><a href="javascript:;">全部</a></span>
+                                <span class="fl"><a href="javascript:;">全部</a></span>
+                                <span class="fl"><a href="javascript:;">全部</a></span>
+                                <span class="fl"><a href="javascript:;">全部</a></span>
+                                <span class="fl"><a href="javascript:;">全部</a></span>
+                                <span class="fl"><a href="javascript:;">全部</a></span>
+                                <span class="fl"><a href="javascript:;">全部</a></span>
+                            </div>
+                            <div class="hot_list">
+                                <ul class="clearfix">
+                                    <li class="fl">
+                                        <a href="javascript:;" class="pr">
+                                            <img src="images/list.jpg">
+                                            <i class="new"></i>
+                                            <p class="pa title">炫斗之王</p>
+                                            <div class="btn pa">
+                                                <div class="in_btn">
+                                                    <p class="in_game">进入游戏</p>
+                                                    <p class="go_home">游戏首页</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href="javascript:;" class="pr">
+                                            <img src="images/list.jpg">
+                                            <i class="new"></i>
+                                            <p class="pa title">炫斗之王</p>
+                                            <div class="btn pa">
+                                                <div class="in_btn">
+                                                    <p class="in_game">进入游戏</p>
+                                                    <p class="go_home">游戏首页</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href="javascript:;" class="pr">
+                                            <img src="images/list.jpg">
+                                            <i class="new"></i>
+                                            <p class="pa title">炫斗之王</p>
+                                            <div class="btn pa">
+                                                <div class="in_btn">
+                                                    <p class="in_game">进入游戏</p>
+                                                    <p class="go_home">游戏首页</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href="javascript:;" class="pr">
+                                            <img src="images/list.jpg">
+                                            <i class="new"></i>
+                                            <p class="pa title">炫斗之王</p>
+                                            <div class="btn pa">
+                                                <div class="in_btn">
+                                                    <p class="in_game">进入游戏</p>
+                                                    <p class="go_home">游戏首页</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="foot_item">
+                            <div class="item_header">
+                                <h4>友情链接</h4>
+                            </div>
+                            <div class="foot_con">
+                                <ol class="clearfix">
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                    <li class="fl"><a href="javascript:;">凯英网络</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageGame_right_con pr pageGame_con_hei pageGame_detail "  id="pageGame_con_scrollbar" >
+            <div class="scrollbar fr pa  pageGame_con_hei">
+                <div class="track">
+                    <div class="thumb pa"></div>
+                </div>
+            </div>
+            <div class="viewport pr pageGame_con_hei">
+                <ul class="overview">
+                    <li class="detail_con cur" game-id="10001">
+                        <div class="detail clearfix">
+                            <div class="left_contain fl">
+                                <h3>Tom Clancy’s The Division™</h3>
+                                <div class="lanrenzhijia">
+                                    <div id="picBox" class="picBox">
+                                        <ul class="cf">
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                            <li><a href="#"><img src="images/touxiang.jpg" /><i class="btn-link-i"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div id="listBox" class="listBox">
+                                        <ul class="cf">
+                                            <li class="on"><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                            <li><div class="arrow-up pa"></div><img src="image/detail-list.jpg" /></li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail_btn">
+                                        <span id="prev" class="btn prev"></span>
+                                        <span id="next" class="btn next"></span>
+                                        <span class="btn_center" id="center"><em></em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right_contain fl">
+                                <div class="get_gift">
+                                    <p class="pr hasget">领取礼包</p>
+                                    <div class="clearfix">
+                                        <span class="fl">账号充值</span>
+                                        <span class="fl">进入论坛</span>
+                                    </div>
+                                </div>
+                                <div class="content1">
+                                    <div class="right_con">
+                                        <h3>游戏评分</h3>
+                                    </div>
+                                    <div class="score clearfix">
+                                        <span class="fl">7.5</span><i class="fl">分</i><p class="fl">（已有</p><b class="fl">2012</b><p class="fl">人评分）</p>
+                                    </div>
+                                </div>
+                                <div class="content2">
+                                    <div class="right_con clearfix">
+                                        <h3 class="fl" style="margin-right: 28px">游戏类型</h3><h3 class="fl">上市时间</h3>
+                                    </div>
+                                    <ul class="con_list clearfix">
+                                        <li><a href="javascript:;">HTC</a></li>
+                                        <li><a href="javascript:;">大鹏</a></li>
+                                    </ul>
+                                </div>
+                                <div class="content1">
+                                    <div class="right_con">
+                                        <h3>游戏简介</h3>
+                                    </div>
+                                    <p>我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。在黑色星期五——一种毁坏性的流行病席卷了整个纽约，基础设施接二连三地慢慢瘫痪。在短短几天内，失去生活必需品的整个社会陷入了混乱。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail_comment">
+                            <div class="comment ">
+                                <ul class="comment_head clearfix">
+                                    <li class="fl splendid cur language" data-name="splendid">精彩评论</li>
+                                    <li class="fl newComment language" data-name="newComment">最新评论</li>
+                                    <li class="fr badComment clearfix hide"><i class="fl language" data-name="badComment"></i><b class="fl"></b></li>
+                                    <li class="fr goodComment clearfix hide"><i class="fl language" data-name="goodComment"></i><b class="fl"></b></li>
+                                    <li class="fl myComment language" data-name="myComment">我的评论</li>
+                                </ul>
+                                <div class="comment_body">
+                                    <ol class="in_comment_body" id="comment_con">
+                                        <li class="comment_list" u-id="100050">
+                                            <div class="comment_body_con clearfix">
+                                                <div class="fl com_portrait">
+                                                    <img src="http://api.vronline.com/Public/images/defaultpic/girl2.jpg">
+                                                </div>
+                                                <div class="fl right_com pr" style="width: 720px;">
+                                                    <div class="right_com_title clearfix ">
+                                                        <h3 class="fl">WB21T：</h3>
+                                                        <span class="fl">非常棒，强烈推荐</span>
+                                                    </div>
+                                                    <div class="right_com_con clearfix">
+                                                        <p class="fl">2016-07-27 13:33:14</p>
+                                                        <p class="fl playGame_time clearfix">
+                                                            <i class="language fl" data-name="game_play_time">进行游戏时间：</i>
+                                                            <b class="fl">1.6</b>
+                                                            <em class="fl language" data-name="play_hour">个小时</em>
+                                                        </p>
+                                                        <div class="fr clearfix comment_comment">
+                                                            <div class="fl comment_delete language" data-name="report">举报</div>
+                                                            <i class="fl">|</i>
+                                                            <div class="fl pr like">(<b>46</b>)</div>
+                                                            <i class="fl">|</i>
+                                                            <div class="fl pr unlike">(<b>1</b>)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <div class="comment_page" id="comment_page"></div>
+                                </div>
+                                <div class="unComment language" data-name="unComment">暂无评论</div>
+                                <div class="comment_foot">
+                                    <p class="have_comment clearfix"><i class="fl language" data-name="has">已经有</i><b class="fl"></b><i class="fl language" data-name="evaluating"></i></p>
+                                    <div class="add_comment pr">
+                                        <textarea  cols="30" rows="10"  onclick="this.value='';" data-name="comment_add"></textarea>
+                                        <div class="comment_login">
+                                            <div class="in_com_login clearfix">
+                                                <p class="un_login fl language" data-name="un_login">未登录，请</p>
+                                                <p class="fl login_in_text language" data-name="login_enter">登录</p>
+                                                <p class="fl language" data-name="or">或</p>
+                                                <p class="fl login_text language" data-name="register">注册</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="in_comment_foot clearfix">
+                                        <div class="fl comment_grade pr">
+                                            <ul class="un_sel fl">
+                                                <li></li>
+                                            </ul>
+                                            <span class="grade_mouse pa"></span>
+                                            <span class="game_score clearfix"><b class="fl">0.5</b><em class="fl language" data-name="score">分</em></span>
+                                        </div>
+                                        <div class="fr clearfix comment_btn">
+                                            <p class="fl language" data-name="like_game"></p>
+                                            <ul class="fl clearfix">
+                                                <li class="fl cur language" data-name="like">喜欢</li>
+                                                <li  class="fl language" data-name="unlike">不喜欢</li>
+                                            </ul>
+                                            <p class="fl send language" data-name="send">发送</p>
+                                        </div>
+                                    </div>
+                                    <div class="no_score">
+                                        <p class="language" data-name="go_score">你还没有评分哦，快去评分吧！</p>
+                                        <div>
+                                            <button class="sure">确定</button>
+                                            <button class="cancel">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class=" language start_btn" data-name="start">开始游戏</div>
+        </div>
+    </div>
+
+</body>
+</html>

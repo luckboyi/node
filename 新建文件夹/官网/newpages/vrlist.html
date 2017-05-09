@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VR游戏首页</title>
+    <link rel="stylesheet" href="http://pic.vronline.com/common/style/base.css">
+    <link rel="stylesheet" href="http://pic.vronline.com/website/style/headeFooter.css"/>
+    <link rel="stylesheet" href="http://pic.vronline.com/website/style/home.css" />
+    <link rel="stylesheet" href="http://pic.vronline.com/website/style/VRgame.css" />
+    <link rel="stylesheet" href="http://pic.vronline.com/website/style/webgame.css" />
+</head>
+<body>
+<header>
+    <div class='top clearfloat'>
+        <div class='fl left'>
+            <img src='../../../pic/website/images/logo.png' />
+            <a class='sy' href="javascript:;">首页</a>
+            <a href="javascript:;">充值</a>
+            <a href="javascript:;">关于VRonline</a>
+        </div>
+        <div class='fr right clearfix'>
+            <a class='fl blue' href='javascript:;'>安装VR客户端</a>
+            <a class='login' href="javascript:;">登录</a>
+            <!------------------------new 2016-10-14----------------------------------------->
+            <!--new 2016-10-19 qb 语言暂时先不要-->
+            <a class='language clearfix hide' href="javascript:;">
+                <span>语言</span>
+                <div class="change_language">
+                    <p class="chinese">中文</p>
+                    <p>英文</p>
+                </div>
+            </a>
+            <!----------------------------new 2016-10-14--以下注释的代码登录之后的样式---------------------------->
+            <div class='fr login_user hide'>
+                <div class="clearfix">
+					<span class="user_pic fl">
+						<img src='' />
+					</span>
+                    <div class="fl user_detail clearfix">
+                        <!--new 2016-10-19 qb-->
+                        <h3>DaveheDavehe<span></span></h3>
+                        <div class="grade clearfix">
+                            <span class="fl level2"></span>
+                            <span class="fl level_num">2345</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <!--new 2016-10-19 qb-->
+                    <li class="geren"><a href="javascript:;"><span></span>个人中心</a></li>
+                    <!--<li class="change"><a href="javascript:;"><span></span>更改语言</a></li>-->
+                    <li class="switch"><a href="javascript:;"><span></span>切换账户</a></li>
+                    <li class="quit"><a href="javascript:;"><span></span>退出</a></li>
+                </ul>
+            </div>
+            <!----------------------------new 2016-10-14------------------------------>
+        </div>
+    </div>
+</header>
+<div class="sec_nav" style="margin-top:92px;">
+    <div class="nav clearfloat">
+        <ul class='fl clearfloat'>
+            <li class="fl">
+                <!----------------------------new 2016-10-14 span外面包个a------------------------------>
+                <a href="javascript:;"><span>VR游戏</span></a>
+                <div class='con block'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+            <li class="fl">
+                <!----------------------------new 2016-10-14 span外面包个a------------------------------>
+                <a href="javascript:;"><span>多媒体</span></a>
+                <div class='con'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+            <li class="fl">
+                <!----------------------------new 2016-10-14 span外面包个a------------------------------>
+                <a href="javascript:;"><span>网页游戏</span></a>
+                <div class='con'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+            <li class="fl">
+                <!----------------------------new 2016-10-14 span外面包个a------------------------------>
+                <a href="javascript:;"><span>设备支持</span></a>
+                <div class='con'>
+                    <a href='javascript:;'>全景VR</a>
+                    <a href='javascript:;'>游戏视频</a>
+                    <a href='javascript:;'>风景名胜</a>
+                </div>
+            </li>
+        </ul>
+        <!--<div class='search fr'>
+            <input class='txt' type='text' placeholder="请输入游戏名称" />
+            <input type='submit' value='' class='sub' />
+        </div>-->
+    </div>
+</div>
+<div class="VRgame_home clearfix vrgame_list">
+    <div class="fl VRgame_home_left">
+        <h3 class="f14">热门游戏</h3>
+        <div class="in_webgame_recent " id="vr_game_left_list">
+            <div class="webgame_recent_con pr">
+                <div class="scrollbar pa fr"><div class="track"><div class="thumb pa"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <ul class="overview">
+                        <li class="pr">
+                            <a href="javascript:;">
+                                <img src="../images/3.jpg" >
+                            </a>
+                            <p class="pa game_title">
+                                <span class="fl">星战前夜</span>
+                                <span class="fr">网通一区</span>
+                            </p>
+                            <div class="shade_layer">
+
+                            </div>
+                        </li>
+                        <li class="pr">
+                            <a href="javascript:;">
+                                <img src="../images/3.jpg" >
+                            </a>
+                            <p class="pa game_title">
+                                <span class="fl">星战前夜</span>
+                                <span class="fr">网通一区</span>
+                            </p>
+                            <div class="shade_layer">
+
+                            </div>
+                        </li>
+                        <li class="pr">
+                            <a href="javascript:;">
+                                <img src="../images/3.jpg" >
+                            </a>
+                            <p class="pa game_title">
+                                <span class="fl">星战前夜</span>
+                                <span class="fr">网通一区</span>
+                            </p>
+                            <div class="shade_layer">
+
+                            </div>
+                        </li>
+                        <li class="pr">
+                            <a href="javascript:;">
+                                <img src="../images/3.jpg" >
+                            </a>
+                            <p class="pa game_title">
+                                <span class="fl">星战前夜</span>
+                                <span class="fr">网通一区</span>
+                            </p>
+                            <div class="shade_layer">
+
+                            </div>
+                        </li>
+                        <li class="pr">
+                            <a href="javascript:;">
+                                <img src="../images/3.jpg" >
+                            </a>
+                            <p class="pa game_title">
+                                <span class="fl">星战前夜</span>
+                                <span class="fr">网通一区</span>
+                            </p>
+                            <div class="shade_layer">
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fr VRgame_home_right">
+        <div class="clearfix">
+            <div class="fl in_webgame_left_con">
+                <!--最新推荐-->
+                <div class="new_webgame">
+                    <div class="webgame_con_head">
+                        <h3 class="blueColor pr">
+                            <i class="pa game_list_icon"></i>
+                            <span>游戏库</span>
+                        </h3>
+                    </div>
+                    <div class="new_webgame_con video_good_con clearfix">
+                        <ul class="clearfix">
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li><li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+                            <li class="fl pr">
+                                <a href="javascript:;">
+                                    <img src="../images/3.jpg" >
+                                </a>
+                                <p class="clearfix pa title">
+                                    <span class="fl ells" title="游戏名">游戏名游戏名游戏名游戏名游戏名</span>
+                                    <span class="fr device_con clearfix">
+                                        <i class="fr icon-device icon-device-deepoon"></i>
+                                        <i class="fr icon-device icon-device-oculus"></i>
+                                        <i class="fr icon-device icon-device-htc"></i>
+                                    </span>
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--最新推荐-->
+            </div>
+            <div class="fr video_hot_list" style="width: 228px;">
+                <!--搜索-->
+                <div class="screen">
+                    <div class="screen_title">
+                        <h3><i></i>按类型筛选</h3>
+                    </div>
+                    <div class="screen_con">
+                        <div class="search">
+                            <input type="text" placeholder="请输入游戏名称" />
+                            <i></i>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">类型：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">免费</a></li>
+                                <li class="fl"><a href="javascript:;">休闲</a></li>
+                                <li class="fl"><a href="javascript:;">体育</a></li>
+                                <li class="fl"><a href="javascript:;">独立</a></li>
+                                <li class="fl"><a href="javascript:;">MMORPG</a></li>
+                                <li class="fl"><a href="javascript:;">FPC</a></li>
+                                <li class="fl"><a href="javascript:;">TPS</a></li>
+                                <li class="fl"><a href="javascript:;">MOBA</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">设备：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">全部</a></li>
+                                <li class="fl"><a href="javascript:;">大朋</a></li>
+                                <li class="fl"><a href="javascript:;">HTC</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">特征：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">全部</a></li>
+                                <li class="fl"><a href="javascript:;">动作</a></li>
+                                <li class="fl"><a href="javascript:;">策略</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_bar">
+                            <h4 class="blueColor f14">字母：</h4>
+                            <ul class="clearfix">
+                                <li class="fl cur"><a href="javascript:;">abc</a></li>
+                                <li class="fl"><a href="javascript:;">edr</a></li>
+                                <li class="fl"><a href="javascript:;">fff</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="http://pic.vronline.com/common/js/jquery-1.12.3.min.js"></script>
+<script>
+    $(function() {
+        var hei =$('.vrgame_list').find('.new_webgame .webgame_con_head').offset().top;
+        // body...
+        $(window).scroll(function(event) {
+            var sct = $(this).scrollTop();
+            if(sct > hei){
+                $('.vrgame_list').find('.screen').css({
+                    position: 'fixed',
+                    top:'74px'
+                });
+                $('.vrgame_list').find('.webgame_con_head').css({
+                    position: 'fixed',
+                    top:'74px',
+                    width:'730px',
+                    zIndex:'99999',
+                    background:'rgba(32,66,107,.3)'
+                });
+            }else{
+                $('.vrgame_list').find('.screen').css({
+                    position: 'relative',
+                    top:'0'
+                });
+                $('.vrgame_list').find('.webgame_con_head').css({
+                    position: 'relative',
+                    top:'0',
+                    width:'auto',
+                    zIndex:'99999',
+                    background:'rgba(0,0,0,0)'
+                });
+            }
+        });
+
+    });
+</script>

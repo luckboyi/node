@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="http://pic.vronline.com/btobEdition/css/base.css" />
+	<link rel="stylesheet" href="../../../pic/btobEdition/css/btobEdition.css" />
+	<script src='http://pic.vronline.com/btobEdition/js/jquery-1.12.3.min.js'></script>
+    <script src='http://pic.vronline.com/btobEdition/js/tinyscrollbar.js'></script>
+	<title>btob</title>
+</head>
+<body>
+	<!--头部-->
+	<div class="home">
+		<div class="all">
+			<div class="head pr">
+				<div class="fl left clearfix">
+					<a class="fl return" href="javascript:;"><i></i></a>
+					<p class="fl clearfix"><i class="fl"></i><span class="fl f14">HTC vive</span></p>
+				</div>
+				<span class="logo"></span>
+				<div class="fr right clearfix">
+					<div class="fl time clearfix">
+						<i class="fl"></i>
+						<span class="fl">剩余时间:</span>
+						<span class="fl">00:25:35</span>
+					</div>
+					<div class="fl clearfix">
+						<div class="fl more">
+							<i></i>
+							<div class="install">
+								<ul>
+									<li>
+										<a class="clearfix" href="javascript:;">
+											<i class="fl"></i>
+											<span class="fl">设置</span>
+										</a>
+									</li>
+									<li class="manager">
+										<a class="clearfix" href="javascript:;">
+											<i class="fl"></i>
+											<span class="fl">管理员登录</span>
+										</a>
+									</li>
+									<li class="quit">
+										<a class="clearfix" href="javascript:;">
+											<i class="fl"></i>
+											<span class="fl">退出</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<span class="fl narrow"><i></i></span>
+						<i class="fl enlarge"></i>
+						<i class="fl close"></i>
+					</div>
+				</div>
+			</div>
+			<!--内容-->
+			<!--<iframe src="indexCon.html" scrolling="no" width="100%" height="790" frameborder="0"></iframe>-->
+			<div class="VRcon">
+				<iframe id="detailCon" src="indexCon.html" scrolling="no" width="100%" height="924" frameborder="0"></iframe>
+			</div>
+			
+		</div>
+	</div>
+	<script>
+	    $(function(){
+	        $('#scrollbar1').tinyscrollbar();
+	    });
+	</script>
+</body>
+</html>

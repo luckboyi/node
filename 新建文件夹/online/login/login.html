@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../pageGame/style/base.css">
+    <link rel="stylesheet" href="style/login.css">
+    <script src="../pageGame/js/jquery-1.11.3.min.js"></script>
+    <script src="login_win.js"></script>
+    <!-- new-2016-10-17 对于IE 10 以下版本placeholder的兼容性调整 -->
+	<!--[if lt IE 10]>
+	<script>
+		$(function(){
+			
+			$("input[type!='password'],textarea").bind({
+				"focus":function(){
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==placeholderVal){
+						$(this).val("");
+					}
+				},
+				"blur":function(){
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==""){
+						$(this).val(placeholderVal);
+					}
+				}
+			});
+			
+			$("input[type!='password'],textarea").each(function(i,n){
+				$(this).val($(this).attr("placeholder"));
+			});
+			
+			
+			$("input[type='password']").bind({
+				"focus":function(){			
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==placeholderVal){
+						var copy_this = $(this).clone(true,true);
+						if ($(this).attr("type") == "text") $(this)[0].type = "password"; 
+						$(copy_this).insertAfter($(this));
+						$(this).remove();				
+						$(copy_this).val("");
+						$(copy_this).focus();
+					}
+				},
+				"blur":function(){			
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==""){
+						var copy_this = $(this).clone(true,true);
+						if ($(this).attr("type") == "text") $(this)[0].type = "text"; 
+						$(copy_this).insertAfter($(this));
+						$(this).remove();				
+						$(copy_this).val(placeholderVal);
+					}
+				}
+			});
+			
+			$("input[type='password']").each(function(i,n){
+				var placeHolderVal = $(this).attr("placeholder");
+				var copy_this = $(this).clone(true,true);
+				if ($(this).attr("type") == "text") $(this)[0].type = "text"; 
+				$(copy_this).insertAfter($(this));
+				$(this).remove();
+				$(copy_this).val(placeHolderVal);				
+			});
+		});
+	</script>
+	<![endif]-->
+</head>
+<body>
+<!--用户登录、注册-->
+
+<!--用户登录、注册-->
+<!--注册完成S-->
+<div class="mask success_register ">
+    <div class="verification_con show" id="success_register">
+        <div class="verification_head clearfix" >
+            <h3 class="fl language" data-name="registration">注册</h3>
+            <i class="verification_close fr"></i>
+        </div>
+        <div class="verification_body" style="">
+            <p><i  class="language " data-name="your_msg">你的账户</i><em  class="language " data-name="registration_msg" style="color: #23a0bf;">注册成功！</em></p>
+            <p class="language" data-name="registration_save">请妥善保管好账号密码，确保账号安全</p>
+        </div>
+        <div class="success_register_btn language" data-name="success_register">完成并登录</div>
+    </div>
+</div>
+<!--注册完成E-->
+<!--注册失败S-->
+<div class="mask erro_register ">
+    <div class="verification_con   tac show" id="erro_register">
+        <div class="verification_head clearfix" >
+            <h3 class="fl language" data-name="erro_registration">注册失败</h3>
+            <i class="verification_close fr "></i>
+        </div>
+        <div class="verification_body" style="">
+            <p class="language" data-name="registration_erro_msg">注册信息失败，请重新注册</p>
+        </div>
+        <div class="success_register_btn language" data-name="re_register">返回并重新注册</div>
+    </div>
+</div>
+<!--注册失败E-->
+<!--验证码s-->
+<div class="mask verification_inCon">
+    <div class="verification_con show" id="dragVer">
+        <div class="verification_head clearfix" >
+            <h3 class="fl language" data-name="verification_code">请输入验证码</h3>
+            <i class="verification_close fr"></i>
+        </div>
+        <div class="verification_body" style="">
+            <p class="language" data-name="abnormal_operation">你的操作出现异常，请输入验证码</p>
+            <input type="text" placeholder="请输入验证码" class="input_verification">
+            <div class="verification_img">
+                <img src="">
+                <a href="javascript:;" class="language" data-name="invisibility"></a>
+                <p class="verification_erro_msg">看不清请换一张</p>
+            </div>
+        </div>
+        <div class="verification_foot">
+            <div class="verification_cancel fr language" data-name="cancel">确定</div>
+            <div class="verification_sure fr language" data-name="sure">取消</div>
+        </div>
+    </div>
+</div>
+<!--验证码E-->
+<!--密码找回S-->
+<div class="mask retrieve_pas ">
+    <div class="login" >
+        <div class="login_head clearfix">
+            <h3 class="fl language" data-name="password_back">密码找回</h3>
+            <p class="login_close fr"></p>
+        </div>
+        <div class="login_body">
+            <form >
+                <p class="pr">
+                    <i ></i>
+                    <input type="text" placeholder="输入找回的手机号" name="phoneNumber" >
+                    <span class="Validform_checktip pa"></span>
+                </p>
+                <p class="pr" id="verify_drag">
+                </p>
+                <p class="clearfix pr message_code">
+                    <i></i>
+                    <input type="text" placeholder="输入验证码" class="verification fl" name="verifyCode">
+                    <input class="send_btn fr" type="button" value="发送验证码" id="send_btn">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+            </form>
+            <div class="register language" data-name="next_tip">下一步</div>
+        </div>
+    </div>
+</div>
+<!--密码找回E-->
+<!--重新输入验证密码S-->
+<div class="mask pas_again ">
+    <div class="login" >
+        <div class="login_head clearfix">
+            <h3 class="fl language" data-name="password_again">重设密码</h3>
+            <p class="login_close fr"></p>
+        </div>
+        <div class="login_body">
+            <form >
+                <p class="pr">
+                    <i></i>
+                    <input type="password" placeholder="重新输入密码" name="loginPassword" class="loginPassword">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+                <p class="pr">
+                    <i></i>
+                    <input type="password" placeholder="再次输入密码" name="checkLoginPassword">
+                    <span class="Validform_checktip pa"></span>
+                </p>
+            </form>
+            <div class="register language" data-name="sure">确定</div>
+        </div>
+    </div>
+</div>
+<!--重新输入验证密码E-->
+<!--修改完成S-->
+<div class="mask success_pas_set ">
+    <div class="login" >
+        <div class="login_head clearfix">
+            <h3 class="fl language" data-name="success_pas_set">修改完成</h3>
+            <p class="login_close fr"></p>
+        </div>
+        <div class="login_body tac">
+            <p class="language " data-name="success_set_msg">你的密码修改完成，请注意保护账号安全</p>
+            <div class="success_register_btn language" data-name="success_set">确定</div>
+        </div>
+    </div>
+</div>
+<!--修改完成E-->
+</body>
+</html>
+<script>
+
+    loginFn.login();
+    loginFn.login();
+
+
+</script>

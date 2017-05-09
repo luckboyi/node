@@ -1,0 +1,181 @@
+#header {
+    height: 117px;
+}
+.logo, .logo img {
+    width: 263px;
+    height: 60px;
+}
+.logo {
+    float: left;
+}
+.header-bar {
+    float: right;
+}
+.sign-area{    
+    margin-right: 20px;
+    padding-top: 17px;
+	width:70px;
+    height: 43px;
+    position: relative;
+}
+.search-wrap {
+    float: left;
+    margin-right: 20px;
+    padding-top: 17px;
+    height: 43px;
+    position: relative;
+}
+.search-wrap .text {
+    width: 150px;
+    height: 26px;
+    padding: 0 42px 0 18px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #323232;
+    background-color: #fff;
+    border: 1px #ebebeb solid;
+    border-radius: 8px;
+	outline: 0;
+	-webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+.search-wrap input:focus{
+	width:188px;
+}
+.search-wrap .search-btn, .nav h3 i, .nav .sub:before {
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+}
+.search-wrap .search-btn{
+    position: absolute;
+    right: 1px;
+    top: 18px;
+    font-size: 0;
+    width: 32px;
+    height: 26px;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 0 14px 14px 0;
+    background-color: #fff;
+    background-position: -184px -497px;
+	outline: 0;
+}
+.user-wrap {
+    float: left;
+    width: 65px;
+    height: 60px;    
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    color: #969696;
+}
+.nav-wrap {
+    height: 55px;
+    border-top: 1px #f0f0f0 solid;
+    border-bottom: 1px #ebebeb solid;
+    background-color: #fafafa;
+}
+.border {
+    height: 1px;
+    background-color: #fff;
+}
+.nav {
+    float: left;
+    height: 54px;
+    margin-left: -50px;
+}
+.nav>li {
+    float: left;
+    width: 110px;
+    height: 66px;
+    position: relative;
+    margin-right: 5px;
+    z-index: 999;	
+}
+.nav li:first-child {
+	text-align:center;
+}
+.nav h3 a {
+    display: block;
+    padding-left: 20px;
+    height: 54px;
+    font-size: 16px;
+    line-height: 54px;
+    color: #323232;
+}
+.nav h3 i {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 10px;
+    height: 54px;
+    background-position: -206px -29px;
+}
+.nav .sub {
+    display:none ;
+    position: absolute;
+    left: 0;
+    top: 66px;
+    z-index: 10;
+    background-color: #fff;
+    width: 89px;
+    padding: 15px 0 6px 19px;
+    border: 1px #f0f0f0 solid;
+    border-radius: 5px;	
+}
+.nav li:hover .sub{
+	display:block;
+	-webkit-animation-name: fadeIn; /*动画名称*/
+	-webkit-animation-duration: 0.5s; /*动画持续时间*/
+	-webkit-animation-iteration-count: 1; /*动画次数*/
+	-webkit-animation-delay: 0s; /*延迟时间*/	
+}
+@-webkit-keyframes fadeIn {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+@-webkit-keyframes fadeOut {
+0% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
+.nav .sub:before {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    margin-left: -7px;
+    z-index: 11;
+    content: " ";
+    width: 14px;
+    height: 7px;
+    background-position: -202px -473px;
+}
+.nav .sub li:first-child {
+    height: 2px;
+    width: 70px;
+    margin-bottom: 6px;
+    background-color: #1190c7;
+}
+.nav .sub li {
+    height: 30px;
+    line-height: 30px;
+}
+.nav .sub a {
+    display: block;
+    height: 30px;
+    font-size: 14px;
+    color: #646464;
+}
+.nav .sub a:hover {    
+    color: #1190c7;
+}

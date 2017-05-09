@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/personal_center.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/jquery.Jcrop.js"></script>
+    <script src="../js/tinyscrollbar.js"></script>
+    <script src="../js/pay.js"></script>
+    <script src="../js/tips.js"></script>
+    <script src="js/personalCenter.js"></script>
+</head>
+<body  class="platform">
+    <div class="personal_center clearfix">
+        <div class="left_per fl">
+            <ul>
+                <li class="pr cur userMsg"><a href="javascript:;">用户资料</a></li>
+                <li class="pr charge">
+                    <i class="cur"></i>
+                    <a href="javascript:;">充值中心</a>
+                    <ol class="" style="display: none;">
+                        <li class="">支付宝</li>
+                    </ol>
+
+                </li>
+                <li class="pr problem"><a href="javascript:;">常见问题</a></li>
+                <li class="pr problem"><a href="javascript:;">关于VR</a></li>
+            </ul>
+        </div>
+        <div class="right_per personal_center_height" id="personal_center_scroll">
+            <div class="scrollbar fr pr  personal_center_height">
+                <div class="track">
+                    <div class="thumb pa"></div>
+                </div>
+            </div>
+            <div class="viewport pr  personal_center_height">
+                <ul class="in_right_per overview">
+                    <!--用户资料S-->
+                    <li class="list_con user_msg cur">
+                        <div class="user_header">
+                            <p class="pr img_con">
+                                <img src="images/list_img.jpg" >
+                                <i class="edit pa"></i>
+                            </p>
+                            <p class="title">David</p>
+                            <div class="clearfix submit_msg pr">
+                                <i></i>
+                                <p class="fl">最近一次登录:</p>
+                                <span class="fl month">08/29</span>
+                                <span class="fl time">16:16</span>
+                                <span class="fl country">中国</span>
+                            </div>
+                        </div>
+                        <div class="user_con">
+                            <ul class="clearfix">
+                                <li class="fl">
+                                    <h4>基础资料：</h4>
+                                    <p class="clearfix">
+                                        <span class="fl">昵称</span>
+                                        <input type="text" class="fl">
+                                        <span class="fr save_btn">保存</span>
+                                    </p>
+                                </li>
+                                <li class="fl">
+                                    <h4 class="icon pr"><i></i>账号安全：<p class="tips pa user_tips">温馨提示：建议您完善您的账户资料，账号更安全！</p></h4>
+                                    <p class="clearfix">
+                                        <span class="fl">平台账号</span>
+                                        <span class="fl name" user-id="100000">stevent</span>
+                                        <span class="fr revamp_btn">修改</span>
+                                    </p>
+                                </li>
+                                <li class="fl">
+                                    <h4 class="icon pr"><i></i>绑定手机：<p class="tips pa phone_tips">检测到您的账号还没有绑定手机，为了提高账号安全和密码找回，请及时进行手机绑定！</p></h4>
+                                    <p class="clearfix">
+                                        <span class="fl">你的账户未绑定手机</span>
+                                        <span class="fr phone_btn">绑定手机</span>
+                                        <b class="fr unbind clearfix">
+                                            <i class="fl">修改</i>
+                                            <i class="fl">解绑</i>
+                                        </b>
+                                    </p>
+                                </li>
+                                <li class="fl">
+                                    <h4>基础资料：</h4>
+                                    <p class="clearfix">
+                                        <span class="fl">不定期修改密码 增加账号安全</span>
+                                        <span class="fr revamp_paw_btn">修改密码</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--用户资料E-->
+                    <!--平台支付S-->
+                    <li class="list_con paymentCenter">
+                        <div class="payment_con hide">
+                            <h4 class="payment_title">充值账号</h4>
+                            <div class="clearfix">
+                                <span class="fl">平台账号：</span>
+                                <span class="fl name" user-id="10017" token="fcc6bf7a54f7c31a85f94439c8940a97">steven</span>
+                                <span class="fl blueCor balance_title">V点余额：</span>
+                                <span class="fl blueCor balance_num">168</span>
+                            </div>
+                            <div class="pay_sel_btn">
+                                <span class="cur vr_charge">充值V点</span>
+                                <span class="pageGame_charge">网页游戏</span>
+                            </div>
+
+                            <h4 class="payment_title">选择充值金额</h4>
+                            <div class="pageGame_sel clearfix">
+                                <span class="fl">游戏名称：</span>
+                                <select class="fl blueCor" name="list">
+                                    <option class="blueCor" value="1">烈火屠龙</option>
+                                    <option class="blueCor" value="2">烈火屠龙烈火屠龙</option>
+                                    <option class="blueCor" value="3">烈火屠龙</option>
+                                </select>
+                                <span class="fl server">服务器：</span>
+                        <span class="fl">
+                            <select name="list" id="">
+                                <option value="1">请选择服务器</option>
+                                <option value="2">请选择服务器1</option>
+                                <option value="3">请选择服务器2</option>
+                            </select>
+                        </span>
+                                <span class="fl total_scale">总付比例：</span>
+                                <span class="fl ">￥</span>
+                                <span class="fl">1:</span>
+                                <span class="fl scale_num">100</span>
+                                <span class="fl">元宝</span>
+                            </div>
+                            <div class="clearfix payment_num">
+                                <span class="fl ">￥100</span>
+                                <span class="fl">￥500</span>
+                                <span class="fl">￥2000</span>
+                                <span class="fl">￥3000</span>
+                                <span class="fl">￥5000</span>
+                            </div>
+                            <div class="clearfix other_pay_num pr">
+                                <label class="clearfix fl">
+                                    <span class="fl">其他金额</span>
+                                    <input type="text" placeholder="填写1~50000之间的整数" class="fl" value="">
+                                </label>
+                                <i class="fl"></i>
+                                <p class="pa pay_num_tips">金额填写1~50000之间的整数，不含小数点</p>
+                                <span class="fl pageGame_sel">获得游戏币：</span>
+                                <span class="fl blueCor pageGame_sel">389000元宝</span>
+                                <p class="pa erroColor erro_tips">金额填写1~50000之间的整数，不含小数点</p>
+                            </div>
+                            <div class="payment_select clearfix pageGame_sel pageGame_pay">
+                                <div class="fl select_right clearfix">
+                                    <div class="vr_pay_con pageGame_choice_mode">
+                                        <p class="pr">
+                                            <span>V点余额：</span>
+                                            <span class="blueCor balance_num">100</span>
+                                            <span class="blueCor">点</span>
+                                            <span class="choice_box"></span>
+                                            <span class="balance user_vr_pay">使用V点支持本次交易</span>
+                                        </p>
+                                        <p class="choice_vr_pay">
+                                            <span>支付总额：</span>
+                                            <span class="whiteCor">￥</span>
+                                            <span class="whiteCor total_num">5000</span>
+                                            <span>/</span>
+                                            <span class="blueCor user_num">200</span>
+                                            <span class="blueCor">点被使用</span>
+                                        </p>
+                                        <p>
+                                            <span>你需支付</span>
+                                            <span class="erroColor">￥</span>
+                                            <span class="erroColor need_num">5000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pay_zhi_btn pr">
+                                <!--<span class="pay_now cur pay_use_code">手机扫码支付</span>-->
+                                <input type="submit" class="cur pay_use_code" data-name="scan" value="手机扫码支付">
+                                <input type="submit"  value="登录支付宝账号" data-name="window" class="pay_use_name">
+                                <input type="submit" class="pay_use_vr cur" value="立即支付" style="display: none;">
+                            </div>
+                            <form id="frm_post" method="post" target="_blank" accept-charset="utf-8" action="http://dev3.pay.xy.com/index.php?action=alipayvr&resource_id=1282160">
+                                <div style="display: none;">
+                                    <input type="hidden" name = "uid" value="10017">
+                                    <input type="hidden" name = "try_uid" value="">
+                                    <input type="hidden" name = "token" value="fcc6bf7a54f7c31a85f94439c8940a97">
+                                    <input type="hidden" name = "callback_url" value="http://test3.xyzs.com/callback">
+                                    <input type="hidden" name = "jump_url" value="http://www.vronline.com/">
+                                    <input type="hidden" name = "surl" value=":">
+                                    <input type="hidden" name = "game_type" value="1001">
+                                    <input type="hidden" name = "sid" value="1">
+                                    <input type="hidden" name = "wp_pid" value="">
+                                    <input type="hidden" name = "wp_uid" value="10017|1">
+                                    <input type="hidden" name = "pay_total" value="0.01">
+                                    <input type="hidden" name = "pay_rmb" value="">
+                                    <input type="hidden" name = "login_openid" value="">
+                                    <input type="hidden" name = "login_type" value="">
+                                    <input type="hidden" name = "attach" value="">
+                                    <input type="hidden" name = "game_owner" value="">
+                                    <input type="hidden" name = "is_contract" value="0">
+                                    <input type="hidden" name = "sign" value="">
+                                    <input type="hidden" name = "user_ip" value="1000">
+                                    <input type="hidden" name = "channel" value="alipay">
+                                    <input type="hidden" name = "pay_vr" value="1">
+                                    <input type="hidden" name = "isdev" value="1">
+                                </div>
+                            </form>
+                            <div class="clearfix payment_tips ">
+                                <i class="fl"></i>
+                                <div class="fl">
+                                    <p>您的V点数余额不足，无法支付。您可以通过以下方法进行充值：</p>
+                                    <p>方法1：对平台账号充值VR点数。<a href="javascript:;" class="blueCor">如何获得V点数>></a></p>
+                                    <p>方法2：使用支付宝进行支付。</p>
+                                </div>
+                            </div>
+                            <h4 class="payment_title">温馨提示 <a href="javascript:;" class="fr blueCor contact">联系客服</a></h4>
+                            <div class="tips_con">
+                                <p>1、您充入的V点不可返还，并且无法提现，某些游戏和（或）服务可能会收费额外费用。</p>
+                                <p>2、支付宝账户额支付：只要您的支付宝账户中存有余额，就可以为游戏进行充值。</p>
+                                <p>3、使用支付宝支付，对消费者来说，目前不需要任何的手续费。</p>
+                                <p>想要了解更多信息，请阅读 <a href="javascript:;" class="blueCor">《VRonline使用条款》</a>和 <a href="javascript:;" class="blueCor">《销售条款》</a></p>
+                            </div>
+                        </div>
+                        <div class="suc_charge tac ">
+                            <h4 >成功充值</h4>
+                            <p>订单号：<b>vr:1222225225533333</b>,您已经成功充值<i class="blueCor">10元</i></p>
+                            <p>现在开始体验VRonline平台给您带来的精彩内容吧！</p>
+                            <span class="continue_charge cur">继续充值</span>
+                        </div>
+                        <div class="error_charge tac show">
+                            <h4 >成功失败</h4>
+                            <p>很抱歉，充值失败，我们会尽快处理，请稍后再试！</p>
+                            <span class="continue_charge cur">返回</span>
+                        </div>
+                    </li>
+                    <!--平台支付E-->
+
+                    <!--常见问题s-->
+                    <li class="list_con problem_center">
+                        <h2 class="f20 tac fw">VRonline常见问题FAQ</h2>
+                        <div class="pro_content ">
+                            <h4 class="f14 fw">问：如何要注册一个VRonline平台账号</h4>
+                            <div>
+                                <p>答：1.点击VRonline客户端顶部用户头像，或访问VRonline官网（wwww.vronline.com），点击注册/登录。</p>
+                                <p class="tin">2.VR平台目前支持普通账户注册和登录、第三方账户（QQ/微信/新浪微博）登录。</p>
+                            </div>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：账号密码忘了，如何找回？</h4>
+                            <div>
+                                <p>答：目前只开放手机找密码，注册账号成功后登录个人中心，建议进行手机绑定，提高账号安全性，操作方法具体如下：</p>
+                                <p class="tin">步骤1：成功绑定手机。</p>
+                                <p class="tin">步骤2：获取短信验证码。</p>
+                                <p class="tin">步骤3：输入新密码+确认新密码。</p>
+                                <p class="tin">步骤4：密码找回成功，使用新密码登录。</p>
+                            </div>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我是游客账号，如何修改为自己的VRonline平台账号？</h4>
+                            <p>答：以游客身从登录VR平台，可以进入“个人中心→账号安全”，填写新的平台账号+新密码进行修改，每个游戏账号只提供1次修改机会。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4>问：如何绑定手机/解绑手机/修改绑定手机操作？</h4>
+                            <p>答：进入“个人中心”通过绑定手机+验证码，完成绑定/解绑/修改等操作。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：VR游戏要付费吗？</h4>
+                            <p>答：VRonline客户端内目前提供的游戏都是免费的，不需要支付任何费用。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我要如何玩平台内提供的VR游戏？</h4>
+                            <p>答：步骤1：登录VR平台，选择“VR游戏”，选择任意一款VR游戏进入游戏详情页。</p>
+                            <p class="tin">步聚2：点击“安装”，安装成功。</p>
+                            <p class="tin">步骤3：安装设备驱动和连接线正确与电脑连接。</p>
+                            <p class="tin">步聚4：点击“开始”按钮，启动游戏。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：如何安装本地VR游戏至平台客户端内？</h4>
+                            <p>答：点击VR游戏左侧底部“添加游戏”，可选择本地桌面的VR游戏安程包进行安装。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：平台账户如何充值？</h4>
+                            <p>答：右击头像，选择下拉菜单“充值”，进入充值中心界面。目前只推出支付宝充值，充值时可选择“平台虚拟币”或“网页游戏”、充值金额、选择充值方式。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：充值平台虚拟币，如何使用？</h4>
+                            <p>答：VRonline平台充获得可以获得对应数据的虚拟币。作为VR平台统一货币，目前可用于支付或抵扣网页游戏的充值金额，后续将陆续开放更多可以支付的商品。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：目前平台支持哪些方式的充值？</h4>
+                            <p>答：支付宝手机扫码、登录支付宝账号</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我充值页游，但平台虚拟币还有余额，可以合并支付吗？</h4>
+                            <p>答：可以。如想要对页游充值时，用户可以选择使用平台虚拟币余额支付抵扣一部分的充值金额或全额支付（余额足够充值页游的金额），或不需要使用平台余额而采用全额现金充值。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：页游礼包如何领取？</h4>
+                            <p>答：进入“网页游戏”界面，选择任意一款游戏点击“领取礼包”，进入领取页面，选择礼包种类，查看礼包内容后点击领取。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：礼包领取了CDKEY如何使用？能查看领取过的CDKEY吗？</h4>
+                            <p>答：CDKEY可以进行复制，然后至启动页游进入游戏内输入CDKEY领取。如果忘了礼包的CDKEY，可以进入“礼包中心→我的礼包”内查询领取记录。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我想提些意见，可以去哪里反馈？</h4>
+                            <p>答：VRonline客户端内可以至右上角下拉菜单“意见”中反馈。官网可以至右侧侧边栏中通过在线客户或意见进行反馈。</p>
+                        </div>
+                    </li>
+                    <!--常见问题e-->
+                    <!--关于vr-->
+                    <li class="list_con problem_center aboutVR">
+                        <h3>关于VR</h3>
+                        <ul>
+                            <li class="clearfix">
+                                <div class="fl left_li">
+                                    <span></span>
+                                    <p>VR到底是什么？</p>
+                                </div>
+                                <div class="fl right_li">
+                                    <p>虚拟现实（Virtual Reality,简称VR）。利用计算机图像处理能力和外部设备模拟产生可交互的三维虚拟空间，提供使用者关于视觉，听觉，触觉等感官的模拟，让使用者如同身临其境。</p>
+                                </div>
+                            </li>
+                            <li class="clearfix user_platform">
+                                <div class="fl left_li">
+                                    <span></span>
+                                    <p>我们是什么样的平台？</p>
+                                </div>
+                                <div class="fl right_li">
+                                    <p>虚拟现实（Virtual Reality,简称VR）。利用计算机图像处理能力和外部设备模拟产生可交互的三维虚拟空间，提供使用者关于视觉，听觉，触觉等感官的模拟，让使用者如同身临其境。</p>
+                                </div>
+                            </li>
+                            <li class="clearfix experience_vr">
+                                <div class="fl left_li">
+                                    <span></span>
+                                    <p>我们要如何体验VR?</p>
+                                </div>
+                                <div class="fl right_li">
+                                    <div>
+                                        <img src="../../../pic/website/images/experience01.png" />
+                                        <p>1 首先您需要一套VR设备 (大朋头盔、HTC VIVE、 OUCLUS)</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <img src="../../../pic/website/images/experience02.png" />
+                                        <p>2 打开VRonline客户端，选择一款VR游戏</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <img src="../../../pic/website/images/experience03.png" />
+                                        <p>3下载/安装游戏</p>
+                                    </div>
+                                    <span></span>
+                                    <div>
+                                        <img src="../../../pic/website/images/experience04.png" />
+                                        <p>4 连接设备 开始游戏</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--关于vr-->
+                    <!--支付成功S-->
+
+                    <!--支付成功S-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--弹窗-->
+    <!--支付宝扫码支付S-->
+    <div class="mask_layer pay_ewm ">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr ">
+                <h4 class="fl">支付宝扫码支付</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">
+                    <img src="images/loading.gif" width="220" height="220">
+                </p>
+                <p class="">
+                    <span>交易金额：</span>
+                    <span class="blueCor need_pay_num">5000</span>
+                    <span class="blueCor">元</span>
+                </p>
+                <p>支付方式：支付宝扫码</p>
+                <p>
+                    <span>交易单号：</span>
+                    <span class="need_pay_code">1200145683555457</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!--支付宝扫码支付S-->
+    <!--修改头像S-->
+    <div class="mask_layer  modify_box">
+        <div class=" modify_head_portrait popup_window" id="jcropdiv">
+            <div class="wl">
+                <div class="jc-demo-box" data="0">
+                    <div id="target" class="jcrop_w" >
+                        <img src="../images/touxiang.jpg" width="602" height="602"  />
+                    </div>
+                </div>
+                <p class="title">如果您还没有设置头像，系统为显示默认头像，您可以上传本地照片作为个人头像</p>
+            </div>
+            <div class="wr" id="preview-pane">
+                <div class="preview-container">
+                    <p class="title">预览</p>
+                    <p>
+                    <span class="pre-1">
+                        <img src="../images/touxiang.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+                    </span>
+                    </p>
+                    <p class="big_img_size">100px<i>X</i>100px</p>
+                    <p>
+                    <span class="pre-2">
+                        <img src="../images/touxiang.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+                    </span>
+                    </p>
+                    <p class="big_img_size">60px<i>X</i>60px</p>
+                </div>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl  pr">上传
+                        <form action="xxx.php" method="post" enctype="multipart/form-data"></form><input type="file" name="file" id="file" onchange="previewHeadFile()"  style="opacity: 0; position: absolute; left: 0; top: 0; height: 30px; width: 100px;"></li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--修改头像E-->
+    <!--绑定手机号S-->
+    <div class="bind_phoneNum mask_layer">
+        <div class="popup_window  ">
+            <div class="in_popup">
+                <p class="input_phone">
+                    <label>
+                        <span>输入手机号</span>
+                        <input type="text">
+                    </label>
+                    <p class="erroColor erro_phone_msg"></p>
+                </p>
+                <p class="message">
+                    <label>
+                        <span>短信验证码</span>
+                        <input type="text">
+                    </label>
+                    <span class="get_code">获取验证码</span>
+                </p>
+                <p class="system_tip">系统将会以短信方式发送至需要绑定的手机</p>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--绑定手机号E-->
+    <!--修改密码-->
+    <div class="revamp_password mask_layer ">
+        <div class="popup_window">
+            <div class="in_popup">
+                <p class="">
+                    <label>
+                        <span>原密码</span>
+                        <input type="password">
+                    </label>
+                    <p class="erroColor erro_phone_msg"></p>
+                </p>
+                <p>
+                    <label>
+                        <span>新密码</span>
+                        <input type="password">
+                        <p class="erroColor erro_phone_msg"></p>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span>确认密码</span>
+                        <input type="password">
+                        <p class="erroColor erro_phone_msg"></p>
+                    </label>
+                </p>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--手机绑定成功-->
+    <div class="mask_layer success_popup_window">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr hide">
+                <h4 class="fl">提示</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">手机绑定成功</p>
+            </div>
+            <div class="popup_btn success_popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <!-------------new 2016-10-12---------------->
+                    <li class="fl cancel">取消</li>
+                    <!-------------new 2016-10-12---------------->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--修改平台账号-->
+    <div class="revamp_account mask_layer">
+        <div class="popup_window">
+            <div class="in_popup">
+                <p class="">
+                    <label>
+                        <span>平台账号</span>
+                        <input type="password">
+                    </label>
+                <p class="erroColor erro_phone_msg">该账号已被注册、账号不能为空、账号不符合要求</p>
+                </p>
+                <p>
+                    <label>
+                        <span>新密码</span>
+                        <input type="password">
+                    </label>
+                <p class="erroColor erro_phone_msg">密码不能为空、密码需要6~16位数字或字母</p>
+                </p>
+                <p>
+                    <label>
+                        <span>确认密码</span>
+                        <input type="password">
+                    </label>
+                <p class="erroColor erro_phone_msg">密码不能为空、两次密码不一致</p>
+                </p>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">修改</li>
+                    <!-------------new 2016-10-12---------------->
+                    <li class="fl cancel">取消</li>
+                    <!-------------new 2016-10-12---------------->
+                </ul>
+                <p class="erroColor erro_phone_msg">账号只能提供1次修改,确认无误后请点击“修改”</p>
+            </div>
+        </div>
+    </div>
+    <!--//确定修改平台账号-->
+    <div class="mask_layer sure_revamp_account">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr hide">
+                <h4 class="fl">提示</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">新设置的平台账号和密码可直接登录VR平台</p>
+                <p>是否确定修改账号?</p>
+            </div>
+            <div class="popup_btn success_popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--//成功修改平台账号-->
+    <div class="mask_layer success_revamp_account ">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr hide">
+                <h4 class="fl">提示</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">修改成功！</p>
+                <p>您的账号还没有绑定手机，绑定手机后可享受手机找密码等功能</p>
+                <p>个人中心→用户资料→手机绑定</p>
+            </div>
+            <div class="popup_btn success_popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

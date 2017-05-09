@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>官网注册</title>
+    <link rel="stylesheet" href="../online/pageGame/style/base.css">
+    <link rel="stylesheet" href="style/register.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="login_container">
+    <div class="login_con clearfix fl">
+        <div class="login fl tac">
+            <h4 class="blueColor2 f18 tal">登录</h4>
+            <div class="in_login">
+                <p class="pr">
+                    <input type="text" placeholder="手机/邮箱/XY账号" name="accountnum">
+                    <span class="erro_msg pa errorColor tal pr f12"><i class="pa"></i><b>错误</b></span>
+                </p>
+                <p class="pr">
+                    <input type="password" placeholder="请输入密码" name="password">
+                    <span class="erro_msg pa errorColor tal pr f12"><i class="pa"></i><b></b></span>
+                </p>
+                <p class="pr rem_pwd ">
+                    <i class="sel pa"></i>
+                    <span class="fl f12">在这台电脑上记住我</span>
+                    <span class="fr f12 blueColor2 curp">找回密码</span>
+                </p>
+                <p class="btn f16">登录</p>
+                <p class="third_login">
+                    <a href="http://passport.vronline.com/auth/qq" class="pr">
+                        <i class="pa"> </i>
+                        <b>QQ登录</b>
+                    </a>
+                    <a href="http://passport.vronline.com/auth/wx" class="pr">
+                        <i class="pa wx"></i>
+                        <b>微信登录</b>
+                    </a>
+                    <a href="http://passport.vronline.com/auth/qq" class="pr">
+                        <i class="pa wb"></i>
+                        <b>微博登录</b>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="register fl tac">
+            <h4 class="blueColor2 f18 tal">注册</h4>
+            <div class="register_con">
+                <p class="tal f14">新建一个免费账号</p>
+                <p class="tal f12">欢迎免费加入VR平台，我们将为您创建VR账户，</p>
+                <p class="tal f12">同时您可以安装VR客户端体验更多精彩内容。</p>
+                <p  class="btn f16">注册</p>
+            </div>
+        </div>
+    </div>
+    <div class="download_vr fr tac">
+        <p class="f16 title">专注于VR内容的综合性开放平台</p>
+        <p class="img_box"></p>
+        <p class="f16 btn">安装VR客户端</p>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<script>
+    $(function(){
+        //失去焦点
+        $('.in_login input').each(function(){
+            $(this).blur(function(){
+                checkLogin($(this));
+                if($(this).next('span.erro_msg').find('b').text() != ''){
+                    $(this).focus();
+                }
+            })
+        });
+        //登录 检测
+        function checkLogin(obj){
+            var name = obj.attr('name');
+            var value = obj.val();
+            if(name == 'accountnum'){
+                if(typeof value == 'undefinde' || value == ''){
+                    obj.next('span.erro_msg').show().find('b').text('账号不能为空');
+                    obj.css('border-color','#ea5a5a');
+                }else{
+                    obj.next('span.erro_msg').hide().find('b').text('');
+                    obj.css('border-color','#2a3343')
+                }
+            };
+            if(name == 'password'){
+                if(typeof value == 'undefinde' || value == ''){
+                    obj.next('span.erro_msg').show().find('b').text('账号不能为空');
+                    obj.css('border-color','#ea5a5a')
+                }else{
+                    obj.next('span.erro_msg').hide().find('b').text('');
+                    obj.css('border-color','#2a3343')
+                }
+            }
+        }
+
+
+
+    })
+</script>

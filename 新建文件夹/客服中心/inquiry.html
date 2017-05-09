@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>查询结果</title>
+	<link rel="stylesheet" href="http://pic.vronline.com/news/style/base.css">
+	<link rel="stylesheet" href="http://pic.vronline.com/news/style/customer.css" />
+	<script src="http://pic.vronline.com/common/js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+	<!--头部导航-->
+	<div></div>
+	<!--内容-->
+	<div class="container">
+		<div class="clearfix all_con">
+			<div class="crumbs clearfix">
+				<a class="fl" href="javascript:;">客服中心</a>
+				<span class="fl">></span>
+				<a class="fl" href="javascript:;">账号密码</a>
+			</div>
+			<div class="fl left">
+				<ul>
+					<li class="cur">
+						<a class="clearfix" href="javascript:;">
+							<i class="fl"></i>
+							<span>账号密码</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl rechargePayment"></i>
+							<span>充值支付</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl platformGame"></i>
+							<span>平台游戏</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl deviceConnection"></i>
+							<span>设备连接</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl auditRelease"></i>
+							<span>审核发布</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl otherIssues"></i>
+							<span>其他问题</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl opinion"></i>
+							<span>投诉建议</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+					<li>
+						<a class="clearfix" href="javascript:;">
+							<i class="fl queryResults"></i>
+							<span>查询结果</span>
+							<i class="fr"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fl right">
+				<ul>
+					<!--账号密码-->
+					<li class="list_con account cur">
+						<div class="account_con">
+							<div class="clearfix">
+								<span class="fl"><em>*</em>我的账号</span>
+								<input type="text" placeholder="请输入您的账号" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em>*</em>问题分类</span>
+								<select>
+									<option>密码找回1</option>
+									<option>密码找回2</option>
+									<option>密码找回3</option>
+									<option>密码找回4</option>
+								</select>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em>*</em>问题描述</span>
+								<div class="fl text_wrap">
+									<textarea name="" rows="" cols="" class="text" placeholder="为保障账号安全，请勿在描述中填写账号或密码等信息。"></textarea>
+									<div class="text_limit">还可输入<span class="text_num"></span>个字</div>
+								</div>
+								<div class="fl clearfix upload">
+									<span class="fl submit upload_img">上传截图</span>
+									<p class="fl upload_limit">请保证您提交的文件总大小＜5MB（支持jpg，gif， png， bmp格式）</p>
+									<div class="fl select_file">
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>填写姓名</span>
+								<input type="text" placeholder="请填写您的姓名" />
+								<div class="clearfix sex">
+									<p class="fl clearfix"><i class="fl selected"></i><span class="fl">先生</span></p>
+									<p class="fl clearfix"><i class="fl"></i><span class="fl">女士</span></p>
+								</div>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>联系方式</span>
+								<input type="text" placeholder="请输入手机号码，方便我们与您联系" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>身份证号</span>
+								<input type="text" placeholder="请输入身份证号码" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>EMALL</span>
+								<input type="text" placeholder="请输入EMAIL，方便我们与您联系" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>QQ号码</span>
+								<input type="text" placeholder="请输入QQ号码，方便我们与您联系" />
+							</div>
+							<div>
+								<p class="submit">提交</p>
+								<p class="notes">问题处理中如需进一步确认，我们可能会通过您提供的联系方式和您取得联系</p>
+							</div>
+						</div>
+						<div class="successfully" style="display:none;">
+							<p class="clearfix"><i class="fl"></i><span class="fl">提交成功</span></p>
+							<p>事件编号：<span class="num">VR00001</span></p><br />
+							<p class="tips">感您的反馈~我们会尽快进行核实，并给予回复。</p>
+							<p>如您当前账号未登录，可通过事件编号查看事件处理进度；如当前账号登录，您可以通过“查询结果”查看事件处理进度。</p><br />
+							<p>请牢记您的事件编号：</p>
+							<div><a href="javascript:;"><返回客服中心</a></div>
+						</div>
+					</li>
+					<!--充值支付-->
+					<li class="list_con">充值支付</li>
+					<!--平台游戏-->
+					<li class="list_con">平台游戏</li>
+					<!--设备连接-->
+					<li class="list_con account device">
+						<div class="account_con">
+							<div class="clearfix">
+								<span class="fl"><em>*</em>选择类别</span>
+								<div class="clearfix sex sel">
+									<p class="fl clearfix"><i class="fl"></i><span class="fl">VR游戏</span></p>
+									<p class="fl clearfix"><i class="fl"></i><span class="fl">多媒体</span></p>
+									<p class="fl clearfix"><i class="fl"></i><span class="fl">网页游戏</span></p>
+								</div>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em>*</em>我的账号</span>
+								<input type="text" placeholder="请输入您的账号" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em>*</em>问题分类</span>
+								<select>
+									<option>密码找回1</option>
+									<option>密码找回2</option>
+									<option>密码找回3</option>
+									<option>密码找回4</option>
+								</select>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em>*</em>问题描述</span>
+								<div class="fl text_wrap">
+									<textarea name="" rows="" cols="" class="text" placeholder="为保障账号安全，请勿在描述中填写账号或密码等信息。"></textarea>
+									<div class="text_limit">还可输入<span class="text_num"></span>个字</div>
+								</div>
+								<div class="fl clearfix upload">
+									<span class="fl submit upload_img">上传截图</span>
+									<p class="fl upload_limit">请保证您提交的文件总大小＜5MB（支持jpg，gif， png， bmp格式）</p>
+									<div class="fl select_file">
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+										<p class="fl"><i></i><span></span></p>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>填写姓名</span>
+								<input type="text" placeholder="请填写您的姓名" />
+								<div class="clearfix sex">
+									<p class="fl clearfix"><i class="fl selected"></i><span class="fl">先生</span></p>
+									<p class="fl clearfix"><i class="fl"></i><span class="fl">女士</span></p>
+								</div>
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>联系方式</span>
+								<input type="text" placeholder="请输入手机号码，方便我们与您联系" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>身份证号</span>
+								<input type="text" placeholder="请输入身份证号码" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>EMALL</span>
+								<input type="text" placeholder="请输入EMAIL，方便我们与您联系" />
+							</div>
+							<div class="clearfix">
+								<span class="fl"><em></em>QQ号码</span>
+								<input type="text" placeholder="请输入QQ号码，方便我们与您联系" />
+							</div>
+							<div>
+								<p class="submit">提交</p>
+								<p class="notes">问题处理中如需进一步确认，我们可能会通过您提供的联系方式和您取得联系</p>
+							</div>
+						</div>
+					</li>
+					<!--审核发布-->
+					<li class="list_con">审核发布</li>
+					<!--其他问题-->
+					<li class="list_con">其他问题</li>
+					<!--投诉建议-->
+					<li class="list_con">投诉建议</li>
+					<!--查询结果-->
+					<li class="list_con inquiry_con">
+						<!--问题列表-->
+						<div class="result">
+							<div class="status">
+								<p class="fl cur clearfix"><i class="fl handling"></i><span class="fl">待处理</span></p>
+								<p class="fl clearfix"><i class="fl handled"></i><span class="fl">已处理</span></p>
+								<div class="fr">
+									<input type="text" placeholder="请输入事件编号或账号" />
+									<i></i>
+								</div>
+							</div>
+							<table class="cur" cellpadding="0" cellspacing="0">
+								<tr>
+								    <th>事件编号</th>
+								    <th>问题类型</th>
+								    <th>问题分类</th>
+								    <th>反馈时间</th>
+								    <th>事件状态</th>
+								    <th>操作</th>
+								</tr>
+								<tr>
+								    <td>0001</td>
+								    <td>充值支付</td>
+								    <td>充值未到账</td>
+								    <td>2016-11-01 16:02</td>
+								    <td><span class="red">待处理</span></td>
+								    <td><a href="javascript:;">查看</a></td>
+								</tr>
+								<tr>
+								    <td>0001</td>
+								    <td>充值支付</td>
+								    <td>充值未到账</td>
+								    <td>2016-11-01 16:02</td>
+								    <td><span class="red">待处理</span></td>
+								    <td><a href="javascript:;">查看</a></td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0">
+								<tr>
+								    <th>事件编号</th>
+								    <th>问题类型</th>
+								    <th>问题分类</th>
+								    <th>反馈时间</th>
+								    <th>事件状态</th>
+								    <th>操作</th>
+								</tr>
+								<tr>
+								    <td>0001</td>
+								    <td>充值支付</td>
+								    <td>充值未到账</td>
+								    <td>2016-11-01 16:02</td>
+								    <td><span class="complete">已处理</span></td>
+								    <td><a href="javascript:;">查看</a></td>
+								</tr>
+								<tr>
+								    <td>0001</td>
+								    <td>充值支付</td>
+								    <td>充值未到账</td>
+								    <td>2016-11-01 16:02</td>
+								    <td><span class="complete">已处理</span></td>
+								    <td><a href="javascript:;">查看</a></td>
+								</tr>
+							</table>
+						</div>
+						<!--查看结果-->
+						<div class="see"  style="display:none;">
+							<div class="see_title">
+								<h3 class="title">我的问题</h3>
+							</div>
+							<div class="see_con">
+								<div class="clearfix see_con_title">
+									<p class="fl"><span>事件编号:</span><span>事件编号</span></p>
+									<p class="fl"><span>问题类型:</span><span>事件编号</span></p>
+									<p class="fl"><span>问题分类:</span><span>事件编号</span></p>
+									<p class="fl"><span>反馈时间:</span><span>事件编号</span></p>
+								</div>
+								<p class="problem_description"><span>问题描述：</span><span>充值后没有到账，钱已经扣了怎么办！！充值后没有到账，钱已经扣了怎么办！！充值后没有到账，钱已经扣了怎么办！！充值后没有到账，钱已经扣了怎么办！！充值后没有到账，钱已经扣了怎么办！！充值后没有到账，钱已经扣了怎么办！！</span></p>
+								<div class="reply">
+									<div class="clearfix">
+										<p class="fl reply_name"><span>客服回复:</span><span>【客服】1234</span></p>
+										<div class="fl reply_con">
+										    <span>您好，先别着急，请把账号提供给我，这边会马上解决您的问题！</span>
+											<span>2016-12-19 16:51</span>
+										</div>
+									</div>
+									<div class="my_reply clearfix">
+										<p class="fl reply_name"><span>客服回复:</span><span>【客服】1234</span></p>
+										<div class="fl reply_con">
+											<span>您好，先别着急，请把账号提供给我，这边会马上解决您的问题！</span>
+											<span>2016-12-19 16:51</span>
+										</div>
+									</div>
+									<div class="clearfix">
+										<p class="fl reply_name"><span>客服回复:</span><span>【客服】1234</span></p>
+										<div class="fl reply_con">
+											<span>您好，先别着急，请把账号提供给我，这边会马上解决您的问题！</span>
+											<span>2016-12-19 16:51</span>
+										</div>
+									</div>
+									<div class="my_reply clearfix">
+										<p class="fl reply_name"><span>客服回复:</span><span>【客服】1234</span></p>
+										<div class="fl reply_con">
+											<span>您好，先别着急，请把账号提供给我，这边会马上解决您的问题！</span>
+											<span>2016-12-19 16:51</span>
+										</div>
+									</div>
+									<div class="clearfix">
+										<p class="fl reply_name"><span>客服回复:</span><span>【客服】1234</span></p>
+										<div class="fl reply_con">
+											<span>您好，先别着急，请把账号提供给我，这边会马上解决您的问题！</span>
+											<span>2016-12-19 16:51</span>
+										</div>
+									</div>
+									<div class="my_reply clearfix">
+										<p class="fl reply_name"><span>客服回复:</span><span>【客服】1234</span></p>
+										<div class="fl reply_con">
+											<span>您好，先别着急，请把账号提供给我，这边会马上解决您的问题！</span>
+											<span>2016-12-19 16:51</span>
+										</div>
+									</div>
+								</div>
+								<div class="write" >
+									<div class="clearfix">
+										<div class="fl clearfix score">
+											<i class="fl closed"></i>
+											<span class="fl">感谢您的咨询，请您对本次服务进行评分：</span>
+											<span class="fl clearfix"><i class="fl satisfied"></i>满意</span>
+											<span class="fl clearfix"><i class="fl unsatisfied"></i>不满意</span>
+										</div>
+										<span class="fr evaluate">结束并评价</span>
+									</div>
+									<div class="communication clearfix">
+										<span class="fl">我的回复：</span>
+										<div class="fl text_wrap">
+											<textarea name="" rows="" cols="" class="text" placeholder="字数长度在1-200个字之间"></textarea>
+											<div class="text_limit">还可输入<span class="text_num"></span>个字</div>
+										</div>
+									</div>
+									<p class="submit">提 交</p>
+								</div>
+								<!--end-->
+								<div class="end clearfix" style="display:none;">
+									<span class="fl"></span>
+									<p class="fl">事件已结束，如有新问题请重新提交</p>
+									<span class="fl"></span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--底部-->
+	</div>
+	</div>
+	<script>
+		$(function(){
+			//待处理与已处理切换
+			$('.status').on('click','p',function(){
+				var i = $(this).index();
+				$(this).addClass('cur').siblings().removeClass('cur');
+				$(this).parents('.result').find('table').eq(i).addClass('cur').siblings().removeClass('cur');
+			})
+			//选择
+			$(".sex").on('click','p',function(){
+				$("p i").removeClass('selected');
+				$(this).children("i").addClass('selected');
+			})
+			//左侧选择
+			$(".left ul").on('click','li',function(){
+				var i = $(this).index();
+				$(this).addClass('cur').siblings().removeClass('cur');
+				$(this).parents('.all_con').find('.list_con').eq(i).addClass('cur').siblings().removeClass('cur');
+			})
+			//限制字数
+			var String2;
+			$('.text_num').text( '200' );
+			$('.text').on('keyup',function(){
+				var item = $(this);
+				var str1 = item.val();
+				var ArrayOne = [];
+				
+				ArrayOne = str1.split('');
+				var Num = 200 - ArrayOne.length;
+				
+				if( Num<=10 && Num>0 ){
+					$('.text_num').text( Num );
+					$('.text_num').css('color','red');
+				}else if( Num<=0 ){
+					$('.text_num').text( '0' );
+					String2 = item.val().slice( 0,200 );
+					item.val( String2 );
+					$('.text_num').css('color','red');
+				}else{
+					$('.text_num').text( Num );
+					$('.text_num').css('color','#42bcef');
+				};
+			});
+		})
+	</script>
+</body>
+</html>

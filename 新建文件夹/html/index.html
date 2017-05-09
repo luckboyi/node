@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vr客户端</title>
+    <link rel="stylesheet" type="text/css" href="style/va-style.css">
+</head>
+<body ng-app="myApp">
+
+<div class="blur"></div>
+<!--拖拽S-->
+<div class="list_drag_con">
+    <div class="list_drag"></div>
+</div>
+<!--拖拽E-->
+<div class="main_list_container" >
+<!--头部结构S-->
+    <div class="header pr clearfix" ng-controller="headerController">
+        <div >
+            <a class="prev fl " ng-click="go($event)" data-type="back"> < </a>
+            <a class="next fl" ng-click="go($event)" data-type="go"> > </a>
+        </div>
+        <ul class="fl clearfix add_title">
+            <!-- ng-class="{true:'cur',false:''}[className]"-->
+            <li class="fl game language" data-name="game_title" ui-sref="game" ng-class="{cur:gamecursor}">游戏</li>
+            <li class="fl game language drive" data-name="drive_title" ui-sref="drive" ng-show="isShow" ng-class="{cur:drivercursor}">驱动</li>
+        </ul>
+        <h4 class="logo fl"></h4>
+            <span class="manager fr clearfix pr">
+                <i class="set fl "></i>
+                <i class="mini fl"></i>
+                <i class="max fl"></i>
+                <i class="close fl"></i>
+                <ul class="pa setting_list">
+                    <li class="cur setting"><p></p><span class="language" data-name="manage_set"></span></li>
+                    <li class="idea"><p></p><span class="language" data-name="manage_idea"></span></li>
+                    <li class="change hide"><p></p><span class="language" data-name="manage_account"></span></li>
+                    <li class="exit"><p></p><span class="language" data-name="manage_exit"></span></li>
+                </ul>
+            </span>
+        <p class="user fr clearfix">
+            <img src="image/touxiang.jpg" class="fl"/>
+            <span class="name fr" class="language" data-name="userNmae">LaLaLa</span>
+        </p>
+    </div>
+<!--头部结构E-->
+    <div ui-view></div>
+
+
+    <!--弹框S-->
+
+    <!--弹框E-->
+</div>
+</body>
+<script>
+    //驱动数据
+    data1 = {
+        title:'大鹏VR',
+        explain:'xxxxxxxx',
+        imgSrc:'image/act_bg.png'
+    };
+    data2 = {
+        percent:50,
+        text:'下载了百分之五十'
+    };
+    data21 = {
+        status:'0'
+    };
+    //左侧列表数据
+    data3 =[{
+        'game_id':'100010',
+        'title':'全民奇迹',
+        'imgSrc':'image/list_img.jpg',
+        'tag':["射击","单击"]
+    },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        }
+    ];
+    data333 =[{
+        'game_id':'100030',
+        'title':'全民奇迹',
+        'imgSrc':'image/list_img.jpg',
+        'address':''
+    },
+        {
+            'game_id':'100040',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100050',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        },
+        {
+            'game_id':'100020',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]
+        }
+    ];
+    data31 =[{
+        'game_id':'100010',
+        'title':'全民奇迹',
+        'imgSrc':'image/list_img.jpg',
+        'tag':["射击","单击"]
+    }
+    ];
+    //左侧列表下载数据
+    data33 =  {
+        'game_id':'100020',
+        'status':'1',
+        'percent':'80'
+    }
+    //商城数据
+    data4 =[{
+        'game_id':'7',
+        'state':'new',
+        'imgSrc':'image/list-bg.jpg',
+        'title':'全民奇迹',
+        'mac':true,
+        'win':false
+    }];
+    //详情数据
+    data5 = {
+        'game_id':'7',
+        'title':'xxxxx',
+        'bigImg':['image/vedio-bg.jpg','image/detail-list.jpg','image/detail-list.jpg','image/vedio-bg.jpg'],
+        'miImg':['image/vedio-bg.jpg','image/detail-list.jpg','image/vedio-bg.jpg','image/vedio-bg.jpg','image/vedio-bg.jpg'],
+        'introduction':'简介xxxxxxxxx',
+        'support':['大鹏','HTC'],
+        'message':['Windows 7','处理器','内存','v.10','3.2'],
+        'mini_message':['Windows 8','处理器','内存','v.10','3.2']
+    };
+    //详情下载数据
+    data6={
+        'game_id':'0',
+        'speed':'20',
+        'residue':'',
+        'percent':'20',
+        'text':'下载了2.0G'
+    };
+    //详情下载状态
+    data7 ={
+        'game_id':'0',
+        'status':'1'
+    };
+    //游戏开始
+    data8 ={
+        'state':'0'
+    }
+    data9 = {data:[{
+        'deleteSure':'确定将选中的游戏删除',
+        'deleteLocalName':'同时删除本地文件',
+        'sure':'确定',
+        'cancel':'取消',
+        'game_title':'game',
+        'drive_title':'drive',
+        'manage_set':'设置',
+        'manage_idea':'意见反馈',
+        'manage_account':'切换账号',
+        'manage_exit':'退出',
+        'manage_delete':'删除',
+        'userName':'用户名',
+        'noGame':'你尚未添加任何游戏',
+        'addNoGame':'请从游戏库或本地游戏中添加游戏',
+        'addGame':'添加本地游戏',
+        'manage_language':'语言设置',
+        'Chinese':'中文',
+        'English':'英文',
+
+        'game_plain':'游戏简介',
+        'support_equipment':'支持设备',
+        'system':'系统需求',
+        'configuration':'推荐配置',
+        'minimum':'最低配置',
+        'os':'操作系统',
+        'processor':'处理器',
+        'storage':'内存'
+    }]
+    }
+
+    data10 ={
+        'game_id':'100010',
+        'title':'全民奇迹'
+    }
+
+    data11 ={
+        'state':'0'
+    };
+    //弹窗数据
+    data1111=[{'game_id':'100030',
+        'title':'全民奇迹',
+        'imgSrc':'image/list_img.jpg',
+        'tag':["射击","单击"]},
+        {'game_id':'100040',
+            'title':'全民奇迹',
+            'imgSrc':'image/list_img.jpg',
+            'tag':["射击","单击"]}
+    ];
+</script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.js"></script>
+<script src="pbl/js/app.js"></script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户资料</title>
+	<link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/im.css">
+    <script src="../js/plug/jquery-1.11.3.min.js"></script>
+    <script src="../js/plug/tinyscrollbar.js"></script>
+    <script src="./js/tool/vue.js"></script>
+</head>
+<body>
+	<div class="usermsg pr" id="usermsg">
+		<i class="close_btn pa" v-on:click.stop = "closeBtn()"></i>
+		<div class="user_img clearfix">
+			<div class="fl left_con tac">
+				<div class="img_con">
+				<img :src="img" >
+				</div>
+				<p class="els f14" title="{{name}}">{{name}}</p>			
+			</div>
+			<div class="fr send_btn f14" v-on:click.stop="sendMsg()">发送消息</div>
+		</div>
+		<div class="user_play tac">
+			<p class="title f14">玩过的游戏</p>
+			<div class="game_hository_con">
+				<ul class="clearfix">
+					<li class="fl" v-for="item in history_game">
+						<div class="img_con fl">
+							<img :src="item.game_img" >
+						</div>
+						<div class="txt_con fr">
+							<p>{{item.gamename}}</p>
+							<p class="els">{{item.playnum}}人在玩</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/component/usermsg.js"></script>
+<script src="js/tool/imInterface.js"></script>

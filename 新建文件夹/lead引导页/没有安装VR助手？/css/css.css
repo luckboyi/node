@@ -1,0 +1,64 @@
+﻿.content {
+    width: 574px;
+    height: 324px;
+	border:3px solid #66c0f4;
+	background-color:#111a25;
+	overflow:hidden;
+}
+.content ul{padding:30px 0; overflow:hidden;}
+.content ul li{padding:0 35px; overflow:hidden;}
+.top-text{
+	color:#d5e7ff;
+	font-size:38px;
+	display:block;
+	text-align:left;
+	margin-bottom:47px;
+	}
+.content .choice{
+	width:235px;
+	height:75px;
+	background-color:#152943;
+	border:1px solid #147aa5;
+	color:#59b4dd;
+	text-align:left;
+	padding:10px 15px;
+	font-size:15px;
+	font-family:"微软雅黑";
+	line-height:30px;
+	cursor: pointer;
+	-webkit-transition: background-color .3s ease-out,border-color .3s ease-out; 
+    transition: background-color .3s ease-out,border-color .3s ease-out; 
+}
+.content button span{
+	font-size:32px;
+}
+.content .choice:hover{
+	background-color:#204274;
+	border:1px solid #1babbe;
+	color:#9ef0fb;
+}
+.content .line{
+	border:1px solid #223040;
+	margin:33px 15px 15px 15px;
+}
+.content .logo-zs{
+	display:block;
+	width:94px;
+	height:54px;
+	background:url(../images/logo-zs.png) 0 10px no-repeat;
+	overflow:hidden;
+}
+.content .introduce{
+	color:#959ba2;
+	font-size:13px;
+	line-height:18px;
+	width:390px;
+	text-align:justify;
+}
+.close{
+	width:12px ;height:12px ;background: url(../images/close.png) no-repeat center;cursor: pointer;z-index: 999; right: 10px;top: 10px;
+	-webkit-transition: all .5s ease;
+-moz-transition: all .5s ease;
+transition: all .5s ease;
+}
+.close:hover{transform:rotate(180deg);-webkit-transform:rotate(180deg);}

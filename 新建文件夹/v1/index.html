@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VR客户端</title>
+    <link rel="stylesheet" type="text/css" href="style/va-style.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.gallery.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/jquery.valiant360.min.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<div class="blur"></div>
+<div class="main_list_container">
+    <div style="width:5px; height:5px; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; right:0;top:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; right:0;bottom:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; left:0;bottom:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:100%;height:1px; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:1px;height:100%; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:1px;height:100%; right:0;top:0; -webkit-app-region: drag;" class="pa"></div>
+    <!--确认框-->
+    <div class="">
+        <div class="confirmation" id="drag1">
+            <div class="in_confirmation">
+                <p class="language" data-name="deleteSure"></p>
+                <div class="delete_local">
+                    <input type="checkbox" checked="checked" >
+                    <span class="language" data-name="deleteLocalName"></span>
+                </div>
+            </div>
+            <div>
+                <div class="sure language" data-name="sure"></div>
+                <div class="cancel language" data-name="cancel"></div>
+            </div>
+        </div>
+    </div>
+    <!--添加本地游戏弹框S-->
+    <div class="">
+        <div class="bounced bounced_drag" id="addGameDrag" >
+            <div class="addGame" >
+                <div class="addGame-header clearfix">
+                    <h3 class="fl appendCon language" data-name="addGame"></h3>
+                    <div class="close fr cn mr14" ></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body">
+                        <p class="in-body-title appendCon language" data-name="selectRoutine"></p>
+                        <div class="in-body-con" >
+                            <ul class="in-con-header" >
+                                <li class=" in-con-check"></li>
+                                <li class="parting-line first-parting-line clearfix"><i class="fl">|</i><i class="fr">|</i></li>
+                                <li class="parting-line sec-parting-line clearfix " ><div class="fl language" data-name="routine"></div><i class="fr">|</i></li>
+                                <li class="in-con-area language" data-name="area"></li>
+                            </ul>
+                            <div class="in-con-body"  id="scrollbar4">
+                                <div class="scrollbar pr fr" style="height: 100%">
+                                    <div class="track">
+                                        <div class="thumb pa"><div class="end"></div></div>
+                                    </div>
+                                </div>
+                                <div class="viewport" style="height: 280px;">
+                                    <div class="overview">
+                                        <ul class="localGameList"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel"></div>
+                        <div class="addSelect fr language" data-name="add_select"></div>
+                        <div class="browse fr cn language" data-name="amend"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--添加本地游戏弹框E-->
+    <!--设置弹框S-->
+    <div class="">
+        <div class="bounced set_bounced "  id="setDrag" >
+            <div class="addGame" style="width: 678px;">
+                <div class="addGame-header clearfix">
+                    <h3 class="fl appendCon language" data-name="manage_set"></h3>
+                    <div class="close fr cn mr14" ></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body clearfix">
+                        <h3 class="fl language" data-name="integration_set"></h3>
+                        <div class="in-body-con fl" >
+                            <div class="clearfix pr">
+                                <h4 class="fl language" data-name="set_language"></h4>
+                                <div class="fl pr language_set">
+                                    <div class="language language_selected" data-name="Chinese"></div>
+                                    <i class="pa"></i>
+                                    <ul class="set_language">
+                                        <li data-name="English" class="language"></li>
+                                        <li data-name="Chinese" class="language"></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="clearfix facility_set">
+                                <h4 class="fl language" data-name="set_facility"></h4>
+                                <ol class="fl selected_btn fl pr">
+                                    <li class="pr clearfix fl yse language" data-name="yes">是</li>
+                                    <li  class="pr clearfix fl no language" data-name="no">否</li>
+                                </ol>
+                            </div>
+                            <div class="clearfix facility_set" >
+                                <h4 class="fl language" data-name="colse_set"></h4>
+                                <ol class="fl selected_btn fl pr">
+                                    <li class="pr clearfix fl yse language" data-name="yes">是</li>
+                                    <li  class="pr clearfix fl no language" data-name="no">否</li>
+                                </ol>
+                            </div>
+                            <div class="download_path facility_set">
+                                <h4 class="fl language" data-name="download_path">:</h4>
+                                <div class="fl">
+                                    <input type="text" value="">
+                                </div>
+                                <button class="fl language amend" data-name="amend"></button>
+                                <button class="fl language open" data-name="open"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel"></div>
+                        <div class="browse fr cn language" data-name="sure"></div>
+                        <div class="addSelect fr cn language renew" data-name="renew"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--设置弹框E-->
+    <!--账号注册s-->
+    <div class="mask login_mask">
+        <div class="login" id="login">
+            <div class="login_head clearfix">
+                <h3 class="fl language" data-name="registering"></h3>
+                <p class="login_close fr"></p>
+            </div>
+            <div class="login_body">
+                <form id="registerForm">
+                    <p class="pr">
+                        <i ></i>
+                        <input type="text" placeholder="11位手机号/邮箱" name="phoneNumber" id="login_phoneNum">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr">
+                        <i></i>
+                        <input type="text" placeholder="输入昵称" name="nickName">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr">
+                        <i></i>
+                        <input type="password" placeholder="输入密码" name="loginPassword" class="loginPassword">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr">
+                        <i></i>
+                        <input type="password" placeholder="确认密码" name="checkLoginPassword">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr" id="verify_drag">
+                    </p>
+                    <p class="clearfix pr message_code">
+                        <i></i>
+                        <input type="text" placeholder="输入验证码" class="verification fl" name="verifyCode">
+                        <input class="send_btn fr" type="button" value="发送验证码" id="send_btn">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                </form>
+                <div class="clearfix login_agreement">
+                    <i class="login_sel selected fl"></i>
+                    <div class="fl agreement" ><b class="fl language" data-name="agreed"></b><a href="javascript:;" class="language fl" data-name="vo_agreement"></a></div>
+                </div>
+                <div class="register language" data-name="register"></div>
+                <div class="hasAccount language" data-name="existing_account"><a href="javascript:;" class="log_in language" data-name="log_in"></a></div>
+            </div>
+        </div>
+    </div>
+    <!--账号注册e-->
+    <div class="">
+        <!--注册完成S-->
+        <div class="verification_con  success_register " id="success_register">
+            <div class="verification_head clearfix" >
+                <h3 class="fl language" data-name="registration"></h3>
+                <i class="verification_close fr"></i>
+            </div>
+            <div class="verification_body" style="">
+                <p class="language" data-name="registration_msg"></p>
+            </div>
+            <div class="success_register_btn language" data-name="success_register"></div>
+        </div>
+        <!--注册完成E-->
+    </div>
+
+    <!--注册失败S-->
+    <div class="">
+        <div class="verification_con  erro_register tac " id="erro_register">
+            <div class="verification_head clearfix" >
+                <h3 class="fl language" data-name="erro_registration"></h3>
+                <i class="verification_close fr"></i>
+            </div>
+            <div class="verification_body" style="">
+                <p class="language" data-name="registration_erro_msg"></p>
+            </div>
+            <div class="success_register_btn language" data-name="re_register"></div>
+        </div>
+    </div>
+    <!--注册失败E-->
+    <!--帐号登陆S-->
+    <div class="login_enter_mask mask">
+        <div class="login_enter pr" id="login_enter">
+            <i class="login__enter_close"></i>
+            <h3></h3>
+            <div class="pa login_in_header" style="width: 100%; height: 100px; top: 0;"></div>
+            <div class="login_enter_con">
+                <div class="login_img fl">
+                    <img src="image/touxiang.jpg">
+                </div>
+                <div class="fl login_enter_input">
+                    <div class="in_login_enter_input" >
+                        <div class="pr in_login_input">
+                            <input class="fl" id="login_in_phoneNum"  type="text" placeholder="手机/邮箱"  name="login_in_phoneNum">
+                            <a class="fl language in_registering" href="javascript:;" data-name="in_registering">zhuced</a>
+                            <i class="pull-down"></i>
+                            <ul class="pa"></ul>
+                        </div>
+                        <div class="login_enter_password pr">
+                            <input class="fl" type="password" placeholder="请输入密码" name="login_in_password">
+                            <a class="fl language" href="javascript:;" data-name="forgot_password"></a>
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="login_enter_sel clearfix">
+                        <div class="fl password">
+                            <i class="selected"></i>
+                            <b class="language" data-name="remember_password"></b>
+                        </div>
+                        <div class="fl automatic">
+                            <i></i>
+                            <b class="language" data-name="automatic_login"></b>
+                        </div>
+                    </div>
+                    <div class="login_enter_btn language" data-name="login_enter"></div>
+                    <p class="login_enter_erro pa language"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--帐号登陆E-->
+    <!--验证码s-->
+    <div class="mask">
+        <div class="verification_con verification_inCon" id="dragVer">
+            <div class="verification_head clearfix" >
+                <h3 class="fl language" data-name="verification_code"></h3>
+                <i class="verification_close fr"></i>
+            </div>
+            <div class="verification_body" style="">
+                <p class="language" data-name="abnormal_operation"></p>
+                <input type="text" placeholder="请输入验证码" class="input_verification">
+                <div class="verification_img">
+                    <img src="">
+                    <a href="javascript:;" class="language" data-name="invisibility"></a>
+                    <p class="verification_erro_msg"></p>
+                </div>
+            </div>
+            <div class="verification_foot">
+                <div class="verification_cancel fr language" data-name="cancel"></div>
+                <div class="verification_sure fr language" data-name="sure"></div>
+            </div>
+        </div>
+    </div>
+    <!--验证码E-->
+    <!--登录E-->
+    <!--意见反馈S-->
+    <div class="mask">
+        <div class="bounced bounced_advice">
+            <div class="advice">
+                <div class="advice_head clearfix">
+                    <h3 class="fl appendCon" data-name="manage_advice"></h3>
+                    <div class="close fr cn"></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body clearfix">
+                        <p class="language" data-name="your_problem"></p>
+                        <textarea ></textarea>
+                        <p class="language" data-name="contact_way"></p>
+                        <div class="clearfix advice_write">
+                            <input class="fl" type="text" placeholder="请输入手机号">
+                            <input class="fl" type="text" placeholder="请输入QQ号">
+                        </div>
+                        <p class="language" data-name="upload_photo"></p>
+                        <div class="advice_img clearfix">
+                            <div class="pr fl">
+                                <p></p>
+                                <input type="file">
+                                <img src="">
+                            </div>
+                            <div class="pr fl">
+                                <p></p>
+                                <input type="file">
+                                <img src="">
+                            </div>
+                            <div class="pr fl">
+                                <p></p>
+                                <input type="file">
+                                <img src="">
+                            </div>
+                            <div class="pr fl">
+                                <p></p>
+                                <input type="file">
+                                <img src="">
+                            </div>
+                            <div class="pr fl">
+                                <p></p>
+                                <input type="file">
+                                <img src="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel"></div>
+                        <div class="browse fr cn language" data-name="sure"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--意见反馈E-->
+    <!--滤镜-->
+    <!-- <span class="header_line"></span>
+    <i class="header_line"></i> -->
+    <!--滤镜-->
+    <!--头部结构S-->
+    <div class="header pr clearfix"  style="-webkit-app-region: drag;">
+        <i class="prev fl cur"  style="-webkit-app-region: no-drag;"> < </i>
+        <i class="next fl"  style="-webkit-app-region: no-drag;"> > </i>
+        <ul class="fl clearfix add_title"  style="-webkit-app-region: no-drag;">
+            <li class="fl cur game language" data-name="game_title"></li>
+            <li class="fl  language video" data-name="video_title">视频</li>
+        </ul>
+        <h4 class="logo fl"></h4>
+        <div class="manager fr clearfix pr"  style="-webkit-app-region: no-drag;">
+            <div class="vrBtn fl"  style="-webkit-app-region: no-drag;">VR</div>
+            <i class="set fl "  style="-webkit-app-region: no-drag;"></i>
+            <i class="mini fl"  style="-webkit-app-region: no-drag;"></i>
+            <i class="max fl"  style="-webkit-app-region: no-drag;"></i>
+            <i class="close fl"  style="-webkit-app-region: no-drag;"></i>
+            <ul class="pa setting_list"  style="-webkit-app-region: no-drag;">
+                <li class="cur setting"  style="-webkit-app-region: no-drag;"><p></p><span class="language" data-name="manage_set" ></span></li>
+                <li class="idea"  style="-webkit-app-region: no-drag;"><p></p><span class="language" data-name="manage_idea"></span></li>
+                <li class="change hide"  style="-webkit-app-region: no-drag;"><p></p><span class="language" data-name="manage_account"></span></li>
+                <!-- <li class="changeLanguage"><p></p><span class="language" data-name="manage_language"></span> -->
+                </li>
+                <li class="exit"  style="-webkit-app-region: no-drag;"><p></p><span class="language" data-name="manage_exit"></span></li>
+            </ul>
+            <ol class="language_list pa"  style="-webkit-app-region: no-drag;">
+                <li class="chinese"  style="-webkit-app-region: no-drag;">
+                    <p></p>
+                    <span class="language" data-name="Chinese"></span>
+                </li>
+                <li class="english"  style="-webkit-app-region: no-drag;">
+                    <p></p>
+                    <span class="language" data-name="English"></span>
+                </li>
+            </ol>
+        </div>
+        <div class="user fr clearfix" title="未登录"   style="-webkit-app-region: no-drag;">
+            <img src="image/touxiang.jpg" class="fl"/>
+            <span class="name fr" class="language" data-name="userNmae"></span>
+        </div>
+    </div>
+    <!--头部结构E-->
+    <!--内容S-->
+    <div class="list_con clearfix js_list_hei ">
+        <!--左侧列表结构S-->
+        <div class="side_list fl js_list_hei pr">
+            <div id="scrollbar1" class=" js_scr_hei">
+                <div class="scrollbar fr pr">
+                    <div class="track">
+                        <div class="thumb pa"></div>
+                    </div>
+                </div>
+                <div class="in_side_list viewport js_scr_hei" >
+                    <div class="no_game">
+                        <i></i>
+                        <p class="in_no_game language" data-name="noGame"></p>
+                        <p class="add_no_game language" data-name="addNoGame"></p>
+                    </div>
+                    <div class="overview">
+                        <div class="game_list_con">
+                            <ul></ul>
+                        </div>
+                        <div class="video_list_con">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="add_game"><i>+</i><span class="language" data-name="addGame"></span></p>
+            <div class="video_label pa">
+                <p class="fl pr history_video language"><i class="pa video_history"></i>历史记录</p>
+                <p class="fl pr fullscreen_video language"><i class="pa panoramic_video"></i>全景视频</p>
+            </div>
+        </div>
+        <!--左侧列表结构S-->
+        <!--商城S-->
+        <div class="list_container js_list_hei pr">
+            <div id="scrollbar2"  class=" js_store_scr_hei">
+                <div class="scrollbar fr pr">
+                    <div class="track">
+                        <div class="thumb pa"></div>
+                    </div>
+                </div>
+                <div class="viewport js_store_hei">
+                    <ul class="list_con clearfix overview"></ul>
+                </div>
+            </div>
+            <div class="pa store_bg"></div>
+        </div>
+        <!--商城E-->
+        <!--右侧详情页S-->
+        <div class="js_list_hei pr detail_container">
+            <div class="detail clearfix js_detail_hei pr">
+                <div id="scrollbar3"  class=" js_detail_hei">
+                    <div class="scrollbar fr pr js_detail_hei"><div class="track"><div class="thumb pa"></div></div></div>
+                    <div class="in_detail_con viewport js_detail_hei">
+                        <div class="clearfix overview">
+                            <div class="detail_text clearfix" ></div>
+                            <div class="detail_comment">
+                                <div class="comment">
+                                    <ul class="comment_head clearfix">
+                                        <li class="fl splendid cur language" data-name="splendid">精彩评测</li>
+                                        <li class="fl newComment language" data-name="newComment">最新评测</li>
+                                        <li class="fl goodComment clearfix"><i class="fl language" data-name="goodComment">好评</i><b class="fl">(1024)</b></li>
+                                        <li class="fl badComment clearfix"><i class="fl language" data-name="badComment">差评</i><b class="fl">(2048)</b></li>
+                                        <li class="fl myComment">我的评论</li>
+                                    </ul>
+                                    <div class="comment_body">
+                                        <ol class="in_comment_body" id="comment_con"></ol>
+                                        <div class="comment_page" id="comment_page"></div>
+                                    </div>
+                                    <div class="comment_foot">
+                                        <p class="have_comment">已经有<b>1222</b>条评测</p>
+                                        <div class="add_comment">
+                                            <textarea  cols="30" rows="10"  onclick="this.value='';">发表评论</textarea>
+                                        </div>
+                                        <div class="in_comment_foot clearfix">
+                                            <div class="fl comment_grade pr">
+                                                <ul class="un_sel fl">
+                                                    <li></li>
+                                                </ul>
+                                                <span class="grade_mouse pa"></span>
+                                                <span class="game_score"><b>0.5</b>分</span>
+                                            </div>
+                                            <div class="fr clearfix comment_btn">
+                                                <p class="fl">你喜欢这款游戏么？</p>
+                                                <ul class="fl clearfix">
+                                                    <li class="fl cur">喜欢</li>
+                                                    <li  class="fl">不喜欢</li>
+                                                </ul>
+                                                <p class="fl send">发送</p>
+                                            </div>
+                                        </div>
+                                        <div class="no_score">
+                                            <p>你还没有评分哦，快去评分吧！</p>
+                                            <div>
+                                                <button class="sure">确定</button>
+                                                <button class="cancel">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="download_btn pa">
+                    <div class="fl btn language" data-name="install"></div>
+            </div>
+        </div>
+        <!--右侧详情页E-->
+        <!--视频列表S-->
+
+        <!--视频列表E-->
+        <!--右侧视频S-->
+        <div class="video_container js_list_hei pr">
+            <div id="scrollbar5"  class=" js_store_scr_hei">
+                <div class="scrollbar fr pr">
+                    <div class="track">
+                        <div class="thumb pa"></div>
+                    </div>
+                </div>
+                <div class="viewport js_store_hei">
+                    <div class="overview pr">
+                        <!--视频首页S-->
+                        <div class="video" style="style:1000px; margin: 0 auto;">
+                            <div class="video_list">
+                                <ul>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">精选</h4>
+                                            <span class="fl">共<b>7</b>部视频</span>
+                                            <div class="button_more fr">更多</div>
+                                        </div>
+                                        <div class="video_list_container ">
+                                            <ul class=" clearfix">
+                                                <li class="fl pr" data-src="video/Video1.mp4">
+                                                    <a href="#A">
+                                                        <img src="image/video8.jpg" >
+                                                        <p>翼装飞行</p>
+                                                    </a>
+                                                    <span class="pa">102:00</span>
+                                                    <div class="video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/http://dev.vronline.com/Video/Video4.mp4 ">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video4.jpg" >
+                                                        <p>过山车</p>
+                                                    </a>
+                                                    <span class="pa">42:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/http://dev.vronline.com/Video/Video3.mp4 ">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video3.jpg" >
+                                                        <p>星战</p>
+                                                    </a>
+                                                    <span class="pa">52:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/http://dev.vronline.com/Video/Video7.mp4 ">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video7.jpg" >
+                                                        <p>大溪地极限冲浪</p>
+                                                    </a>
+                                                    <span class="pa">32:10</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video2.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video2.jpg" >
+                                                        <p>Invasion</p>
+                                                    </a>
+                                                    <span class="pa">24:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/http://dev.vronline.com/Video/Video1.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video9.jpg" >
+                                                        <p>恐怖玩具熊</p>
+                                                    </a>
+                                                    <span class="pa">24:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video9.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video13.jpg" >
+                                                        <p>牵线木偶</p>
+                                                    </a>
+                                                    <span class="pa">56:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">游戏</h4>
+                                            <span class="fl">共<b>5</b>部视频</span>
+                                            <div class="button_more fr">更多</div>
+                                        </div>
+                                        <div class="video_list_container ">
+                                            <ul class=" clearfix">
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video1.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video1.jpg">
+                                                        <p>翼装飞行</p>
+                                                    </a>
+                                                    <span class="pa">102:00</span>
+                                                    <div class="video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video3.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video3.jpg" >
+                                                        <p>星战</p>
+                                                    </a>
+                                                    <span class="pa">52:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video11.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video11.jpg" >
+                                                        <p>未来体育</p>
+                                                    </a>
+                                                    <span class="pa">20:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video2.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video2.jpg" >
+                                                        <p>Invasion</p>
+                                                    </a>
+                                                    <span class="pa">24:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video15.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video15.jpg" >
+                                                        <p>Memories with Maya</p>
+                                                    </a>
+                                                    <span class="pa">120:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">场景</h4>
+                                            <span class="fl">共<b>5</b>部视频</span>
+                                            <div class="button_more fr">更多</div>
+                                        </div>
+                                        <div class="video_list_container ">
+                                            <ul class=" clearfix">
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video8.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video8.jpg">
+                                                        <p>洞穴</p>
+                                                    </a>
+                                                    <span class="pa">32:10</span>
+                                                    <div class="video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video10.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video10.jpg" >
+                                                        <p>世界风光</p>
+                                                    </a>
+                                                    <span class="pa">42:20</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video6.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video6.jpg" >
+                                                        <p>冰岛之旅</p>
+                                                    </a>
+                                                    <span class="pa">42:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video7.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video7.jpg" >
+                                                        <p>大溪地极限冲浪</p>
+                                                    </a>
+                                                    <span class="pa">32:10</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video4.jpg" >
+                                                        <p>过山车</p>
+                                                    </a>
+                                                    <span class="pa">120:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">旅游景区</h4>
+                                            <span class="fl">共<b>1</b>部视频</span>
+                                            <div class="button_more fr">更多</div>
+                                        </div>
+                                        <div class="video_list_container ">
+                                            <ul class=" clearfix">
+                                                <li class="fl pr" data-src="http://demo.sifang.com/2015/tht/">
+                                                    <a href="http://demo.sifang.com/2015/tht/">
+                                                        <img src="image/video.jpg">
+                                                        <p>桃花源风景区</p>
+                                                    </a>
+                                                    <div class="video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">其他</h4>
+                                            <span class="fl">共<b>5</b>部视频</span>
+                                            <div class="button_more fr">更多</div>
+                                        </div>
+                                        <div class="video_list_container">
+                                            <ul class=" clearfix">
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video5.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video5.jpg">
+                                                        <p>性感泳装女孩</p>
+                                                    </a>
+                                                    <span class="pa">45:00</span>
+                                                    <div class="video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video9.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video9.jpg" >
+                                                        <p>恐怖玩具熊</p>
+                                                    </a>
+                                                    <span class="pa">20:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video12.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video12.jpg" >
+                                                        <p>滑雪</p>
+                                                    </a>
+                                                    <span class="pa">36:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video4.jpg" >
+                                                        <p>牵线木偶</p>
+                                                    </a>
+                                                    <span class="pa">24:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video14.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video14.jpg" >
+                                                        <p>自由下坠</p>
+                                                    </a>
+                                                    <span class="pa">24:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--视频首页E-->
+                            <!--视频列表页S-->
+                            <div class="video_detail">
+                                <!--banner-->
+                                <section id="dg-container" class="dg-container">
+                                    <div class="dg-wrapper">
+                                        <a href="#"><img src="image/video_banner1.jpg" alt="image01"></a>
+                                        <a href="#"><img src="image/video_banner2.jpg" alt="image02"></a>
+                                        <a href="#"><img src="image/video_banner3.jpg" alt="image03"></a>
+                                    </div>
+                                    <!-- <nav class="pr">
+                                         <div class="pa clearfix">
+                                             <span class="dg-prev fl">上一个</span>
+                                             <span class="dg-next fl">下一个</span>
+                                         </div>
+                                     </nav>-->
+                                </section>
+                                <!--banner-->
+                                <ul class="detailListCon">
+                                    <li class="Selection list">
+                                        <div class="in_video_detail">
+                                            <div class="video_list_header clearfix">
+                                                <h4 class="fl">精选</h4>
+                                            </div>
+                                            <div class="video_detail_con">
+                                                <ul class="clearfix">
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video1.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video1.jpg" >
+                                                            <p>翼装飞行</p>
+                                                        </a>
+                                                        <span class="pa">102:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video4.jpg" >
+                                                            <p>过山车</p>
+                                                        </a>
+                                                        <span class="pa">42:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video3.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video3.jpg" >
+                                                            <p>星战</p>
+                                                        </a>
+                                                        <span class="pa">52:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video7.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video7.jpg" >
+                                                            <p>大溪地极限冲浪</p>
+                                                        </a>
+                                                        <span class="pa">32:10</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video2.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video2.jpg" >
+                                                            <p>Invasion</p>
+                                                        </a>
+                                                        <span class="pa">24:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video9.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video9.jpg" >
+                                                            <p>恐怖玩具熊</p>
+                                                        </a>
+                                                        <span class="pa">24:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video13.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video13.jpg" >
+                                                            <p>牵线木偶</p>
+                                                        </a>
+                                                        <span class="pa">56:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="game list">
+                                        <div class="in_video_detail">
+                                            <div class="video_list_header clearfix">
+                                                <h4 class="fl">游戏</h4>
+                                            </div>
+                                            <div class="video_detail_con">
+                                                <ul class="clearfix">
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video1.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video1.jpg">
+                                                            <p>翼装飞行</p>
+                                                        </a>
+                                                        <span class="pa">102:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video3.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video3.jpg" >
+                                                            <p>星战</p>
+                                                        </a>
+                                                        <span class="pa">52:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video11.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video11.jpg" >
+                                                            <p>未来体育</p>
+                                                        </a>
+                                                        <span class="pa">20:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video2.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video2.jpg" >
+                                                            <p>Invasion</p>
+                                                        </a>
+                                                        <span class="pa">24:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video15.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video15.jpg" >
+                                                            <p>Memories with Maya</p>
+                                                        </a>
+                                                        <span class="pa">120:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="scene list">
+                                        <div class="in_video_detail">
+                                            <div class="video_list_header clearfix">
+                                                <h4 class="fl">场景</h4>
+                                            </div>
+                                            <div class="video_detail_con">
+                                                <ul class="clearfix">
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video8.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video8.jpg">
+                                                            <p>洞穴</p>
+                                                        </a>
+                                                        <span class="pa">32:10</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video10.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video10.jpg" >
+                                                            <p>世界风光</p>
+                                                        </a>
+                                                        <span class="pa">42:20</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video6.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video6.jpg" >
+                                                            <p>冰岛之旅</p>
+                                                        </a>
+                                                        <span class="pa">42:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video7.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video7.jpg" >
+                                                            <p>大溪地极限冲浪</p>
+                                                        </a>
+                                                        <span class="pa">32:10</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video4.jpg" >
+                                                            <p>过山车</p>
+                                                        </a>
+                                                        <span class="pa">120:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="scene list">
+                                        <div class="in_video_detail">
+                                            <div class="video_list_header clearfix">
+                                                <h4 class="fl">旅游景区</h4>
+                                            </div>
+                                            <div class="video_detail_con">
+                                                <ul class="clearfix">
+                                                    <li class="fl pr" data-src="http://demo.sifang.com/2015/tht/">
+                                                        <a href="http://demo.sifang.com/2015/tht/">
+                                                            <img src="image/video.jpg">
+                                                            <p>桃花源风景区</p>
+                                                        </a>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="other list">
+                                        <div class="in_video_detail">
+                                            <div class="video_list_header clearfix">
+                                                <h4 class="fl">其他</h4>
+                                            </div>
+                                            <div class="video_detail_con">
+                                                <ul class="clearfix">
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video5.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video5.jpg">
+                                                            <p>大灾难逃离地球</p>
+                                                        </a>
+                                                        <span class="pa">45:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video9.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video9.jpg" >
+                                                            <p>恐怖玩具熊</p>
+                                                        </a>
+                                                        <span class="pa">20:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video12.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video12.jpg" >
+                                                            <p>滑雪</p>
+                                                        </a>
+                                                        <span class="pa">36:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video4.jpg" >
+                                                            <p>牵线木偶</p>
+                                                        </a>
+                                                        <span class="pa">24:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                    <li class="fl pr" data-src="http://dev.vronline.com/Video/Video14.mp4">
+                                                        <a href="javascript:;">
+                                                            <img src="image/video14.jpg" >
+                                                            <p>自由下坠</p>
+                                                        </a>
+                                                        <span class="pa">24:00</span>
+                                                        <div class="min_video_videoBtn"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--视频列表页E-->
+                            <!--视频历史记录S-->
+                            <div class="video_history_con">
+                                <ol>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">今天</h4>
+                                        </div>
+                                        <div class="video_detail_con">
+                                            <ul class="clearfix">
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video1.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video1.jpg" >
+                                                        <p>翼装飞行</p>
+                                                    </a>
+                                                    <span class="pa">102:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video4.jpg" >
+                                                        <p>过山车</p>
+                                                    </a>
+                                                    <span class="pa">42:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video3.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video3.jpg" >
+                                                        <p>星战</p>
+                                                    </a>
+                                                    <span class="pa">52:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">一周内</h4>
+                                        </div>
+                                        <div class="video_detail_con">
+                                            <ul class="clearfix">
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video5.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video5.jpg">
+                                                        <p>大灾难逃离地球</p>
+                                                    </a>
+                                                    <span class="pa">45:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video9.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video9.jpg" >
+                                                        <p>恐怖玩具熊</p>
+                                                    </a>
+                                                    <span class="pa">20:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video12.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video12.jpg" >
+                                                        <p>滑雪</p>
+                                                    </a>
+                                                    <span class="pa">36:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video4.jpg" >
+                                                        <p>牵线木偶</p>
+                                                    </a>
+                                                    <span class="pa">24:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="video_list_header clearfix">
+                                            <h4 class="fl">更早</h4>
+                                        </div>
+                                        <div class="video_detail_con">
+                                            <ul class="clearfix">
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video10.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video10.jpg" >
+                                                        <p>世界风光</p>
+                                                    </a>
+                                                    <span class="pa">42:20</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video6.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video6.jpg" >
+                                                        <p>冰岛之旅</p>
+                                                    </a>
+                                                    <span class="pa">42:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video7.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video7.jpg" >
+                                                        <p>大溪地极限冲浪</p>
+                                                    </a>
+                                                    <span class="pa">32:10</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                                <li class="fl pr" data-src="http://dev.vronline.com/Video/Video4.mp4">
+                                                    <a href="javascript:;">
+                                                        <img src="image/video4.jpg" >
+                                                        <p>过山车</p>
+                                                    </a>
+                                                    <span class="pa">120:00</span>
+                                                    <div class="min_video_videoBtn"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                            <!--视频历史记录E-->
+                            <!--视频播放器S-->
+                            <div class="video_play">
+                                <!--<div class="valiantPhoto pr" data-video-src="" style="width: 960px; height: 540px; background: #000;" clickAndDrag=1  >
+                                    <div class="pa video_btn video_btn_play hide"></div>
+                                    &lt;!&ndash;<input type="file" class="add_local_video pa" style="z-index: 999999999; opacity: 0;" name="filename">&ndash;&gt;
+                                    <div class="add_local_video pa language" data-name="open_local">打开文件</div>
+                                </div>-->
+                                <div class="valiantPhoto " data-video-src="" style="width: 480px; height: 380px; position:relative">
+                                    <!-- <video id="myVideo" controls preload="auto" style="width: 480px; height: 380px;" ></video> -->
+                                </div>
+                                <div class="in_video_information">
+                                    <div class="video_content">
+                                        <div class="video_content_head clearfix">
+                                            <h4 class="fl">Tom Clancy's</h4>
+                                            <div class="fr pr unlike"><b>333</b></div>
+                                            <div class="fr pr like"><b>111</b></div>
+                                            <p class="fr clearfix"><b class="fl">970</b><i class="fl">次观看</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="video_intro">
+                                        这是一部超级有趣的vr视频，开心就好啦
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--视频播放器E-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pa store_bg"></div>
+        </div>
+        <!--右侧视频E-->
+    </div>
+    <!--内容S-->
+    <!--驱动S-->
+    <!--驱动E-->
+    <!--拖拽S-->
+    <div class="list_drag_con">
+        <div class="list_drag"></div>
+    </div>
+
+    <!--拖拽E-->
+</div>
+</body>
+</body>
+</html>
+<script>
+    data0 = [
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },{
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            },
+            {
+                'game_id':'3',
+                'status':'0',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            }
+        ];
+    data1= [
+            {
+                'game_id':'1',
+                'title':'全民奇迹',
+                'imgSrc':'image/list_img.jpg',
+                'tag':["射击","单击"]
+            }
+        ];
+    data2= [
+            {
+                'game_id':'7',
+                'statue':'0',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            },
+             {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            },
+             {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            },
+             {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            },
+             {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            },
+             {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            },
+             {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            }
+            , {
+                'game_id':'7',
+                'state':'new',
+                'imgSrc':'image/list-bg.jpg',
+                'title':'全民奇迹',
+                'type':['mac','window']
+            }
+        ];
+    data2222= [
+        {
+            'game_id':'7',
+            'state':'0',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        },
+        {
+            'game_id':'7',
+            'state':'1',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        },
+        {
+            'game_id':'7',
+            'state':'1',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        },
+        {
+            'game_id':'7',
+            'state':'0',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        },
+        {
+            'game_id':'7',
+            'state':'1',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        },
+        {
+            'game_id':'7',
+            'state':'0',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        },
+        {
+            'game_id':'7',
+            'state':'1',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        }
+        , {
+            'game_id':'7',
+            'state':'0',
+            'imgSrc':'image/list-bg.jpg',
+            'title':'全民奇迹',
+            'type':['mac','window']
+        }
+    ];
+    data3=[
+            {
+                'game_id':'0',
+                'title':'1',
+                'score':'7.5',
+                'people_num':'888',
+                'background':'',
+                'bigImg':['image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg'],
+                'miImg':['image/video-bg.jpg','image/detail-list.jpg','image/video-bg.jpg',,'image/video-bg.jpg',,'image/video-bg.jpg'],
+                'introduction':'我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。在黑色星期五——一种毁坏性的流行病席卷了整个纽约，基础设施接二连三地慢慢瘫痪。在短短几天内，失去生活必需品的整个社会陷入了混乱。',
+                'support':['大鹏','HTC'],
+                'message':['Windows 7','处理器','内存','v.10','3.2'],
+                'mini_message':['Windows 8','处理器','内存','v.10','3.2']
+            }
+        ]
+    data4=[
+            {
+                'game_id':'7',
+                'title':'1',
+                'score':'7.5',
+                'people_num':'888',
+                'bigImg':['image/video-bg.jpg','image/detail-list.jpg','image/detail-list.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg'],
+                'miImg':['image/video-bg.jpg','image/detail-list.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg','image/video-bg.jpg'],
+                'introduction':'简介我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。',
+                'support':['大鹏','HTC'],
+                'message':['Windows 7','处理器','内存','v.10','3.2'],
+                'mini_message':['Windows 8','处理器','内存','v.10','3.2']
+            }
+        ];
+    data5 =[
+            {
+                'game_id':'7',
+                'status':'1',
+                'percent':'10',
+                'title':'蜀山传奇','imgSrc':'image/list_img.jpg','tag':["射击","单击"]
+            }
+        ];
+    data6 =[
+            {
+                'add_head':'驱动',
+                'title':'驱动名称',
+                'explain':'我们生于一个复杂的世界，她越先进，就会变得越易受攻击。我们创造了一个纸牌之屋：只需拿走一张纸牌，便全盘坍塌。在黑色星期五——一种毁坏性的流行病席卷了整个纽约，基础设施接二连三地慢慢瘫痪。在短短几天内，失去生活必需品的整个社会陷入了混乱。',
+                'percent':'10'
+            }
+        ];
+    data7 =[
+            {
+                'percent':'90'
+            }
+        ];
+
+    //数据详情下载更新
+    data8 = [
+            {
+                'game_id':'1',
+                'status':'1', //状态  0未下载 ； 1正在下载 ； 2下载完成；
+                'speed':'10', //下载了百分之十；
+                'residue':'2.4',//剩余量
+                'percent':'10',
+                'text':''
+            }
+        ];
+    data9 = [
+            {
+                'title':'驱动',
+            }
+        ];
+    data10 = [
+            {
+                'state':'0'
+            }
+        ];
+    data11 = {
+            'deleteLocalName':'删除本地',
+            'manage_delete':'删除',
+            'deleteSure':'delete',
+            'game_title': 'dddddd',
+            'drive_title': '(驱动)',
+            'manage_set': 'set',
+            'install': 'inst',
+            'system':'xxx',
+            'os':'os',
+            'vo_agreement':'《维奥相关用户协议》',
+            'in_game':'游戏中',
+            'Chinese':'中文',
+            'English':'英文',
+            'amend':'浏览',
+            'open':'打开'
+        };
+    data12={
+        'languageState':2052,
+        'selected':1,
+        'miniSelected':1,
+        'dir':'D:/'
+    };
+    data13 =[{
+        'imgSrc':'image/touxiang.jpg',
+        'title':'驰车',
+        'content':'世界上没有rpg解决不了的事情',
+        'time':'2016年4月24日',
+        'gameTime':'0',
+        'like':'100',
+        'unlike':'200'
+    },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'time':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        },
+        {
+            'imgSrc':'image/touxiang.jpg',
+            'title':'驰车',
+            'content':'世界上没有rpg解决不了的事情',
+            'commentTime':'2016年4月24日',
+            'gameTime':'0',
+            'like':'100',
+            'unlike':'200'
+        }
+
+    ]
+</script>
+<script src="js/index.js"></script>
+<script>
+    $(function() {
+        $('#dg-container').gallery();
+    });
+</script>

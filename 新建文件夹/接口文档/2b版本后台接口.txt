@@ -1,0 +1,73 @@
+
+html5==>pc
+
+window.CppCall('frametype', 'action', 'json');
+
+
+frametype:	'gamelistframe'
+
+action			| 描述				| json
+
+-------------------------------------------------------------------------------------
+'getgamesstatus'	获取游戏状态			[{'gameid': 1001, 'ver': 1246867389},{'gameid': 1002, 'ver': 1246867389}]
+
+'insfuncclicked'	安装，更新，暂停，继续功能按钮	{'gameid':1001}
+
+'batchinstall'		批量安装
+'batchupdate'		批量更新
+'batchsync'		批量同步
+
+'getdowninfo'		获取所有安装过没安装完的游戏信息
+
+'deleteinstall'		删除安装			{'gameid' : 1001, 'isdellocal': 1}
+
+
+=======================================================================================================
+
+pc==>html5
+
+mainFn.interface('module','fn','data')
+
+module: 	'list'
+
+action				| 描述			| json
+
+-----------------------------------------------------------------------------------------------------------------
+
+'gamesstatusres'		获取游戏状态返回	[{'gameid': 1001, 'status': 0},{'gameid': 1002, 'status': 1}]
+				10:已经安装0:安装1:更新2:等待中
+				
+					
+'updategamestatus'		更新游戏状态		{'gameid':1001,'status':4}
+				3:安装中4:更新中
+
+				
+'updatedownloadstatus'		更新下载状态		{'gameid':1001,'status':0}
+				0::暂停1:下载中2:下载成功 3下载失败
+
+'updategameinstallprogress'	游戏安装进度信息	{'gameid':1001, 'pos': 20, 'txt': '正在下载：速度1M/s'}
+
+
+//下载管理
+'updategameinstallresult'	游戏安装结束状态信息	{'gameid' : 1001, 'txt': '安装成功'}
+
+'gamedowninfores'		游戏下载信息返回	[{'gameid':1001,'pos':10},{'gameid':1002,'pos':20}]
+
+		
+"updategamedowninstallprogres"   下载管理更新进度	{}
+
+
+module  'main_panel'
+
+tipsWindow                      公共弹框		{
+								msg:['','']或msg:'',
+								icon:''(true,false  成功失败调用)，
+								loading:''
+								buttons：[{btnTxt:'确定','callback':'func1'},{btnTxt:'重连','callback':'func2'}]	
+							}
+	
+
+
+
+
+

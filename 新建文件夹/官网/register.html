@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>官网注册</title>
+    <link rel="stylesheet" href="../../../pic/common/style/base.css">
+	<link rel="stylesheet" href="../../../pic/website/style/headeFooter.css"/>
+	<link rel="stylesheet" href="../../../pic/website/style/VRhome.css" />
+	<!--new 2016-10-23 qb-->
+	<script src="js/html5shiv.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- new-2016-10-17 对于IE 10 以下版本placeholder的兼容性调整 -->
+	<!--[if lt IE 10]>
+	<script>
+		$(function(){
+			
+			$("input[type!='password'],textarea").bind({
+				"focus":function(){
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==placeholderVal){
+						$(this).val("");
+					}
+				},
+				"blur":function(){
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==""){
+						$(this).val(placeholderVal);
+					}
+				}
+			});
+			
+			$("input[type!='password'],textarea").each(function(i,n){
+				$(this).val($(this).attr("placeholder"));
+			});
+			
+			
+			$("input[type='password']").bind({
+				"focus":function(){			
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==placeholderVal){
+						var copy_this = $(this).clone(true,true);
+						$(copy_this).attr("type","password");
+						$(copy_this).insertAfter($(this));
+						$(this).remove();				
+						$(copy_this).val("");
+						$(copy_this).focus();
+					}
+				},
+				"blur":function(){			
+					var placeholderVal = $(this).attr("placeholder");
+					var realVal = $(this).val();
+					if($.trim(realVal)==""){
+						var copy_this = $(this).clone(true,true);
+						$(copy_this).attr("type","text");
+						$(copy_this).insertAfter($(this));
+						$(this).remove();				
+						$(copy_this).val(placeholderVal);
+					}
+				}
+			});
+			
+			$("input[type='password']").each(function(i,n){
+				var placeHolderVal = $(this).attr("placeholder");
+				var copy_this = $(this).clone(true,true);
+				$(copy_this).attr("type","text");
+				$(copy_this).insertAfter($(this));
+				$(this).remove();
+				$(copy_this).val(placeHolderVal);				
+			});
+		});
+	</script>
+	<![endif]-->
+</head>
+<body>
+<header>
+	<div class='top clearfloat'>
+		<div class='fl left'>
+			<img src='../../../pic/website/images/logo.png' />
+			<a class='sy' href="javascript:;">首页</a>
+			<a href="javascript:;">充值</a>
+			<a href="javascript:;">关于VRonline</a>
+		</div>
+		<div class='fr right clearfix'>
+			<a class='fl blue' href='javascript:;'>安装VR客户端</a>
+			<a class='login' href="javascript:;">登录</a>
+			<!------------------------new 2016-10-14----------------------------------------->
+			<!--new 2016-10-19 qb 语言暂时先不要-->
+			<a class='language clearfix hide' href="javascript:;">
+				<span>语言</span>
+				<div class="change_language">
+					<p class="chinese">中文</p>
+					<p>英文</p>
+				</div>
+			</a>
+			<!----------------------------new 2016-10-14--以下注释的代码登录之后的样式---------------------------->
+			<div class='fr login_user hide'>
+				<div class="clearfix">
+					<span class="user_pic fl">
+						<img src='' />
+					</span>
+					<div class="fl user_detail clearfix">
+						<!--new 2016-10-19 qb-->
+						<h3>DaveheDavehe<span></span></h3>
+						<div class="grade clearfix">
+							<span class="fl level2"></span>
+							<span class="fl level_num">2345</span>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<!--new 2016-10-19 qb-->
+					<li class="geren"><a href="javascript:;"><span></span>个人中心</a></li>
+					<!--<li class="change"><a href="javascript:;"><span></span>更改语言</a></li>-->
+					<li class="switch"><a href="javascript:;"><span></span>切换账户</a></li>
+					<li class="quit"><a href="javascript:;"><span></span>退出</a></li>
+				</ul>
+			</div>
+			<!----------------------------new 2016-10-14------------------------------>
+		</div>
+	</div>
+</header>
+<div class="sec_nav" style="margin-top:92px;">
+	<div class="nav clearfloat">
+		<ul class='fl clearfloat'>
+			<li class="fl">
+				<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+				<a href="javascript:;"><span>VR游戏</span></a>
+				<div class='con block'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+			<li class="fl">
+				<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+				<a href="javascript:;"><span>多媒体</span></a>
+				<div class='con'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+			<li class="fl">
+				<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+				<a href="javascript:;"><span>网页游戏</span></a>
+				<div class='con'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+			<li class="fl">
+				<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+				<a href="javascript:;"><span>设备支持</span></a>
+				<div class='con'>
+					<a href='javascript:;'>全景VR</a>
+					<a href='javascript:;'>游戏视频</a>
+					<a href='javascript:;'>风景名胜</a>
+				</div>
+			</li>
+		</ul>
+		<!--<div class='search fr'>
+			<input class='txt' type='text' placeholder="请输入游戏名称" />
+			<input type='submit' value='' class='sub' />
+		</div>-->
+	</div>
+</div>
+<div class="login_container">
+    <div class="login_con clearfix fl tac register_con mar0">
+        <h4 class="blueColor2 f18 tal">账号注册</h4>
+        <p>
+            <label class="pr">
+                <span>账号名称</span>
+                <i class="pa"></i>
+                <input type="text" placeholder="输入账号名称" name="accountnum">
+                <span class="erro_msg pa errorColor tal pr f12" ><i class="pa"></i><b>错误</b></span>
+            </label>
+        </p>
+        <p>
+            <label class="pr">
+                <span>输入密码</span>
+                <i class="pa pwd_icon"></i>
+                <input type="password" class="loginPassword" placeholder="输入密码" name="loginPassword">
+                <span class="erro_msg pa errorColor tal pr f12"><i class="pa"></i><b>错误</b></span>
+            </label>
+        </p>
+        <p>
+            <label class="pr">
+                <span>确认密码</span>
+                <i class="pa pwd_icon"></i>
+                <input type="password" placeholder="确认密码" name="checkLoginPassword">
+                <span class="erro_msg pa errorColor tal pr f12"><i class="pa"></i><b>错误</b></span>
+            </label>
+        </p>
+        <p>
+            <label class="pr">
+                <span>验证码</span>
+                <i class="pa yzm"></i>
+                <input type="password" placeholder="输入验证码">
+                <img src="../../../pic/website/images/" class="pa">
+                <span class="erro_msg pa errorColor tal pr f12"><i class="pa"></i><b>错误</b></span>
+            </label>
+        </p>
+        <!--new2016-10-18-->
+        <p class="check">
+        	<i class="sel pa"></i><span>我已阅读并同意<a href="user_agreement.html" target="_blank">《VRonline用户协议》</a></span>
+        </p>
+        <!--new2016-10-18-->
+        <p  class="btn f16">提交</p>
+        <p class="has_aco">
+            <span class="f12">
+                已有账号？<a href="javascript:;" class="blueColor2">马上登录</a>
+            </span>
+        </p>
+    </div>
+    <!--注册成功-->
+    <div class="login_con clearfix fl tac suc_register">
+        <h4 class="blueColor2 f16 pr"><i class="pa"></i>注册成功</h4>
+        <p class="f12">恭喜你，您的账号注册成功</p>
+        <p class="f12">系统不将在<b class="blueColor2 ">5</b>秒内，自动跳转到首页</p>
+        <p  class="btn f16 login_immediately">立即登录</p>
+    </div>
+    <div class="download_vr fr tac">
+        <p class="f16 title">专注于VR内容的综合性开放平台</p>
+        <p class="img_box"></p>
+        <p class="f16 btn">安装VR客户端</p>
+    </div>
+</div>
+<footer>
+	<div class='foot'>
+		<img src="../../../pic/website/images/logo.png" />
+		<div class="aboutUS">
+			<a href="javascript:;">关于VRonline</a>
+			<a href="javascript:;">关于恺英</a>
+			<a href="javascript:;">联系我们</a>
+			<a href="javascript:;">商务合作</a>
+			<a class='none' href="javascript:;">我是开发者</a>
+		</div>
+		<!-------------------------------new2016-10-14---------------------------------->
+		<div class="hide">
+			<span>友情链接：</span> 
+			<a href="javascript:;">OculusRift贴吧</a>
+			<a href="javascript:;">妖界VRVR</a>
+			<a href="javascript:;">345导航</a>
+			<a href="javascript:;">VR科技网</a>
+			<a href="javascript:;">一起爱VR</a>
+			<a href="javascript:;">VR玩家</a>
+			<a href="javascript:;">智壹VR网</a>
+			<a href="javascript:;">07073VR</a>
+			<a href="javascript:;">VR眼镜vr论坛</a>
+			<a href="javascript:;">vv麦逗VR</a>
+			<a href="javascript:;">VR专业导航网站</a>
+			<a class='none' href="javascript:;">高手VR</a>
+		</div>
+		<!-------------------------------new2016-10-14---------------------------------->
+		<div style="width:300px;margin:0 auto; " >
+ 			<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202001649" style="border:0;display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../../pic/website/images/pl.png" style="float:left;"/><p  class=""  style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; ">沪公网安备 31011202001649号</p></a>
+ 		</div>
+		<p>
+			<span>沪网文[2013]0667-082</span>
+			<span>沪ICP备16034129号-1</span>
+			<span>文化部网络游戏举报和联系电子邮箱:</span>
+			<a href="Mailto:wlyxjb@gmail.com" style="border: none;">wlyxjb@gmail.com</a>
+		</p>
+		<!------------------new-2016-10-11------------->
+		<p>
+			<span>Copyright&copy;2008-2015 vronline.com All Rights Reserved</span>
+			<span>上海恺英网络科技有限公司 版权所有</span>
+		</p>
+		<!-------------------------------new2016-10-14---------------------------------->			
+	</div>
+</footer>
+</body>
+</html>
+
+
+<script>
+    $(function(){
+        //失去焦点
+        //注册失去焦点
+        $('.register_con input').each(function(){
+            $(this).blur(function () {
+                var errmsg = register_check(this);
+                var valid = $(this).siblings(".erro_msg");
+                if(errmsg !== ''){
+                    valid.show().find('b').html(errmsg);
+                    $(this).css('border-color','#c83434')
+                }else{
+                    valid.hide().find('b').html('');
+                    $(this).css('border-color','#828f9e')
+                }
+            });
+        });
+        //注册检测
+        function register_check(e){
+            var o =$(e);
+            var value = $.trim(o.val());
+            var errmsg = '';
+            var name = o.attr('name');
+            switch (name){
+                case 'accountnum':
+                    if (value == "") {
+                        errmsg = "昵称不能为空";
+                        break;
+                    }
+                    var rs=/^[a-zA-Z\u4E00-\u9FA50-9][a-zA-Z\u4E00-\u9FA50-9_]*$/;
+                    if (!rs.test(value)) {
+                        errmsg="只允许中英文、数字、下划线，且不能以下划线开头"
+                        break;
+                    }
+                    var a =value.length;
+                    if (value.match(/[^\x00-\xff]/ig) != null) {
+                        var b = value.match(/[^\x00-\xff]/ig).length;
+                        a = a + b * 2
+                    }
+                    if (a < 6 || a > 18) {
+                        errmsg = "昵称长度只能6~18个字符";
+                        break;
+                    }
+                    break;
+                case 'loginPassword':
+                    if (value == "") {
+                        errmsg = "密码不能为空";
+                        break;
+                    }
+                    if (value.length<6 || value.length>16) {
+                        errmsg ="输入6-16位密码";
+                        break;
+                    }
+                    break;
+                case 'checkLoginPassword':
+                    if(value == ''){
+                        errmsg = '密码不能为空';
+                        break;
+                    }
+                    if(value != $('.loginPassword').val()){
+                        errmsg = '两次密码不同';
+                        break;
+                    }
+                    break;
+                case 'verifyCode':
+                    if (value == "") {
+                        errmsg = "验证码不能为空" ;
+                        break;
+                    }
+            }
+            return errmsg;
+        };
+
+        //点击注册提交提示注册成功
+        $('.register_con').on('click','.btn',function(){
+            $(this).parents('.register_con').hide().siblings('.suc_register').show();
+            countdownFn();
+        });
+        //注册成功倒计时
+        function countdownFn(){
+            var countdownnum = 5;
+            function countdown(){
+                if(countdownnum == 0){
+                    //window.location.href = 'http://www.vronline.com'
+                }else{
+                    countdownnum--;
+                    $('.suc_register').find('b').text(countdownnum);
+                }
+            }
+            setInterval(function(){
+                countdown();
+            },1000);
+            //点击立即登录
+            $('.suc_register').on('click','.login_immediately',function(){
+                //window.location.href = 'http://www.vronline.com'
+            })
+        }
+		
+		
+		//导航条     
+		$('.nav ul li').each(function(){
+			$(this).mouseover(function(){
+				$(this).children('.con').show();	
+			});
+			$(this).mouseout(function(){
+				$(this).children('.con').hide();
+			})
+		});
+    })
+</script>

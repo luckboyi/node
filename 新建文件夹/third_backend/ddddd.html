@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第三方后台</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/personal_center.css">
+    <link rel="stylesheet" href="style/jason.css">
+    <link rel="stylesheet" href="style/cikonss.css">
+</head>
+<body>
+<!--侧边栏S-->
+<div class="siderbar tac wordColor">
+    <a href="javascript:;"></a>
+    <ul>
+        <li class="cur pr"><i></i>基本资料</li>
+        <li class="pr "><i class="bank"></i>银行账号</li>
+    </ul>
+</div>
+<!--侧边栏E-->
+<!--顶部栏S-->
+<div class="personal_header clearfix">
+    <div class="nav_con fl">
+        <ul class="clearfix">
+            <li class="fl"><a href="javascript:;">首页</a></li>
+            <li class="fl"><a href="javascript:;">产品列表</a></li>
+            <li class="fl"><a href="javascript:;">数据查询</a></li>
+            <li class="fl"><a href="javascript:;">产品审核</a></li>
+        </ul>
+    </div>
+    <div class="login_con fr clearfix">
+            <span class="fl">
+                <img src="images/list_img.jpg">
+            </span>
+        <p class="fl">name</p>
+    </div>
+
+</div>
+<!--顶部栏E-->
+<!--内容-->
+<div class="container">
+    <div class="in_con">
+        <h4 class="f14">产品详情</h4>
+        <div class="content product-detail pr">
+            <p>
+                <span class="product-title">name4</span>
+                <span class="product-id">产品ID：104</span>
+                <span class="product-status success"><i></i>等待审核</span>
+            </p>
+            <p>
+                <span>创建时间：2019-09-21 17:30:17</span>
+                <span class="product-status fail"><i></i>未上线</span>
+            </p>
+            <p class="pa sub_btn">
+                <span class="pass">通过</span>
+                <span class="reject">驳回</span>
+            </p>
+        </div>
+    </div>
+    <div class="in_con">
+        <h4 class="f14 clearfix pr">
+            <span class="">产品详情</span>
+            <span class=" pa nav">
+                <i>开发者协议</i>
+                <i class="cur">开发者协议</i>
+            </span>
+        </h4>
+        <div class="content product-detail product-detail-info">
+            <div class="product-row clearfix">
+                <p class="clearfix">
+                    <span class="title fl">产品名称：</span>
+                    <span>name4</span>
+                </p>
+               <p class="clearfix">
+                   <span class="title fl">公司名称：</span>
+                   <span>上海恺英网络科技有限公司</span>
+               </p>
+                <p class="clearfix">
+                    <span class="title fl">产品类型：</span>
+                    <span>策略</span>
+                </p>
+                <p class="clearfix">
+                    <span class="title fl">产品简介：</span>
+                    <span class="desc"></span>
+                </p>
+            </div>
+            <div class="product-row clearfix">
+                <p class="clearfix">
+                    <span class="title fl">游戏图标：</span>
+                    <span>在热门游戏以及游戏列表显示</span>
+                </p>
+                <div class="pic-con clearfix ">
+                    <div class="pic fl pr">
+                        <span class="pic-icon"></span>
+                        <span class="pic-txt">320*180 JPG</span>
+                        <img src="images/list_img.jpg" class="pa" height="auto" width="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="product-row clearfix">
+                <p class="clearfix">
+                    <span class="title fl">游戏历史：</span>
+                    <span>在历史游戏中显示的图标，建议与游戏图标相同</span>
+                </p>
+                <div class="pic-con clearfix ">
+                    <div class="pic fl">
+                        <span class="pic-icon"></span>
+                        <span class="pic-txt">320*180 JPG</span>
+                        <img src="images/list_img.jpg" class="pa" height="auto" width="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="product-row clearfix">
+                <p class="clearfix">
+                    <span class="title fl">详情轮播图：</span>
+                    <span>在游戏中轮播的图标</span>
+                </p>
+                <div class="pic-con clearfix ">
+                    <div class="pic fl">
+                        <span class="pic-icon"></span>
+                        <span class="pic-txt">320*180 JPG</span>
+                        <img src="" class="pa" height="auto" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="side">
+	<ul>
+		<li class="qq">
+			<a href="javascript:;">
+				<span></span>
+				<p>技术支持</p>
+				<img src="images/helper.png" />
+			</a>
+		</li>
+		<li class="VRgame">
+			<a href="javascript:;">
+				<span></span>
+				<p>VR游戏SDK</p>
+			</a>
+		</li>
+		<li class="webgame">
+			<a href="javascript:;">
+				<span></span>
+				<p>网页游戏SDK</p>
+			</a>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
+
+
+
+<script>
+    //通过
+    $('.sub_btn .pass').on('click',function(){
+        $.ajax({
+            url:'',
+            async:true,
+            type:'POST',
+            dataType:'json',
+            data:'',
+            success: function(data){
+
+            },
+            error:function(){
+
+            }
+        })
+    });
+    //驳回
+    $('.sub_btn .reject').on('click',function(){
+        $.ajax({
+            url:'',
+            async:true,
+            type:'POST',
+            dataType:'json',
+            data:'',
+            success: function(data){
+
+            },
+            error:function(){
+
+            }
+        })
+    });
+</script>

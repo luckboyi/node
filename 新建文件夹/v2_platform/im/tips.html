@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/im.css">
+    <script src="../js/plug/jquery-1.11.3.min.js"></script>
+    <script src="../js/plug/tinyscrollbar.js"></script>
+    <script src="js/tool/vue.js"></script>
+</head>
+<body>
+    <div class="tips_con" id="delete_tips">
+        <div class="msg_con tac" user-id="uid">
+            <p>确定删除好友“{{name}}”</p>
+        </div>
+        <div class="btn_con tac">
+            <ul class="clearfix">
+                <li class="fl" @click="sureFn">确定</li>
+                <li class="fl" @click="cancelFn">取消</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/component/delete.js"></script>
+<script src="js/tool/imInterface.js"></script>

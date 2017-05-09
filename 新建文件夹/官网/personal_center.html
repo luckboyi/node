@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="http://pic.vronline.com/common/style/base.css">
+	<link rel="stylesheet" href="http://pic.vronline.com/website/style/headeFooter.css"/>
+	<link rel="stylesheet" href="../../../pic/website/style/VRhome.css" />
+	<!--new 2016-10-23 qb-->
+	<script src="js/html5shiv.js"></script>
+    <!--new 2016-10-17 新增加jquery-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<!-------------------new 2016-10-12---------------------->
+	<header>
+		<div class='top clearfloat'>
+			<div class='fl left'>
+				<img src='../../../pic/website/images/logo.png' />
+				<a class='sy' href="javascript:;">首页</a>
+				<a href="javascript:;">充值</a>
+				<a href="javascript:;">关于VRonline</a>
+			</div>
+			<div class='fr right clearfix'>
+				<a class='fl blue' href='javascript:;'>安装VR客户端</a>
+				<a class='login' href="javascript:;">登录</a>
+				<!------------------------new 2016-10-14----------------------------------------->
+				<!--new 2016-10-19 qb 语言暂时先不要-->
+				<a class='language clearfix hide' href="javascript:;">
+					<span>语言</span>
+					<div class="change_language">
+						<p class="chinese">中文</p>
+						<p>英文</p>
+					</div>
+				</a>
+				<!----------------------------new 2016-10-14--以下注释的代码登录之后的样式---------------------------->
+				<div class='fr login_user hide'>
+					<div class="clearfix">
+						<span class="user_pic fl">
+							<img src='' />
+						</span>
+						<div class="fl user_detail clearfix">
+							<!--new 2016-10-19 qb-->
+							<h3>DaveheDavehe<span></span></h3>
+							<div class="grade clearfix">
+								<span class="fl level2"></span>
+								<span class="fl level_num">2345</span>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<!--new 2016-10-19 qb-->
+						<li class="geren"><a href="javascript:;"><span></span>个人中心</a></li>
+						<!--<li class="change"><a href="javascript:;"><span></span>更改语言</a></li>-->
+						<li class="switch"><a href="javascript:;"><span></span>切换账户</a></li>
+						<li class="quit"><a href="javascript:;"><span></span>退出</a></li>
+					</ul>
+				</div>
+				<!----------------------------new 2016-10-14------------------------------>
+			</div>
+		</div>
+	</header>
+	<!--new 2016-10-17-->
+	<div class="sec_nav" style='padding-top:20px;'>
+		<div class="nav clearfloat" style='margin-top:0;'>
+	<!--new 2016-10-17-->
+			<ul class='fl clearfloat'>
+				<li class="fl">
+					<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+					<a href="javascript:;"><span>VR游戏</span></a>
+					<div class='con block'>
+						<a href='javascript:;'>全景VR</a>
+						<a href='javascript:;'>游戏视频</a>
+						<a href='javascript:;'>风景名胜</a>
+					</div>
+				</li>
+				<li class="fl">
+					<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+					<a href="javascript:;"><span>多媒体</span></a>
+					<div class='con'>
+						<a href='javascript:;'>全景VR</a>
+						<a href='javascript:;'>游戏视频</a>
+						<a href='javascript:;'>风景名胜</a>
+					</div>
+				</li>
+				<li class="fl">
+					<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+					<a href="javascript:;"><span>网页游戏</span></a>
+					<div class='con'>
+						<a href='javascript:;'>全景VR</a>
+						<a href='javascript:;'>游戏视频</a>
+						<a href='javascript:;'>风景名胜</a>
+					</div>
+				</li>
+				<li class="fl">
+					<!----------------------------new 2016-10-14 span外面包个a------------------------------>
+					<a href="javascript:;"><span>设备支持</span></a>
+					<div class='con'>
+						<a href='javascript:;'>全景VR</a>
+						<a href='javascript:;'>游戏视频</a>
+						<a href='javascript:;'>风景名胜</a>
+					</div>
+				</li>
+			</ul>
+			<!--<div class='search fr'>
+				<input class='txt' type='text' placeholder="请输入游戏名称" />
+				<input type='submit' value='' class='sub' />
+			</div>-->
+		</div>
+	</div>
+	<!-------------------new 2016-10-12---------------------->
+    <div class="personal_center clearfix official_personal_center">
+        <div class="left_per fl">
+            <ul>
+                <li class="pr cur userMsg"><a href="javascript:;">用户资料</a></li>
+                <li class="pr my_video"><a href="javascript:;">我的视频</a></li>
+                <li class="pr problem"><a href="javascript:;">常见问题</a></li>
+                <li class="pr problem about_vr"><a href="javascript:;">关于VR</a></li>
+            </ul>
+        </div>
+        <div class="right_per " >
+            <div class=" pr  ">
+                <ul class="in_right_per ">
+                    <!--用户资料S-->
+                    <li class="list_con user_msg cur">
+                        <div class="user_header">
+                            <p class="pr img_con">
+                                <img src="../../../pic/website/images/list_img.jpg" >
+                                <i class="edit pa"></i>
+                            </p>
+                            <p class="title">David</p>
+                            <div class="clearfix submit_msg pr">
+                                <i></i>
+                                <p class="fl">最近一次登录:</p>
+                                <span class="fl month">08/29</span>
+                                <!--new 2016-10-13-->
+                                <span class="fl">16:16</span>
+                                <!--new 2016-10-13-->
+                                <span class="fl country">中国</span>
+                            </div>
+                        </div>
+                        <div class="user_con">
+                            <ul class="clearfix">
+                                <li>
+                                    <h4>基础资料：</h4>
+									<p class="clearfix">
+										<span class="fl">昵称</span>
+										<input id="nick" type="text" class="fl" value="33333444">
+										<span class="fr save_btn" id="btnNick">保存</span>
+									</p>
+                                </li>
+                                <li>
+                                    <h4 class="icon pr"><!-- <i></i> -->账号安全：<span class="errorColor" style="display: none;">建议您完善您的账户资料,账户更安全！</span><!-- <p class="tips pa user_tips"> --><!-- 温馨提示：建议您完善您的账户资料，账号更安全！</p> --></h4>
+                                    <p class="clearfix">
+										<span class="fl">平台账号</span>
+										<span class="fl name" id="accountName">test123</span>
+									</p>
+									<p class="clearfix">
+										<span class="fl icon pr"><i id="signMobile"></i>绑定手机：<span class="tips pa phone_tips" id="signMobile2" style="display: none;">检测到您的账号还没有绑定手机，为了提高账号安全和密码找回，请及时进行手机绑定！</span></span>
+										<span class="fl" id="bindMobile" for="">你的账户未绑定手机</span>		
+										<!--  -->
+										<span class="fr phone_btn" id="btnBindMobile" style="">绑定手机</span>
+										<!--   -->
+										<b class="fr unbind clearfix" id="mobileAction" style="display:none">
+										<!-- <i class="fl modify" id="modify_phone" style="display:none">修改</i> -->
+										<i class="fl unbind_btn" id="unbind_phone">解绑</i>
+										</b>
+									</p>
+                                    <p class="clearfix">
+                                        <span class="fl">基础资料：</span>
+										<span class="fl">不定期修改密码 增加账号安全</span>
+										<span class="fr revamp_paw_btn" id="btnModity">修改密码</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--用户资料E-->
+                    <!--我的视频S-->
+                    <li class="list_con my_video_con">
+                    	<div class="video_title">
+                    		<span class="play_record video_active"><i></i>播放记录</span>
+                    		<span class="personal_video"><i></i>个人视频</span>
+                    		<span class="upload_video"><i></i>上传视频</span>
+                    	</div>
+                    	<!--播放记录-->
+                    	<div class="videoCon play_record_con">
+                    		<!--当没有播放记录时-->
+                    		<div class="play_record_no hide">
+                    			<img src="../../../pic/website/images/noLoginGame.png" />
+                    			<p>暂无播放历史记录</p>
+                    			<p>可前往 <a href="http://www.vronline.com/media">多媒体</a> 体验精彩VR视频</p>
+                    		</div>
+                    		<!--当没有播放记录时-->
+                    		<div class="play_record_more">
+                    			<ul class="clearfix">
+                    				<li class="fl">
+                    					<a href="javascript:;">
+                    						<img src="../../../pic/website/images/my_video.png" />
+                    						<p>西楚霸王 新手礼包 </p>
+                    					</a>
+                    				</li>
+                    				<li class="fl">
+                    					<a href="javascript:;">
+                    						<img src="../../../pic/website/images/my_video.png" />
+                    						<p>西楚霸王 新手礼包 </p>
+                    					</a>
+                    				</li>
+                    				<li class="fl">
+                    					<a href="javascript:;">
+                    						<img src="../../../pic/website/images/my_video.png" />
+                    						<p>西楚霸王 新手礼包 </p>
+                    					</a>
+                    				</li>
+                    				<li class="fl">
+                    					<a href="javascript:;">
+                    						<img src="../../../pic/website/images/my_video.png" />
+                    						<p>西楚霸王 新手礼包 </p>
+                    					</a>
+                    				</li>
+                    				<li class="fl">
+                    					<a href="javascript:;">
+                    						<img src="../../../pic/website/images/my_video.png" />
+                    						<p>西楚霸王 新手礼包 </p>
+                    					</a>
+                    				</li>
+                    				<li class="fl">
+                    					<a href="javascript:;">
+                    						<img src="../../../pic/website/images/my_video.png" />
+                    						<p>西楚霸王 新手礼包 </p>
+                    					</a>
+                    				</li>
+                    			</ul>
+                    		</div>
+                    		<div class="page">
+                                <div class="row-fluid">
+				                <div class="span6">
+				                    <div class="dataTables_info" id="sample_1_info">第1页 共2页</div>
+				                </div>
+				                  	<div class="span6">
+					                    <div class="dataTables_paginate paging_bootstrap pagination">
+					                      	<ul>
+					                        <li class="disabled"><span>上一页</span></li> 
+					                        <li class="active"><span>1</span></li>
+					                        <li><a href="http://www.vronline.com/profile/video?page=2">2</a></li> 
+											<li><a href="http://www.vronline.com/profile/video?page=2" rel="next">下一页</a></li>
+					                      	</ul>
+					                    </div>
+				                  	</div>
+				                </div>
+				            </div>
+                    	</div>
+                    	<!--个人视频-->
+                    	<div class="videoCon personal_video_con hide">
+                    		<div class="personal_video_title">
+                    			<span>视频数量 (<i>8</i>)</span>
+								<a class="all" href="javascript:;">全部</a>
+								<a href="javascript:;">已通过</a>
+								<a href="javascript:;">审核中</a>
+								<a href="javascript:;">未通过</a>
+                    		</div>
+                    		<ul class="clearfix">
+                    			<li class="fl">
+                					<a class="videoConA" href="javascript:;">
+                						<span>
+                							<img src="../../../pic/website/images/my_video.png" />
+                						</span>
+                						<p>西楚霸王 新手礼包 </p>
+                					</a>
+                					<div class="clearfix">
+                						<span class="fl">播放次数:<i>1万</i>次</span>
+                						<a class="fr" href="javascript:;">修改</a>
+                					</div>
+                				</li>
+                				<li class="fl">
+                					<a class="videoConA" href="javascript:;">
+                						<span>
+                							<img src="../../../pic/website/images/my_video.png" />
+                						</span>
+                						<p>西楚霸王 新手礼包 </p>
+                					</a>
+                					<div class="clearfix">
+                						<span class="fl">播放次数:<i>1万</i>次</span>
+                						<a class="fr" href="javascript:;">修改</a>
+                					</div>
+                				</li>
+                				<li class="fl">
+                					<a class="videoConA" href="javascript:;">
+                						<span>
+                							<img src="../../../pic/website/images/my_video.png" />
+                						</span>
+                						<p>西楚霸王 新手礼包 </p>
+                					</a>
+                					<div class="clearfix">
+                						<span class="fl">播放次数:<i>10万</i>次</span>
+                						<a class="fr" href="javascript:;">修改</a>
+                					</div>
+                				</li>
+                				<li class="fl">
+                					<a class="videoConA" href="javascript:;">
+                						<span>
+                							<img src="../../../pic/website/images/my_video.png" />
+                						</span>
+                						<p>西楚霸王 新手礼包 </p>
+                					</a>
+                					<div class="clearfix">
+                						<span class="fl hide">播放次数:<i>3939</i>次</span>
+                						<span class="fl auditing">审核中...</span>
+                						<a class="fr" href="javascript:;">取消审核</a>
+                						<a class="fr hide" href="javascript:;">修改</a>
+                					</div>
+                				</li>
+                				<li class="fl">
+                					<a class="videoConA" href="javascript:;">
+                						<span>
+                							<img src="../../../pic/website/images/my_video.png" />
+                						</span>
+                						<p>西楚霸王 新手礼包 </p>
+                					</a>
+                					<div class="clearfix">
+                						<span class="fl hide">播放次数:<i>3939</i>次</span>
+                						<span class="fl adopt">审核未通过</span>
+                						<a class="fr hide" href="javascript:;">修改</a>
+                						<a class="fr" href="javascript:;">重新提交</a>
+                					</div>
+                				</li>
+                				<li class="fl">
+                					<a class="videoConA" href="javascript:;">
+                						<span>
+                							<img src="../../../pic/website/images/my_video.png" />
+                						</span>
+                						<p>西楚霸王 新手礼包 </p>
+                					</a>
+                					<div class="clearfix">
+                						<span class="fl">播放次数:<i>3939</i>次</span>
+                						<a class="fr" href="javascript:;">修改</a>
+                					</div>
+                				</li>
+                    		</ul>
+                    		<div class="page">
+                                <div class="row-fluid">
+				                <div class="span6">
+				                    <div class="dataTables_info" id="sample_1_info">第1页 共2页</div>
+				                </div>
+				                  	<div class="span6">
+					                    <div class="dataTables_paginate paging_bootstrap pagination">
+					                      	<ul>
+					                        <li class="disabled"><span>上一页</span></li> 
+					                        <li class="active"><span>1</span></li>
+					                        <li><a href="http://www.vronline.com/profile/video?page=2">2</a></li> 
+											<li><a href="http://www.vronline.com/profile/video?page=2" rel="next">下一页</a></li>
+					                      	</ul>
+					                    </div>
+				                  	</div>
+				                </div>
+				            </div>
+                    	</div>
+                    	<!--上传视频-->
+                    	<div class="videoCon upload_video_con hide">
+                    		<!--填写视频信息-->
+                    		<div>
+	                    		<h3>视频详情</h3>
+	                    		<div>
+	                    			<ul>
+	                    				<li class="clearfix">
+	                    					<span class="fl title">视频名称</span>
+	                    					<input class="fl upload_con" type="text" placeholder="请填写上传的视频名称" />
+	                    				</li>
+	                    				<li class="clearfix text_con">
+	                    					<span class="fl title">视频简介</span>
+	                    					<textarea class="fl upload_con" name="" rows="" cols="" placeholder="请对上传的视频内容进行简单描述"></textarea>
+	                    					<p>剩余字数<span class="textCount">200</span>个 </p>
+	                    				</li>
+	                    				<li class="clearfix">
+	                    					<span class="fl title">视频分类</span>
+	                    					<select class="fl upload_con">
+	                    						<option value="极限刺激">极限刺激</option>
+	                    						<option value="极限刺激1">极限刺激1</option>
+	                    						<option value="极限刺激2">极限刺激2</option>
+	                    					</select>
+	                    				</li>
+	                    				<li class="clearfix">
+	                    					<span class="fl title">是否VR视频</span>
+	                    					<div class="fl upload_con">
+	                    						<span><i class="sel"></i>是</span>
+	                    						<span><i class="sel"></i>否</span>
+	                    					</div>
+	                    				</li>
+	                    				<li class="clearfix upload_pic">
+	                    					<span class="fl title">视频封面</span>
+	                    					<div class="fl upload_con_pic">
+	                    						<div>
+	                    							<input type="button" value="" />
+	                    							<p>
+	                    								<i></i>
+	                    								<span>上传图片</span>
+	                    							</p>
+	                    						</div>
+	                    						<p>仅支持JPG及PNG格式,尺寸为<i>xx*xx</i>,大小不超过500K</p>
+	                    					</div>
+	                    				</li>
+	                    				<li class="clearfix">
+	                    					<span class="fl title">上传方式</span>
+	                    					<select class="fl upload_con">
+	                    						<option value="上传视频">上传视频</option>
+	                    						<option value="上传视频1">上传视频1</option>
+	                    						<option value="上传视频2">上传视频2</option>
+	                    					</select>
+	                    				</li>
+	                    			</ul>
+	                    			<div class="sc_video">
+	                    				<p>上传视频</p>
+	                    				<span>(<em title="上传视频名称">上传视频名称</em>) 上传文件不能超过10G,必须为视频格式</span>
+	                    			</div>
+	                    			<div>
+	                    				<p class="progress_bar"><span class="progress_bar_length"><i class="progress_bar_num">1%</i></span></p>
+										<p class="start_upload">开始</p>
+	                    			</div>
+	                    		</div>
+	                    		<div class="tj_video"> 	
+	                    			<p>提交审核</p>
+	                    			<span><i class="sel"></i>同意<a href="javascript:;">VRONLINE视频服务条款</a></span>
+	                    		</div>
+                    		</div>
+							<!--视频提交成功-->
+							<div class="video_success hide">
+								<p class="state"><i></i><span>视频提交成功！</span></p>
+								<p class="success_after">您可以在 <a href="javascript:;">个人视频</a> 中查看审核进度</p>
+								<p class="go_on">继续上传视频</p>
+							</div>
+                    	</div>
+                    </li>
+                    <!--我的视频E-->
+                    <!--常见问题s-->
+                    <li class="list_con problem_center">
+                        <h2 class="f20 tac fw">VRonline常见问题FAQ</h2>
+                        <div class="pro_content ">
+                            <h4 class="f14 fw">问：如何要注册一个VRonline账号</h4>
+                            <div>
+                                <p>答：1.点击VR助手顶部用户头像，或访问VRonline官网（wwww.vronline.com），点击注册/登录。</p>
+                                <p class="tin">2.VR平台目前支持普通账户注册和登录、第三方账户（QQ/微信/新浪微博）登录。</p>
+                            </div>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：账号密码忘了，如何找回？</h4>
+                            <div>
+                                <p>答：目前只开放手机找密码，注册账号成功后登录个人中心，建议进行手机绑定，提高账号安全性，操作方法具体如下：</p>
+                                <p class="tin">步骤1：成功绑定手机。</p>
+                                <p class="tin">步骤2：获取短信验证码。</p>
+                                <p class="tin">步骤3：输入新密码+确认新密码。</p>
+                                <p class="tin">步骤4：密码找回成功，使用新密码登录。</p>
+                            </div>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我是游客账号，如何修改为自己的VRonline账号？</h4>
+                            <p>答：以游客身从登录VR助手，可以进入“个人中心→账号安全”，填写新的VRonline账号+新密码进行修改，每个游戏账号只提供1次修改机会。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4>问：如何绑定手机/解绑手机/修改绑定手机操作？</h4>
+                            <p>答：进入“个人中心”通过绑定手机+验证码，完成绑定/解绑/修改等操作。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：VR游戏要付费吗？</h4>
+                            <p>答：VR助手内目前提供的游戏都是免费的，不需要支付任何费用。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我要如何玩VR助手内提供的VR游戏？</h4>
+                            <p>答：步骤1：登录VR助手，选择“VR游戏”，选择任意一款VR游戏进入游戏详情页。</p>
+                            <p class="tin">步聚2：点击“安装”，安装成功。</p>
+                            <p class="tin">步骤3：安装设备驱动和连接线正确与电脑连接。</p>
+                            <p class="tin">步聚4：点击“开始”按钮，启动游戏。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：如何安装本地VR游戏至VR助手内？</h4>
+                            <p>答：点击VR游戏左侧底部“添加游戏”，可选择本地桌面的VR游戏安程包进行安装。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：VRonline账户如何充值？</h4>
+                            <p>答：右击头像，选择下拉菜单“充值”，进入充值中心界面。目前只推出支付宝充值，充值时可选择“充值V币”或“网页游戏”、充值金额、选择充值方式。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：充值V币，如何使用？</h4>
+                            <p>答：VRonline充获得可以获得对应数据的V币。作为VR助手统一货币，目前可用于支付或抵扣网页游戏的充值金额，后续将陆续开放更多可以支付的商品。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：目前平台支持哪些方式的充值？</h4>
+                            <p>答：支付宝手机扫码、登录支付宝账号</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我充值页游，但平台虚拟币还有余额，可以合并支付吗？</h4>
+                            <p>答：可以。如想要对页游充值时，用户可以选择使用V币余额支付抵扣一部分的充值金额或全额支付（余额足够充值页游的金额），或不需要使用平台余额而采用全额现金充值。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：页游礼包如何领取？</h4>
+                            <p>答：进入“网页游戏”界面，选择任意一款游戏点击“领取礼包”，进入领取页面，选择礼包种类，查看礼包内容后点击领取。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：礼包领取了CDKEY如何使用？能查看领取过的CDKEY吗？</h4>
+                            <p>答：CDKEY可以进行复制，然后至启动页游进入游戏内输入CDKEY领取。如果忘了礼包的CDKEY，可以进入“礼包中心→我的礼包”内查询领取记录。</p>
+                        </div>
+                        <div class="pro_content">
+                            <h4 class="f14 fw">问：我想提些意见，可以去哪里反馈？</h4>
+                            <p>答：VR助手内可以至右上角下拉菜单“意见”中反馈。官网可以至右侧侧边栏中通过在线客户或意见进行反馈。</p>
+                        </div>
+                    </li>
+                    <!--关于VR-->
+                    <li class="list_con problem_center aboutVR">
+                    	<h3>关于VR</h3>
+                    	<ul>
+                    		<li class="clearfix">
+                    			<div class="fl left_li">
+                    				<span></span>
+                    				<p>VR到底是什么？</p>
+                    			</div>
+                    			<div class="fl right_li">
+                    				<p>虚拟现实（Virtual Reality,简称VR）。利用计算机图像处理能力和外部设备模拟产生可交互的三维虚拟空间，提供使用者关于视觉，听觉，触觉等感官的模拟，让使用者如同身临其境。</p>
+                    			</div>
+                    		</li>
+                    		<li class="clearfix user_platform">
+                    			<div class="fl left_li">
+                    				<span></span>
+                    				<p>我们是什么样的平台？</p>
+                    			</div>
+                    			<div class="fl right_li">
+                    				<p>虚拟现实（Virtual Reality,简称VR）。利用计算机图像处理能力和外部设备模拟产生可交互的三维虚拟空间，提供使用者关于视觉，听觉，触觉等感官的模拟，让使用者如同身临其境。</p>
+                    			</div>
+                    		</li>
+                    		<li class="clearfix experience_vr">
+                    			<div class="fl left_li">
+                    				<span></span>
+                    				<p>我们要如何体验VR?</p>
+                    			</div>
+                    			<div class="fl right_li">
+                    				<div>
+                    					<img src="../../../pic/website/images/experience01.png" />
+                    					<p>1 首先您需要一套VR设备 (大朋头盔、HTC VIVE、 OUCLUS)</p>
+                    				</div>
+                    				<span></span>
+                    				<div>
+                    					<img src="../../../pic/website/images/experience02.png" />
+                    					<p>2 打开VRonline客户端，选择一款VR游戏</p>
+                    				</div>
+                    				<span></span>
+                    				<div>
+                    					<img src="../../../pic/website/images/experience03.png" />
+                    					<p>3下载/安装游戏</p>
+                    				</div>
+                    				<span></span>
+                    				<div>
+                    					<img src="../../../pic/website/images/experience04.png" />
+                    					<p>4 连接设备 开始游戏</p>
+                    				</div>
+                    			</div>
+                    		</li>
+                    	</ul>
+                    </li>
+                    <!--常见问题e-->
+                    <!--支付成功S-->
+
+                    <!--支付成功S-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--弹窗-->
+
+    <!--修改头像S-->
+    <div class="mask_layer  modify_box">
+        <div class=" modify_head_portrait popup_window" id="jcropdiv">
+            <div class="wl">
+                <div class="jc-demo-box" data="0">
+                    <div id="target" class="jcrop_w" >
+                        <img src="../../../../pic/website/images/touxiang.jpg" width="602" height="602"  />
+                    </div>
+                </div>
+                <p class="title">如果您还没有设置头像，系统为显示默认头像，您可以上传本地照片作为个人头像</p>
+            </div>
+            <div class="wr" id="preview-pane">
+                <div class="preview-container">
+                    <p class="title">预览</p>
+                    <p>
+                    <span class="pre-1">
+                        <img src="../../../../pic/website/images/touxiang.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+                    </span>
+                    </p>
+                    <p class="big_img_size">100px<i>X</i>100px</p>
+                    <p>
+                    <span class="pre-2">
+                        <img src="../../../../pic/website/images/touxiang.jpg" class="jcrop-preview jcrop_preview_s" alt="" />
+                    </span>
+                    </p>
+                    <p class="big_img_size">60px<i>X</i>60px</p>
+                </div>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl  pr">上传
+                        <form action="xxx.php" method="post" enctype="multipart/form-data"></form><input type="file" name="file" id="file" onchange="previewHeadFile()"  style="opacity: 0; position: absolute; left: 0; top: 0; height: 30px; width: 100px;"></li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--修改头像E-->
+    <!--绑定手机号S-->
+    <div class="bind_phoneNum mask_layer">
+        <div class="popup_window  ">
+            <div class="in_popup">
+                <p class="input_phone">
+                    <label>
+                        <span>输入手机号</span>
+                        <input type="text">
+                    </label>
+                    <p class="erroColor erro_phone_msg"></p>
+                </p>
+                <p class="message">
+                    <label>
+                        <span>短信验证码</span>
+                        <input type="text">
+                    </label>
+                    <span class="get_code">获取验证码</span>
+                </p>
+                <p class="system_tip">系统将会以短信方式发送至需要绑定的手机</p>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--绑定手机号E-->
+    <!--修改密码-->
+    <div class="revamp_password mask_layer ">
+        <div class="popup_window">
+            <div class="in_popup">
+                <p class="">
+                    <label>
+                        <span>原密码</span>
+                        <input type="password">
+                    </label>
+                    <p class="erroColor erro_phone_msg"></p>
+                </p>
+                <p>
+                    <label>
+                        <span>新密码</span>
+                        <input type="password">
+                        <p class="erroColor erro_phone_msg"></p>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span>确认密码</span>
+                        <input type="password">
+                        <p class="erroColor erro_phone_msg"></p>
+                    </label>
+                </p>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--手机绑定成功-->
+    <div class="mask_layer success_popup_window">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr hide">
+                <h4 class="fl">提示</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">手机绑定成功</p>
+            </div>
+            <div class="popup_btn success_popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--修改平台账号-->
+    <div class="revamp_account mask_layer">
+        <div class="popup_window">
+            <div class="in_popup">
+                <p class="">
+                    <label>
+                        <span>平台账号</span>
+                        <input type="password">
+                    </label>
+                <p class="erroColor erro_phone_msg">该账号已被注册、账号不能为空、账号不符合要求</p>
+                </p>
+                <p>
+                    <label>
+                        <span>新密码</span>
+                        <input type="password">
+                    </label>
+                <p class="erroColor erro_phone_msg">密码不能为空、密码需要6~16位数字或字母</p>
+                </p>
+                <p>
+                    <label>
+                        <span>确认密码</span>
+                        <input type="password">
+                    </label>
+                <p class="erroColor erro_phone_msg">密码不能为空、两次密码不一致</p>
+                </p>
+            </div>
+            <div class="popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">修改</li>
+                </ul>
+                <p class="erroColor erro_phone_msg">账号只能提供1次修改,确认无误后请点击“修改”</p>
+            </div>
+        </div>
+    </div>
+    <!--//确定修改平台账号-->
+    <div class="mask_layer sure_revamp_account">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr hide">
+                <h4 class="fl">提示</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">新设置的平台账号和密码可直接登录VR平台</p>
+                <p>是否确定修改账号?</p>
+            </div>
+            <div class="popup_btn success_popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--//成功修改平台账号-->
+    <div class="mask_layer success_revamp_account ">
+        <div class="popup_window" >
+            <div class="popup_head clearfix pr hide">
+                <h4 class="fl">提示</h4>
+                <i class=" close pa"></i>
+            </div>
+            <div class="in_popup success_popup">
+                <p class="">修改成功！</p>
+                <p>您的账号还没有绑定手机，绑定手机后可享受手机找密码等功能</p>
+                <p>个人中心→用户资料→手机绑定</p>
+            </div>
+            <div class="popup_btn success_popup_btn">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-------------------new 2016-10-12---------------------->
+    <footer>
+		<div class='foot'>
+			<img src="../../../pic/website/images/logo.png" />
+			<div class="aboutUS">
+				<a href="javascript:;">关于VRonline</a>
+				<a href="javascript:;">关于恺英</a>
+				<a href="javascript:;">联系我们</a>
+				<a href="javascript:;">商务合作</a>
+				<a class='none' href="javascript:;">我是开发者</a>
+			</div>
+			<!-------------------------------new2016-10-14---------------------------------->
+			<div class="hide">
+				<span>友情链接：</span> 
+				<a href="javascript:;">OculusRift贴吧</a>
+				<a href="javascript:;">妖界VRVR</a>
+				<a href="javascript:;">345导航</a>
+				<a href="javascript:;">VR科技网</a>
+				<a href="javascript:;">一起爱VR</a>
+				<a href="javascript:;">VR玩家</a>
+				<a href="javascript:;">智壹VR网</a>
+				<a href="javascript:;">07073VR</a>
+				<a href="javascript:;">VR眼镜vr论坛</a>
+				<a href="javascript:;">vv麦逗VR</a>
+				<a href="javascript:;">VR专业导航网站</a>
+				<a class='none' href="javascript:;">高手VR</a>
+			</div>
+			<!-------------------------------new2016-10-14---------------------------------->
+			<div style="width:300px;margin:0 auto; " >
+	 			<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011202001649" style="border:0;display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../../pic/website/images/pl.png" style="float:left;"/><p  class=""  style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; ">沪公网安备 31011202001649号</p></a>
+	 		</div>
+			<p>
+				<span>沪网文[2013]0667-082</span>
+				<span>沪ICP备16034129号-1</span>
+				<span>文化部网络游戏举报和联系电子邮箱:</span>
+				<a href="Mailto:wlyxjb@gmail.com" style="border: none;">wlyxjb@gmail.com</a>
+			</p>
+			<!------------------new-2016-10-11------------->
+			<p>
+				<span>Copyright&copy;2008-2015 vronline.com All Rights Reserved</span>
+				<span>上海恺英网络科技有限公司 版权所有</span>
+			</p>
+			<!-------------------------------new2016-10-14---------------------------------->			
+		</div>
+	</footer>
+	<!-------------------new 2016-10-12---------------------->
+</body>
+</html>
+<script>
+    $(function(){
+        //点击左侧进入
+        $('.personal_center .left_per ul').on('click','li.pr',function(){
+
+            var i = $(this).index();
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.right_per li.list_con').eq(i).addClass('cur').siblings().removeClass('cur');
+        });
+        //new 2016-10-17
+        //导航条     
+		$('.nav ul li').each(function(){
+			$(this).mouseover(function(){
+				$(this).children('.con').show();	
+			});
+			$(this).mouseout(function(){
+				$(this).children('.con').hide();
+			})
+		});
+		
+		//我的视频
+		var aSpan=$(".my_video_con .video_title span");
+		var aCon=$(".videoCon");
+		var now=0;
+		aSpan.click(function(){
+			now=$(this).index();
+			tab();
+		});
+		function tab(){ 
+			aSpan.removeClass('video_active');
+			aCon.addClass('hide');
+			aSpan.eq(now).addClass('video_active');
+			aCon.eq(now).removeClass('hide');
+		};
+		
+		//多行文本框限制字数
+		$(".text_con textarea").keyup(function(){
+ 			var curLength=$(".text_con textarea").val().length; 
+			if(curLength>200){ 
+				var num=$(".text_con textarea").val().substr(0,200); 
+				$(".text_con textarea").val(num); 
+			}else{ 
+				$(".textCount").text(200-$(".text_con textarea").val().length); 
+			} 
+		});
+		$(".text_con textarea").focus(function(){
+		  	if($(".text_con textarea").val() == '请对上传的视频内容进行简单描述'){
+		  		$(".text_con textarea").val() = '';
+		  	}
+		});
+		$(".text_con textarea").blur(function(){
+			if($(".text_con textarea").val() == ''){
+	            $(".text_con textarea").val() = '请对上传的视频内容进行简单描述';
+	        } 
+		});
+	})
+</script>

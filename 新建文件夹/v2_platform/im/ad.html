@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公告</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/im.css">
+    <script src="../js/plug/jquery-1.11.3.min.js"></script>
+    <script src="../js/plug/tinyscrollbar.js"></script>
+    <script src="js/tool/vue.js"></script>
+</head>
+<body>
+<div class="chat_container clearfix" id="ad_container">
+    <div class="fl chat_list pr" id="chat_list">
+        <div class="scrollbar pa"><div class="track pr"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport">
+            <div class="overview">
+                <ul>
+                    <li class="clearfix pr" v-on:click.stop="clickFn(index,item)" :class="{'cur':item.state}" v-for="(index,item) in items" u-id="{{item.uid}}" title="{{item.name}}">
+                        <div class="fl user_header_img">
+                            <img  :src="item.url">
+                        </div>
+                        <div class="chat_name els">{{item.name}}</div>
+                        <span class="chat_msg_num pa"  v-if="item.list.msg !=0 && item.state != true">{{item.list.msg}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fl in_chat_container pr" v-for="(index,item) in items" v-show="item.state">
+        <h3 class="f16" >{{item.name}}</h3>
+        <div class="chat_con">
+            <div class="in_chat_con pr" id="in_chat_con">
+                <div class="scrollbar pa"><div class="track pr"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <div class="overview">
+                        <div v-for="list in item.msglist">
+                            <p class="send_time" v-if="list.sendtime !=''">{{list.sendtime}}</p>
+                            <ul>
+                                <li class="clearfix" v-for="i in list.msg" :class="{'min':i.state}">
+                                    <div class="clearfix">
+                                        <p class="send_time tal" v-if="i.time !=''">{{i.time}}</p>
+                                        <div class="chat_name fl" v-if="i.txt !=''">{{i.txt}}</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tool pr">
+        <i class="min_btn"></i>
+        <i class="close_btn"></i>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/component/ad.js"></script>
+<script src="js/tool/imInterface.js"></script>

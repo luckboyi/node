@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加好友</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/im.css">
+    <script src="../js/plug/jquery-1.11.3.min.js"></script>
+    <script src="../js/plug/tinyscrollbar.js"></script>
+    <script src="js/tool/vue.js"></script>
+</head>
+<body>
+<div class="chat_container clearfix" id="add_friend">
+    <div class="search_container" id="search_container">
+        <div class="tool pr">
+            <i class="close_btn"></i>
+        </div>
+        <h3>查找添加</h3>
+        <div class="add_friend_body">
+            <div class="in_add_friend_body">
+                <div class="search_bar tac">
+                    <h4 class="f16">玩家</h4>
+                    <div class="search_con pr" id="search_con">
+                        <div class="pr in_search_con">
+                            <input type="text" name="search" placeholder="搜索平台账号、平台昵称" v-model="word">
+                            <div class="search_icon_container pa" @click.stop="searchFn">
+                                <i class="pa search_icon" ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_list">
+                    <div class="in_search_list" id="in_search_list">
+                        <div class="scrollbar pa"><div class="track pr"><div class="thumb"><div class="end"></div></div></div></div>
+                        <div class="viewport">
+                            <div class="overview">
+                                <!--推荐的好友-->
+                                <div class="search_tips" id="recommend_list">
+                                    <h4>{{title}}</h4>
+                                    <p v-if="lists.length ==0" class="tac search_result f16">暂无好友推荐</p>
+                                    <ul class="recommend_friend clearfix" v-if="lists.length >0">
+                                        <li class="clearfix fl" v-for="(index,list) in lists" user-id="{{list.uid}}" title="{{list.name}}">
+                                            <div class="clearfix" >
+                                                <div class="img_container fl">
+                                                    <img  :src="list.url">
+                                                </div>
+                                                <div class="fr name_container">
+                                                    <span class="els " title="{{list.name}}">{{list.name}}</span>
+                                                    <p class="add_btn add_friend_btn" @click.stop="addFn(index)" v-show="list.state"><b class="f16">+</b>好友</p>
+                                                    <p class="add_btn verify" @click.stop="addFn(index)" v-show="!list.state">待验证</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--推荐的游戏-->
+                                <div class="search_tips recommend_game" id="recommend_game">
+                                    <h4>{{title}}</h4>
+                                    <ul class="recommend_friend clearfix">
+                                        <li class="clearfix fl" v-for="(index,list) in lists"  game-id="{{list.gameid}}">
+                                            <div class="img_container fl" @click="playGame(index)">
+                                                <img :src="list.url">
+                                            </div>
+                                            <div class="fr name_container">
+                                                <span class="els " title="{{list.name}}">{{list.name}}</span>
+                                                <p class="play_num">{{list.num}}人在玩</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/component/add_friend.js"></script>
+<script src="js/tool/imInterface.js"></script>

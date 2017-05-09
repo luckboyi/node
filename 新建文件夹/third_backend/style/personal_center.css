@@ -1,0 +1,138 @@
+.siderbar{background: #2b2f3d;width: 200px;height: 100%;
+    position: fixed; color: #989dab;
+    border-top:2px solid #3d4a5d;
+}
+.siderbar a{
+    width: 125px;
+    height: 83px;
+    margin: 20px 0 40px;
+    display: inline-block;
+    background: url("../images/logo.png") no-repeat center;
+}
+.siderbar li{
+    line-height: 26px;
+    height: 26px;
+    width: 160px;
+    display: inline-block;
+    border-left: 2px solid #2b2f3d;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.siderbar li.cur,.siderbar li:hover{background:#3a3e4c;color: #fff;border-left: 2px solid #41beff; }
+.siderbar li i{  position: absolute; width: 16px; height: 14px; background: url("../images/icon.png") no-repeat 0 0;left: 24px;top:50%; margin-top: -7px;}
+.siderbar li i.bank{background-position:url("../images/icon.png") no-repeat 0 0;}
+.siderbar li i.configure{width:18px; background-position: -63px 0;}
+.siderbar li p{margin-left:50px; color:#989dab}
+.siderbar li p i.account{position: absolute;left: 42px;top: 40px; background-position: -81px 0;}
+.siderbar li p:hover{color:#fff;}
+.siderbar li p:hover i{background-position-y:-14px;}
+.siderbar li i.pageGame{background-position: -31px 0;}
+.siderbar li i.VR_product{background-position: -47px 0;}
+.siderbar li.cur i,.siderbar li:hover i{background-position-y:-14px;}
+.personal_header{margin-left: 200px; border-left:2px solid #34b5ee; line-height: 48px; height: 48px; background: #3d4a5d; min-width: 1000px;}
+.personal_header .nav_con a{color: #79808c;}
+.personal_header .nav_con li{margin-left: 56px;}
+.personal_header .nav_con li:hover a,.personal_header .nav_con li.cur a{color: #fff;}
+.login_con{margin-right: 220px;}
+.login_con span{width: 35px;height: 35px;border: 1px solid #fff; border-radius: 50px; display: inline-block;
+    overflow: hidden;margin-top: 4px;margin-right: 10px;}
+.login_con span img{width: 100%;height: 100%;}
+.login_con p{color:#d1d0d0;font-size: 18px;}
+/*----------------new----------------*/
+.login_con p.exit{margin-left: 20px;  cursor: pointer;}
+.login_con p.exit:hover{color: #fff;}
+/*----------------new----------------*/
+.container{margin-left:200px;padding: 50px 0 0 50px;}
+.in_con{border-radius:4px;border: 1px solid #d8dee7;width: 100%;background: #fff; color: #949494;
+    margin-bottom: 20PX;}
+.in_con h4{text-indent: 36px; font-weight: 600; line-height: 38px; border-bottom: 1px solid #d8dee7; color: #000;background: #f5f7fa;}
+.in_con p{line-height: 58px;}
+.in_con span.title{width: 160px;text-indent: 40px;display: inline-block;font-size: 14px; color: #949494;}
+.in_con .content{padding: 10px 0}
+.in_con input{line-height: 34px;width: 350px;text-indent: 5px;border: 1px solid #dadada;}
+.in_con .img_box{display:inline-block;width: 152px;height: 92px; border: 1px solid #dadada;}
+.in_con .img_box img{width: 100%;height: 100%;}
+.in_con .img_box input{width:152px;height: 92px;opacity: 0; color: #949494;}
+.btn_con{width: 950px;}
+.editor_btn{outline: none;margin: 0 6px;
+    cursor: pointer;width:100px;line-height: 38px;border: 1px solid #dadada;border-radius: 4px; display: inline-block;background: #f5f7fa !important;color:#5189a6 !important;}
+.editor_btn:hover{background:#fff !important; }
+.editor_btn:active{background:#ebebec !important;}
+.product-detail .sub_btn{margin-bottom:0;right: 0; top: 66%; transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);}
+.product-detail .sub_btn span{width: 90px; line-height: 36px; background: #f5f7fc;display: inline-block;text-align: center;
+    cursor: default;border-radius: 4px;color: #5189a6;font-size: 14px;}
+.product-detail .sub_btn span:hover{background: #ebebec;}
+.product-detail .sub_btn span:active{background: #ccc;}
+.in_con span.nav{top: 8px;}
+.in_con span.nav i{
+    cursor: pointer;line-height:24px;font-size: 12px;font-weight:normal; color: #5189a6; width:90px;display: inline-block;text-align: center;height: 24px;text-indent: 0;margin-bottom: -10px;font-style:normal ;}
+.in_con span.nav i.cur{width: 88px; border: 1px solid #d8dee7; border-bottom: 0;text-align: center;background: #fff;border-top-left-radius:4px;border-top-right-radius:4px;
+    -moz-box-shadow:0px 3px 1px #999 inset;
+    -webkit-box-shadow:0px 3px 1px #999 inset;
+    box-shadow:0px 3px 1px #999 inset;
+}
+.close_btn{width: 13px;height: 13px; background: url("../images/icon.png") no-repeat 0 -770px;right: 20px; top: 20px;
+    position: absolute; }
+.close_btn:hover{background-position: -13px -770px;}
+.bind_container input{outline: none; margin-top: 20px;}
+span.unbind_send_mes:hover,.bind_container .sure:hover{background:#2cdef5 !important;  }
+span.unbind_send_mes:active,.bind_container .sure:active{background:#22a1bf !important; }
+.bind_container .cancel:hover{background: #dedede !important;}
+.bind_container .cancel:active{background: #ccc !important;}
+span.unbind_send_mes.disabled{background:#3d4040 !important;  pointer-events: none; }
+.bind_container{
+    position: fixed;z-index: 9999;color: #4d4d4d; top:0; left: 0; background: rgba(0,0,0,.5);width: 100%;height: 100%;
+}
+.bind_container .in_bind_container{
+    border-radius:4px;
+    position: absolute;
+    padding:30px 60px 10px;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    background: #fff
+}
+.bind_container .unbind_btn{
+    margin-top:20px;display: inline-block;
+}
+.bind_container .unbind_btn li{
+    width: 120px; line-height: 30px;  cursor: pointer; margin: 0 6px; color: #fff;border-radius: 4px;
+}
+.bind_container .unbind_btn li.sure{background: #22a1bf;border-radius: 4px;border: 1px solid #22a1bf;}
+.bind_container .unbind_btn li.cancel{ border: 1px solid #dedede; color: #4d4d4d;  }
+.bind_container  p.bind_phone_num{
+    line-height: 30px;width: 422px; text-align: center;color: #4d4d4d;
+}
+.bind_container  p.bind_phone_num span{
+    width: 120px;
+}
+.bind_container  p.bind_phone_num input{
+    text-indent:10px;width: 300px;line-height: 28px; border: 1px solid #dadada; color: #4d4d4d;
+}
+.bind_container  p.send_code{
+    line-height: 30px;width: 422px; text-align: center;color: #4d4d4d; position: relative;
+}
+.bind_container  p.send_code span{
+    width: 120px;
+}
+.bind_container  p.send_code input{
+    text-indent:10px;width: 300px;line-height: 28px; border: 1px solid #dadada; color: #4d4d4d;
+}
+.bind_container  p.send_code span.unbind_send_mes{
+    width: 120px; display: inline-block;cursor: pointer; position: absolute;right: 0;top: 20px;line-height: 30px;background: #22a1bf;color: #fff;
+}
+.bind_container .unbind_tipsCon{
+    line-height: 30px;margin: 20px 0;
+}
+.bind_container span.errorColor{
+    left: 86px;
+    top: 48px;
+    text-align: left;
+    width: 300px !important;
+    text-indent: 42px;
+    display: none;
+    background: url("../images/personal.png") 5px -154px;
+    line-height: 20px;
+}

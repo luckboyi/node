@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/jquery.Jcrop.js"></script>
+</head>
+<body  class="platform">
+
+<!--绑定手机号-->
+<div class="bind_phoneNum mask_layer">
+    <div class="popup_window  ">
+        <div class="in_popup">
+            <p class="input_phone">
+                <label>
+                    <span>输入手机号</span>
+                    <input type="text">
+                </label>
+            </p>
+            <p class="message">
+                <label>
+                    <span>短信验证码</span>
+                    <input type="text">
+                </label>
+                <span class="get_code">获取验证码</span>
+            </p>
+            <p class="system_tip">系统将会以短信方式发送至需要绑定的手机</p>
+        </div>
+        <div class="popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+                <li class="fl cancel">取消</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--修改密码-->
+<div class="revamp_password mask_layer ">
+    <div class="popup_window">
+        <div class="in_popup">
+            <p class="">
+                <label>
+                    <span>原密码</span>
+                    <input type="password">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span>新密码</span>
+                    <input type="password">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span>确认密码</span>
+                    <input type="password">
+                </label>
+            </p>
+        </div>
+        <div class="popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+                <li class="fl cancel">取消</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--手机绑定成功-->
+<div class="mask_layer success_popup_window">
+    <div class="popup_window" >
+        <div class="popup_head clearfix pr hide">
+            <h4 class="fl">提示</h4>
+            <i class=" close pa"></i>
+        </div>
+        <div class="in_popup success_popup">
+            <p class="">手机绑定成功</p>
+        </div>
+        <div class="popup_btn success_popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--修改平台账号-->
+<div class="revamp_account mask_layer ">
+    <div class="popup_window">
+        <div class="in_popup">
+            <p class="">
+                <label>
+                    <span>平台账号</span>
+                    <input type="password">
+                </label>
+            <p class="erroColor erro_phone_msg">该账号已被注册、账号不能为空、账号不符合要求</p>
+            </p>
+            <p>
+                <label>
+                    <span>新密码</span>
+                    <input type="password">
+                </label>
+            <p class="erroColor erro_phone_msg">密码不能为空、密码需要6~16位数字或字母</p>
+            </p>
+            <p>
+                <label>
+                    <span>确认密码</span>
+                    <input type="password">
+                </label>
+                <p class="erroColor erro_phone_msg">密码不能为空、两次密码不一致</p>
+            </p>
+        </div>
+        <div class="popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">修改</li>
+            </ul>
+            <p class="erroColor erro_phone_msg">账号只能提供1次修改,确认无误后请点击“修改”</p>
+        </div>
+    </div>
+</div>
+<!--//确定修改平台账号-->
+<div class="mask_layer sure_revamp_account  ">
+    <div class="popup_window" >
+        <div class="popup_head clearfix pr hide">
+            <h4 class="fl">提示</h4>
+            <i class=" close pa"></i>
+        </div>
+        <div class="in_popup success_popup">
+            <p class="">新设置的平台账号和密码可直接登录VR平台</p>
+            <p>是否确定修改账号?</p>
+        </div>
+        <div class="popup_btn success_popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--//成功修改平台账号-->
+<div class="mask_layer success_revamp_account  show">
+    <div class="popup_window" >
+        <div class="popup_head clearfix pr hide">
+            <h4 class="fl">提示</h4>
+            <i class=" close pa"></i>
+        </div>
+        <div class="in_popup success_popup">
+            <p class="">修改成功！</p>
+            <p>您的账号还没有绑定手机，绑定手机后可享受手机找密码等功能</p>
+            <p>个人中心→用户资料→手机绑定</p>
+        </div>
+        <div class="popup_btn success_popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--卡包领取成功-->
+<div class="mask_layer success_get gift_get">
+    <div class="popup_window">
+        <div class="in_popup">
+            <p class="title pr"><i class="pa"></i><span class="f20">领取成功</span></p>
+            <p>
+                <span  class="clearfix">
+                <b class="fl">礼包CDKEY：</b><i class="fl">164444errgreer2455</i>
+                </span>
+            </p>
+
+            <p class="clearfix"><span class="fl">礼包记录，可至“</span><a href="javascript:;" class="fl">礼包中心</a><span class="fl">"-"</span><a href="javascript:;" class="fl">我的卡包</a><span class="fl">"查看</span></span></p>
+        </div>
+        <div class="popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--卡包领取失败-->
+<div class="mask_layer success_get fail_get ">
+    <div class="popup_window">
+        <div class="in_popup">
+            <p class="title pr"><i class="pa erro"></i><span class="f20">领取失败</span></p>
+            <p>
+                该账号已领取过
+            </p>
+        </div>
+        <div class="popup_btn">
+            <ul class="clearfix">
+                <li class="fl sure">确定</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--设置头像-->
+<div class="mask_layer modify_head_portrait ">
+    <div class="popup_window modify_con">
+        <div class="modify_container">
+            <div class="fl left_con">
+                <div class="img_box">
+                    <span id="target" class="jcrop_w" style="display: inline-block" >
+                        <img src="../images/touxiang.jpg"  width="602" height="auto" >
+                    </span>
+                </div>
+                <p class="title">如果您还没有设置头像，系统为显示默认头像，您可以上传本地照片作为个人头像</p>
+                <p class="erro_msg erroColor f14">请上传图像文件</p>
+            </div>
+            <div class="fr right_con">
+                <p class="title">预览</p>
+                <p class="big_img">
+                    <span class="pre-1">
+                        <img src="../images/touxiang.jpg" >
+                    </span>
+                </p>
+                <p class="big_img_size">100px<i>X</i>100px</p>
+                <p class="small_img">
+                    <span  class="pre-2">
+                       <img src="../images/touxiang.jpg">
+                    </span>
+                </p>
+                <p class="big_img_size">60px<i>X</i>60px</p>
+            </div>
+        </div>
+        <div class="popup_btn">
+            <ul class="clearfix">
+                <li class="fl  pr">上传
+                    <form action="xxx.php" method="post" enctype="multipart/form-data"></form><input type="file" name="file" id="file" onchange="previewHeadFile()"  style="opacity: 0; position: absolute; left: 0; top: 0; height: 30px; width: 100px;"></li>
+                <li class="fl cancel">取消</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!--上传图像-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<script>
+    //图片预览
+    function previewHeadFile(){
+        var preview = document.querySelector('.big_img img');
+        var preview2 = document.querySelector('.img_box img');
+        var preview3 = document.querySelector('.small_img img');
+        var file  = document.querySelector('input#file').files[0];
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            preview.src = reader.result;
+            preview2.src = reader.result;
+            preview3.src = reader.result;
+            $('.modify_head_portrait .popup_btn .cancel').text('保存');
+        };
+        if(file){
+            reader.readAsDataURL(file);
+        }else{
+            preview.src = '';
+        }
+        // var
+    }
+    $(function(){
+        //修改密码
+        //点击取消
+        $('.sure').on('click',function(){
+            $(this).parents('.mask_layer').hide(100)
+        });
+        $('.cancel').on('click',function(){
+            $(this).parents('.mask_layer').hide(100)
+        });
+        //点击绑定成功确定或者取消关闭
+        $('.success_popup_window .popup_btn').on('click','li',function(){
+            if($(this).hasClass('sure')){
+                $(this).parents('.success_popup_window').hide(100);
+            }
+        });
+       /* //点击关闭
+        $('.close').on('click',function(){
+            $(this).parents('.success_popup_window').hide(100);
+        });*/
+
+
+
+    })
+
+
+
+
+
+</script>
+
+

@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户端</title>
+    <!--<meta name="viewport" content="target-densitydpi=device-dpi" />
+    <meta name="viewport" content="target-densitydpi=high-dpi" />
+    <meta name="viewport" content="target-densitydpi=medium-dpi" />
+    <meta name="viewport" content="target-densitydpi=low-dpi" />
+    <meta name="viewport" content="target-densitydpi=200" />-->
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/va-style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/plantform.css">
+    <script src="js/plug/jquery-1.11.3.min.js"></script>
+    <script src="js/plug/tinyscrollbar.js"></script>
+    <script src="js/plug/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/tool/platform.js"></script>
+    <script src="js/html/vr_game_list.js"></script>
+    <script src="js/html/drive.js"></script>
+    <script src="js/html/detail.js"></script>
+    <script src="js/html/main.js"></script>
+    <script src="js/tool/interface.js"></script>
+    <script src="js/html/login.js"></script>
+</head>
+<body>
+<div class="main_container pr">
+    <!--设置拖拽区域 s-->
+    <div style="width:5px; height:5px; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; right:0;top:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; right:0;bottom:0; -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px; height:5px; left:0;bottom:0; -webkit-app-region: drag; " class="pa"></div>
+    <div style="width:100%;height:1px; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:100%;height:1px; left:0;bottom:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px;height:100%; left:0;top:0;  -webkit-app-region: drag;" class="pa"></div>
+    <div style="width:5px;height:100%; right:0;top:0; -webkit-app-region: drag;" class="pa"></div>
+    <div class="pa" style="-webkit-app-region: drag;width: 400%;height: 51px;z-index: 0;"></div>
+    <!--设置拖拽区域 e-->
+    <!--头部结构S-->
+    <div class="header pr clearfix"  style="z-index: 1">
+        <button type="button" name="button" id="btnceshi" class="hide">测试</button>
+        <div class="fl header_tool clearfix pr"  style="-webkit-app-region: no-drag;z-index: 1;" >
+            <p class="fl back" title=""></p>
+            <p class="refresh fl hide"></p>
+            <div class="fl pr hide">
+                <input type="text" placeholder="请输入名称">
+                <p class="search pa"></p>
+            </div>
+        </div>
+        <ul class="fl clearfix add_title pr"   style="-webkit-app-region: no-drag; z-index: 9;">
+            <li class="fl cur home" style="z-index: 9;"><a href="javascript:;" class="language"  data-name="home">首页</a></li>
+            <li class="fl  game vrgame" style="z-index: 9;"><a href="javascript:;" class="language"  data-name="game_title">VR游戏</a></li>
+            <li class="fl  pageGame hide" style="z-index: 9;"><a href="javascript:;" class=" language" data-name="pageGame_title"></a></li>
+            <li class="fl   video" style="z-index: 9;"><a href="javascript:;" class=" language"  data-name="video_title">3D播播</a></li>
+            <li class="fl   drive  glow" style="z-index: 9;"><a href="javascript:;" class=" language"  data-name="drive_title">驱动</a></li>
+            <li class="fl game_test">
+                <input type="text" placeholder="请输入游戏id" class="test_gameid">
+                <input type="button" class="test_btn" value="提交">
+            </li>
+        </ul>
+        <h4 class="logo fl"></h4>
+        <div class="manager fr clearfix pr"   style="-webkit-app-region: no-drag;z-index: 1;">
+            <div class="correct fl" title="VR tools"></div>
+            <div class="vrBtn fl "  style="-webkit-app-region: no-drag;" title="VR模式"></div>
+            <p class="fl division"   style="-webkit-app-region: no-drag;">|</p>
+            <div class="window set fl " title="设置" style="-webkit-app-region: no-drag;"></div>
+            <div class="window mini fl"  title="最小化" style="-webkit-app-region: no-drag;"></div>
+            <div class="window max  fl"  title="最大化" style="-webkit-app-region: no-drag;"></div>
+            <div class="window closeplate fl"  title="关闭" style="-webkit-app-region: no-drag;"></div>
+            <ul class="pa setting_list"  style="-webkit-app-region: no-drag;">
+                <li class="cur setting"><p></p><span class="language" data-name="manage_set">设置</span></li>
+                <li class="exchange_code_set"><p class="exchange_code_set_icon"></p><span class="language" data-name="">兑换激活码</span></li>
+                <li class="idea"><p></p><span class="language" data-name="manage_idea">意见反馈</span></li>
+                <li class="change hide"><p></p><span class="language" data-name="manage_account"></span></li>
+                </li>
+                <li class="aboutVr"><p></p><span class="language" data-name="">关于VR助手</span></li>
+                <li class="exit"><p></p><span class="language" data-name="manage_exit">退出</span></li>
+            </ul>
+            <ol class="language_list pa"  style="-webkit-app-region: no-drag;">
+                <li class="chinese">
+                    <p></p>
+                    <span class="language" data-name="Chinese"></span>
+                </li>
+                <li class="english">
+                    <p></p>
+                    <span class="language" data-name="English"></span>
+                </li>
+            </ol>
+        </div>
+        <div class="user fr clearfix" u-id=""  style="-webkit-app-region: no-drag;">
+            <img src="image/touxiang1.png" class="fl"/>
+            <div class="fl">
+                <p class="name fr language"  data-name="userNmae"></p>
+                <div class="clearfix">
+                    <span class="level fl hide"></span>
+                    <span class="fl money clearfix pr"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--头部结构E-->
+    <!--内容S-->
+    <div class="list_con clearfix con_hei main_con pr" >
+        <!--左侧边栏-->
+        <div class="vr_game_list con_hei pr vr_show" style="z-index: 777;">
+            <div class="vr_game_list_hei pr" id="vr_game_list_scroll">
+                <div class="scrollbar fr pr vr_game_list_hei">
+                    <div class="track">
+                        <div class="thumb pa"></div>
+                    </div>
+                </div>
+                <div class="viewport vr_game_list_hei">
+                    <div class="overview">
+                        <div class="online_game_list game_list">
+                            <h4 class="left_list_title cur"><i class="left_list_icon list_vr_icon"></i>VR游戏<i class="left_list_icon more_list"></i></h4>
+                            <ul>
+                               <!-- <li class="in_side_con clearfix" vr-support="'+val.sup_vr+'" game-id="' + val.game_id + '" gameName="'+ val.title +'">
+                                    <a href="javascript:;" class="pr">
+                                        <img src="image/list_img.jpg" >
+                                        <p class="title pa" title=' + val.title +'>dddd</p>
+                                        <p class="vr_list_progress pr">
+                                            <i class="in_download_pro pa" style="width: 80%"></i>
+                                        </p>
+                                    </a>
+                                </li>-->
+                            </ul>
+                        </div>
+                        <div class="local_game_list game_list">
+                            <h4 class="left_list_title cur"><i class="left_list_icon local_list_icon"></i>本地游戏<i class="left_list_icon more_list"></i></h4>
+                            <ul>
+                                <!--<li class="in_side_con clearfix" vr-support="'+val.sup_vr+'" game-id="' + val.game_id + '" gameName="'+ val.title +'"><a href="javascript:;">
+                                    <div class="lise_content clearfix">
+                                        <img src="' + val.imgSrc + '" />
+                                        <div class="fl pr">'<i class="vr_sup_icon"></i><p class="title" title=' + val.title +'>' + val.title + '</p>
+                                            <span>' + val.tag[i] + '</span>
+                                        </div></div></a>
+                                </li>-->
+                            </ul>
+                        </div>
+                        <div class="hot_game_list game_list">
+                            <h4>推荐游戏</h4>
+                            <ul>
+                                <!--<li class="in_side_con clearfix" vr-support="'+val.sup_vr+'" game-id="' + val.game_id + '" gameName="'+ val.title +'">
+                                    <a href="javascript:;" class="pr">
+                                        <img src="image/list_img.jpg" >
+                                        <p class="game_title pa">
+                                            <span class="fl els">热火</span>
+                                            <span class="fr els">4.8分</span>
+                                        </p>
+                                        <i class="price pa free">￥200</i>
+                                    </a>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="add_game"><i class=""></i><span class="language" data-name="addGame">添加本地游戏</span></p>
+        </div>
+        <!--左侧边栏-->
+        <!--下载按钮-->
+        <div class="in_platform_con con_hei">
+            <!--下载按钮-->
+            <div class="tips_login mask ">
+                <div class="tips_login_con pa tac">
+                    <i class="pa close"></i>
+                    <ul>
+                        <li class="tips_login_btn fl"></li>
+                        <li class="tips_login_in_btn fl"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setup_con mask " style="z-index:888;">
+                <div class="setup pa ">
+                    <i class="pa close"></i>
+                    
+                </div>                
+            </div>
+            <div class="download_btn pa vr_game_download_btn" style="z-index: 999;">
+                <div class="fl btn language" data-name="install" game-id="10000">安装</div>
+                <p class="tal game_login un_sup_vr_login"><a href="javascript:;" class="language submit_enter" data-name="login_enter">登录</a><b class="language" data-name="login_addGame">后才可以添加此游戏</b></p>
+                <div class="vr_sup_tips pa" style="left: 480px;">
+                    <p class="woftings_tips pr"><i class="language pa" data-name="we_support_vr">我们支持“添加本地游戏”，守望先锋、魔兽世界以VR模式运行</i></p>
+                </div>
+                <div class=" sup_vr_btn pa">
+                    <p class="in_btn pr close"><i class="pa"></i><b class="off">off</b></p>
+                    <p class="language" data-name="vr_model">VR模式</p>
+                </div>
+                <div class="schedule ">
+                    <div class="in_sch pr clearfix">
+                        <p class="in_text fl"></p>
+                        <p class="do_in_sch pr" ><i class="do_btn"></i></p>
+                    </div>
+                </div>
+                <p class="tal game_login sup_vr_login"><b>此游戏支持VR模式，</b><a href="javascript:;" class="language submit_enter" data-name="login_enter">登录</a><b class="language" data-name="">后才可体验！</b></p>
+                <p class="un_service_tips pa" ><i class="language pa" data-name="un_drive">未检测到VR设备，请链接设备</i></p>
+                <p class="pa un_service_title">此游戏不支持VR模式</p>
+                <p class="download_tips" style="display: none; color: #999;left: 260px;top: 44px;"></p>
+            </div>
+            <div class="video_container  js_list_hei local_video_play_btn">
+                <div class="in_video_con  js_list_hei pr"></div>
+                <a href="javascript:;" class="pa local_video_play"><i class="pa"></i>本地播放器</a>
+            </div>
+            <!--下载按钮-->
+            <!--iframe内容-->
+            <div class=" vr_con_height" style="z-index: 1;">
+                <div class="loading tac">
+                    <p  class="loading_icon">
+                        <img src="image/load.gif">
+                    </p>
+                    <div>
+                        <span class="fl">Loading</span>
+                        <div class="spinner fl"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+                    </div>
+                </div>
+                <iframe name="main" id="main" allowTransparency="true" allowfullscreen frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+            <!--iframe内容-->
+        </div>
+        <div class="drive_con clearfix">
+            <div class="drive_download_con ">
+                <div class="clearfix">
+                    <div class="act_con fl">
+                        <div class="drive_name">
+                        </div>
+                        <div class="drive_information">
+                        </div>
+                        <div class="drive_undown">
+                            <div class="install_btn language" data-name="install">安装</div>
+                        </div>
+                    </div>
+                    <div class="act_img fr">
+                    </div>
+                </div>
+                <div class="drive_schedule pr  tac">
+                    <span class="pa hide"></span>
+                    <div class="in_sch pr clearfix">
+                        <div class="do_in_sch pa fl"  style="width:50%;">
+                            <i class="do_btn"></i>
+                        </div>
+                        <div class="pa clearfix fl download_text hide" id="drive_down_pro">
+                            <div class="clearfix text_pro" style="left:5px; top:0;">
+                                <div class="spinner fl hide"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pr download_pro_text">设备已连接，正在为您安装驱动，请耐心等待<b></b>...</p>
+                </div>
+                <div class="loading_drive tac"><i>正在安装中...</i></div>
+                <p class="friendly_rem">友情提醒：当安装驱动过程中需要您的电脑处于联网状态，如安装进度条长时间停止不动，请您检查当前网络是否正常：）</p>
+            </div>
+            <div class="suc_drive tac">
+                <div class="suc_drive_img">
+                    <img src="image/suc_drive.png">
+                </div>
+                <ul class="clearfix">
+                    <li class="vrgame">
+                    </li>
+                    <li class="media ">
+                    </li>
+                </ul>
+            </div>
+            <div class="fail_drive tac">
+                <div class="fail_drive_img">
+                    <img src="image/fail_drive.png">
+                </div>
+                <div class="fail_install_btn">重新安装</div>
+            </div>
+        </div>
+    </div>
+    <!--内容S-->
+    <!--拖拽S-->
+    <div class="list_drag_con">
+        <div class="list_drag"></div>
+    </div>
+    <!--拖拽E-->
+
+    <!--删除确认框-->
+    <div class="confirmation " id="drag1">
+        <div class="in_confirmation">
+            <p class="language" data-name="deleteSure">确定将选中的游戏删除</p>
+            <div class="delete_local">
+                <input type="checkbox" >
+                <span class="language" data-name="deleteLocalName">同时删除本地文件</span>
+            </div>
+        </div>
+        <div>
+            <div class="sure language" data-name="sure">确定</div>
+            <div class="cancel language" data-name="cancel">取消</div>
+        </div>
+    </div>
+    <!--删除确认框-->
+    <!--添加本地游戏弹框S-->
+    <div class="mask bounced_drag add_local_game pa">
+        <div class="bounced  show" id="addGameDrag" >
+            <div class="addGame" >
+                <div class="addGame-header clearfix">
+                    <h3 class="fl appendCon language" data-name="addGame">添加本地游戏（支持VR模式）</h3>
+                    <div class="close fr cn mr14" ></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body">
+                        <p class="in-body-title appendCon clearfix">
+                            <span class="fl language"  data-name="selectRoutine">选择一个程序并将其添加至你的游戏库</span>
+                            <span class="fr  language clearfix vr_play_game show"  data-name=""><i class="fl language" data-name="support">我们支持</i><b class="fl language" data-name="overwatch">守望先锋</b><i class="fl">、</i><b class="fl language" data-name="wow">魔兽世界</b><i class="fl language" data-name="vr_play">以VR模式运行</i></span>
+                        </p>
+                        <div class="in-body-con" >
+                            <ul class="in-con-header" >
+                                <li class=" in-con-check"></li>
+                                <li class="parting-line first-parting-line clearfix"><i class="fl">|</i><i class="fr">|</i></li>
+                                <li class="parting-line sec-parting-line clearfix " ><div class="fl language" data-name="routine"></div><i class="fr">|</i></li>
+                                <li class="in-con-area language" data-name="area"></li>
+                            </ul>
+                            <div class="in-con-body"  id="addLocalGameList">
+                                <div class="scrollbar pr fr" style="height: 100%">
+                                    <div class="track">
+                                        <div class="thumb pa"><div class="end"></div></div>
+                                    </div>
+                                </div>
+                                <div class="viewport" style="height: 280px;">
+                                    <div class="overview">
+                                        <ul class="localGameList"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel">取消</div>
+                        <div class="addSelect fr language" data-name="add_select">添加所选程序</div>
+                        <div class="browse fr cn language" data-name="amend">浏览</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--添加本地游戏弹框E-->
+    <!--设置弹框S-->
+    <div class="mask set_bounced commonSetting ">
+        <div class="bounced show">
+            <div class="addGame" style="width: 678px;">
+                <div class="addGame-header clearfix">
+                    <h3 class="fl appendCon language" data-name="manage_set">设置</h3>
+                    <div class="close fr cn mr14" ></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body clearfix">
+                        <ul class="fl">
+                            <li class="synthetic on_choose">
+                                <h3 class="fl language" data-name="integration_set">综合</h3>
+                            </li>
+                            <li class="local">
+                                <h3 class="fl language" data-name="">本地VR游戏</h3>
+                            </li>
+                        </ul>
+                        <div class="in-body-con fl" >
+                            <li class="li_con">
+                                <div class="clearfix pr">
+                                    <h4 class="fl language" data-name="set_language">设置平台使用的语音：</h4>
+                                    <div class="fl pr language_set">
+                                        <div class="language language_selected" data-name="Chinese">中文</div>
+                                        <i class="pa"></i>
+                                        <ul class="set_language">
+                                            <li data-name="Chinese" class="language">中文</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix facility_set equipmentauto_set">
+                                    <h4 class="fl language" data-name="set_facility">插入设备时，自动启动软件：</h4>
+                                    <ol class="fl selected_btn fl pr">
+                                        <li class="pr clearfix fl yse language selected" data-name="yes">是</li>
+                                        <li  class="pr clearfix fl no language" data-name="no">否</li>
+                                    </ol>
+                                </div>
+                                <div class="clearfix facility_set close_btn_set" >
+                                    <h4 class="fl language" data-name="colse_set">是否开机自动启动：</h4>
+                                    <ol class="fl selected_btn fl pr">
+                                        <li class="pr clearfix fl yse language selected" data-name="yes">是</li>
+                                        <li  class="pr clearfix fl no language" data-name="no">否</li>
+                                    </ol>
+                                </div>
+                                <div class="clearfix facility_set openVRonline_set" >
+                                    <h4 class="fl language" data-name="">是否开启VRonline助手服务：</h4>
+                                    <ol class="fl selected_btn fl pr">
+                                        <li class="pr clearfix fl yse language selected" data-name="yes">是</li>
+                                        <li  class="pr clearfix fl no language" data-name="no">否</li>
+                                    </ol>
+                                </div>
+                                <div class="download_path facility_set clearfix">
+                                    <h4 class="fl language" data-name="download_path">默认下载路径：</h4>
+                                    <div class="fl">
+                                        <input type="text" value="">
+                                    </div>
+                                    <button class="fl language amend" data-name="amend">浏览</button>
+                                    <button class="fl language open" data-name="open">打开</button>
+                                </div>
+                                <div class="close_plateform facility_set">
+                                    <h4 class="fl language" data-name="close_plateform">关闭面板时：</h4>
+                                    <ol class="fl selected_btn fl pr">
+                                        <li class="pr clearfix fl yse language selected" data-name="min_plateform"><b style="width: 120px;display: inline-block;margin-left: -16px;">最小化到托盘</b></li>
+                                        <li  class="pr clearfix fl no language" data-name="exit_plateform"><b style="width: 120px;display: inline-block;margin-left: -16px;">退出程序</b></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="li_con hide">
+                                <div class="show_vrDeploy pr clearfix hide">
+                                    <h4 class="fl language " data-name="show_vrDeploy">呼出VR配置页面：</h4>
+                                    <div class="fl">
+                                        <input type="text" class="openset" value="Ctrl+v">
+                                    </div>
+                                    <span class="hide">按键被占用</span>
+                                </div>
+                                <div class=" rein facility_set clearfix pr hide">
+                                    <h4 class="fl language" data-name="rein_show_vrDeploy">手柄呼出VR配置页面：</h4>
+                                    <span class="">START</span>
+                                </div>
+                                <div class=" clearfix pr facility_set hide">
+                                    <h4 class="fl language" data-name="game_mode">游戏模式：</h4>
+                                    <ol class="fl selected_btn fl pr">
+                                        <li class="pr clearfix fl yse language selected" data-name="yes">是</li>
+                                        <li  class="pr clearfix fl no language" data-name="no">否</li>
+                                    </ol>
+                                </div>
+                                <div class="show_vrDeploy enable_handle pr clearfix facility_set">
+                                    <h4 class="fl language" data-name="view_close">启用手柄：</h4>
+                                    <div class="fl">
+                                        <input type="text"  class="openhandle"  value="Ctrl+j">
+                                    </div>
+                                    <span class="hide">按键被占用</span>
+                                </div>
+                                <div class="show_vrDeploy control_mouse pr clearfix facility_set">
+                                    <h4 class="fl language" data-name="view_close">控制鼠标：</h4>
+                                    <div class="fl">
+                                        <input type="text"  class="ctrlmouse" value="Ctrl+n">
+                                    </div>
+                                    <span class="hide">按键被占用</span>
+                                </div>
+                                <div class="show_vrDeploy control_view pr clearfix facility_set">
+                                    <h4 class="fl language" data-name="view_close">控制视角：</h4>
+                                    <div class="fl">
+                                        <input type="text"  class="ctrlview " value="Ctrl+m">
+                                    </div>
+                                    <span class="hide">按键被占用</span>
+                                </div>
+                                <div class="show_vrDeploy close_view pr clearfix facility_set">
+                                    <h4 class="fl language" data-name="view_close">视角拉近：</h4>
+                                    <div class="fl">
+                                        <input type="text" class=" closerview" value="Ctrl+w">
+                                    </div>
+                                    <span class="hide">按键被占用</span>
+                                </div>
+                                <div class="show_vrDeploy pull_view pr clearfix facility_set">
+                                    <h4 class="fl language" data-name="Perspective_pull">视角拉远：</h4>
+                                    <div class="fl">
+                                        <input type="text" class=" lenspull" value="Ctrl+s">
+                                    </div>
+                                    <span class="hide">按键被占用</span>
+                                </div>
+                                <div class="rain_setting facility_set clearfix">
+                                    <h4 class="fl language" data-name="Perspective_pull">手柄设置：</h4>
+                                    <div class="rain_settings fl">设置</div>
+                                </div>
+                                <div class="fr prompt">此设置仅支持VR启动魔兽世界和守望先锋时使用</div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel">取消</div>
+                        <div class="browse fr cn language set_sure" ..id="set_sure" data-name="sure">确定</div>
+                        <div class=" fr cn language renew" data-name="renew">恢复默认设置</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--设置手柄弹框E-->
+    <div class="mask set_bounced hide gameSetting">
+        <div class="bounced show">
+            <div class="addGame" style="width: 822px;">
+                <div class="addGame-header clearfix">
+                    <h3 class="fl appendCon language" data-name="manage_set">设置-<span>手柄设置</span></h3>
+                    <div class="close fr cn mr14" ></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body clearfix">
+                        <ul class="fl">
+                            <li class="synthetic on_choose" data-name="gamewarworld">
+                                <h3 class="fl language " data-name="">魔兽世界</h3>
+                            </li>
+                            <li  class="local">
+                                <h3 class="fl language " data-name="">守望先锋</h3>
+                            </li>
+                        </ul>
+                        <div class="in_body_con fl" >
+                            <ul>
+                                <li class="li_con">
+                                    <div class="key_choose pr">
+	                                    <div class="handle_key_btn clearfix">
+	                                    	<img class="fl" src="./image/Handle.png">
+	                                        <div class="key_choose_r_l fl">
+		                                        <p><span class="handle_btn">手柄按键</span><span class="oppo_key_btn">对应键盘按键</span></p>
+		                                        <ul class="">
+		                                            <li>
+		                                            <span class="round">A</span>
+		                                            <span class="oppo_key"><input type="text" value="1"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="round">B</span>
+		                                            <span class="oppo_key"><input type="text" value="2"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="round">X</span>
+		                                            <span class="oppo_key"><input type="text" value="3"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="round">Y</span>
+		                                            <span class="oppo_key"><input type="text" value="4"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="square">LB</span>
+		                                            <span class="oppo_key oppo_key_ot"><input type="text" value="5"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="square">RB</span>
+		                                            <span class="oppo_key oppo_key_ot"><input type="text" value="6"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="square">LT</span>
+		                                            <span class="oppo_key oppo_key_ot"><input type="text" value="7"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                            <li>
+		                                            <span class="square">RT</span>
+		                                            <span class="oppo_key oppo_key_ot"><input type="text" value="8"></span>
+		                                            <span class="key_warning hide">按键被占用</span>
+		                                            </li>
+		                                        </ul>
+		                                    </div>
+		                                </div>
+	                                </div>
+	                            </li>
+	                            <li class="li_con hide">
+	                                <img src="./image/okLogo.png" alt="" class="oklogo">
+	                                <p class="hint_msg">守望先锋已支持手柄操作，请去游戏内设置。</p>
+	                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel">取消</div>
+                        <div class="browse fr cn language set_sure" ..id="set_sure" data-name="sure">确定</div>
+                        <div class=" fr cn language renew" data-name="renew">恢复默认设置</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+    </div>
+    <!--账号注册s-->
+    <div class="mask login_mask ">
+        <div class="login" id="login">
+            <div class="login_head clearfix">
+                <h3 class="fl language" data-name="registering"></h3>
+                <p class="login_close fr"></p>
+            </div>
+            <div class="login_body">
+                <form id="registerForm">
+                    <p class="pr">
+                        <i ></i>
+                        <input type="text" placeholder="输入账号" name="phoneNumber" class="login_phoneNum" id="login_phoneNum">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr hide">
+                        <i></i>
+                        <input type="text" placeholder="输入昵称" name="nickName">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr">
+                        <i></i>
+                        <input type="password" placeholder="密码" name="loginPassword" class="loginPassword">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                    <p class="pr">
+                        <i></i>
+                        <input type="password" placeholder="再次输入密码" name="checkLoginPassword">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+
+                    <p class="clearfix pr message_code ">
+                        <i></i>
+                        <input type="text" placeholder="输入验证码" class="verification fl" name="verifyCode">
+                        <img src="image/yanzm.jpg">
+                        <span class="Validform_checktip pa"></span>
+                    </p>
+                </form>
+                <div class="clearfix login_agreement pr">
+                    <i class="login_sel selected fl"></i>
+                    <div class="fl agreement" ><b class="fl language" data-name="agreed"></b><a href="javascript:;" class="language fl" data-name="vo_agreement">ddddd</a></div>
+                </div>
+                <div class="register language" data-name="register"></div>
+                <div class="hasAccount language" data-name="existing_account">
+                    <span class="language" data-name="has_num"></span>
+                    <a href="javascript:;" class="log_in language" data-name="log_in"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--账号注册e-->
+    <div class="">
+        <!--注册完成S-->
+        <div class="verification_con  success_register " id="success_register">
+            <div class="verification_head clearfix" >
+                <h3 class="fl language" data-name="registration"></h3>
+                <i class="verification_close fr"></i>
+            </div>
+            <div class="verification_body" style="">
+                <p><i  class="language " data-name="your_msg"></i><em  class="language " data-name="registration_msg" style="color: #23a0bf;"></em></p>
+                <p class="language" data-name="registration_save"></p>
+            </div>
+            <div class="success_register_btn language" data-name="success_register"></div>
+        </div>
+        <!--注册完成E-->
+    </div>
+    <!--注册失败S-->
+    <div class="">
+        <div class="verification_con  erro_register tac " id="erro_register">
+            <div class="verification_head clearfix" >
+                <h3 class="fl language" data-name="erro_registration"></h3>
+                <i class="verification_close fr"></i>
+            </div>
+            <div class="verification_body" style="">
+                <p class="language" data-name="registration_erro_msg"></p>
+            </div>
+            <div class="success_register_btn language" data-name="re_register"></div>
+        </div>
+    </div>
+    <!--注册失败E-->
+    <!--帐号登陆S-->
+    <div class="login_enter_mask mask">
+        <div class="login_enter pr" id="login_enter">
+            <i class="login__enter_close"></i>
+            <h3></h3>
+            <div class="pa login_in_header" style="width: 100%; height: 100px; top: 0;"></div>
+            <div class="login_enter_con">
+                <div class="login_img fl">
+                    <img src="image/touxiang.jpg">
+                </div>
+                <div class="fl login_enter_input">
+                    <div class="in_login_enter_input">
+                        <div class="pr in_login_input">
+                            <input class="fl" id="login_in_phoneNum" type="text" placeholder="输入手机或账号"  name="login_in_phoneNum">
+                            <a class="fl language in_registering" href="javascript:;" data-name="in_registering">注册</a>
+                            <i class="pull-down"></i>
+                            <ul class="pa">
+                            </ul>
+                        </div>
+                        <div class="login_enter_password pr">
+                            <input class="fl" type="password" placeholder="请输入密码" name="login_in_password">
+                            <a class="fl language find_pas" href="javascript:;" data-name="forgot_password">找回密码</a>
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="login_enter_sel clearfix">
+                        <div class="fl password">
+                            <i class="selected"></i>
+                            <b class="language" data-name="remember_password"></b>
+                        </div>
+                    </div>
+                    <div class="login_enter_btn language" id="login_btn" data-name="login_enter"></div>
+                    <p class="login_enter_erro pa language" style="bottom:172px;"></p>
+                    <p class="pa other_enter">
+                        <span class="pr qq_enter"><a href="javascript:;" class="language" data-name="qq_login">QQ登录</a></span>
+                        <span class="pr 3d_enter"><a href="javascript:;" class="language" data-name="3d_login">3D播播</a></span>
+                        <span class="pr wx_enter"><a href="javascript:;" class="language" data-name="wx_login">微信登录</a></span>
+                        <span class="pr wb_enter"><a href="javascript:;" class="language" data-name="wb_login">微博登录</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--帐号登陆E-->
+    <!--验证码s-->
+    <div class="mask">
+        <div class="verification_con verification_inCon" id="dragVer">
+            <div class="verification_head clearfix" >
+                <h3 class="fl language" data-name="verification_code"></h3>
+                <i class="verification_close fr"></i>
+            </div>
+            <div class="verification_body" style="">
+                <p class="language" data-name="abnormal_operation"></p>
+                <input type="text" placeholder="请输入验证码" class="input_verification">
+                <div class="verification_img">
+                    <img src="">
+                    <a href="javascript:;" class="language" data-name="invisibility"></a>
+                    <p class="verification_erro_msg"></p>
+                </div>
+            </div>
+            <div class="verification_foot">
+                <div class="verification_cancel fr language" data-name="cancel"></div>
+                <div class="verification_sure fr language" data-name="sure"></div>
+            </div>
+        </div>
+    </div>
+    <!--验证码E-->
+    <!--关于vr-->
+    <div class="mask about_vr about_vr_stip1">
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr clearfix">
+                <h3 class=" language" data-name="about_vr"></h3>
+                <p class="close_btn hide"></p>
+            </div>
+            <div class="bounced_body">
+                <ul class="clearfix">
+                    <li class="fl left_con">
+                        <p class="txt1 language" data-name="what_vr"></p>
+                        <p class="txt2 language" data-name="how_we_pla"></p>
+                    </li>
+                    <li class="fl right_con">
+                        <p class="language" data-name="what_vir"></p>
+                        <p class="language" data-name="what_vronline"></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bounced_foot tac">
+                <p class=" language sure" data-name="next_page"></p>
+            </div>
+        </div>
+    </div>
+    <div class="mask about_vr about_vr_stip2">
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr clearfix">
+                <h3 class=" language" data-name="about_vr"></h3>
+                <p class="close_btn hide"></p>
+            </div>
+            <div class="bounced_body">
+                <p class="language txt1" data-name="how_experience"></p>
+                <p class="txt2">
+                    <span class="language" data-name="you_need"></span>
+                    <span class="language" data-name="sel_game"></span>
+                    <span class="language" data-name="down_game"></span>
+                    <span><b class="language" data-name="line_drive"></b><b class="language" data-name="start_game"></b></span>
+                </p>
+            </div>
+            <div class="bounced_foot tac">
+                <p class=" language sure" data-name="know"></p>
+            </div>
+        </div>
+    </div>
+    <!--关于vr-->
+    <!--网络错误-->
+    <div class="mask offline_login ">
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr clearfix">
+                <h3 class=" language" data-name="prompt">提示</h3>
+                <p class="close_btn "></p>
+            </div>
+            <div class="bounced_body">
+                <p class="language" data-name="offline_login">网络连接错误，确认使用离线登录？</p>
+            </div>
+            <div class="bounced_foot tac">
+                <ul class="clearfix tac">
+                    <li class="fl language sure" data-name="sure">确定</li>
+                    <li class="fl language cancel" data-name="cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mask network_error">
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr clearfix">
+                <h3 class=" language" data-name="prompt">提示</h3>
+                <p class="close_btn "></p>
+            </div>
+            <div class="bounced_body">
+                <p class="language" data-name="">网络连接错误</p>
+            </div>
+            <div class="bounced_foot tac">
+                <ul class="clearfix tac">
+                    <li class="fl language sure" data-name="sure">确定</li>
+                    <li class="fl language cancel" data-name="cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--新手指导-->
+    <div class="new_course pr ">
+        <div class="exit pr language" data-name="exit_course"></div>
+        <p class=" tips tips1 cur"> <span class="next_tips pa">1/5步</span></p>
+        <p class=" tips tips2"> <span class="next_tips pa">2/5步</span></p>
+        <p class=" tips tips3  "> <span class="next_tips pa">3/5步</span></p>
+        <p class=" tips tips4 "> <span class="next_tips pa">4/5步</span></p>
+        <p class=" tips tips5 "> <span class="next_tips pa last_tips">5/5步</span></p>
+    </div>
+    <!--新手指导-->
+    <!--退出平台提示-->
+    <div class="mask close_tips ">
+        <div class="mask_container">
+            <div class="mask_head">
+                <h3>关闭提示</h3>
+            </div>
+            <div class="mask_con">
+                <p>您点击了关闭按钮，您是想：</p>
+                <form action="" method="get">
+                    <label><input name="min"  type="radio" value="0" checked="checked" class="min"/>最小化到托盘</label>
+                    <label><input name="min" type="radio" value="1"  />退出程序</label>
+                </form>
+            </div>
+            <div class="mask_foot clearfix">
+                <div class="fl">
+                    <form action="">
+                        <label><input type="checkbox" checked="checked" id="rem"  name="rem" value="0">记住我的选择</label>
+                    </form>
+                </div>
+                <ul class="fr">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--退出平台提示-->
+    <!--系统提示-->
+    <div class="mask system_tips">
+        <div class="mask_container">
+            <div class="mask_head">
+                <h3></h3>
+            </div>
+            <div class="mask_con">
+                <p>此功能不支持32位操作系统</p>
+
+            </div>
+            <div class="mask_foot clearfix tac">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--系统提示-->
+    <!--验证码-->
+    <div class="mask code_tips">
+        <div class="mask_container">
+            <div class="mask_head">
+                <h3>VRonline账户验证</h3>
+                <i class="close_btn"></i>
+            </div>
+            <div class="mask_con">
+                <p>为确保您的账号安全，请输入以下验证码：</p>
+                <p class="pr code_img clearfix">
+                    <input class="fl" type="text" placeholder="请输入验证码">
+                    <img src="" class="pa" >
+                    <span class="fl">换一张</span>
+                    <i class="erro_icon pa"></i>
+                </p>
+            </div>
+            <div class="mask_foot clearfix tac">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--验证码-->
+    <!--退出vr模式提示-->
+    <!--退出vr模式提示-->
+    <div class="mask exit_vr_tips ">
+        <div class="mask_container">
+            <div class="mask_head">
+                <h3>提示</h3>
+            </div>
+            <div class="mask_con">
+                <p>是否关闭VR space?</p>
+            </div>
+            <div class="mask_foot clearfix tac">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                    <li class="fl cancel">取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--退出vr模式提示-->
+    <!--没有任何设备-->
+    <div class="mask un_equipment_tips">
+        <div class="mask_container">
+            <div class="mask_head">
+                <h3>提示</h3>
+            </div>
+            <div class="mask_con">
+                <p>请接入平台支持的VR设备后，启动VR模式</p>
+            </div>
+            <div class="mask_foot clearfix tac">
+                <ul class="clearfix">
+                    <li class="fl sure">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--没有任何设备-->
+    <!--已经反馈成功-->
+    <div class="mask success_bounced_msg " id="divSuccess">
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr ">
+                <h3 class=" language" data-name="success_bounced"></h3>
+                <p class="close_btn "></p>
+            </div>
+            <div class="bounced_body">
+                <p class="language" data-name="suc_bounced">谢谢您提的宝贵意见,我们会尽快跟进解决！</p>
+            </div>
+            <div class="bounced_foot tac">
+                <ul class="clearfix tac">
+                    <li class="fl language cancel" data-name="sure" id="btnSuccess">确定</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--反馈成功-->
+    <div class="mask bounced_advice " id="divAdvice">
+        <div class="bounced show">
+            <div class="advice">
+                <div class="advice_head ">
+                    <h3 class=" appendCon" data-name="">意见反馈</h3>
+                    <div class="close_btn"></div>
+                </div>
+                <div class="bounced_con">
+                    <div class="addGame-body clearfix">
+                        <p class="language" data-name="your_problem">您的问题（所填文字不能小于15个字且不能大于300字）</p>
+                        <textarea id="content"></textarea>
+                        <p class="language" data-name="contact_way"></p>
+                        <div class="clearfix advice_write">
+                            <input id="mobile" class="fl" type="text" placeholder="请输入手机号" name="phoneNum">
+                            <input id="qq" class="fl" type="text" placeholder="请输入QQ号" name="">
+                            <span class="erroColor">手机号或qq号必须填写一项，以便及时向你反馈处理信息！</span>
+                        </div>
+                        <p class="language" data-name="upload_photo"></p>
+                        <div class="advice_img clearfix">
+                            <div class="pr fl">
+                                <p class=" advice_close_btn"></p>
+                                <input type="file" onchange="previewFile1()" class="file1">
+                                <img src="" class="image1">
+                            </div>
+                            <div class="pr fl">
+                                <p class="advice_close_btn"></p>
+                                <input type="file" onchange="previewFile2()" class="file2">
+                                <img src="" class="image2">
+                            </div>
+                            <div class="pr fl">
+                                <p class="advice_close_btn"></p>
+                                <input type="file" onchange="previewFile3()" class="file3">
+                                <img src="" class="image3">
+                            </div>
+                            <div class="pr fl">
+                                <p class="advice_close_btn"></p>
+                                <input type="file" onchange="previewFile4()" class="file4">
+                                <img src="" class="image4">
+                            </div>
+                            <div class="pr fl">
+                                <p class="advice_close_btn"></p>
+                                <input type="file" onchange="previewFile5()" class="file5">
+                                <img src="" class="image5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="in-foot clearfix">
+                        <div class="cancel fr cn language" data-name="cancel" id="btnCencel">取消</div>
+                        <div class="browse fr cn language" data-name="sure" id="btnOk">确定</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--网络错误的时候-->
+    <div class="network_erro tac pa">
+        <img src="image/neterror_03.png">
+        <p class="text">当前网络不可用，请检查网络状况！</p>
+        <p class="refresh_icon">重新加载</p>
+    </div>
+    <!--网络错误的时候-->
+    <!-- 兑换激活码 -->
+    <div class="mask exchange_code  " >
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr ">
+                <h3 class=" language" data-name="">兑换激活码</h3>
+                <p class="close_btn "></p>
+            </div>
+            <div class="bounced_body tal" style="padding:0 20px;">
+                <p class="language input_code" data-name="suc_bounced">输入您想要兑换的激活码</p>
+                <input type="text"  value="" placeholder="请输入激活码">
+                <p class="exchange_model">激活样式</p>
+                <p class="exchange_model">SSSS-SSSS-SSSS-SSSS</p>
+            </div>
+            <div class="bounced_foot tac">
+                <ul class="clearfix fr">
+                    <li class="fl language next_tip" data-name="">下一步</li>
+                    <li class="fl language cancel" data-name=""  >取消</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 兑换信息 -->
+    <div class="mask exchange_code_result">
+        <div class="suc_bounced_con">
+            <div class="bounced_head pr ">
+                <h3 class=" language" data-name="">兑换激活码</h3>
+                <p class="close_btn "></p>
+            </div>
+            <div class="bounced_body " style="padding:0 20px 10px 20px;">
+                <p class="language " data-name="">激活成功,你激活的游戏为：</p>
+                <p class="exchange_gamename f24">使命召唤</p>
+            </div>
+            <div class="bounced_foot tac">
+                <ul class="clearfix fr">
+                    <li class="fl language  resume_load" data-name="">重新输入</li>
+                    <li class="fl language cancel" data-name=""  >完成</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 关于vr助手 -->
+    <div class="mask abort_vr_mask  " >
+        <div class="suc_bounced_con" style="width:600px;">
+            <div class="bounced_head pr ">
+                <h3 class=" language" data-name="">关于VR助手</h3>
+                <p class="close_btn "></p>
+            </div>
+            <div class="bounced_body " style="padding:0 20px 40px 20px;">
+                <img src="image/logo.png" height="40" width="123" style="margin:40px 0 20px 0;">
+                <p class="language f14" data-name="">版本号：<b style="color:#0182ea;"></b></p>
+                <p style="line-height:30px;" class=" f14">©2008-2015 vronline.com All Rights Reserved</p>
+                <p style="line-height:30px; padding-bottom:0;" class=" f14">上海恺英网络科技有限公司 版权所有</p>
+                <p style="line-height:30px;" class=" f14">上海陈行路2388号浦江科技广场3号3F</p>
+                <p style="line-height:30px;" class=" f14">客服电话：021-54310366-8065</p>
+            </div>
+        </div>
+    </div>
+    <!-- 引导页 -->
+    <div class="homelead_con mask  tac">
+    <!-- 首页1 -->
+        <div class="in_homelead_con pa pr">
+          <div class="close pa"></div>
+          <div class="homelead_txt pa">
+            <p class="f26 ">亲爱的用户,欢迎您使用VR助手.</p>
+            <p class="f26 tal">为了给您提供更好的服务和方便使用.</p>
+            <p class="f26 tal">现在我们将为您<b style="color:#e9e773;">介绍VR助手~</b></p>
+          </div>
+          <div class="start_btn pa"></div>
+        </div>
+        <!-- 选择设备 -->
+        <div class="lead_drive_check pa pr center ">
+          <div class="close pa"></div>
+          <i class="has_drive pa"></i>
+          <i class="no_drive pa"></i>
+        </div>
+        <!-- 没有驱动的时候 -->
+        <div class="no_drive_container pa pr center">
+          <h3>如果您现在还没有设备，先去看看VR视频或游戏</h3>
+          <div class="btn_con clearfix">
+            <div class="video_btn_drive fl"></div>
+            <div class="game_btn fr"></div>
+          </div>
+        </div>
+        <div class="no_drive_con pa pr center tac ">
+          <div class="close pa"></div>
+          <h3>如果你现在还没有设备，我们推荐您看看<b  style="color:#e9e773;">Deepoon E3</b></h3>
+          <div class="drivecast fl pr">
+            <div class="bd pr">
+                <ul class="cast-list">
+                <li><img src="images/1.jpg"></li>
+                <li><img src="images/2.jpg"></li>
+                <li><img src="images/3.jpg"></li>
+                <li><img src="images/4.jpg"></li>
+                <li class="pr"><img src="images/5.jpg"><a class="into pa" href="#"></a></li>
+                </ul>
+                <div class="arrow pa pr center">
+                    <a class="prev pa " href="javascript:;"></a>
+                    <a class="next pa " href="javascript:;"></a>
+                </div>
+            </div>
+          </div>
+          <div class="fr dp_right_con tac" >
+            <p class="f20">心动体验价：￥<b>500</b></p>
+            <p><span class="by_btn"></span></p>
+            <p>我想先去看看<b style="color:#e9e773;">VR游戏或视频</b></p>
+            <p class="clearfix">
+              <span class="vr_game fl"></span>
+              <span class="bb fr"></span>
+            </p>
+          </div>
+        </div>
+        <!-- 有驱动的时候 -->
+        <div class="has_drive_con pa pr center tac ">
+          <div class="close pa"></div>
+          <h3>我们可以<b  style="color:#e9e773;">自动适配</b>和安装市面上主流VR设备的驱动</h3>
+          <ul class="clearfix">
+            <li class="fl tac" support="1">
+              <div class="img_con pr ">
+                <span class="pa pr"><i>新品推荐</i></span>
+                <img src="image/dae3.png">
+                <p class="els pa drive_name els ">DPVR E3</p>
+                <p class="pa pr download_con"><b class="pa">已连接</b><i class="in_press pa" style="width:0;"></i></p>
+              </div>
+              <p class="ells2 tal" title="新一代虚拟现实头盔297克机身，如此轻盈！">新一代虚拟现实头盔297克机身，如此轻盈！</p>
+              <div class="charge_btn pr cp"><p class="pa pr hide"></p><b>购买</b></div>
+            </li>
+            <li class="fl tac"  support="2">
+              <div class="img_con pr">
+                <img src="image/dap.png">
+                <p class="els pa drive_name els ">DPVR E2</p>
+                <p class="pa pr download_con"><b class="pa">已连接</b><i class="in_press pa" style="width:0;"></i></p>
+              </div>
+              <p class="ells2 tal" title="新一代虚拟现实头盔297克机身，如此轻盈！">虚拟现实头盔</p>
+            </li>
+            <li class="fl tac"  support="3">
+              <div class="img_con pr">
+                <img src="image/ocurift.png">
+                <p class="els pa drive_name els ">Oculus  Rift</p>
+                <p class="pa pr download_con"><b class="pa">已连接</b><i class="in_press pa" style="width:0;"></i></p>
+              </div>
+              <p class="ells2 tal" title="新一代虚拟现实头盔297克机身，如此轻盈！">虚拟现实头盔</p>
+            </li>
+            <li class="fl tac"  support="4">
+              <div class="img_con pr">
+                <img src="image/htc.png">
+                <p class="els pa drive_name els ">HTC  VIVE</p>
+                <p class="pa pr download_con"><b class="pa">已连接</b><i class="in_press pa" style="width:0;"></i></p>
+              </div>
+              <p class="ells2 tal" title="新一代虚拟现实头盔297克机身，如此轻盈！">虚拟现实头盔</p>
+            </li>
+            <li class="fl tac"  support="5">
+              <div class="img_con pr">
+                <img src="image/other.png">
+                <p class="els pa drive_name els ">其他</p>
+                <p class="pa pr download_con"><b class="pa">已连接</b><i class="in_press pa" style="width:0;"></i></p>
+              </div>
+              <p class="ells2 tal" title="新一代虚拟现实头盔297克机身，如此轻盈！">虚拟现实头盔</p>
+            </li>
+          </ul>
+          <div class="pa next_tip"></div>
+          <p class="pr f18 drive_state no_drive_connect cur"><span class="pr"><b>您现在可以将您的设备与电脑连接...</b><i class="pa connect_icon"></i></span></p>
+          <p class="pr f18 drive_state connect_on"><span class="pr"><b>正在检查新设备，请稍等...</b><i class="pa connect_icon"></i></span></p>
+          <p class="pr f18 drive_state connect_in"><span class="pr"><b>已检测到新设备，正在安装驱动...</b><i class="pa connect_icon"></i></span></p>
+          <p class="pr f18 drive_state connect_over"><span class="pr"><b>恭喜您，VR设备已成功安装到您的电脑上！</b><i class="pa next_vr"></i></span></p>
+        </div>
+        <!-- vr游戏 -->
+        <div class="go_detail pa pr tac center ">
+          <div class="close pa"></div>
+          <h3 class="f20">我们推荐给你两款精品火爆的VR游戏，不妨快来体验下吧！</h3>
+          <div class="clearfix detail_con">
+            <div class="fl in_detail" game-id="1000022">
+              <div class="in_detail_con">
+                <div class="img_con ">
+                  <img src="image/1.jpg">
+                </div>
+              </div>
+              <div class="in_detail_bottom tal clearfix"><i class="fl">RAW DATA</i><div class="fl"><span>已有</span><b>5w</b><span>人下载</span></div></div>
+            </div>
+            <div class="fr  in_detail"  game-id="1000029">
+              <div class="in_detail_con">
+                <div class="img_con">
+                  <img src="image/3.jpg">
+                </div>
+              </div>
+              <div class="in_detail_bottom tal clearfix"><i class="fl">RAW DATA</i><div class="fl els"><span>已有</span><b>5w</b><span>人下载</span></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- 进入视频 -->
+        <div class="go_video pa pr tac center ">
+          <h3 class="tal">您在这里可以享受和浏览丰富的<b style="color:#e9e773;">VR视频资源</b>,我们推荐给你这款<b  style="color:#e9e773;">热门视频</b>,不妨用VR设备来体验下吧</h3>
+          <ul class="clearfix">
+            <li class="fl">
+              <div class="img_con">
+                <img src="images/1.jpg" >
+              </div>
+              <p class="els f14 name_video"><i style=" vertical-align: top;">侏罗纪公园</i>（已有<b>1000</b>人观看)</p>
+            </li>
+            <li class="fr">
+              <div class="img_con">
+                <img src="images/1.jpg" >
+              </div>
+              <p class="els f14 name_video"><i style=" vertical-align: top;">侏罗纪公园</i>（已有<b>1000</b>人观看)</p>
+            </li>
+          </ul>
+        </div>
+    </div>
+</div>
+<div class="remind_con mask ">
+    <div class="remind pr"><a href="#" class="button_3d"></a><a href="#" class="close"></a></div>
+</div>
+<!-- 引导页 -->
+
+<script>
+    
+	$(function(){
+    //兑换激活码
+    $('.exchange_code').on('click','.bounced_foot .next_tip',function(){
+        var val = $(this).parents('.exchange_code').find('.bounced_body input').val();
+        //console.dir(val)
+        if(val != ''){
+          PL.callFun('mainframe', 'activegame',val);
+        }
+    });
+    $('.exchange_code').on('click','.bounced_foot .cancel',function(){
+        $(this).parents('.mask').hide();
+    });
+    $('.exchange_code_result').on('click','.resume_load',function(){
+        $(this).parents('.mask').hide();
+        $('.exchange_code').find('input').val('');
+        $('.exchange_code').show().find('.input_code').removeClass('erroColor').text('输入您想要兑换的激活码');
+    })
+		$('.addGame-body ul').on('click','li',function(){
+			var i = $(this).index();
+			$(this).addClass('on_choose').siblings().removeClass('on_choose');
+			$(this).parents('.addGame-body').find('.li_con').eq(i).removeClass('hide').siblings().addClass('hide');
+		})
+		//
+		$('.rain_settings').on('click',function(){
+			$('.set_bounced').addClass('show');
+		})
+		//关闭设置弹窗
+		$('.commonSetting .bounced .close').on('click',function(){
+			$('.commonSetting').removeClass('show');
+		});
+		//关闭游戏手柄设置弹窗
+		$('.gameSetting .bounced .close').on('click',function(){
+			$('.gameSetting').removeClass('show');
+		});
+		//取消设置弹窗
+		$('.commonSetting .in-foot .cancel').on('click',function(){
+			$('.commonSetting').removeClass('show');
+		});
+		//取消游戏手柄设置弹窗
+		$('.gameSetting .in-foot .cancel').on('click',function(){
+			$('.gameSetting').removeClass('show');
+		});
+		//设置弹窗成功
+		$('.commonSetting .in-foot .browse').on('click',function(){
+			$('.commonSetting').removeClass('show');
+            /*var json = {
+                    'common':{'openset':'','closerview':'','lenspull':'','openhandle':'','Ctrlmouse':'','Ctrlview':''},
+                    'gamewarworld':{'A':'','B':'','X':'', 'Y':'', 'LB':'', 'RB':'', 'LT':'','RT':''}
+                }*/
+                if($(this).parents('.commonSetting').find('li.local').hasClass('on_choose')){
+                  var json = {
+                    openset:'122'
+                  };
+                  json.openset     = $('.commonSetting').find('.openset').val()
+                  json.closerview  = $('.commonSetting').find('.closerview').val()
+                  json.lenspull    = $('.commonSetting').find('.lenspull').val()
+                  json.openhandle  = $('.commonSetting').find('.openhandle').val()
+                  json.ctrlmouse   = $('.commonSetting').find('.ctrlmouse').val()
+                  json.ctrlview    = $('.commonSetting').find('.ctrlview').val()
+                  //console.dir(json)
+                }
+
+            PL.callFun('mainframe', 'savecommonkeyset',JSON.stringify(json));
+		});
+		//游戏手柄设置弹窗成功
+		$('.gameSetting .in-foot .browse').on('click',function(){
+			$('.gameSetting').removeClass('show');
+      //console.dir($(this).parents('.gameSetting').find('li.on_choose').attr('data-name'))
+      var name = $(this).parents('.gameSetting').find('li.on_choose').attr('data-name');
+      var json = {
+        gamewarworld:{
+
+        }
+      };
+      json.gamewarworld.A = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(0).find('input').val()
+      json.gamewarworld.B = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(1).find('input').val()
+      json.gamewarworld.X = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(2).find('input').val()
+      json.gamewarworld.Y = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(3).find('input').val()
+      json.gamewarworld.LB = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(4).find('input').val()
+      json.gamewarworld.RB = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(5).find('input').val()
+      json.gamewarworld.LT = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(6).find('input').val()
+      json.gamewarworld.RT = $('.gameSetting ').find('.key_choose_r_l  ul li').eq(7).find('input').val()
+
+      //console.dir(json)
+      PL.callFun('mainframe','savegamekeyset',JSON.stringify(json));
+		});
+    //点击恢复默认设置
+    $('.gameSetting .in-foot .renew').on('click',function(){
+        //$('.gameSetting').removeClass('show');
+        PL.callFun('mainframe','resetkeyset','gamewarworld');
+    });
+    //点击本地游戏回复默认设置
+    $('.commonSetting  .renew').on('click',function(){
+        PL.callFun('mainframe','resetkeyset','common');
+    });
+		//判断对应按键值不能重复
+		function checkName(data){
+            var values="";
+            $(".gameSetting .li_con input").each(function(i,item){
+                var value=$(this).val().toUpperCase();
+                values+=value; //获取所有的名称
+            });
+            var val=$(data).val().toUpperCase(); //获得当前输入框的值
+            //判断当前输入框的值
+            var newValue=values.replace(val,""); //去除当前输入框的值
+            if(newValue==""){
+                return false;
+            }else{
+                if(val == ''){
+                    $(data).parent().next().removeClass('hide').text('按键不能为空');
+                }else if(val.length> 1){
+                    if($(data).parents('.mask').hasClass('gameSetting')){
+                        $(data).parent().next().removeClass('hide').text('按键不能超过两位');
+                    }
+                }else if(val.replace(/^[A-Za-z0-9]+$/,'')){
+                    $(data).parent().next().removeClass('hide').text('按键只能设置为英文字符、数字');
+                }else{
+                    if(newValue.indexOf(val)>-1){  //当前值和newValue作比较
+                        $(data).parent().next().removeClass('hide').text('按键被占用');
+                    }else{
+                        $(data).parent().next().addClass('hide');
+                    }
+                }
+            }
+        }
+        $(".gameSetting .li_con input").on('keyup',function(){
+        	checkName(this);
+        });
+        //本地VR游戏value重复判断
+        $(".commonSetting .li_con input").on('keyup',function(){
+        	var values="";
+            $(".commonSetting .li_con input").each(function(i,item){
+                var value=$(this).val().toUpperCase();
+                values+=value; //获取所有的名称
+            });
+            var val=$(this).val().toUpperCase(); //获得当前输入框的值
+            var newValue=values.replace(val,""); //去除当前输入框的值
+            if(newValue==""){
+                return false;
+            }else{
+            	if(val==""){
+            		$(this).parent().next().removeClass('hide').text('按键不能为空');
+            	}else if(val.length==1){
+                 	$(this).parent().next().addClass('hide');
+	                if(newValue.indexOf(val)>-1){  //当前值和newValue作比较
+		                $(this).parent().next().removeClass('hide').text('按键被占用');
+		            }else{
+		            	$(this).parent().next().addClass('hide');
+		            }
+            	}else if(newValue.indexOf(val)>-1){  //当前值和newValue作比较
+	                $(this).parent().next().removeClass('hide').text('按键被占用');
+	            }else if(val.replace(/[^\u4E00-\u9FA5]/g,'')){
+				    $(this).parent().next().removeClass('hide').text('按键只能设置为英文字符、数字');
+				}else{
+	            	$(this).parent().next().addClass('hide');
+	            }
+            }
+        });
+        //游戏快捷键设置
+        $(".commonSetting .show_vrDeploy input").keydown(function(event){
+		  	var e = event || window.event || arguments.callee.caller.arguments[0];
+		  	this.value=$(this).val();
+            var keyName;
+            //console.dir(e.keyCode)
+            switch(e.keyCode){
+				case 9:keyName="Tab";$(this).attr('keyCode',9);break;
+				case 13:keyName="Enter";$(this).attr('keyCode',13);break;
+				case 16:keyName="Shift";$(this).attr('key',16);break;
+				case 17:keyName="Ctrl" ;$(this).attr('key',17);break;
+				case 18:keyName="Alt";$(this).attr('key',18);break;
+				case 19:keyName="PauseBreak";$(this).attr('keyCode',19);break;
+				case 20:keyName="Caps Lock";$(this).attr('keyCode',20);break;
+				case 27:keyName="Esc";$(this).attr('keyCode',27);break;
+				case 32:keyName="空格";$(this).attr('keyCode',32);break;
+				case 33:keyName="PageUp";$(this).attr('keyCode',33);break;
+				case 34:keyName="PageDown";$(this).attr('keyCode',34);break;
+				case 35:keyName="End";$(this).attr('keyCode',35);break;
+				case 36:keyName="Home";$(this).attr('keyCode',36);break;
+				case 37:keyName="left";$(this).attr('keyCode',37);break;
+				case 38:keyName="up";$(this).attr('keyCode',38);break;
+				case 39:keyName="right";$(this).attr('keyCode',39);break;
+				case 40:keyName="down";$(this).attr('keyCode',40);break;
+				case 45:keyName="Insert";$(this).attr('keyCode',45);break;
+				case 46:keyName="Delete";$(this).attr('keyCode',46);break;
+				case 19:keyName="PauseBreak";break;
+				case 20:keyName="Caps Lock";break;
+				case 27:keyName="Esc";break;
+				case 32:keyName="空格";break;
+				case 33:keyName="PageUp";break;
+				case 34:keyName="PageDown";break;
+				case 35:keyName="End";break;
+				case 36:keyName="Home";break;
+				case 37:keyName="left";break;
+				case 38:keyName="up";break;
+				case 39:keyName="right";break;
+				case 40:keyName="down";break;
+				case 45:keyName="Insert";break;
+				case 46:keyName="Delete";break;
+				case 19:keyName="PauseBreak";break;
+				case 20:keyName="Caps Lock";break;
+				case 27:keyName="Esc";break;
+				case 33:keyName="PageUp";break;
+				case 34:keyName="PageDown";break;
+				case 35:keyName="End";break;
+				case 36:keyName="Home";break;
+				case 37:keyName="left";break;
+				case 38:keyName="up";break;
+				case 39:keyName="right";break;
+				case 40:keyName="down";break;
+				case 45:keyName="Insert";break;
+				case 46:keyName="Delete";break;
+				case 65:keyName='A';$(this).attr('keyCode',65);break;
+                case 66:keyName='B';$(this).attr('keyCode',66);break;
+                case 67:keyName='C';$(this).attr('keyCode',67);break;
+                case 68:keyName='D';$(this).attr('keyCode',68);break;
+                case 69:keyName='E';$(this).attr('keyCode',69);break;
+                case 70:keyName='F';$(this).attr('keyCode',70);break;
+                case 71:keyName='G';$(this).attr('keyCode',71);break;
+                case 72:keyName='H';$(this).attr('keyCode',72);break;
+                case 73:keyName='I';$(this).attr('keyCode',73);break;
+                case 74:keyName='J';$(this).attr('keyCode',74);break;
+                case 75:keyName='K';$(this).attr('keyCode',75);break;
+                case 76:keyName='L';$(this).attr('keyCode',76);break;
+                case 77:keyName='M';$(this).attr('keyCode',77);break;
+                case 78:keyName='N';$(this).attr('keyCode',78);break;
+                case 79:keyName='O';$(this).attr('keyCode',79);break;
+                case 80:keyName='P';$(this).attr('keyCode',80);break;
+                case 81:keyName='Q';$(this).attr('keyCode',81);break;
+                case 82:keyName='R';$(this).attr('keyCode',82);break;
+                case 83:keyName='S';$(this).attr('keyCode',83);break;
+                case 84:keyName='T';$(this).attr('keyCode',84);break;
+                case 85:keyName='U';$(this).attr('keyCode',85);break;
+                case 86:keyName='V';$(this).attr('keyCode',86);break;
+                case 87:keyName='W';$(this).attr('keyCode',87);break;
+                case 88:keyName='X';$(this).attr('keyCode',88);break;
+                case 89:keyName='Y';$(this).attr('keyCode',89);break;
+                case 90:keyName='Z';$(this).attr('keyCode',90);break;
+				case 91:keyName="左Win";$(this).attr('keyCode',91);break;
+				case 92:keyName="右Win";$(this).attr('keyCode',92);break;
+				case 93:keyName="快捷菜单键";$(this).attr('keyCode',93);break;
+				case 95:keyName="Sleep";$(this).attr('keyCode',95);break;
+				case 96:keyName="小键盘区0";$(this).attr('keyCode',96);break;
+				case 97:keyName="小键盘区1";$(this).attr('keyCode',97);break;
+				case 98:keyName="小键盘区2";$(this).attr('keyCode',98);break;
+				case 99:keyName="小键盘区3";$(this).attr('keyCode',99);break;
+				case 100:keyName="小键盘区4";$(this).attr('keyCode',100);break;
+				case 101:keyName="小键盘区5";$(this).attr('keyCode',101);break;
+				case 102:keyName="小键盘区6";$(this).attr('keyCode',102);break;
+				case 103:keyName="小键盘区7";$(this).attr('keyCode',103);break;
+				case 104:keyName="小键盘区8";$(this).attr('keyCode',104);break;
+				case 105:keyName="小键盘区9";$(this).attr('keyCode',105);break;
+				case 106:keyName="*";$(this).attr('keyCode',106);break;
+				case 107:keyName="+";$(this).attr('keyCode',107);break;
+				case 109:keyName="-";$(this).attr('keyCode',109);break;
+				case 110:keyName=".";$(this).attr('keyCode',110);break;
+				case 111:keyName="/";$(this).attr('keyCode',111);break;
+				case 112:keyName="F1";$(this).attr('keyCode',112);break;
+				case 113:keyName="F2";$(this).attr('keyCode',113);break;
+				case 114:keyName="F3";$(this).attr('keyCode',114);break;
+				case 115:keyName="F4";$(this).attr('keyCode',115);break;
+				case 116:keyName="F5";$(this).attr('keyCode',116);break;
+				case 117:keyName="F6";$(this).attr('keyCode',117);break;
+				case 118:keyName="F7";$(this).attr('keyCode',118);break;
+				case 119:keyName="F8";$(this).attr('keyCode',119);break;
+				case 120:keyName="F9";$(this).attr('keyCode',120);break;
+				case 121:keyName="F10";$(this).attr('keyCode',121);break;
+				case 122:keyName="F11";$(this).attr('keyCode',122);break;
+				case 123:keyName="F12";$(this).attr('keyCode',123);break;
+				case 144:keyName="NumLock";$(this).attr('keyCode',144);break;
+				case 145:keyName="ScrollLock";$(this).attr('keyCode',145);break;
+				case 186:keyName=";";$(this).attr('keyCode',186);break;
+				case 187:keyName="=";$(this).attr('keyCode',187);break;
+				case 188:keyName=",";$(this).attr('keyCode',188);break;
+				case 189:keyName="-";$(this).attr('keyCode',189);break;
+				case 190:keyName=".";$(this).attr('keyCode',190);break;
+				case 191:keyName="/";$(this).attr('keyCode',191);break;
+				case 192:keyName="`";$(this).attr('keyCode',192);break;
+				case 219:keyName="[]";$(this).attr('keyCode',219);break;
+				case 220:keyName="\\";$(this).attr('keyCode',220);break;
+				case 221:keyName="]";$(this).attr('keyCode',221);break;
+				case 222:keyName="'";$(this).attr('keyCode',222);break;
+				case 255:keyName="Wake";$(this).attr('keyCode',255);break;
+				default:keyName='';break;
+            }
+			if((e.shiftKey)&&(e.keyCode!=16)){
+            	keyName="Shift + "+ keyName;
+            	$(this).attr("value",keyName);
+            	keyName=keyName.substring(0,keyName.length-1);
+            }
+            if((e.altKey)&&(e.keyCode!=18)){keyName = "Alt + "+ keyName; $(this).attr("value",keyName);}
+            if((e.ctrlKey)&&(e.keyCode!=17)){keyName ="Ctrl + "+ keyName; $(this).attr("value",keyName);}
+            if(!(e.ctrlKey)&&!(e.altKey)&&!(e.shiftKey)&&(e.keyCode!=37)&&(e.keyCode!=38)&&(e.keyCode!=39)&&(e.keyCode!=40)&&(e.keyCode!=33)&&(e.keyCode!=34)&&(e.keyCode!=35)&&(e.keyCode!=36)&&(e.keyCode!=45)&&(e.keyCode!=46)&&(e.keyCode!=9)&&(e.keyCode!=20)){
+            	$(this).attr("value",keyName);
+              if(e.keyCode > 64 && e.keyCode < 91){
+                keyName=keyName.substring(0,keyName.length-1);
+
+              }
+            }
+            this.value= keyName;
+		});
+
+	})
+</script>
+
+</body>
+</html>
+<script src="js/tool/route.js"></script>
+<script>
+var data22 ={
+  paytoken:'',
+  appid:1,
+  serverid:1,
+  openid:"faqRv_HgeC",
+  vrkey:"xxxxxxxxxxx",
+  price:10,
+  num:1,
+  total:10,
+  url		 : "http://img3.duitang.com/uploads/item/201411/07/20141107220551_TMMsE.jpeg",
+  item  	 : "游戏名",
+  itemid	 : 1007,
+  extra1	 : "此处可以写开发商订单号"
+}
+$(function(){
+  $('#btnceshi').on('click',function(){
+    buy_game(data22)
+
+  })
+})
+</script>

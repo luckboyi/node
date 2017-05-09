@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IM主面板</title>
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="style/im.css">
+    <script src="../js/plug/jquery-1.11.3.min.js"></script>
+    <script src="../js/plug/tinyscrollbar.js"></script>
+    <script src="js/tool/vue.js"></script>
+</head>
+<body>
+    <div class="im_container pr">
+        <i class="pa close_btn" style="-webkit-app-region: no-drag; z-index: 999;"></i>
+        <div class="drag_con" style="-webkit-app-region: drag; position:absolute; width:100%;height:66px; left:0; top:0;padding:0 50px 0 180px;box-sizing:border-box;-webkit-box-sizing:border-box;">
+          <div style="width:100%;height:100%;"></div>
+        </div>
+        <div id="user_msg" class="clearfix">
+            <div class="img_container fl pr">
+                <img :src="url" user-id="{{uid}}">
+                <i class="pa " :class="{online:state == 1,busy:state == 3 || state == 4 || state == 7,leave:state ==2,hiding:state == 5}"></i>
+            </div>
+            <div class="fl">
+                <p class="user_name clearfix">
+                    <span class="fl name f14 cp els">{{name}}</span>
+                    <span class="fl rank cp"></span>
+                    <span class="fl money cp yellowCol"  v-if="money !=0"><i class="vr_money_icon"></i>{{money}}</span>
+                </p>
+                <div class="user_state pr" style="-webkit-app-region: no-drag; z-index: 999;">
+                    <span class="cp" v-if="state == 1">在线</span>
+                    <span class="cp" v-if="state == 2">离开</span>
+                    <span class="cp" v-if="state == 3">忙碌</span>
+                    <span class="cp" v-if="state == 4">请勿打扰</span>
+                    <span class="cp" v-if="state == 5">隐身</span>
+                    <span class="cp" v-if="state == 6">离线</span>
+                    <span class="cp" v-if="state == 7">游戏中</span>
+                    <ul class="sel_state">
+                        <li state="online">
+                            <div>
+                                <i class="online" ></i><b>在线</b>
+                            </div>
+                        <li state="busy">
+                            <div>
+                                <i class="busy" ></i><b>忙碌</b>
+                            </div>
+                        <li state="leave">
+                            <div>
+                                <i class="leave" ></i><b>离开</b>
+                            </div>
+                        <li state="hiding">
+                            <div>
+                                <i class="hiding" ></i><b>隐身</b>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h3 class="f14">我的好友</h3>
+        <div class="pr list_container">
+            <div class="" id="friend_list_scrollbar">
+                <div class="scrollbar pr"><div class="track pr"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <div class="overview">
+                        <!--好友申请-->
+                        <div class="friend_req pr" id="friend_req" v-show="state">
+                            <h4 class="pr" v-on:click="list"><i class="pa icon" :class="{shrink:if_shrink}"></i>好友申请<span class="req_num fr">{{items.length}}</span></h4>
+                            <ul class="friend_list" v-show="if_shrink">
+                                <li class="clearfix " v-for="item in items">
+                                    <div class="img_container fl pr"  v-on:click.stop="userMsg(item)">
+                                        <img :src="item.url">
+                                    </div>
+                                    <div class="fl user_msg">
+                                        <h4 class="name els">{{item.name}}</h4>
+                                        <p class="msg els">希望添加您为好友！</p>
+                                    </div>
+                                    <div class="fr tac btn pa">
+                                        <div class="clearfix btn_con">
+                                            <span class="fl cur" v-on:click="agree(item)">同意</span>
+                                            <span class="fl" v-on:click="overlook(item)">忽略</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="agree_tips">你已成功添加为好友！</div>
+                        <!--好友申请-->
+                        <!--好友列表-->
+                        <div class="friend_req" id="friend_list" v-show="state">
+                            <h4 class="pr" v-on:click="list"><i class="pa icon" :class="{shrink:if_shrink}"></i>好友列表<span class="fr" v-if="items.length !=0"><b>{{online_num}}</b>/<b>{{items.length}}</b></span></h4>
+                            <ul class="friend_list" v-show="if_shrink">
+                                <li class="clearfix pr in_friend_list" v-for="item in items | orderBy field reverse" uid="{{item.uid}}">
+                                    <div class="img_container fl pr" v-on:click="userMsg(item)">
+                                        <img :src="item.url" :class="{'gray':item.state == 6}">
+                                        <i class="pa" :class="{online:item.state == 1,busy:item.state == 3 || item.state == 4 || item.state == 7,leave:item.state ==2,hiding:item.state == 5}"></i>
+                                    </div>
+                                    <div class="fl user_msg"  v-on:click="firendListClick(item)">
+                                        <h4 class="name els">{{item.name}}</h4>
+                                        <span class="fr unread_msg" v-if="item.msg_num !=0">{{item.msg_num}}</span>
+                                        <p class="msg els">{{item.msg}}</p>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <!--好友列表-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_list_foot pa" id="addsearch">
+            <ul class="tac clearfix">
+                <li class="tac fl pr"  v-on:click="addsearch()">
+                    <i class="icon search"></i>
+                    <b>查找添加</b>
+                </li>
+                <li class="fr pr">
+                    <i class="icon system_msg"></i>
+                    <b>系统消息</b>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var data1= {
+        state:true,
+        if_shrink:true,
+        agree_tips:false,
+        items:[
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                online:'true',
+                money:'20000',
+                state:'忙碌',
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                busy:'true',
+                money:'20000',
+                state:'忙碌',
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                leave:'true',
+                money:'20000',
+                state:'忙碌',
+            }
+        ]
+
+    };
+    var data2= {
+        state:true,
+        if_shrink:true,
+        field:'state',
+        online_num:'2',
+        items:[
+            {
+                url:'../image/touxiang1.png',
+                name:'dddd',
+                rank:'rank1',
+                online:'true',
+                money:'20000',
+                state:'6',
+                msg:'dededededdddddddddddddddddddddddddd',
+                msg_num:'',
+                tag:0,
+                uid:'10000'
+            },
+            {
+                uid:'10000',
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                busy:'true',
+                money:'20000',
+                state:'2',
+                msg:'1111111',
+                msg_num:'0',
+                tag:3
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                leave:'true',
+                money:'20000',
+                state:'3',
+                msg:'希望添加你为好友',
+                tag:2
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                online:true,
+                money:'20000',
+                state:'4',
+                msg:'希望添加你为好友',
+                tag:0
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                leave:'true',
+                money:'20000',
+                state:'5',
+                msg:'希望添加你为好友',
+                msg_num:'',
+                tag:2
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                leave:'true',
+                money:'20000',
+                state:'3',
+                msg:'希望添加你为好友',
+                tag:2
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                online:true,
+                money:'20000',
+                state:'2',
+                msg:'希望添加你为好友',
+                unread_msg:false,
+                tag:0
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                leave:'true',
+                money:'20000',
+                state:'3',
+                msg:'希望添加你为好友',
+                unread_msg:false,
+                tag:2
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                leave:'true',
+                money:'20000',
+                state:'3',
+                msg:'希望添加你为好友',
+                unread_msg:false,
+                tag:2
+            },
+            {
+                url:'../image/touxiang1.png',
+                name:'david',
+                rank:'rank1',
+                hiding:false,
+                money:'20000',
+                state:'4',
+                msg:'ddd',
+                unread_msg:false,
+                gray:true,
+                tag:4
+            }
+        ]
+
+    };
+    var addData ={
+        url:'../image/touxiang1.png',
+        name:'添加的',
+        rank:'rank1',
+        hiding:false,
+        money:'20000',
+        state:'离开',
+        msg:'ddd',
+        unread_msg:false,
+        gray:true,
+        tag:2
+    };
+    var userUpdata={
+        url:'../image/touxiang1.png',
+        name:'david',
+        rank:'rank2',
+        money:'10',
+        state:6,
+    };
+    var userUpdata2={
+        url:'../image/touxiang1.png',
+        name:'zhengy',
+        state:'online',
+        rank:'rank1',
+        online:false,
+        busy:false,
+        leave:true,
+        hiding:false,
+        money:0,
+        state:'忙碌',
+    };
+    var pushData = {
+        url:'../image/touxiang1.png',
+        name:'david',
+        rank:'rank1',
+        online:'true',
+        money:'20000',
+        state:'忙碌',
+        msg:'添加的',
+        unread_msg:true,
+        msg_num:'99+'
+    };
+</script>
+<script src="js/component/im.js"></script>
+<script src="js/tool/imInterface.js"></script>

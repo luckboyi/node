@@ -1,0 +1,238 @@
+imfn.imFrame('module','fn','data');
+
+主面板
+
+module: 	'mainFrame'
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		userData	        用户信息       {
+							   url:'用户头像地址'，
+							   uid：‘用户id’
+						           name：'用户名’，
+							   rank：‘用户等级  rank1-99’，
+						           money：‘v币的余额’
+							   state:'（用户状态： 1.在线 2.离开 3.忙碌 4.请勿打扰 5.隐身 6.离线 7.游戏中）'
+							}			
+		changeUserData		更新用户信息	{
+            							
+							}
+		friend_request		好友申请	{
+								state:true  (是否有好有申请列表)
+								if_shrink：true（是否展开列表）
+								agree_tips：false（默认为false，是否添加成功），
+								items:[{
+									url:'用户头像'，
+									name：‘用户名’，
+									
+							   
+								}]
+							}
+		new_friend_request	新的好友申请	{
+								url:'用户头像'，
+								name：‘用户名’，
+							}
+		friend_list		已有的好友列表	
+							{
+								state:true  (是否有好有申请列表)
+								if_shrink：true（是否展开列表）
+								agree_tips：false（默认为false，是否添加成功），
+								online_num：在线的用户数量，
+								field:‘state’,排序用的默认传入即可
+								items:[{
+									url:'用户头像'，
+									name：‘用户名’，
+									uid:'',
+							    		msg:'用户个性签名'
+									msg_num：‘未读信息数量’
+							   		 state:'（用户状态： 1.在线 2.离开 3.忙碌 4.请勿打扰 5.隐身 6.离线 7.游戏中）'
+								}]
+							}
+		add_friend_list         新添加的好有	{
+									url:'用户头像'，
+									name：‘用户名’，
+									uid:'',
+									online：在线‘true’，
+							   		busy：忙碌‘true  or false’
+							   		leave：离开 ‘true or false’
+							    		msg:'用户个性签名'
+									msg_num：‘未读信息数量’
+							   		tag：‘1  在线1 离开2  忙碌 3 隐身4’	
+							}
+		resh_friend_list	更新好友列表
+
+
+添加好友
+module: 	addFriendFrame
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		recommend_list          推荐的好友	{
+								title:'推荐的好友（搜索到的好友）'，
+								lists:[{
+									url:''
+									name:'',
+									uid:''，
+									state:'添加好友为true 验证中为false'
+								}]	
+							}			
+		recommend_game          推荐的游戏	data0={
+            							title:'推荐游戏'，
+								lists:[{
+									url:''
+									name:'',
+									uid:''，
+									gameid：‘’
+								}]	
+							}
+
+
+聊天框
+
+module: 	chatFrame
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		chatFrientList          已有的聊天列表  {
+								items:[{
+									uid:'',
+									url:''	,
+									name:'',
+									state:''是否为当前聊天窗口
+									list:[
+										msg:'' 消息数量
+									]，
+									msglist:[{
+										sendtime:'',
+										msg:[{
+											url:'',
+											txt:''
+										}]
+									}]
+									
+								}]	
+							}			
+		addMsg                  新增加的聊天	{
+								sendtime:'2017/01/09',
+                       						uid:'',
+                    						msg:[{
+                        						url:'../image/touxiang1.png',
+                        						state:'false',
+                        						txt:'dddd',
+                    						 	}]
+									
+								}
+		
+
+公告
+
+module: 	noticeFrame
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		noticeFn               公告信息列表  	items:[{
+								name:'维护公告'，
+								uid:''
+								state：‘是否当前选中’
+								list：{
+									msg：20  未读的信息数量
+								}，
+								msglist:[{
+									sendtime:'2017/01/09',
+                    							msg:[{
+                        							time:'',
+                        							txt:'dddd',
+                    						 	}]			
+								},
+								{
+								name:'活动信息'，
+								uid:''
+								state：‘是否当前选中’
+								list：{
+									msg：20  未读的信息数量
+								}，
+								msglist:[{
+									sendtime:'2017/01/09',
+                    							msg:[{
+                        							time:'',
+                        							txt:'dddd',
+                    						 	}]			
+								},
+							]			
+		addNoticeMsg            新增公告信息	{
+								sendtime:'2017/01/09',
+								uid:''
+                    							msg:[{
+                        							time:'',
+                        							txt:'dddd',
+                    						 	}]
+									
+								}
+
+
+用户资料
+
+module: 	usermsgFrame
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		usermsg                 用户信息  	{
+								img:‘用户头像’，
+								name:'用户名’，
+								history_game:[
+									{
+									game_img:'游戏icon',
+									gamename:'游戏名',
+									playnum:'玩过此款游戏的人数'
+									}
+								]
+							}
+
+消息提示
+
+module: 	newMsgTipsFrame
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		newMsgFn               信息列表  	{
+								uid:10001,
+    								name:1111,
+   								 msg:'dsfdfafaffffffffffffffffffffffff',
+    								url:'../image/touxiang1.png',
+    								msgnum:'20'
+							}
+		addNewMsgFn		新消息		{
+								lists:[{
+        							uid:10001,
+        							name:245,
+        							msg:'dsfdfafaffffffffffffffffffffffff',
+        							url:'../image/touxiang1.png',
+        							msgnum:'20'
+    								}
+    								]
+							}
+
+删除提示提示
+
+module: 	deleteFrame
+
+		action			描述		json
+---------------------------------------------------------------------
+fn:    		
+
+		deleteFrient            	 	{
+								name:'1111',
+    								uid:'10000'
+							}

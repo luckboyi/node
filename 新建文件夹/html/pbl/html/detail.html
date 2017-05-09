@@ -1,0 +1,126 @@
+
+<div>
+    <div class="js_list_hei pr detail_container" ng-controller="detailController">
+        <div class="detail clearfix js_detail_hei pr">
+            <div id="scrollbar3"  class=" js_detail_hei">
+                <div class="scrollbar fr pr js_detail_hei"><div class="track"><div class="thumb pa"></div></div></div>
+                <div class="in_detail_con viewport js_detail_hei">
+                    <div class="clearfix overview">
+                        <div class="detail_box" game-id="{{detailDate.game_id}}"><div class="left_contain fl">
+                            <h3  ng-bind="detailDate.title"></h3>
+                            <div class="lanrenzhijia">
+                                <div id="picBox" class="picBox">
+                                    <ul class="cf" style="width: 4800px;" >
+                                        <li ng-repeat="item in detailDate.bigImg track by $index ">
+                                            <a href="#"><img ng-src="{{detailDate.bigImg[$index]}}"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#">
+                                    <div id="listBox" class="listBox">
+                                        <ul class="cf" style="width: 604px;">
+                                            <li ng-repeat="item in detailDate.miImg track by $index ">
+                                                <div class="arrow-up pa"></div>
+                                                <img ng-src="{{detailDate.miImg[$index]}}">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail_btn" style="display: none;">
+                                        <span id="prev" class="btn prev"></span>
+                                        <span id="next" class="btn next"></span>
+                                                                            <span class="btn_center" id="center">
+                                                                                <em></em>
+                                                                            </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                            <div class="right_contain fl">
+                                <div class="content1">
+                                    <div class="right_con">
+                                        <h3 class="language" data-name="game_plain" >游戏简介</h3>
+                                    </div>
+                                    <p ng-bind="detailDate.introduction"></p>
+                                </div>
+                                <div class="content2">
+                                    <div class="right_con">
+                                        <h3 class="language" data-name="support_equipment">支持设备</h3>
+                                    </div>
+                                    <ul class="con_list clearfix" >
+                                        <li ng-repeat="item in detailDate.support track by $index ">
+                                            <a href="javascript:;" ng-bind="detailDate.support[$index]"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content3">
+                                    <div class="right_con">
+                                        <h3 class="language" data-name="system">xxx</h3>
+                                    </div>
+                                    <div class="message_hd">
+                                        <ul class="clearfix" id="drive_configuration">
+                                            <li class="fl cur language" data-name="configuration">推荐配置</li>
+                                            <li class="fl language" data-name="minimum">最低配置</li>
+                                        </ul>
+                                    </div>
+                                    <div class="message_bd">
+                                        <ul class="recommend ">
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="os">os</div>
+                                                <span class="message" ng-bind="detailDate.message[0]"></span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="processor">处理器:</div>
+                                                <span class="message"  ng-bind="detailDate.message[1]"></span></li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="storage">内存:</div>
+                                                <span class="message"  ng-bind="detailDate.message[2]"></span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="versions">DirectX 版本:</div>
+                                                <span class="message"  ng-bind="detailDate.message[3]"></span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="space">存储空间:</div>
+                                                <span class="message"  ng-bind="detailDate.message[4]"></span>
+                                            </li>
+                                        </ul>
+                                        <ul class="mini">
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="os">os</div>
+                                                <span class="message" ng-bind="detailDate.mini_message[0]"></span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="processor">处理器:</div>
+                                                <span class="message"  ng-bind="detailDate.mini_message[1]"></span></li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="storage">内存:</div>
+                                                <span class="message"  ng-bind="detailDate.mini_message[2]"></span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="versions">DirectX 版本:</div>
+                                                <span class="message"  ng-bind="detailDate.mini_message[3]"></span>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl language" style="width: 100px" data-name="space">存储空间:</div>
+                                                <span class="message"  ng-bind="detailDate.mini_message[4]"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="download_btn pa" >
+            <div class="fl btn language"  data-name="{{btnData.btnStatus}}" ng-click="detailBtn()">安装</div>
+            <div class="schedule" ng-show="detailDowProShow">
+                <div class="in_sch pr clearfix">
+                    <p class="in_text fl" ng-bind="detailDowDate.text"></p>
+                    <p class="do_in_sch pr"  style="width:{{detailDowDate.percent}}%"><i class="do_btn"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

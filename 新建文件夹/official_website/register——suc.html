@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>官网注册</title>
+    <link rel="stylesheet" href="../online/pageGame/style/base.css">
+    <link rel="stylesheet" href="style/register.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="login_container">
+    <div class="login_con clearfix fl tac suc_register">
+        <h4 class="blueColor2 f16 pr"><i class="pa"></i>注册成功</h4>
+        <p class="f12">恭喜你，您的账号注册成功</p>
+        <p class="f12">系统不将在<b class="blueColor2 ">5</b>秒内，自动跳转到首页</p>
+        <p  class="btn f16 login_immediately">立即登录</p>
+    </div>
+    <div class="download_vr fr tac">
+        <p class="f16 title">专注于VR内容的综合性开放平台</p>
+        <p class="img_box"></p>
+        <p class="f16 btn">安装VR客户端</p>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<script>
+    $(function(){
+        //倒计时
+        var num = 5;
+        function countdown(){
+            if(num == 1){
+                //window.location.reload();
+                //window.location.href = 'http://www.vronline.com'
+            }else{
+                num--;
+                $('.suc_register').find('b').text(num);
+            }
+        }
+        setInterval(function(){
+            countdown();
+        },500);
+        //点击立即登录
+        $('.suc_register').on('click','.login_immediately',function(){
+            //window.location.href = 'http://www.vronline.com'
+        })
+    })
+</script>

@@ -1,0 +1,24 @@
+.main_container{height: 100%;}
+.vr_game_list{
+    width: 240px;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid #293141;
+    overflow: hidden;
+    display: none;
+    background: rgba(32, 39, 49, 0.5);
+    z-index: 999;
+}
+.vr_game_list_hei .overview{width: 100%;}
+.side_list{width: 234px;}
+#vr_game_list_scroll:hover .thumb{
+    display: block;
+}
+.add_local_game{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.add_local_game .bounced_con{padding: 0 12px 12px 12px;}
+#addLocalGameList .thumb{display: block;}

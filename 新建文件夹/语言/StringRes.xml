@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item key="game_title" 			value="游戏" />
+	<item key="video_title" 		value="多媒体" />
+	<item key="drive_title" 		value="驱动" />
+	<item key="manage_set"			value="设置" />
+	<item key="manage_idea"			value="意见" />
+	<item key="manage_account"		value="切换账号" />
+	<item key="manage_exit"			value="退出" />
+	<item key="manage_delete"		value="删除" />
+	<item key="install"				value="安装" />
+	<item key="pause"				value="暂停" />
+	<item key="started"				value="开始" />
+	<item key="continue"			value="继续" />
+	<item key="finish"				value="安装完成" />
+	<item key="game_plain"			value="游戏简介" />
+	<item key="support_equipment"	value="支持设备" />
+	<item key="system"				value="系统需求" />
+	<item key="configuration"		value="推荐配置" />
+	<item key="minimum"				value="本机配置" />
+	<item key="os"					value="操作系统" />
+	<item key="processor"			value="处理器" />
+	<item key="storage"				value="内存" />
+	<item key="versions"			value="DirectX版本" />
+	<item key="space"				value="显卡" />
+	<item key="noGame"				value="你尚未添加任何游戏" />
+	<item key="addNoGame"			value="请从游戏库或本地游戏中添加游戏" />
+	<item key="addGame"				value="添加本地游戏" />
+	<item key="manage_language"		value="语言设置"/>
+	<item key="Chinese"				value="中文"/>
+	<item key="English"				value="英文"/>
+	<item key="deleteSure"			value="确定将选中的游戏删除"/>
+	<item key="deleteLocalName"		value="同时删除本地文件"/>
+	<item key="sure"				value="确定"/>
+	<item key="cancel"				value="取消"/>
+	<item key="userName"			value="用户名"/>
+	<item key="update"				value="更新" />
+	<item key="in_game"				value="游戏中..." />
+	<item key="addGame"				value="添加游戏" />
+	<item key="selectRoutine"		value="选择一个程序并将其添加至您的游戏库" />
+	<item key="routine"				value="程序" />
+	<item key="area"				value="区域" />
+	<item key="add_select"			value="添加所选程序" />
+	<item key="manage_set"			value="设置" />
+	<item key="integration_set"		value="综合" />
+	<item key="set_language"		value="设置平台使用的语言：" />
+	<item key="set_facility"		value="插入设备时，自动启动软件：" />
+	<item key="yes"					value="是" />
+	<item key="no"					value="否" />
+	<item key="colse_set"			value="关闭按钮设置：" />
+	<item key="min"					value="最小化" />
+	<item key="close_set"			value="关闭程序" />
+	<item key="download_path"		value="默认下载路径：" />
+	<item key="amend"				value="浏览" />
+	<item key="open"				value="打开" />
+	<item key="renew"				value="恢复默认设置" />
+	<item key="manage_advice"		value="意见反馈" />
+	<item key="your_problem"		value="您的问题（必填）" />
+	<item key="contact_way"			value="联系方式（必填一项）" />
+	<item key="upload_photo"		value="上传照片" />
+	<item key="registering"			value="账号注册" />
+	<item key="agreed"				value="我已阅读并同意" />
+	<item key="vo_agreement"		value="《维奥相关用户协议》"/>
+	<item key="register"			value="注册" />
+	<item key="log_in"				value="已有账号？" />
+	<item key="in_registering"		value="注册账号" />
+	<item key="forgot_password"		value="找回密码" />
+	<item key="remember_password"	value="记住密码" />
+	<item key="automatic_login"		value="自动登录" />
+	<item key="login_enter"			value="登录" />
+	<item key="verification_code"	value="请输入验证码" />
+	<item key="abnormal_operation"	value="您的操作出现异常，请输入验证码" />
+	<item key="invisibility"		value="看不清换一张" />
+	<item key="registration"		value="注册完成" />
+	<item key="registration_msg"	value="您的账号注册成功！请妥善保管好账号密码，确保账号安全" />
+	<item key="success_register"	value="注册成功请登录" />
+	<item key="erro_registration"	value="注册失败" />
+	<item key="registration_erro_msg"	value="注册信息失败，请重新注册" />
+	<item key="re_register"			value="返回并重新注册" />
+	<item key="sent_verfication"	value="发送验证码" />
+	<item key="video_history"		value="历史记录" />
+	<item key="panoramic_video"		value="本地播放器" />
+	<item key="more"				value="更多" />
+	<item key="open_local"			value="打开文件" />
+	<item key="splendid"			value="精彩评测" />
+	<item key="newComment"			value="最新评测" />
+	<item key="goodComment"			value="好评" />
+	<item key="badComment"			value="差评" />
+	<item key="myComment"			value="我的评论" />
+	<item key="haveWatch"			value="次观看" />
+	<item key="game_play_time"		value="进行游戏时间：" />
+	<item key="play_hour"			value="个小时" />
+	<item key="report"				value="举报" />
+	<item key="has_report"			value="已举报" />
+	<item key="suc_report"			value="举报成功" />
+	<item key="go_score"			value="你还没有评分哦，快去评分吧！" />
+	<item key="total"				value="共" />
+	<item key="video_num"			value="部视频" />
+	<item key="unlike"				value="不喜欢" />
+	<item key="like"				value="喜欢" />
+	<item key="send"				value="发送" />
+	<item key="like_game"			value="你喜欢这款游戏么？" />
+	<item key="score"				value="分" />
+	<item key="un_login"			value="未登录，请" />
+	<item key="unComment"			value="暂无评论" />
+	<item key="has"					value="已经有" />
+	<item key="evaluating"			value="条评测" />
+	<item key="comment_add"			value="发表评论" />
+	<item key="has"					value="已有" />
+	<item key="or"					value="或" />
+	<item key="has_people"			value="人评分" />
+	<item key="game_score"			value="玩家评分" />
+	<item key="click_start"			value="点击下方的“开始”按钮，即可启动" />
+
+
+</config>

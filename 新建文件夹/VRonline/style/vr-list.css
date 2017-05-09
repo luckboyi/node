@@ -1,0 +1,323 @@
+body {
+  background-color: #F0F0F0; }
+
+.content {
+  width: 1200px;
+  margin: 0 auto; }
+  .content .header {
+    margin: 24px 0; }
+  .content .game-filter {
+    background-color: white;
+    width: 1200px;
+    padding-bottom: 27px; }
+    .content .game-filter .choose {
+      width: 1082px;
+      margin: 0 auto;
+      font-size: 12px; }
+      .content .game-filter .choose li:hover, .content .game-filter .choose li.cur {
+        background: #3C95D8;
+        border: 1px solid #3C95D8 !important;
+        color: #fff; }
+      .content .game-filter .choose li:hover a, .content .game-filter .choose li.cur a {
+        color: #fff; }
+      .content .game-filter .choose h3 {
+        border-bottom: #D5D5D5 1px solid; }
+        .content .game-filter .choose h3 span {
+          top: 1px;
+          border-bottom: #1792fa 2px solid;
+          font-size: 22px;
+          height: 46px;
+          line-height: 46px;
+          display: block;
+          width: 90px; }
+      .content .game-filter .choose .list-box {
+        padding: 17px 0 16px;
+        width: 1082px;
+        border-bottom: #D5D5D5 solid 1px; }
+        .content .game-filter .choose .list-box .title {
+          width: 57px;
+          text-align: right;
+          float: left;
+          line-height: 3;
+          margin-top: -3px; }
+        .content .game-filter .choose .list-box .ch-cont {
+          margin-left: 84px; }
+          .content .game-filter .choose .list-box .ch-cont .plat-list li {
+            float: left;
+            display: block;
+            text-align: center;
+            border: 1px #D5D5D5 solid;
+            margin-left: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            padding: 8px 14px; }
+          .content .game-filter .choose .list-box .ch-cont .plat-list .all {
+            background-color: #3C95D8;
+            border: none;
+            color: #ffffff;
+            border: 1px solid #3C95D8; }
+            .content .game-filter .choose .list-box .ch-cont .plat-list .all a {
+              color: #ffffff; }
+          .content .game-filter .choose .list-box .ch-cont .plat-list .space {
+            margin-left: 71px; }
+      .content .game-filter .choose .more {
+        display: none; }
+      .content .game-filter .choose .moreChoose {
+        cursor: pointer;
+        display: block;
+        width: 320px;
+        height: 40px;
+        margin: 0 auto;
+        z-index: 2;
+        margin-top: -1px;
+        background-color: white;
+        border-bottom: #D5D5D5 1px solid;
+        border-left: #D5D5D5 1px solid;
+        border-right: #D5D5D5 1px solid;
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px; }
+        .content .game-filter .choose .moreChoose i {
+          width: 14px;
+          height: 16px;
+          background-position: -15px -48px;
+          margin-left: 24px; }
+  .content .vr-game-list {
+    width: 1200px;
+    margin-top: 24px; }
+    .content .vr-game-list .vr-show {
+      width: 806px;
+      float: left;
+      background-color: #ffffff; }
+      .content .vr-game-list .vr-show .vr-show-content {
+        width: 718px;
+        margin-left: 67px; }
+        .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header {
+          width: 718px;
+          padding: 18px 0 13px;
+          border-bottom: 1px solid #D5D5D5; }
+          .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .sortList {
+            float: left;
+            color: #424242;
+            font-weight: bold; }
+            .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .sortList span {
+              width: 76px;
+              height: 28px;
+              text-align: center;
+              border-radius: 15px;
+              padding: 7px 10px;
+              margin-right: 31px;
+              cursor: pointer; }
+            .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .sortList span:hover, .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .sortList span.cur {
+              background: #3f97db;
+              color: #fff; }
+          .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .numPage {
+            margin-top: 5px;
+            float: right;
+            color: #424242;
+            font-weight: bold;
+            font-size: 13px; }
+            .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .numPage i {
+              display: inline; }
+            .content .vr-game-list .vr-show .vr-show-content .vr-show-con-header .numPage span {
+              margin-right: 21px; }
+        .content .vr-game-list .vr-show .vr-show-content .list-show {
+          width: 718px; }
+          .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont {
+            width: 718px;
+            padding: 22px 0 28px;
+            border-bottom: #D5D5D5 1px solid; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .img {
+              margin-right: 20px;
+              float: left;
+              cursor: pointer; }
+              .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .img img {
+                width: 132px;
+                height: 162px; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .tit {
+              font-weight: bold;
+              color: #424242;
+              cursor: pointer; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .price {
+              color: #707070;
+              font-weight: bold;
+              margin-top: 8px; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .noMoney {
+              display: inline-block;
+              background: #03a9f4;
+              color: #ffffff;
+              width: 34px;
+              height: 18px;
+              line-height: 18px;
+              border-radius: 3px;
+              text-align: center; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .score {
+              margin-top: 8px; }
+              .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .score .grade {
+                display: inline-block; }
+                .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .score .grade .num {
+                  color: #ff9000; }
+              .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .score .star {
+                display: inline-block; }
+                .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .score .star .star-in {
+                  float: left;
+                  width: 83px;
+                  height: 14px;
+                  margin-right: 14px;
+                  background: url("../images/star.png") no-repeat 0 -14px;
+                  position: relative; }
+                  .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .score .star .star-in i {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url("../images/star.png") no-repeat;
+                    height: 100%; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .txt {
+              margin-top: 5px;
+              color: #a6a6a6;
+              line-height: 23px; }
+            .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .class {
+              margin-top: 8px; }
+              .content .vr-game-list .vr-show .vr-show-content .list-show .list-show-cont .imgExp .class span {
+                display: inline-block;
+                padding: 3px 10px 4px 10px;
+                border: 1px #D5D5D5 solid;
+                margin-right: 14px;
+                color: #a6a6a6;
+                text-align: center; }
+        .content .vr-game-list .vr-show .vr-show-content .pager {
+          padding: 60px 0;
+          text-align: center; }
+          .content .vr-game-list .vr-show .vr-show-content .pager li {
+            display: inline-block;
+            border: #D5D5D5 1px solid;
+            line-height: 20px;
+            border-radius: 2px;
+            margin: 0 6px;
+            padding: 0 6px;
+            cursor: pointer; }
+          .content .vr-game-list .vr-show .vr-show-content .pager li:hover, .content .vr-game-list .vr-show .vr-show-content .pager li.cur {
+            background: #3C95D8;
+            border: #3C95D8 1px solid; }
+          .content .vr-game-list .vr-show .vr-show-content .pager li:hover a, .content .vr-game-list .vr-show .vr-show-content .pager li.cur a {
+            color: #fff; }
+  .content .right-show {
+    float: right; }
+    .content .right-show .vr-new {
+      width: 384px;
+      background-color: #ffffff; }
+      .content .right-show .vr-new .new-in {
+        padding: 20px 10px 0 26px; }
+        .content .right-show .vr-new .new-in .new-in-header {
+          font-size: 19px;
+          border-left: 2px solid #03a9f4;
+          padding-left: 5px; }
+        .content .right-show .vr-new .new-in .zs .newVR {
+          margin-top: 19px; }
+          .content .right-show .vr-new .new-in .zs .newVR .newVRList {
+            margin-right: 17px;
+            float: left; }
+            .content .right-show .vr-new .new-in .zs .newVR .newVRList img {
+              width: 98px;
+              height: 126px; }
+            .content .right-show .vr-new .new-in .zs .newVR .newVRList .newtxt {
+              display: block;
+              color: #727272;
+              padding: 12px 0 14px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden; }
+        .content .right-show .vr-new .new-in .hotClass {
+          margin: 22px 0 27px; }
+          .content .right-show .vr-new .new-in .hotClass .classSort {
+            margin-bottom: 8px;
+            float: left; }
+            .content .right-show .vr-new .new-in .hotClass .classSort .hotSort {
+              display: inline-block;
+              line-height: 24px;
+              text-align: center;
+              border: 1px solid #D5D5D5;
+              padding: 0 7px;
+              margin-right: 10px; }
+          .content .right-show .vr-new .new-in .hotClass .classSort:hover a, .content .right-show .vr-new .new-in .hotClass .classSort.cur a {
+            background: #3f97db;
+            color: #fff;
+            border: 1px solid #3f97db; }
+    .content .right-show .weekDown {
+      width: 384px;
+      background-color: #ffffff; }
+      .content .right-show .weekDown .hotDown {
+        padding: 20px 10px 0 26px; }
+        .content .right-show .weekDown .hotDown .rank {
+          font-size: 19px;
+          padding-bottom: 12px;
+          border-bottom: 2px solid #ffc154; }
+          .content .right-show .weekDown .hotDown .rank .rh {
+            border-left: 2px solid #03a9f4;
+            padding-left: 6px; }
+        .content .right-show .weekDown .hotDown ul {
+          margin-top: 22px; }
+          .content .right-show .weekDown .hotDown ul li {
+            width: 100%;
+            line-height: 44px; }
+            .content .right-show .weekDown .hotDown ul li a {
+              width: 100%;
+              height: 100%; }
+              .content .right-show .weekDown .hotDown ul li a .ranking {
+                width: 22px; }
+              .content .right-show .weekDown .hotDown ul li a .first {
+                color: #ff0000; }
+              .content .right-show .weekDown .hotDown ul li a .gameName {
+                width: 120px; }
+              .content .right-show .weekDown .hotDown ul li a .gameSort {
+                width: 140px; }
+              .content .right-show .weekDown .hotDown ul li a .downNum .num {
+                color: #ff6000; }
+              .content .right-show .weekDown .hotDown ul li a .downNum span.f16 {
+                color: #cecece; }
+              .content .right-show .weekDown .hotDown ul li a .downNum .up {
+                color: #ffd800; }
+              .content .right-show .weekDown .hotDown ul li a .downNum .down {
+                color: #1792fa; }
+              .content .right-show .weekDown .hotDown ul li a .gameCon {
+                display: none; }
+                .content .right-show .weekDown .hotDown ul li a .gameCon .nameImg {
+                  width: 98px;
+                  height: 126px;
+                  margin-right: 10px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .nameImg img {
+                    width: 100%;
+                    height: 100%; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .nameImg i {
+                    width: 26px;
+                    height: 34px;
+                    line-height: 20px;
+                    text-indent: 4px;
+                    color: #fff; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .nameImg .fir {
+                    background-position: -294px -15px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .nameImg .ts {
+                    background-position: -320px -15px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .nameImg .pt {
+                    background-position: -346px -15px; }
+                .content .right-show .weekDown .hotDown ul li a .gameCon .details {
+                  width: 180px;
+                  line-height: 20px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .details .name {
+                    margin-bottom: 44px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .details .type {
+                    margin-bottom: 10px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .details .device {
+                    background: #d7eff6;
+                    line-height: 30px;
+                    padding: 6px 10px;
+                    margin-right: 10px; }
+                  .content .right-show .weekDown .hotDown ul li a .gameCon .details i.icon {
+                    position: relative;
+                    top: 6px; }
+          .content .right-show .weekDown .hotDown ul li:hover .gameCon, .content .right-show .weekDown .hotDown ul li.cur .gameCon {
+            display: block; }
+          .content .right-show .weekDown .hotDown ul li:hover .games, .content .right-show .weekDown .hotDown ul li.cur .games {
+            display: none; }
+
+/*# sourceMappingURL=vr-list.css.map */

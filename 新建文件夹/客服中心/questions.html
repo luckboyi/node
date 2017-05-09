@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://pic.vronline.com/news/style/base.css">
+    <link rel="stylesheet" href="http://pic.vronline.com/news/style/customer.css" />
+    <script src="http://pic.vronline.com/common/js/jquery-1.12.3.min.js"></script>
+    <title>自动查询问题列表</title>
+</head>
+<body>
+<div class="whole all_con clearfix">
+	<div class="crumbs clearfix">
+		<a class="fl" href="javascript:;">客服中心</a>
+		<span class="fl">></span>
+		<a class="fl" href="javascript:;">账号密码</a>
+	</div>
+    <div class="fl left">
+    	<ul>
+		    <li class="cur">
+		        <a class="clearfix" href="javascript:;">
+		            <i class="fl account_que"></i>
+		            <span>账号问题</span>
+		            <i class="fr"></i>
+		        </a>
+		    </li>
+		    <li>
+		       	<a class="clearfix" href="javascript:;">
+		            <i class="fl rechargePayment"></i>
+		            <span>充值问题</span>
+		            <i class="fr"></i>
+		        </a>
+		    </li>
+		    <li>
+		        <a class="clearfix" href="javascript:;">
+		            <i class="fl platformGame"></i>
+		            <span>游戏问题</span>
+		            <i class="fr"></i>
+		        </a>
+		    </li>
+		    <li>
+		        <a class="clearfix" href="javascript:;">
+		            <i class="fl deviceConnection"></i>
+		            <span>设备问题</span>
+		            <i class="fr"></i>
+		        </a>
+		    </li>
+		    <li>
+		        <a class="clearfix" href="javascript:;">
+		            <i class="fl auditRelease"></i>
+		            <span>开发者问题</span>
+		            <i class="fr"></i>
+		        </a>
+		    </li>
+	    </ul>
+    </div>
+    <div class="fl right_show">
+    	<!--账号问题-->
+        <div class="show_con cur">
+        	<ul class="show_msg">
+	            <li>
+		            <div class="show_msg_title">
+		                <p class="clearfix">
+		                    <span class="fl box"></span>
+		                    <span class="fl text ells">如何绑定手机?</span>
+		                    <span class="fl line"></span>
+		                    <span class="fr search">已经有2300人查看</span>
+		                </p>
+		            </div>
+		            <div class="show_msg_content">
+		                <p class="contentOne">1、如果您记得手势密码，请您打开手机安全中心→设置→修改手势密码（只有开启了手势密码才会出现此按钮）→输入原手势密码→创建新手势密码→确认新手势密码→修改成功</p>
+		                <p class="contentTwo">2、如果您忘记手势密码:</p>
+		                <p>请您打开手机安全中心→设置→修改手势密码（只有开启了手势密码才会出现此按钮）→输入原手势密码→创建新手势密码→确认新手势密码→修改成功</p>
+		                <p>请您打开手机安全中心→设置→修改手势密码（只有开启了手势密码才会出现此按钮）→输入原手势密码→创建新手势密码→确认新手势密码→修改成功</p>
+		                <img src="3.jpg" >
+		            </div>
+		        </li>
+	        </ul>
+	        <div class="page_con">
+	        	<div class="row-fluid clearfix">
+	                <div class="fl span6">
+	                    <div class="dataTables_info" id="sample_1_info">第1页 共2页</div>
+	                </div>
+	                <div class="fl span6">
+	                    <div class="dataTables_paginate paging_bootstrap pagination">
+		                    <ul class="clearfix">
+		                        <li class="fl disabled"><span>上一页</span></li>
+		                        <li class="fl active"><span>1</span></li>
+		                        <li class="fl"><a href="http://www.vronline.com/customer/service/faq/2?tp=2&amp;page=2">2</a></li> 
+		                        <li class="fl"><a href="http://www.vronline.com/customer/service/faq/2?tp=2&amp;page=2" rel="next">下一页</a></li>
+		                    </ul>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        <!--充值问题-->
+        <div class="show_con">充值问题</div>
+        <!--游戏问题-->
+        <div class="show_con">游戏问题</div>
+        <!--设备问题-->
+        <div class="show_con">设备问题</div>
+        <!--开发者问题-->
+        <div class="show_con">开发者问题</div>
+    </div>
+</div>
+<script type="text/javascript" >
+	$(function(){
+		//切换问题
+		$(".left ul").on('click','li',function(){
+			var i = $(this).index();
+			$(this).addClass('cur').siblings().removeClass('cur');
+			$(this).parents('.all_con').find('.show_con').eq(i).addClass('cur').siblings().removeClass('cur');
+		})
+		//点击查看问题详情
+		$(".show_msg").on('click','li',function(){
+			$(this).find('.show_msg_content').toggle();
+			$('.show_msg li .show_msg_content').removeClass('msgShow');
+			$(this).find('.show_msg_content').addClass('msgShow');
+		});
+    })
+  </script>
+</body>
+</html>

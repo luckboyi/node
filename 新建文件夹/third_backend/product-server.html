@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>第三方后台</title>
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/personal_center.css">
+    <link rel="stylesheet" href="style/jason.css">
+    <link href="assets/art-dialog/css/ui-dialog.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/cikonss.css" />
+    <link rel="stylesheet" href="./assets/datetimepicker/jquery.datetimepicker.min.css" />
+    <script src="./js/jquery-1.12.3.min.js"></script>
+</head>
+
+<body>
+    <!--侧边栏S-->
+    <div class="siderbar tac wordColor">
+        <a href="javascript:;"></a>
+        <ul>
+            <li class="cur pr"><i></i>基本资料</li>
+            <li class="pr "><i class="bank"></i>银行账号</li>
+        </ul>
+    </div>
+    <!--侧边栏E-->
+    <!--顶部栏S-->
+    <div class="personal_header clearfix">
+        <div class="nav_con fl">
+            <ul class="clearfix">
+                <li class="fl"><a href="javascript:;">首页</a></li>
+                <li class="fl"><a href="javascript:;">产品列表</a></li>
+                <li class="fl"><a href="javascript:;">数据查询</a></li>
+                <li class="fl"><a href="javascript:;">产品审核</a></li>
+            </ul>
+        </div>
+        <div class="login_con fr clearfix">
+            <span class="fl">
+                <img src="images/list_img.jpg">
+            </span>
+            <p class="fl">name</p>
+        </div>
+    </div>
+    <!--顶部栏E-->
+    <!--内容-->
+    <div class="container container-list">
+        <div class="container-head clearfix" style="width: 950px;">
+            <button type="button" class="btn">
+                <span class="icon icon-small"><i class="icon icon-small icon-plus"></i></span> 添加产品
+            </button>
+        </div>
+        <div class="in_con">
+            <h4 class="f14">产品详情</h4>
+            <div class="content product-detail">
+                <p>
+                    <span class="product-title">蓝月传奇</span>
+                    <span class="product-id">产品ID：xxxxxxxxxxxxxx</span>
+                    <span class="product-status success"><i></i>已通过</span>
+                </p>
+                <p>
+                    <span>创建时间：2019-09-21 17:30:17</span>
+                    <span>上线时间：2019-09-21 17:30:17</span>
+                    <span class="product-status fail"><i></i>未上线</span>
+                </p>
+            </div>
+        </div>
+        <div class="table-con" style="width: 950px;">
+            <table class="personal-table" border="0">
+                <tr class="title">
+                    <th>名称</th>
+                    <th>游戏服务器域名</th>
+                    <th>服务器状态</th>
+                    <th>是否新服</th>
+                    <th>是否推荐</th>
+                    <th>上线时间</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>4服</td>
+                    <td>www.sina.com</td>
+                    <td><span class="ok">正常</span></td>
+                    <td>是</td>
+                    <td>否</td>
+                    <td>2016年10月6日</td>
+                    <td><a href="javascript:;" class="edit-recommend">编辑</a></td>
+                </tr>
+                <tr>
+                    <td>4服</td>
+                    <td>www.sina.com</td>
+                    <td><span class="warn">维护</span></td>
+                    <td>是</td>
+                    <td>否</td>
+                    <td>2016年10月6日</td>
+                    <td><a href="javascript:;" class="edit-recommend">编辑</a></td>
+                </tr>
+                <tr>
+                    <td>4服</td>
+                    <td>www.sina.com</td>
+                    <td><span class="error">关闭</span></td>
+                    <td>是</td>
+                    <td>否</td>
+                    <td>2016年10月6日</td>
+                    <td><a href="javascript:;" class="edit-recommend">编辑</a></td>
+                </tr>
+            </table>
+            <div class="page">
+            </div>
+        </div>
+    </div>
+    <div style="display: none" id="editTemp">
+        <div class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">服务器名称：</label>
+                <div class="controls">
+                    <input type="text" name="position_id" class="medium" value="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">服务器域名：</label>
+                <div class="controls">
+                    <input type="text" name="gid" class="medium" value="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">服务器状态：</label>
+                <div class="controls">
+                    <select name="">
+                        <option value="">维护</option>
+                        <option value="">正常</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">是否新服</label>
+                <div class="controls">
+                    <label class="checkbox line">
+                        <input type="checkbox" name="" value="">是
+                    </label>
+                    <label class="checkbox line">
+                        <input type="checkbox" name="" value="">否
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">是否推荐</label>
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="" value="">是
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="" value="">否
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">上线时间：</label>
+                <div class="controls">
+                    <input class="medium date" name="" type="text" value="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/art-dialog/js/dialog-min.js"></script>
+<script src="./assets/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+<script src="./js/common.js"></script>
+<script type="text/javascript">
+$(function() {
+    $.datetimepicker.setLocale('ch');
+
+    $(".edit-recommend").click(function() {
+        var editTempClone = $("#editTemp").clone();
+        editTempClone.find(".form-horizontal").attr("id", "editCon");
+        var editTempHtml = editTempClone.html();
+        editTempClone.remove();
+
+        myDialog.dialog({
+            id: "edit",
+            title: " ",
+            content: editTempHtml,
+            cancelDisplay: false,
+            ok: function() {
+                return false;
+            },
+            okValue: '发布',
+            onshow: function() {
+                var editCon=$("#editCon");
+                editCon.find(".date").datetimepicker();
+            },
+            cancel:function(){
+                var editCon=$("#editCon");
+                editCon.find(".date").datetimepicker("destroy");
+            }
+        });
+    });
+});
+</script>
+
+</html>
